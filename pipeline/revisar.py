@@ -52,6 +52,15 @@ def buscar_similares(nombre, catalogo_nombres):
     return get_close_matches(nombre, catalogo_nombres, n=3, cutoff=UMBRAL_SIMILITUD)
 
 
+def resolver_id(referencia, mapa_gemini_a_real, ids_validos):
+    if isinstance(referencia, int):
+        return referencia if referencia in ids_validos else None
+    if isinstance(referencia, str) and referencia.strip().isdigit():
+        posible = int(referencia.strip())
+        return posible if posible in ids_validos else None
+    return mapa_gemini_a_real.get(referencia)
+
+
 def main():
     if not CANDIDATOS_PATH.exists():
         print("✗ No hay candidatos_pendientes.json. Corre extractor.py primero.")
@@ -154,8 +163,8 @@ def main():
 
     for r in pendientes_rels:
         clave = clave_relacion(r)
-        origen = mapa_gemini_a_real.get(r["origen"], None)
-        destino = mapa_gemini_a_real.get(r["destino"], None)
+        origen = resolver_id(r["origen"], mapa_gemini_a_real, ids_validos)
+        destino = resolver_id(r["destino"], mapa_gemini_a_real, ids_validos)
 
         if origen is None or destino is None:
             print(f"\n⚠ Relación omitida — nodo no mapeado: {r['origen']} → {r['destino']}")

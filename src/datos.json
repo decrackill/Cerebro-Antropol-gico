@@ -1323,6 +1323,406 @@
       "tipo": "autor_de",
       "peso": 1.0,
       "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 53,
+      "origen_id": 3,
+      "destino_id": 28,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 54,
+      "origen_id": 3,
+      "destino_id": 30,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 55,
+      "origen_id": 3,
+      "destino_id": 31,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 56,
+      "origen_id": 3,
+      "destino_id": 35,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 57,
+      "origen_id": 2,
+      "destino_id": 65,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 58,
+      "origen_id": 2,
+      "destino_id": 66,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 59,
+      "origen_id": 2,
+      "destino_id": 67,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 60,
+      "origen_id": 32,
+      "destino_id": 3,
+      "tipo": "mentor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 61,
+      "origen_id": 3,
+      "destino_id": 32,
+      "tipo": "dedica_obra_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 62,
+      "origen_id": 3,
+      "destino_id": 36,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 63,
+      "origen_id": 1,
+      "destino_id": 37,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 64,
+      "origen_id": 3,
+      "destino_id": 26,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 65,
+      "origen_id": 3,
+      "destino_id": 16,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 66,
+      "origen_id": 2,
+      "destino_id": 16,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 67,
+      "origen_id": 39,
+      "destino_id": 16,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 68,
+      "origen_id": 3,
+      "destino_id": 40,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 69,
+      "origen_id": 3,
+      "destino_id": 41,
+      "tipo": "incorpora_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 70,
+      "origen_id": 3,
+      "destino_id": 42,
+      "tipo": "incorpora_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 71,
+      "origen_id": 3,
+      "destino_id": 44,
+      "tipo": "incorpora_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 72,
+      "origen_id": 45,
+      "destino_id": 16,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 73,
+      "origen_id": 1,
+      "destino_id": 47,
+      "tipo": "considera_indispensable",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 74,
+      "origen_id": 3,
+      "destino_id": 48,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 75,
+      "origen_id": 3,
+      "destino_id": 49,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 76,
+      "origen_id": 3,
+      "destino_id": 50,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 77,
+      "origen_id": 3,
+      "destino_id": 51,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 78,
+      "origen_id": 3,
+      "destino_id": 52,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 79,
+      "origen_id": 3,
+      "destino_id": 53,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 80,
+      "origen_id": 3,
+      "destino_id": 54,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 81,
+      "origen_id": 3,
+      "destino_id": 55,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 82,
+      "origen_id": 3,
+      "destino_id": 56,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 83,
+      "origen_id": 3,
+      "destino_id": 74,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 84,
+      "origen_id": 3,
+      "destino_id": 57,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 85,
+      "origen_id": 3,
+      "destino_id": 73,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 86,
+      "origen_id": 3,
+      "destino_id": 59,
+      "tipo": "prologa_obra",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 87,
+      "origen_id": 3,
+      "destino_id": 60,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 88,
+      "origen_id": 3,
+      "destino_id": 61,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 89,
+      "origen_id": 3,
+      "destino_id": 62,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 90,
+      "origen_id": 3,
+      "destino_id": 63,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 91,
+      "origen_id": 3,
+      "destino_id": 64,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 92,
+      "origen_id": 3,
+      "destino_id": 70,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 93,
+      "origen_id": 3,
+      "destino_id": 71,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 94,
+      "origen_id": 3,
+      "destino_id": 72,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 95,
+      "origen_id": 3,
+      "destino_id": 75,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 96,
+      "origen_id": 3,
+      "destino_id": 29,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 97,
+      "origen_id": 3,
+      "destino_id": 32,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 98,
+      "origen_id": 3,
+      "destino_id": 47,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 99,
+      "origen_id": 3,
+      "destino_id": 88,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 100,
+      "origen_id": 3,
+      "destino_id": 89,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 101,
+      "origen_id": 3,
+      "destino_id": 95,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 102,
+      "origen_id": 3,
+      "destino_id": 94,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
     }
   ]
 }
