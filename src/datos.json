@@ -905,6 +905,186 @@
       "metadata": {
         "id_gemini": "savage_life_in_new_guinea"
       }
+    },
+    {
+      "id": 97,
+      "tipo": "obra",
+      "nombre": "Antropología Cultural",
+      "descripcion": "Obra principal de Franz Boas que aborda problemas raciales y culturales, discutiendo la relación entre raza y cultura.",
+      "metadatos": "{\"id_gemini\": \"antropologia_cultural_boas\"}",
+      "metadata": {
+        "id_gemini": "antropologia_cultural_boas"
+      }
+    },
+    {
+      "id": 98,
+      "tipo": "autor",
+      "nombre": "Georg Gerland",
+      "descripcion": "Autor mencionado por Boas en el contexto de la discusión sobre la aptitud racial de los europeos antiguos.",
+      "metadatos": "{\"id_gemini\": \"gerland\"}",
+      "metadata": {
+        "id_gemini": "gerland"
+      }
+    },
+    {
+      "id": 99,
+      "tipo": "autor",
+      "nombre": "Friedrich Ratzel",
+      "descripcion": "Autor mencionado por Boas en el contexto de la discusión sobre la aptitud racial de los europeos antiguos.",
+      "metadatos": "{\"id_gemini\": \"ratzel\"}",
+      "metadata": {
+        "id_gemini": "ratzel"
+      }
+    },
+    {
+      "id": 100,
+      "tipo": "cultura",
+      "nombre": "Árabes",
+      "descripcion": "Pueblo cuya civilización, junto con los bereberes arabizados, alcanzó un alto grado en la Edad Media e influyó en razas negras de África.",
+      "metadatos": "{\"id_gemini\": \"arabes\"}",
+      "metadata": {
+        "id_gemini": "arabes"
+      }
+    },
+    {
+      "id": 101,
+      "tipo": "cultura",
+      "nombre": "Bereberes arabizados",
+      "descripcion": "Grupo cultural en el norte de África que, junto con los árabes, desarrolló una civilización avanzada y se mezcló con poblaciones nativas.",
+      "metadatos": "{\"id_gemini\": \"bereberes_arabizados\"}",
+      "metadata": {
+        "id_gemini": "bereberes_arabizados"
+      }
+    },
+    {
+      "id": 102,
+      "tipo": "concepto",
+      "nombre": "Civilización arábiga",
+      "descripcion": "Un alto nivel cultural desarrollado por árabes y bereberes en el Viejo Mundo, que Boas utiliza como ejemplo de influencia cultural.",
+      "metadatos": "{\"id_gemini\": \"civilizacion_arabiga\"}",
+      "metadata": {
+        "id_gemini": "civilizacion_arabiga"
+      }
+    },
+    {
+      "id": 103,
+      "tipo": "cultura",
+      "nombre": "Sudán",
+      "descripcion": "Región africana donde los pueblos portadores de la civilización arábiga ejercieron influencia y se mezclaron con las razas negras.",
+      "metadatos": "{\"id_gemini\": \"sudan\"}",
+      "metadata": {
+        "id_gemini": "sudan"
+      }
+    },
+    {
+      "id": 104,
+      "tipo": "cultura",
+      "nombre": "África noroccidental",
+      "descripcion": "Región que fue invadida por tribus hamíticas entre los siglos VIII y XI, y donde el mahometismo se difundió, formando grandes imperios y elevando el nivel cultural.",
+      "metadatos": "{\"id_gemini\": \"africa_noroccidental\"}",
+      "metadata": {
+        "id_gemini": "africa_noroccidental"
+      }
+    },
+    {
+      "id": 105,
+      "tipo": "cultura",
+      "nombre": "Tribus hamíticas",
+      "descripcion": "Grupos que invadieron África noroccidental, difundiendo el mahometismo y mezclándose con los nativos.",
+      "metadatos": "{\"id_gemini\": \"tribus_hamiticas\"}",
+      "metadata": {
+        "id_gemini": "tribus_hamiticas"
+      }
+    },
+    {
+      "id": 106,
+      "tipo": "concepto",
+      "nombre": "Mahometismo",
+      "descripcion": "Religión que se difundió en África noroccidental y el Sudán occidental, influyendo profundamente en las tribus y elevando su nivel cultural.",
+      "metadatos": "{\"id_gemini\": \"mahometismo\"}",
+      "metadata": {
+        "id_gemini": "mahometismo"
+      }
+    },
+    {
+      "id": 107,
+      "tipo": "cultura",
+      "nombre": "Sahara",
+      "descripcion": "Región geográfica donde se difundió el mahometismo.",
+      "metadatos": "{\"id_gemini\": \"sahara\"}",
+      "metadata": {
+        "id_gemini": "sahara"
+      }
+    },
+    {
+      "id": 108,
+      "tipo": "cultura",
+      "nombre": "Sudán occidental",
+      "descripcion": "Región africana donde se difundió el mahometismo y se formaron grandes imperios.",
+      "metadatos": "{\"id_gemini\": \"sudan_occidental\"}",
+      "metadata": {
+        "id_gemini": "sudan_occidental"
+      }
+    },
+    {
+      "id": 109,
+      "tipo": "concepto",
+      "nombre": "Razas mestizas",
+      "descripcion": "Grupos resultantes del cruce entre invasores y nativos, que alcanzaron un alto nivel cultural, como en la historia de Bornú.",
+      "metadatos": "{\"id_gemini\": \"razas_mestizas\"}",
+      "metadata": {
+        "id_gemini": "razas_mestizas"
+      }
+    },
+    {
+      "id": 110,
+      "tipo": "cultura",
+      "nombre": "Bornú",
+      "descripcion": "Imperio histórico en África del Norte, utilizado como ejemplo de cómo las razas mestizas se elevaron por encima de otros grupos negros africanos.",
+      "metadatos": "{\"id_gemini\": \"bornu\"}",
+      "metadata": {
+        "id_gemini": "bornu"
+      }
+    },
+    {
+      "id": 111,
+      "tipo": "autor",
+      "nombre": "Heinrich Barth ",
+      "descripcion": "Autor que, junto con Nachtigal, ha dado a conocer el pasado de Bornú.",
+      "metadatos": "{\"id_gemini\": \"barth\"}",
+      "metadata": {
+        "id_gemini": "barth"
+      }
+    },
+    {
+      "id": 112,
+      "tipo": "autor",
+      "nombre": "Gustav Nachtigal ",
+      "descripcion": "Autor que, junto con Barth, ha dado a conocer el pasado de Bornú.",
+      "metadatos": "{\"id_gemini\": \"nachtigal\"}",
+      "metadata": {
+        "id_gemini": "nachtigal"
+      }
+    },
+    {
+      "id": 113,
+      "tipo": "concepto",
+      "nombre": "Poligamia",
+      "descripcion": "Institución social que facilitó la amalgama de los negros por los mahometanos, ya que los conquistadores tomaban esposas nativas.",
+      "metadatos": "{\"id_gemini\": \"poligamia\"}",
+      "metadata": {
+        "id_gemini": "poligamia"
+      }
+    },
+    {
+      "id": 114,
+      "tipo": "cultura",
+      "nombre": "Civilización china",
+      "descripcion": "Ejemplo de Boas sobre cómo la colonización y amalgama de tribus hermanas condujo a una notable uniformidad de cultura en Asia oriental.",
+      "metadatos": "{\"id_gemini\": \"civilizacion_china\"}",
+      "metadata": {
+        "id_gemini": "civilizacion_china"
+      }
     }
   ],
   "relaciones": [

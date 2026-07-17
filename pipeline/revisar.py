@@ -138,9 +138,20 @@ def main():
             elif resp == "editar":
                 nuevo_nombre = input(f"  Nombre [{n['nombre']}]: ") or n["nombre"]
                 nueva_desc = input(f"  Descripción [{n.get('descripcion', n.get('resumen', ''))}]: ") or n.get("descripcion", n.get("resumen", ""))
+
+                tipos_validos = {"autor", "obra", "concepto", "escuela", "cultura", "debate"}
+                entrada_tipo = input(f"  Tipo [{n['tipo']}] (opciones: {', '.join(sorted(tipos_validos))}): ").strip().lower()
+                if entrada_tipo == "":
+                    nuevo_tipo = n["tipo"]
+                elif entrada_tipo in tipos_validos:
+                    nuevo_tipo = entrada_tipo
+                else:
+                    print(f"  ⚠ Tipo '{entrada_tipo}' no reconocido, se mantiene el original '{n['tipo']}'")
+                    nuevo_tipo = n["tipo"]
+
                 cur = conn.execute(
                     "INSERT INTO nodos (tipo, nombre, descripcion, metadatos) VALUES (?, ?, ?, ?)",
-                    (n["tipo"], nuevo_nombre, nueva_desc, json.dumps({"id_gemini": id_gemini})),
+                    (nuevo_tipo, nuevo_nombre, nueva_desc, json.dumps({"id_gemini": id_gemini})),
                 )
                 id_real = cur.lastrowid
                 conn.commit()
@@ -148,7 +159,7 @@ def main():
                 catalogo[nuevo_nombre] = id_real
                 estado["nodos_revisados"][id_gemini] = {"decision": "insertado", "id_real": id_real}
                 guardar_estado(estado)
-                print(f"  ✓ Insertado (editado, id real: {id_real})")
+                print(f"  ✓ Insertado (editado, id real: {id_real}, tipo: {nuevo_tipo})")
             else:
                 estado["nodos_revisados"][id_gemini] = {"decision": "descartado", "id_real": None}
                 guardar_estado(estado)
