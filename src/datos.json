@@ -755,6 +755,156 @@
       "metadata": {
         "id_gemini": "massim_meridionales"
       }
+    },
+    {
+      "id": 82,
+      "tipo": "obra",
+      "nombre": "Melanesians of British New Guinea",
+      "descripcion": "Obra del profesor C. G. Seligman, de la cual se reproducen mapas y planos en el libro de Malinowski.",
+      "metadatos": "{\"id_gemini\": \"melanesians_of_british_new_guinea\"}",
+      "metadata": {
+        "id_gemini": "melanesians_of_british_new_guinea"
+      }
+    },
+    {
+      "id": 83,
+      "tipo": "escuela",
+      "nombre": "Escuela de Antropología de Cambridge",
+      "descripcion": "Escuela a la que se le atribuye la introducción de una forma científicamente correcta de tratar el método en etnografía, enfatizando la distinción entre deducción y observación.",
+      "metadatos": "{\"id_gemini\": \"escuela_de_antropologia_de_cambridge\"}",
+      "metadata": {
+        "id_gemini": "escuela_de_antropologia_de_cambridge"
+      }
+    },
+    {
+      "id": 84,
+      "tipo": "concepto",
+      "nombre": "Pidgin-English",
+      "descripcion": "Idioma simplificado, utilizado por el etnógrafo en el trabajo de campo, pero considerado un 'instrumento muy imperfecto para expresar las ideas'.",
+      "metadatos": "{\"id_gemini\": \"pidgin_english\"}",
+      "metadata": {
+        "id_gemini": "pidgin_english"
+      }
+    },
+    {
+      "id": 85,
+      "tipo": "autor",
+      "nombre": "Adolf Bastian",
+      "descripcion": "Etnólogo temprano mencionado por su contribución a la reformulación de la información etnográfica.",
+      "metadatos": "{\"id_gemini\": \"adolf_bastian\"}",
+      "metadata": {
+        "id_gemini": "adolf_bastian"
+      }
+    },
+    {
+      "id": 86,
+      "tipo": "autor",
+      "nombre": "Lewis Henry Morgan",
+      "descripcion": "Etnólogo temprano mencionado por su contribución a la reformulación de la información etnográfica.",
+      "metadatos": "{\"id_gemini\": \"lewis_henry_morgan\"}",
+      "metadata": {
+        "id_gemini": "lewis_henry_morgan"
+      }
+    },
+    {
+      "id": 87,
+      "tipo": "escuela",
+      "nombre": "Völkerpsychologen alemanes",
+      "descripcion": "Corriente de pensamiento etnológico temprano en Alemania, reconocida por su análisis psicológico.",
+      "metadatos": "{\"id_gemini\": \"voelkerpsychologen\"}",
+      "metadata": {
+        "id_gemini": "voelkerpsychologen"
+      }
+    },
+    {
+      "id": 88,
+      "tipo": "concepto",
+      "nombre": "Etnografía",
+      "descripcion": "Según la definición de Malinowski, se refiere a los resultados empíricos y descriptivos de la ciencia del hombre.",
+      "metadatos": "{\"id_gemini\": \"etnografia\"}",
+      "metadata": {
+        "id_gemini": "etnografia"
+      }
+    },
+    {
+      "id": 89,
+      "tipo": "concepto",
+      "nombre": "Etnología",
+      "descripcion": "Según la definición de Malinowski, se refiere a las teorías especulativas y comparativas de la ciencia del hombre.",
+      "metadatos": "{\"id_gemini\": \"etnologia\"}",
+      "metadata": {
+        "id_gemini": "etnologia"
+      }
+    },
+    {
+      "id": 90,
+      "tipo": "concepto",
+      "nombre": "Animismo",
+      "descripcion": "Concepto que, según el texto, ha reemplazado a términos como 'fetichismo' y 'culto demoníaco' por ser más adecuado para comprender las creencias indígenas.",
+      "metadatos": "{\"id_gemini\": \"animismo\"}",
+      "metadata": {
+        "id_gemini": "animismo"
+      }
+    },
+    {
+      "id": 91,
+      "tipo": "concepto",
+      "nombre": "Fetichismo",
+      "descripcion": "Término antropológico antiguo, considerado por el autor como 'sin el menor sentido' y reemplazado por 'animismo'.",
+      "metadatos": "{\"id_gemini\": \"fetichismo\"}",
+      "metadata": {
+        "id_gemini": "fetichismo"
+      }
+    },
+    {
+      "id": 92,
+      "tipo": "concepto",
+      "nombre": "Culto demoníaco",
+      "descripcion": "Término antropológico antiguo, considerado por el autor como 'sin el menor sentido' y reemplazado por 'animismo'.",
+      "metadatos": "{\"id_gemini\": \"culto_demoniaco\"}",
+      "metadata": {
+        "id_gemini": "culto_demoniaco"
+      }
+    },
+    {
+      "id": 93,
+      "tipo": "concepto",
+      "nombre": "Sistemas clasificatorios de parentesco",
+      "descripcion": "Concepto clave que abrió el camino a las investigaciones modernas sobre sociología indígena, impulsadas por la Escuela de Cambridge.",
+      "metadatos": "{\"id_gemini\": \"sistemas_clasificatorios_parentesco\"}",
+      "metadata": {
+        "id_gemini": "sistemas_clasificatorios_parentesco"
+      }
+    },
+    {
+      "id": 94,
+      "tipo": "concepto",
+      "nombre": "Estructura social",
+      "descripcion": "Ideal primordial del trabajo etnográfico de campo, que busca dar un esquema claro y coherente de la organización de la vida tribal.",
+      "metadatos": "{\"id_gemini\": \"estructura_social\"}",
+      "metadata": {
+        "id_gemini": "estructura_social"
+      }
+    },
+    {
+      "id": 95,
+      "tipo": "autor",
+      "nombre": "Rev. C. W. Abel",
+      "descripcion": "Misionero de la London Missionary Society, citado por Malinowski como ejemplo de las 'versiones groseras y desfiguradas' de la vida indígena.",
+      "metadatos": "{\"id_gemini\": \"c_w_abel\"}",
+      "metadata": {
+        "id_gemini": "c_w_abel"
+      }
+    },
+    {
+      "id": 96,
+      "tipo": "obra",
+      "nombre": "Savage Life in New Guinea",
+      "descripcion": "Libro del Rev. C. W. Abel, mencionado por Malinowski como un ejemplo de perspectivas prejuiciosas sobre los indígenas.",
+      "metadatos": "{\"id_gemini\": \"savage_life_in_new_guinea\"}",
+      "metadata": {
+        "id_gemini": "savage_life_in_new_guinea"
+      }
     }
   ],
   "relaciones": [
@@ -965,6 +1115,214 @@
       "tipo": "relacionado_con",
       "peso": 0.6,
       "fuente": null
+    },
+    {
+      "id": 27,
+      "origen_id": 28,
+      "destino_id": 35,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 28,
+      "origen_id": 32,
+      "destino_id": 33,
+      "tipo": "colabora_con",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 29,
+      "origen_id": 32,
+      "destino_id": 34,
+      "tipo": "colabora_con",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 30,
+      "origen_id": 33,
+      "destino_id": 34,
+      "tipo": "colabora_con",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 31,
+      "origen_id": 31,
+      "destino_id": 68,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 32,
+      "origen_id": 43,
+      "destino_id": 44,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 33,
+      "origen_id": 45,
+      "destino_id": 46,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 34,
+      "origen_id": 29,
+      "destino_id": 28,
+      "tipo": "prologa_obra",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 35,
+      "origen_id": 29,
+      "destino_id": 48,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 36,
+      "origen_id": 49,
+      "destino_id": 69,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 37,
+      "origen_id": 50,
+      "destino_id": 30,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 38,
+      "origen_id": 58,
+      "destino_id": 59,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.1-26"
+    },
+    {
+      "id": 39,
+      "origen_id": 32,
+      "destino_id": 81,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 40,
+      "origen_id": 32,
+      "destino_id": 80,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 41,
+      "origen_id": 83,
+      "destino_id": 76,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 42,
+      "origen_id": 33,
+      "destino_id": 83,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 43,
+      "origen_id": 34,
+      "destino_id": 83,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 44,
+      "origen_id": 32,
+      "destino_id": 83,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 45,
+      "origen_id": 85,
+      "destino_id": 89,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 46,
+      "origen_id": 39,
+      "destino_id": 89,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 47,
+      "origen_id": 86,
+      "destino_id": 89,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 48,
+      "origen_id": 87,
+      "destino_id": 89,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 49,
+      "origen_id": 90,
+      "destino_id": 91,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 50,
+      "origen_id": 90,
+      "destino_id": 92,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 51,
+      "origen_id": 83,
+      "destino_id": 93,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 52,
+      "origen_id": 95,
+      "destino_id": 96,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "argonautas.pdf, p.27-41"
     }
   ]
 }
