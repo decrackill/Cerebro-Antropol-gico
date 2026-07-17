@@ -1,0 +1,20 @@
+{
+  "name": "cerebro-antropologico",
+  "version": "1.0.0",
+  "description": "Grafo de conocimiento interactivo de antropología",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "db": "python3 scripts/init_db.py"
+  },
+  "dependencies": {
+    "cytoscape": "^3.30.0",
+    "cytoscape-fcose": "^2.2.0",
+    "sql.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}

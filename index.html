@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cerebro Antropológico</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Cerebro Antropológico</h1>
+    <div id="filtros">
+      <button data-tipo="todos" class="activo">Todos</button>
+      <button data-tipo="autor">Autores</button>
+      <button data-tipo="obra">Obras</button>
+      <button data-tipo="concepto">Conceptos</button>
+      <button data-tipo="escuela">Escuelas</button>
+      <button data-tipo="cultura">Culturas</button>
+      <button data-tipo="debate">Debates</button>
+    </div>
+    <input type="text" id="buscar" placeholder="Buscar nodo..." />
+  </header>
+  <main>
+    <div id="grafo"></div>
+    <div id="leyenda">
+      <div><span class="punto" style="background:#D85A30"></span>Autor</div>
+      <div><span class="punto" style="background:#1D9E75"></span>Obra</div>
+      <div><span class="punto" style="background:#7F77DD"></span>Concepto</div>
+      <div><span class="punto" style="background:#BA7517"></span>Escuela</div>
+      <div><span class="punto" style="background:#639922"></span>Cultura</div>
+      <div><span class="punto" style="background:#D4537E"></span>Debate</div>
+    </div>
+    <aside id="panel" class="oculto">
+      <button id="cerrar-panel">&times;</button>
+      <h2 id="panel-titulo"></h2>
+      <p id="panel-tipo"></p>
+      <p id="panel-desc"></p>
+      <h3>Relaciones</h3>
+      <ul id="panel-relaciones"></ul>
+    </aside>
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

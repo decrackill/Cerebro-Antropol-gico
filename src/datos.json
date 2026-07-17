@@ -1,0 +1,430 @@
+{
+  "nodos": [
+    {
+      "id": 1,
+      "tipo": "autor",
+      "nombre": "Claude Lévi-Strauss",
+      "descripcion": "Estructuralismo, antropología simbólica",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 2,
+      "tipo": "autor",
+      "nombre": "Franz Boas",
+      "descripcion": "Padre de la antropología moderna",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 3,
+      "tipo": "autor",
+      "nombre": "Bronisław Malinowski",
+      "descripcion": "Funcionalismo, método etnográfico",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 4,
+      "tipo": "autor",
+      "nombre": "Marvin Harris",
+      "descripcion": "Materialismo cultural",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 5,
+      "tipo": "autor",
+      "nombre": "Clifford Geertz",
+      "descripcion": "Interpretación simbólica",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 6,
+      "tipo": "autor",
+      "nombre": "Pierre Bourdieu",
+      "descripcion": "Habitus, campo, capital simbólico",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 7,
+      "tipo": "libro",
+      "nombre": "Tristes Trópicos",
+      "descripcion": "1955",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 8,
+      "tipo": "libro",
+      "nombre": "Las Estructuras Elementales del Parentesco",
+      "descripcion": "1949",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 9,
+      "tipo": "libro",
+      "nombre": "Método de la Etnografía",
+      "descripcion": "1922",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 10,
+      "tipo": "libro",
+      "nombre": "La Estructura del Acto Humano",
+      "descripcion": "1942",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 11,
+      "tipo": "libro",
+      "nombre": "Cannibalism and Culture",
+      "descripcion": "1985",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 12,
+      "tipo": "libro",
+      "nombre": "La Interpretación de las Culturas",
+      "descripcion": "1973",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 13,
+      "tipo": "libro",
+      "nombre": "La Distinción",
+      "descripcion": "1979",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 14,
+      "tipo": "libro",
+      "nombre": "Antropología Estructural",
+      "descripcion": "1958",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 15,
+      "tipo": "concepto",
+      "nombre": "Estructuralismo",
+      "descripcion": "Enfoque que busca estructuras subyacentes",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 16,
+      "tipo": "concepto",
+      "nombre": "Funcionalismo",
+      "descripcion": "Las partes sociales cumplen funciones",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 17,
+      "tipo": "concepto",
+      "nombre": "Materialismo cultural",
+      "descripcion": "El ambiente y tecnología moldean la cultura",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 18,
+      "tipo": "concepto",
+      "nombre": "Interpretativismo",
+      "descripcion": "Cultura como sistema de significados",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 19,
+      "tipo": "concepto",
+      "nombre": "Habitus",
+      "descripcion": "Disposiciones incorporadas por socialización",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 20,
+      "tipo": "concepto",
+      "nombre": "Endocanibalismo",
+      "descripcion": "Consumo ritual de los muertos de la propia comunidad",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 21,
+      "tipo": "concepto",
+      "nombre": "Exocanibalismo",
+      "descripcion": "Consumo ritual de enemigos",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 22,
+      "tipo": "concepto",
+      "nombre": "Kinship",
+      "descripcion": "Sistema de parentesco",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 23,
+      "tipo": "concepto",
+      "nombre": "Thick description",
+      "descripcion": "Descripción densa del contexto cultural",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 24,
+      "tipo": "corriente",
+      "nombre": "Escuela del Estructuralismo",
+      "descripcion": "Corriente de Lévi-Strauss",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 25,
+      "tipo": "corriente",
+      "nombre": "Escuela de Chicago",
+      "descripcion": "Boas, antropología cultural",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 26,
+      "tipo": "corriente",
+      "nombre": "Funcionalismo social",
+      "descripcion": "Malinowski, Radcliffe-Brown",
+      "metadatos": null,
+      "metadata": {}
+    },
+    {
+      "id": 27,
+      "tipo": "corriente",
+      "nombre": "Corriente materialista cultural",
+      "descripcion": "Harris, ecología cultural",
+      "metadatos": null,
+      "metadata": {}
+    }
+  ],
+  "relaciones": [
+    {
+      "id": 1,
+      "origen_id": 1,
+      "destino_id": 7,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 2,
+      "origen_id": 1,
+      "destino_id": 8,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 3,
+      "origen_id": 1,
+      "destino_id": 14,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 4,
+      "origen_id": 3,
+      "destino_id": 9,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 5,
+      "origen_id": 4,
+      "destino_id": 11,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 6,
+      "origen_id": 5,
+      "destino_id": 12,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 7,
+      "origen_id": 6,
+      "destino_id": 13,
+      "tipo": "escribió",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 8,
+      "origen_id": 14,
+      "destino_id": 15,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 9,
+      "origen_id": 9,
+      "destino_id": 16,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 10,
+      "origen_id": 11,
+      "destino_id": 17,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 11,
+      "origen_id": 12,
+      "destino_id": 18,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 12,
+      "origen_id": 12,
+      "destino_id": 23,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 13,
+      "origen_id": 13,
+      "destino_id": 19,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 14,
+      "origen_id": 7,
+      "destino_id": 20,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 15,
+      "origen_id": 8,
+      "destino_id": 22,
+      "tipo": "trata_de",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 16,
+      "origen_id": 1,
+      "destino_id": 24,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 17,
+      "origen_id": 3,
+      "destino_id": 26,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 18,
+      "origen_id": 4,
+      "destino_id": 27,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 19,
+      "origen_id": 2,
+      "destino_id": 25,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 20,
+      "origen_id": 2,
+      "destino_id": 1,
+      "tipo": "influyó_en",
+      "peso": 0.8,
+      "fuente": null
+    },
+    {
+      "id": 21,
+      "origen_id": 2,
+      "destino_id": 3,
+      "tipo": "influyó_en",
+      "peso": 0.8,
+      "fuente": null
+    },
+    {
+      "id": 22,
+      "origen_id": 1,
+      "destino_id": 5,
+      "tipo": "influyó_en",
+      "peso": 0.8,
+      "fuente": null
+    },
+    {
+      "id": 23,
+      "origen_id": 3,
+      "destino_id": 4,
+      "tipo": "influyó_en",
+      "peso": 0.8,
+      "fuente": null
+    },
+    {
+      "id": 24,
+      "origen_id": 20,
+      "destino_id": 21,
+      "tipo": "relacionado_con",
+      "peso": 0.6,
+      "fuente": null
+    },
+    {
+      "id": 25,
+      "origen_id": 15,
+      "destino_id": 22,
+      "tipo": "relacionado_con",
+      "peso": 0.6,
+      "fuente": null
+    },
+    {
+      "id": 26,
+      "origen_id": 16,
+      "destino_id": 23,
+      "tipo": "relacionado_con",
+      "peso": 0.6,
+      "fuente": null
+    }
+  ]
+}
