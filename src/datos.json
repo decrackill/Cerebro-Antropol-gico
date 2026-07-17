@@ -215,6 +215,546 @@
       "descripcion": "Harris, ecología cultural",
       "metadatos": null,
       "metadata": {}
+    },
+    {
+      "id": 28,
+      "tipo": "obra",
+      "nombre": "Los argonautas del Pacífico occidental",
+      "descripcion": "Obra central de Bronisław Malinowski, fundamental para la ciencia antropológica moderna y un modelo metodológico, basada en su trabajo de campo en las islas Trobriand.",
+      "metadatos": "{\"id_gemini\": \"los_argonautas_del_pacifico_occidental\"}",
+      "metadata": {
+        "id_gemini": "los_argonautas_del_pacifico_occidental"
+      }
+    },
+    {
+      "id": 29,
+      "tipo": "autor",
+      "nombre": "James G. Frazer",
+      "descripcion": "Antropólogo que escribió el prólogo de 'Los argonautas del Pacífico occidental' de Malinowski y autor de 'La rama dorada'.",
+      "metadatos": "{\"id_gemini\": \"james_g_frazer\"}",
+      "metadata": {
+        "id_gemini": "james_g_frazer"
+      }
+    },
+    {
+      "id": 30,
+      "tipo": "cultura",
+      "nombre": "Mailu",
+      "descripcion": "Pueblo indígena de Nueva Guinea entre el cual Bronisław Malinowski realizó su primer trabajo de campo.",
+      "metadatos": "{\"id_gemini\": \"mailu\"}",
+      "metadata": {
+        "id_gemini": "mailu"
+      }
+    },
+    {
+      "id": 31,
+      "tipo": "cultura",
+      "nombre": "Trobriand",
+      "descripcion": "Archipiélago de la Melanesia donde Bronisław Malinowski realizó su investigación más importante y el estudio central de 'Los argonautas del Pacífico occidental'.",
+      "metadatos": "{\"id_gemini\": \"trobriand\"}",
+      "metadata": {
+        "id_gemini": "trobriand"
+      }
+    },
+    {
+      "id": 32,
+      "tipo": "autor",
+      "nombre": "C. G. Seligman",
+      "descripcion": "Maestro y amigo de Bronisław Malinowski, y participante en una expedición etnográfica por el estrecho de Torres y Nueva Guinea en 1898.",
+      "metadatos": "{\"id_gemini\": \"c_g_seligman\"}",
+      "metadata": {
+        "id_gemini": "c_g_seligman"
+      }
+    },
+    {
+      "id": 33,
+      "tipo": "autor",
+      "nombre": "A. C. Haddon",
+      "descripcion": "Antropólogo que participó en la expedición de 1898 al estrecho de Torres y Nueva Guinea.",
+      "metadatos": "{\"id_gemini\": \"a_c_haddon\"}",
+      "metadata": {
+        "id_gemini": "a_c_haddon"
+      }
+    },
+    {
+      "id": 34,
+      "tipo": "autor",
+      "nombre": "W. H. R. Rivers",
+      "descripcion": "Antropólogo que participó en la expedición de 1898 al estrecho de Torres y Nueva Guinea.",
+      "metadatos": "{\"id_gemini\": \"w_h_r_rivers\"}",
+      "metadata": {
+        "id_gemini": "w_h_r_rivers"
+      }
+    },
+    {
+      "id": 35,
+      "tipo": "concepto",
+      "nombre": "Trabajo de campo",
+      "descripcion": "Metodología antropológica que implica la inmersión del investigador en la vida de la comunidad estudiada, incluyendo la convivencia y el aprendizaje del idioma nativo.",
+      "metadatos": "{\"id_gemini\": \"trabajo_de_campo\"}",
+      "metadata": {
+        "id_gemini": "trabajo_de_campo"
+      }
+    },
+    {
+      "id": 36,
+      "tipo": "concepto",
+      "nombre": "Visión eurocentrista",
+      "descripcion": "Perspectiva del siglo XIX que consideraba a las culturas primitivas como inferiores al hombre occidental, criticada por Malinowski.",
+      "metadatos": "{\"id_gemini\": \"vision_eurocentrista\"}",
+      "metadata": {
+        "id_gemini": "vision_eurocentrista"
+      }
+    },
+    {
+      "id": 37,
+      "tipo": "concepto",
+      "nombre": "Sociedades «frías» y «calientes»",
+      "descripcion": "Clasificación propuesta por Lévi-Strauss para distinguir sociedades que no optaron por una línea de desarrollo ascendente de las que han entrado en la 'historia'.",
+      "metadatos": "{\"id_gemini\": \"sociedades_frias_y_calientes\"}",
+      "metadata": {
+        "id_gemini": "sociedades_frias_y_calientes"
+      }
+    },
+    {
+      "id": 38,
+      "tipo": "concepto",
+      "nombre": "Economía primitiva",
+      "descripcion": "Tipo de economía estudiada por Malinowski en las Trobriand, donde intervienen factores mágicos y de prestigio además de los puramente utilitarios.",
+      "metadatos": "{\"id_gemini\": \"economia_primitiva\"}",
+      "metadata": {
+        "id_gemini": "economia_primitiva"
+      }
+    },
+    {
+      "id": 39,
+      "tipo": "autor",
+      "nombre": "Tylor",
+      "descripcion": "Antropólogo que ensayó definiciones de la cultura entendida como una totalidad interdependiente, antecedente del funcionalismo.",
+      "metadatos": "{\"id_gemini\": \"tylor\"}",
+      "metadata": {
+        "id_gemini": "tylor"
+      }
+    },
+    {
+      "id": 40,
+      "tipo": "escuela",
+      "nombre": "Escuela de sociología francesa",
+      "descripcion": "Corriente de pensamiento que influenció a Malinowski, de la que recogió la idea de estudiar la sociedad sincrónicamente y la noción de hecho social.",
+      "metadatos": "{\"id_gemini\": \"escuela_de_sociologia_francesa\"}",
+      "metadata": {
+        "id_gemini": "escuela_de_sociologia_francesa"
+      }
+    },
+    {
+      "id": 41,
+      "tipo": "concepto",
+      "nombre": "Nivel sincrónico",
+      "descripcion": "Concepto de la escuela de sociología francesa que implica estudiar la sociedad tal como se presenta contemporáneamente, sin atender a su evolución histórica.",
+      "metadatos": "{\"id_gemini\": \"nivel_sincronico\"}",
+      "metadata": {
+        "id_gemini": "nivel_sincronico"
+      }
+    },
+    {
+      "id": 42,
+      "tipo": "concepto",
+      "nombre": "Hecho social",
+      "descripcion": "Categoría irreductible a las instancias individuales, incorporada por Malinowski de la sociología francesa.",
+      "metadatos": "{\"id_gemini\": \"hecho_social\"}",
+      "metadata": {
+        "id_gemini": "hecho_social"
+      }
+    },
+    {
+      "id": 43,
+      "tipo": "autor",
+      "nombre": "Marcel Mauss",
+      "descripcion": "Autor de la escuela de sociología francesa, asociado con la 'idea de totalidad'.",
+      "metadatos": "{\"id_gemini\": \"marcel_mauss\"}",
+      "metadata": {
+        "id_gemini": "marcel_mauss"
+      }
+    },
+    {
+      "id": 44,
+      "tipo": "concepto",
+      "nombre": "Idea de totalidad",
+      "descripcion": "Concepto central en la obra de Marcel Mauss, que Malinowski incorporó de la sociología francesa.",
+      "metadatos": "{\"id_gemini\": \"idea_de_totalidad\"}",
+      "metadata": {
+        "id_gemini": "idea_de_totalidad"
+      }
+    },
+    {
+      "id": 45,
+      "tipo": "autor",
+      "nombre": "Émile Durkheim",
+      "descripcion": "Sociólogo francés que desarrolló la noción de funcionalidad a partir de Herbert Spencer.",
+      "metadatos": "{\"id_gemini\": \"emile_durkheim\"}",
+      "metadata": {
+        "id_gemini": "emile_durkheim"
+      }
+    },
+    {
+      "id": 46,
+      "tipo": "autor",
+      "nombre": "Herbert Spencer",
+      "descripcion": "Sociólogo británico a partir de quien Émile Durkheim desarrolló la noción de funcionalidad.",
+      "metadatos": "{\"id_gemini\": \"herbert_spencer\"}",
+      "metadata": {
+        "id_gemini": "herbert_spencer"
+      }
+    },
+    {
+      "id": 47,
+      "tipo": "concepto",
+      "nombre": "Participación etnográfica",
+      "descripcion": "Condición indispensable para el trabajo antropológico, que implica la inmersión y vivencia del investigador en la cultura estudiada.",
+      "metadatos": "{\"id_gemini\": \"participacion_etnografica\"}",
+      "metadata": {
+        "id_gemini": "participacion_etnografica"
+      }
+    },
+    {
+      "id": 48,
+      "tipo": "obra",
+      "nombre": "La rama dorada",
+      "descripcion": "Obra de James G. Frazer que despertó la pasión de Bronisław Malinowski por la antropología.",
+      "metadatos": "{\"id_gemini\": \"la_rama_dorada\"}",
+      "metadata": {
+        "id_gemini": "la_rama_dorada"
+      }
+    },
+    {
+      "id": 49,
+      "tipo": "obra",
+      "nombre": "La familia entre los aborígenes australianos",
+      "descripcion": "Primera obra importante de Bronisław Malinowski, publicada en 1913, sobre los aborígenes de Australia.",
+      "metadatos": "{\"id_gemini\": \"la_familia_entre_los_aborigenes_australianos\"}",
+      "metadata": {
+        "id_gemini": "la_familia_entre_los_aborigenes_australianos"
+      }
+    },
+    {
+      "id": 50,
+      "tipo": "obra",
+      "nombre": "Los indígenas de Mailu",
+      "descripcion": "Trabajo de campo de Bronisław Malinowski de 1914, publicado en 1916, sobre los indígenas de Mailu.",
+      "metadatos": "{\"id_gemini\": \"los_indigenas_de_mailu\"}",
+      "metadata": {
+        "id_gemini": "los_indigenas_de_mailu"
+      }
+    },
+    {
+      "id": 51,
+      "tipo": "obra",
+      "nombre": "El mito en la psicología primitiva",
+      "descripcion": "Obra de Bronisław Malinowski publicada en 1926.",
+      "metadatos": "{\"id_gemini\": \"el_mito_en_la_psicologia_primitiva\"}",
+      "metadata": {
+        "id_gemini": "el_mito_en_la_psicologia_primitiva"
+      }
+    },
+    {
+      "id": 52,
+      "tipo": "obra",
+      "nombre": "Crimen y costumbre en la sociedad salvaje",
+      "descripcion": "Obra de Bronisław Malinowski publicada en 1926.",
+      "metadatos": "{\"id_gemini\": \"crimen_y_costumbre_en_la_sociedad_salvaje\"}",
+      "metadata": {
+        "id_gemini": "crimen_y_costumbre_en_la_sociedad_salvaje"
+      }
+    },
+    {
+      "id": 53,
+      "tipo": "obra",
+      "nombre": "El padre en la psicología primitiva",
+      "descripcion": "Obra de Bronisław Malinowski publicada en 1927.",
+      "metadatos": "{\"id_gemini\": \"el_padre_en_la_psicologia_primitiva\"}",
+      "metadata": {
+        "id_gemini": "el_padre_en_la_psicologia_primitiva"
+      }
+    },
+    {
+      "id": 54,
+      "tipo": "obra",
+      "nombre": "Sexo y represión en la sociedad salvaje",
+      "descripcion": "Obra de Bronisław Malinowski publicada en 1927.",
+      "metadatos": "{\"id_gemini\": \"sexo_y_represion_en_la_sociedad_salvaje\"}",
+      "metadata": {
+        "id_gemini": "sexo_y_represion_en_la_sociedad_salvaje"
+      }
+    },
+    {
+      "id": 55,
+      "tipo": "obra",
+      "nombre": "La vida sexual de los salvajes del Noroeste de la Melanesia",
+      "descripcion": "Obra de Bronisław Malinowski publicada en 1929.",
+      "metadatos": "{\"id_gemini\": \"la_vida_sexual_de_los_salvajes_del_noroeste_de_la_melanesia\"}",
+      "metadata": {
+        "id_gemini": "la_vida_sexual_de_los_salvajes_del_noroeste_de_la_melanesia"
+      }
+    },
+    {
+      "id": 56,
+      "tipo": "obra",
+      "nombre": "«Cultura» (artículo de Malinowski)",
+      "descripcion": "Artículo donde Bronisław Malinowski presentó una primera articulación de su pensamiento teórico, publicado en la 'Encyclopaedia of the Social Sciences' en 1931.",
+      "metadatos": "{\"id_gemini\": \"articulo_cultura_malinowski\"}",
+      "metadata": {
+        "id_gemini": "articulo_cultura_malinowski"
+      }
+    },
+    {
+      "id": 57,
+      "tipo": "obra",
+      "nombre": "Los jardines del Coral y su magia",
+      "descripcion": "Obra de Bronisław Malinowski publicada en 1935.",
+      "metadatos": "{\"id_gemini\": \"los_jardines_del_coral_y_su_magia\"}",
+      "metadata": {
+        "id_gemini": "los_jardines_del_coral_y_su_magia"
+      }
+    },
+    {
+      "id": 58,
+      "tipo": "autor",
+      "nombre": "Jomo Kenyatta",
+      "descripcion": "Autor de 'Frente al monte Kenya', cuya obra fue prologada por Bronisław Malinowski en 1938.",
+      "metadatos": "{\"id_gemini\": \"jomo_kenyatta\"}",
+      "metadata": {
+        "id_gemini": "jomo_kenyatta"
+      }
+    },
+    {
+      "id": 59,
+      "tipo": "obra",
+      "nombre": "Frente al monte Kenya",
+      "descripcion": "Obra de Jomo Kenyatta, prologada por Bronisław Malinowski.",
+      "metadatos": "{\"id_gemini\": \"frente_al_monte_kenya\"}",
+      "metadata": {
+        "id_gemini": "frente_al_monte_kenya"
+      }
+    },
+    {
+      "id": 60,
+      "tipo": "obra",
+      "nombre": "Una teoría científica de la cultura",
+      "descripcion": "Obra teórica más importante de Bronisław Malinowski, editada póstumamente en 1944 por Valetta Swann.",
+      "metadatos": "{\"id_gemini\": \"una_teoria_cientifica_de_la_cultura\"}",
+      "metadata": {
+        "id_gemini": "una_teoria_cientifica_de_la_cultura"
+      }
+    },
+    {
+      "id": 61,
+      "tipo": "obra",
+      "nombre": "Libertad y civilización",
+      "descripcion": "Obra de Bronisław Malinowski editada póstumamente en 1944 por Valetta Swann.",
+      "metadatos": "{\"id_gemini\": \"libertad_y_civilizacion\"}",
+      "metadata": {
+        "id_gemini": "libertad_y_civilizacion"
+      }
+    },
+    {
+      "id": 62,
+      "tipo": "obra",
+      "nombre": "Dinámica del cambio de la cultura",
+      "descripcion": "Obra de Bronisław Malinowski publicada póstumamente en 1945.",
+      "metadatos": "{\"id_gemini\": \"dinamica_del_cambio_de_la_cultura\"}",
+      "metadata": {
+        "id_gemini": "dinamica_del_cambio_de_la_cultura"
+      }
+    },
+    {
+      "id": 63,
+      "tipo": "obra",
+      "nombre": "Magia, ciencia y religión",
+      "descripcion": "Conjunto de ensayos de Bronisław Malinowski publicado póstumamente en 1948.",
+      "metadatos": "{\"id_gemini\": \"magia_ciencia_y_religion\"}",
+      "metadata": {
+        "id_gemini": "magia_ciencia_y_religion"
+      }
+    },
+    {
+      "id": 64,
+      "tipo": "obra",
+      "nombre": "Un diario en el sentido estricto del término",
+      "descripcion": "Diarios personales de Bronisław Malinowski escritos en polaco durante sus estancias en las Trobriand, editados póstumamente en 1967.",
+      "metadatos": "{\"id_gemini\": \"un_diario_en_el_sentido_estricto_del_termino\"}",
+      "metadata": {
+        "id_gemini": "un_diario_en_el_sentido_estricto_del_termino"
+      }
+    },
+    {
+      "id": 65,
+      "tipo": "cultura",
+      "nombre": "Esquimales",
+      "descripcion": "Pueblo indígena estudiado in situ por Franz Boas en la última década del siglo XIX.",
+      "metadatos": "{\"id_gemini\": \"esquimales\"}",
+      "metadata": {
+        "id_gemini": "esquimales"
+      }
+    },
+    {
+      "id": 66,
+      "tipo": "cultura",
+      "nombre": "Aborígenes del Nordeste asiático",
+      "descripcion": "Grupo cultural estudiado en la expedición Jesup North Pacific junto con los de Norteamérica.",
+      "metadatos": "{\"id_gemini\": \"aborigenes_del_nordeste_asiatico\"}",
+      "metadata": {
+        "id_gemini": "aborigenes_del_nordeste_asiatico"
+      }
+    },
+    {
+      "id": 67,
+      "tipo": "cultura",
+      "nombre": "Norteamérica",
+      "descripcion": "Región con pueblos aborígenes cuyas relaciones con los del Nordeste asiático fueron estudiadas por la expedición Jesup North Pacific.",
+      "metadatos": "{\"id_gemini\": \"norteamerica\"}",
+      "metadata": {
+        "id_gemini": "norteamerica"
+      }
+    },
+    {
+      "id": 68,
+      "tipo": "cultura",
+      "nombre": "Culturas melanesias",
+      "descripcion": "Culturas de la Melanesia, como las de las islas Trobriand, que participaban en el comercio Kula.",
+      "metadatos": "{\"id_gemini\": \"culturas_melanesias\"}",
+      "metadata": {
+        "id_gemini": "culturas_melanesias"
+      }
+    },
+    {
+      "id": 69,
+      "tipo": "cultura",
+      "nombre": "Aborígenes australianos",
+      "descripcion": "Pueblo estudiado por Bronisław Malinowski en su obra 'La familia entre los aborígenes australianos'.",
+      "metadatos": "{\"id_gemini\": \"aborigenes_australianos\"}",
+      "metadata": {
+        "id_gemini": "aborigenes_australianos"
+      }
+    },
+    {
+      "id": 70,
+      "tipo": "concepto",
+      "nombre": "Magia",
+      "descripcion": "Poder imaginario de controlar las fuerzas de la Naturaleza, considerado por los trobriandeses como esencial para sus actividades económicas y comunitarias.",
+      "metadatos": "{\"id_gemini\": \"magia\"}",
+      "metadata": {
+        "id_gemini": "magia"
+      }
+    },
+    {
+      "id": 71,
+      "tipo": "concepto",
+      "nombre": "Religión",
+      "descripcion": "Sistema de creencias, en el contexto del texto, se compara con la magia y su influencia en la vida de los trobriandeses.",
+      "metadatos": "{\"id_gemini\": \"religion\"}",
+      "metadata": {
+        "id_gemini": "religion"
+      }
+    },
+    {
+      "id": 72,
+      "tipo": "concepto",
+      "nombre": "Hombre Económico Primitivo",
+      "descripcion": "Concepción habitual de un agente que actúa únicamente por lucro y cálculo utilitario, criticada por Malinowski en su estudio del Kula.",
+      "metadatos": "{\"id_gemini\": \"hombre_economico_primitivo\"}",
+      "metadata": {
+        "id_gemini": "hombre_economico_primitivo"
+      }
+    },
+    {
+      "id": 73,
+      "tipo": "cultura",
+      "nombre": "Pueblos africanos",
+      "descripcion": "Culturas que Bronisław Malinowski estudió y por las que mostró interés en los años previos a 1938.",
+      "metadatos": "{\"id_gemini\": \"pueblos_africanos\"}",
+      "metadata": {
+        "id_gemini": "pueblos_africanos"
+      }
+    },
+    {
+      "id": 74,
+      "tipo": "cultura",
+      "nombre": "Culturas americanas primitivas",
+      "descripcion": "Grupo de culturas por las que Bronisław Malinowski se interesó y sobre las que impartió un curso en la Universidad de Cornell.",
+      "metadatos": "{\"id_gemini\": \"culturas_americanas_primitivas\"}",
+      "metadata": {
+        "id_gemini": "culturas_americanas_primitivas"
+      }
+    },
+    {
+      "id": 75,
+      "tipo": "concepto",
+      "nombre": "Holismo",
+      "descripcion": "Principio metodológico que exige tratar con la totalidad de los aspectos sociales, culturales y psicológicos de una comunidad, considerando que están entrelazados y son interdependientes.",
+      "metadatos": "{\"id_gemini\": \"holismo\"}",
+      "metadata": {
+        "id_gemini": "holismo"
+      }
+    },
+    {
+      "id": 76,
+      "tipo": "concepto",
+      "nombre": "Método etnográfico",
+      "descripcion": "Conjunto de normas y criterios para la investigación de campo en antropología, que busca diferenciar observación directa de las deducciones del autor y dar cuenta clara de las condiciones de la investigación.",
+      "metadatos": "{\"id_gemini\": \"metodo_etnografico\"}",
+      "metadata": {
+        "id_gemini": "metodo_etnografico"
+      }
+    },
+    {
+      "id": 77,
+      "tipo": "cultura",
+      "nombre": "Papúe-melanesios",
+      "descripcion": "Poblaciones costeras de las islas del mar del Sur y Nueva Guinea, descritos como expertos navegantes, artesanos y comerciantes.",
+      "metadatos": "{\"id_gemini\": \"papue_melanesios\"}",
+      "metadata": {
+        "id_gemini": "papue_melanesios"
+      }
+    },
+    {
+      "id": 78,
+      "tipo": "cultura",
+      "nombre": "Motu",
+      "descripcion": "Tribu de Port Moresby, navegantes que realizaban expediciones comerciales intertribales (hiri) en canoas lakatoi.",
+      "metadatos": "{\"id_gemini\": \"motu\"}",
+      "metadata": {
+        "id_gemini": "motu"
+      }
+    },
+    {
+      "id": 79,
+      "tipo": "cultura",
+      "nombre": "Tribus del golfo de Papua",
+      "descripcion": "Tribus que comerciaban con los Motu, intercambiando sagú y canoas por alfarería y ornamentos de concha.",
+      "metadatos": "{\"id_gemini\": \"tribus_del_golfo_de_papua\"}",
+      "metadata": {
+        "id_gemini": "tribus_del_golfo_de_papua"
+      }
+    },
+    {
+      "id": 80,
+      "tipo": "concepto",
+      "nombre": "Hiri",
+      "descripcion": "Expediciones comerciales intertribales específicas realizadas por los Motu con las tribus del golfo de Papua.",
+      "metadatos": "{\"id_gemini\": \"hiri\"}",
+      "metadata": {
+        "id_gemini": "hiri"
+      }
+    },
+    {
+      "id": 81,
+      "tipo": "cultura",
+      "nombre": "Massim meridionales",
+      "descripcion": "Indígenas de islas del extremo oriental de Nueva Guinea, cuyas rutas comerciales fueron estudiadas por C. G. Seligman.",
+      "metadatos": "{\"id_gemini\": \"massim_meridionales\"}",
+      "metadata": {
+        "id_gemini": "massim_meridionales"
+      }
     }
   ],
   "relaciones": [
