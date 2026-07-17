@@ -1723,6 +1723,126 @@
       "tipo": "desarrolla_concepto",
       "peso": 1.0,
       "fuente": "argonautas.pdf, p.27-41"
+    },
+    {
+      "id": 103,
+      "origen_id": 3,
+      "destino_id": 38,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "Malinowski critica la noción de economía primitiva en Los Argonautas"
+    },
+    {
+      "id": 104,
+      "origen_id": 43,
+      "destino_id": 38,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "Mauss desarrolla la crítica a la economía primitiva en Ensayo sobre el don"
+    },
+    {
+      "id": 105,
+      "origen_id": 84,
+      "destino_id": 68,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "Lengua de contacto usada en las islas melanesias"
+    },
+    {
+      "id": 106,
+      "origen_id": 3,
+      "destino_id": 78,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "Malinowski estudió brevemente a los Motu antes de ir a Trobriand"
+    },
+    {
+      "id": 107,
+      "origen_id": 3,
+      "destino_id": 77,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "Malinowski realizó trabajo de campo entre los papúe-melanesios"
+    },
+    {
+      "id": 108,
+      "origen_id": 3,
+      "destino_id": 79,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "Malinowski estudió tribus del golfo de Papua en su primer trabajo de campo"
+    },
+    {
+      "id": 109,
+      "origen_id": 43,
+      "destino_id": 10,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "Mauss es autor de La Estructura del Acto Humano"
+    },
+    {
+      "id": 110,
+      "origen_id": 32,
+      "destino_id": 82,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "Seligman es autor de Melanesians of British New Guinea"
+    },
+    {
+      "id": 111,
+      "origen_id": 80,
+      "destino_id": 28,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "El Hiri es un sistema de comercio ceremonial mencionado en Los Argonautas"
+    },
+    {
+      "id": 112,
+      "origen_id": 70,
+      "destino_id": 35,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "La magia es parte central del trabajo de campo de Malinowski"
+    },
+    {
+      "id": 113,
+      "origen_id": 88,
+      "destino_id": 89,
+      "tipo": "precursor_de",
+      "peso": 1.0,
+      "fuente": "La etnografía es la práctica empírica que precede a la etnología"
+    },
+    {
+      "id": 114,
+      "origen_id": 75,
+      "destino_id": 76,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "El holismo es un principio fundamental del método etnográfico"
+    },
+    {
+      "id": 115,
+      "origen_id": 47,
+      "destino_id": 76,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "La participación etnográfica es una técnica del método etnográfico"
+    },
+    {
+      "id": 116,
+      "origen_id": 94,
+      "destino_id": 93,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "La estructura social se organiza a través de los sistemas de parentesco"
+    },
+    {
+      "id": 117,
+      "origen_id": 20,
+      "destino_id": 21,
+      "tipo": "relacionado_con",
+      "peso": 1.0,
+      "fuente": "Endocanibalismo y exocanibalismo son formas opuestas de la práctica caníbal"
     }
   ]
 }
