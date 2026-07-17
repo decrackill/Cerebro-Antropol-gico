@@ -70,6 +70,17 @@ REGLAS PARA IDs NUEVOS:
 - Formato: minúsculas, sin tildes, sin espacios (usa guion bajo). Ej: "levi_strauss"
 - Si el nodo ya existe en la lista de arriba, usa exactamente ese id — no generes uno nuevo.
 
+FORMATO OBLIGATORIO PARA IDs EN RELACIONES (muy importante, fuente de errores pasados):
+- CUALQUIER id que uses en "origen" o "destino" de una relación — sea de un nodo
+  YA EXISTENTE (numérico) o de un nodo NUEVO de esta misma respuesta (snake_case) —
+  SIEMPRE debe ir como STRING entre comillas en el JSON. Nunca como número JSON puro.
+  Correcto:   "origen": "3"
+  Incorrecto: "origen": 3
+- Antes de escribir cada relación, verifica: ¿el id que puse en "origen"/"destino"
+  aparece EXACTAMENTE en la lista de "NODOS QUE YA EXISTEN" de arriba, o en tu propio
+  array "nodos_nuevos" de esta respuesta? Si no aparece en ninguno de los dos lugares,
+  NO generes esa relación — sería una referencia a un nodo fantasma.
+
 ESQUEMA DE SALIDA — devuelve ÚNICAMENTE este JSON, sin texto adicional ni markdown:
 {{
   "nodos_nuevos": [
@@ -84,8 +95,8 @@ ESQUEMA DE SALIDA — devuelve ÚNICAMENTE este JSON, sin texto adicional ni mar
   ],
   "relaciones_nuevas": [
     {{
-      "origen": "id del nodo origen (existente o de nodos_nuevos)",
-      "destino": "id del nodo destino (existente o de nodos_nuevos)",
+      "origen": "string — SIEMPRE entre comillas, id del nodo origen (existente o de nodos_nuevos)",
+      "destino": "string — SIEMPRE entre comillas, id del nodo destino (existente o de nodos_nuevos)",
       "tipo": "uno de los tipos de relación válidos",
       "nota": "string breve, contexto de la relación",
       "cita_textual": "string — el fragmento exacto del texto que justifica esto",

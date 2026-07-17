@@ -91,7 +91,7 @@ def normalizar_tipos(resultado):
     return resultado
 
 
-def procesar_chunk(texto_chunk, nodos_existentes, nodos_nuevos_acumulados):
+def procesar_chunk(texto_chunk, nodos_existentes, nodos_nuevos_acumulados, log_fallos, indice_chunk):
     catalogo_completo = nodos_existentes + [
         {"id": n["id"], "tipo": n["tipo"], "nombre": n["nombre"]}
         for n in nodos_nuevos_acumulados
@@ -110,6 +110,11 @@ def procesar_chunk(texto_chunk, nodos_existentes, nodos_nuevos_acumulados):
     except json.JSONDecodeError:
         print("  ⚠ Chunk devolvió JSON inválido, se omite. Respuesta:")
         print("   ", texto_json[:200])
+        log_fallos.append({
+            "chunk_index": indice_chunk,
+            "razon": "json_invalido",
+            "respuesta_cruda": texto_json[:500],
+        })
         return {"nodos_nuevos": [], "relaciones_nuevas": []}
 
 
@@ -133,11 +138,12 @@ def main():
 
     nodos_acumulados = []
     relaciones_acumuladas = []
+    log_fallos = []
     nombre_pdf = Path(args.pdf).name
 
     for i, chunk in enumerate(chunks, 1):
         print(f"◈ Procesando fragmento {i}/{len(chunks)} (páginas {chunk['pagina_inicio']}-{chunk['pagina_fin']})...")
-        resultado = procesar_chunk(chunk["texto"], nodos_existentes, nodos_acumulados)
+        resultado = procesar_chunk(chunk["texto"], nodos_existentes, nodos_acumulados, log_fallos, i)
         resultado = normalizar_tipos(resultado)
 
         nuevos = resultado.get("nodos_nuevos", [])
@@ -171,8 +177,25 @@ def main():
         encoding="utf-8",
     )
 
+    log_path = BASE_DIR / f"extraccion_log_{Path(args.pdf).stem}.json"
+    log_path.write_text(
+        json.dumps({
+            "pdf": nombre_pdf,
+            "total_paginas": len(paginas),
+            "total_chunks": len(chunks),
+            "chunks_con_error": log_fallos,
+            "rangos_de_pagina_por_chunk": [
+                {"chunk": i, "pagina_inicio": c["pagina_inicio"], "pagina_fin": c["pagina_fin"]}
+                for i, c in enumerate(chunks, 1)
+            ],
+        }, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
     print(f"\n✓ Total: {len(nodos_acumulados)} nodos y {len(relaciones_acumuladas)} relaciones propuestas")
     print(f"  Guardado en {out_path}")
+    if log_fallos:
+        print(f"  ⚠ {len(log_fallos)} chunk(s) fallaron (JSON inválido) — ver {log_path.name}")
     print(f"  Siguiente paso: python revisar.py")
 
 
