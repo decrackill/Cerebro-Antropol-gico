@@ -70,6 +70,15 @@ export function inicializarVisualizacion(nodos, relaciones) {
         style: { 'text-opacity': 1, 'line-color': '#aaa' },
       },
       {
+        selector: 'node[[degree = 0]]',
+        style: {
+          'border-width': 2,
+          'border-style': 'dashed',
+          'border-color': '#ff5555',
+          opacity: 0.5,
+        },
+      },
+      {
         selector: '.oculto-filtro',
         style: { display: 'none' },
       },
@@ -90,6 +99,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
       numIter: 2500,
       tile: true,
       packComponents: true,
+      componentSpacing: 150,
     },
   })
 
