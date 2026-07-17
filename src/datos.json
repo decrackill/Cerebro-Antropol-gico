@@ -50,7 +50,7 @@
     },
     {
       "id": 7,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "Tristes Trópicos",
       "descripcion": "1955",
       "metadatos": null,
@@ -58,7 +58,7 @@
     },
     {
       "id": 8,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "Las Estructuras Elementales del Parentesco",
       "descripcion": "1949",
       "metadatos": null,
@@ -66,7 +66,7 @@
     },
     {
       "id": 9,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "Método de la Etnografía",
       "descripcion": "1922",
       "metadatos": null,
@@ -74,7 +74,7 @@
     },
     {
       "id": 10,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "La Estructura del Acto Humano",
       "descripcion": "1942",
       "metadatos": null,
@@ -82,7 +82,7 @@
     },
     {
       "id": 11,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "Cannibalism and Culture",
       "descripcion": "1985",
       "metadatos": null,
@@ -90,7 +90,7 @@
     },
     {
       "id": 12,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "La Interpretación de las Culturas",
       "descripcion": "1973",
       "metadatos": null,
@@ -98,7 +98,7 @@
     },
     {
       "id": 13,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "La Distinción",
       "descripcion": "1979",
       "metadatos": null,
@@ -106,7 +106,7 @@
     },
     {
       "id": 14,
-      "tipo": "libro",
+      "tipo": "obra",
       "nombre": "Antropología Estructural",
       "descripcion": "1958",
       "metadatos": null,
@@ -186,7 +186,7 @@
     },
     {
       "id": 24,
-      "tipo": "corriente",
+      "tipo": "escuela",
       "nombre": "Escuela del Estructuralismo",
       "descripcion": "Corriente de Lévi-Strauss",
       "metadatos": null,
@@ -194,7 +194,7 @@
     },
     {
       "id": 25,
-      "tipo": "corriente",
+      "tipo": "escuela",
       "nombre": "Escuela de Chicago",
       "descripcion": "Boas, antropología cultural",
       "metadatos": null,
@@ -202,7 +202,7 @@
     },
     {
       "id": 26,
-      "tipo": "corriente",
+      "tipo": "escuela",
       "nombre": "Funcionalismo social",
       "descripcion": "Malinowski, Radcliffe-Brown",
       "metadatos": null,
@@ -210,7 +210,7 @@
     },
     {
       "id": 27,
-      "tipo": "corriente",
+      "tipo": "escuela",
       "nombre": "Corriente materialista cultural",
       "descripcion": "Harris, ecología cultural",
       "metadatos": null,
