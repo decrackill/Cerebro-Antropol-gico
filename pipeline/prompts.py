@@ -23,24 +23,42 @@ TIPOS DE NODO válidos: autor, obra, concepto, escuela, cultura, debate
 TIPOS DE RELACIÓN válidos: influenciado_por, critica_a, desarrolla_concepto,
   pertenece_a, estudia_a, contemporaneo_de, precursor_de, parte_del_debate, redefine_a
 
-CRITERIO ESTRICTO PARA EL TIPO "concepto":
-Un concepto SOLO califica si es un término teórico establecido, citable y con nombre
-propio dentro de la disciplina — algo que un antropólogo reconocería y usaría en otro
-contexto, independiente de este libro. Ejemplos válidos: "reciprocidad", "parentesco",
-"relativismo cultural", "observación participante", "holismo", "kula", "estructura social".
+CRITERIO ESTRICTO PARA EL TIPO "concepto" (leer con cuidado, es la fuente #1 de errores):
 
-NO califica como concepto:
-- Pasos o técnicas descriptivas de un método (ej: "acampar en poblados indígenas",
-  "aprender el idioma indígena" — estos son DETALLES de cómo se practica la
-  "observación participante", no conceptos en sí mismos).
-- Oraciones o ideas parafraseadas del texto que no son términos establecidos
-  (ej: "deducciones del autor", "no vivir con otros blancos").
-- Críticas o argumentos puntuales de un autor sin ser un término reconocido
-  (ej: "crítica de descripciones grotescas de indígenas").
+Un concepto SOLO califica si cumple LAS TRES condiciones simultáneamente:
+1. Es un término con nombre propio y estable — no una oración ni una paráfrasis.
+2. Existiría como entrada en un glosario de antropología general, independiente de
+   este libro y este autor (piensa: "¿aparecería esto en un manual introductorio
+   de antropología, o en Wikipedia como concepto propio?").
+3. Se puede usar en otro contexto/libro sin perder sentido.
 
-Si dudas si algo es un concepto real o solo una idea de paso, NO lo extraigas.
-Prefiere subextraer a sobreextraer. Es mejor un grafo con 15 conceptos sólidos
-que con 60 fragmentos triviales.
+Ejemplos válidos: "reciprocidad", "parentesco", "relativismo cultural",
+"observación participante", "holismo", "kula", "estructura social", "tabú", "totemismo".
+
+PISTAS DE QUE NO ES UN CONCEPTO (recházalo si ves cualquiera de estas señales):
+- Es una acción o paso metodológico puntual ("acampar en poblados indígenas",
+  "aprender el idioma indígena", "convivir con los nativos").
+- Es una oración parafraseada o una conclusión del autor, no un término
+  ("deducciones del autor", "no vivir con otros blancos", "la importancia de X").
+- Es una crítica o juicio de valor puntual, no un término técnico
+  ("crítica de descripciones grotescas de indígenas").
+- Es un evento, anécdota o dato biográfico ("viaje a Nueva Guinea", "enfermedad
+  durante el trabajo de campo").
+- Es específico de una sola obra y no tiene vida propia fuera de ella
+  ("el argumento central del capítulo 3").
+- Solo pudiste describirlo parafraseando varias líneas del texto en vez de nombrarlo
+  en 1-4 palabras — si no tiene un nombre corto y citable, no es un concepto.
+
+AUTOVERIFICACIÓN OBLIGATORIA: antes de incluir cualquier nodo tipo "concepto", agrega
+un campo "justificacion_concepto" explicando en una frase por qué este término
+existiría en un glosario general de antropología, fuera de este libro. Si no puedes
+escribir una justificación honesta y específica (no genérica), DESCARTA el nodo.
+
+Si dudas, NO lo extraigas. Prefiere subextraer a sobreextraer — un grafo con 15
+conceptos sólidos vale más que uno con 60 fragmentos triviales. Como referencia dura:
+en un capítulo típico de 40,000 caracteres, esperarías entre 2 y 8 conceptos nuevos
+reales, no más. Si tu borrador interno tiene más de 10, es señal de que estás
+sobreextrayendo — vuelve a filtrar con el criterio de arriba antes de responder.
 
 CRITERIO ESTRICTO PARA EL TIPO "autor":
 Solo personas con un rol intelectual relevante (autores, teóricos, mentores académicos).
@@ -60,6 +78,7 @@ ESQUEMA DE SALIDA — devuelve ÚNICAMENTE este JSON, sin texto adicional ni mar
       "tipo": "autor|obra|concepto|escuela|cultura|debate",
       "nombre": "string — nombre legible",
       "descripcion": "string — 1-2 oraciones basadas en el texto",
+      "justificacion_concepto": "string — SOLO si tipo=concepto: por qué es un término establecido fuera de este libro. Omite este campo para otros tipos.",
       "confianza": "alta|media|baja — qué tan seguro estás de esta extracción"
     }}
   ],

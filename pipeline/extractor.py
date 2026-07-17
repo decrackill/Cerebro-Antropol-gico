@@ -33,7 +33,15 @@ def cargar_nodos_existentes():
     conn = sqlite3.connect(DB_PATH)
     filas = conn.execute("SELECT id, tipo, nombre FROM nodos").fetchall()
     conn.close()
-    return [{"id": f[0], "tipo": f[1], "nombre": f[2]} for f in filas]
+    existentes = [{"id": f[0], "tipo": f[1], "nombre": f[2]} for f in filas]
+
+    pendientes_path = BASE_DIR / "candidatos_pendientes.json"
+    if pendientes_path.exists():
+        pendientes = json.loads(pendientes_path.read_text(encoding="utf-8"))
+        for n in pendientes.get("nodos_nuevos", []):
+            existentes.append({"id": n["id"], "tipo": n["tipo"], "nombre": n["nombre"]})
+
+    return existentes
 
 
 def extraer_paginas_pdf(ruta):
@@ -148,6 +156,13 @@ def main():
             time.sleep(PAUSA_ENTRE_LLAMADAS)
 
     out_path = BASE_DIR / "candidatos_pendientes.json"
+
+    if out_path.exists():
+        previo = json.loads(out_path.read_text(encoding="utf-8"))
+        nodos_acumulados = previo.get("nodos_nuevos", []) + nodos_acumulados
+        relaciones_acumuladas = previo.get("relaciones_nuevas", []) + relaciones_acumuladas
+        print(f"  (combinado con {len(previo.get('nodos_nuevos', []))} nodos pendientes de una sesión anterior)")
+
     out_path.write_text(
         json.dumps(
             {"nodos_nuevos": nodos_acumulados, "relaciones_nuevas": relaciones_acumuladas},
