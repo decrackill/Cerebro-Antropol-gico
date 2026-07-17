@@ -18,6 +18,17 @@ ESTADO_PATH = BASE_DIR / "revision_estado.json"
 UMBRAL_SIMILITUD = 0.75
 
 
+def pedir_opcion(mensaje, validas, alias=None):
+    alias = alias or {}
+    while True:
+        resp = input(mensaje).strip().lower()
+        if resp in alias:
+            resp = alias[resp]
+        if resp in validas:
+            return resp
+        print(f"  ⚠ No entendí '{resp}'. Opciones válidas: {', '.join(sorted(validas))}. Intenta de nuevo.")
+
+
 def cargar_estado():
     if ESTADO_PATH.exists():
         return json.loads(ESTADO_PATH.read_text(encoding="utf-8"))
@@ -79,7 +90,11 @@ def main():
         if similares:
             print(f"  ⚠ POSIBLE DUPLICADO de: {', '.join(similares)}")
             print(f"    (id existente: {catalogo[similares[0]]})")
-            resp = input("  ¿Es el mismo nodo? (s = usar existente / n = es distinto / omitir): ").strip().lower()
+            resp = pedir_opcion(
+                "  ¿Es el mismo nodo? (s = usar existente / n = es distinto / omitir): ",
+                validas={"s", "n", "omitir"},
+                alias={"si": "s", "sí": "s", "o": "omitir"},
+            )
             if resp == "s":
                 id_real = catalogo[similares[0]]
                 mapa_gemini_a_real[id_gemini] = id_real
@@ -94,7 +109,11 @@ def main():
                 decision_tomada = True
 
         if not decision_tomada:
-            resp = input("  ¿Aprobar como nodo nuevo? (s/n/editar): ").strip().lower()
+            resp = pedir_opcion(
+                "  ¿Aprobar como nodo nuevo? (s/n/editar): ",
+                validas={"s", "n", "editar"},
+                alias={"si": "s", "sí": "s", "e": "editar"},
+            )
             if resp == "s":
                 cur = conn.execute(
                     "INSERT INTO nodos (tipo, nombre, descripcion, metadatos) VALUES (?, ?, ?, ?)",
@@ -153,7 +172,11 @@ def main():
         print(f'  Cita: "{r["cita_textual"]}"')
         if r.get("fuente"):
             print(f"  Fuente: {r['fuente']}")
-        resp = input("  ¿Aprobar? (s/n): ").strip().lower()
+        resp = pedir_opcion(
+            "  ¿Aprobar? (s/n): ",
+            validas={"s", "n"},
+            alias={"si": "s", "sí": "s"},
+        )
         if resp == "s":
             conn.execute(
                 "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",

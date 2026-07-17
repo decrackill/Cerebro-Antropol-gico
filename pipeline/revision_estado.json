@@ -1,0 +1,229 @@
+{
+  "nodos_revisados": {
+    "los_argonautas_del_pacifico_occidental": {
+      "decision": "insertado",
+      "id_real": 28
+    },
+    "james_g_frazer": {
+      "decision": "insertado",
+      "id_real": 29
+    },
+    "mailu": {
+      "decision": "insertado",
+      "id_real": 30
+    },
+    "trobriand": {
+      "decision": "insertado",
+      "id_real": 31
+    },
+    "c_g_seligman": {
+      "decision": "insertado",
+      "id_real": 32
+    },
+    "a_c_haddon": {
+      "decision": "insertado",
+      "id_real": 33
+    },
+    "w_h_r_rivers": {
+      "decision": "insertado",
+      "id_real": 34
+    },
+    "trabajo_de_campo": {
+      "decision": "insertado",
+      "id_real": 35
+    },
+    "kula": {
+      "decision": "descartado",
+      "id_real": null
+    },
+    "vision_eurocentrista": {
+      "decision": "insertado",
+      "id_real": 36
+    },
+    "sociedades_frias_y_calientes": {
+      "decision": "insertado",
+      "id_real": 37
+    },
+    "economia_primitiva": {
+      "decision": "insertado",
+      "id_real": 38
+    },
+    "tylor": {
+      "decision": "insertado",
+      "id_real": 39
+    },
+    "escuela_de_sociologia_francesa": {
+      "decision": "insertado",
+      "id_real": 40
+    },
+    "nivel_sincronico": {
+      "decision": "insertado",
+      "id_real": 41
+    },
+    "hecho_social": {
+      "decision": "insertado",
+      "id_real": 42
+    },
+    "marcel_mauss": {
+      "decision": "insertado",
+      "id_real": 43
+    },
+    "idea_de_totalidad": {
+      "decision": "insertado",
+      "id_real": 44
+    },
+    "emile_durkheim": {
+      "decision": "insertado",
+      "id_real": 45
+    },
+    "herbert_spencer": {
+      "decision": "insertado",
+      "id_real": 46
+    },
+    "participacion_etnografica": {
+      "decision": "insertado",
+      "id_real": 47
+    },
+    "la_rama_dorada": {
+      "decision": "insertado",
+      "id_real": 48
+    },
+    "la_familia_entre_los_aborigenes_australianos": {
+      "decision": "insertado",
+      "id_real": 49
+    },
+    "los_indigenas_de_mailu": {
+      "decision": "insertado",
+      "id_real": 50
+    },
+    "el_mito_en_la_psicologia_primitiva": {
+      "decision": "insertado",
+      "id_real": 51
+    },
+    "crimen_y_costumbre_en_la_sociedad_salvaje": {
+      "decision": "insertado",
+      "id_real": 52
+    },
+    "el_padre_en_la_psicologia_primitiva": {
+      "decision": "insertado",
+      "id_real": 53
+    },
+    "sexo_y_represion_en_la_sociedad_salvaje": {
+      "decision": "insertado",
+      "id_real": 54
+    },
+    "la_vida_sexual_de_los_salvajes_del_noroeste_de_la_melanesia": {
+      "decision": "insertado",
+      "id_real": 55
+    },
+    "articulo_cultura_malinowski": {
+      "decision": "insertado",
+      "id_real": 56
+    },
+    "los_jardines_del_coral_y_su_magia": {
+      "decision": "insertado",
+      "id_real": 57
+    },
+    "fundamentos_de_las_creencias_y_la_moral": {
+      "decision": "descartado",
+      "id_real": null
+    },
+    "jomo_kenyatta": {
+      "decision": "insertado",
+      "id_real": 58
+    },
+    "frente_al_monte_kenya": {
+      "decision": "insertado",
+      "id_real": 59
+    },
+    "una_teoria_cientifica_de_la_cultura": {
+      "decision": "insertado",
+      "id_real": 60
+    },
+    "libertad_y_civilizacion": {
+      "decision": "insertado",
+      "id_real": 61
+    },
+    "dinamica_del_cambio_de_la_cultura": {
+      "decision": "insertado",
+      "id_real": 62
+    },
+    "magia_ciencia_y_religion": {
+      "decision": "insertado",
+      "id_real": 63
+    },
+    "un_diario_en_el_sentido_estricto_del_termino": {
+      "decision": "insertado",
+      "id_real": 64
+    },
+    "esquimales": {
+      "decision": "insertado",
+      "id_real": 65
+    },
+    "aborigenes_del_nordeste_asiatico": {
+      "decision": "insertado",
+      "id_real": 66
+    },
+    "norteamerica": {
+      "decision": "insertado",
+      "id_real": 67
+    },
+    "culturas_melanesias": {
+      "decision": "insertado",
+      "id_real": 68
+    },
+    "aborigenes_australianos": {
+      "decision": "insertado",
+      "id_real": 69
+    },
+    "magia": {
+      "decision": "insertado",
+      "id_real": 70
+    },
+    "religion": {
+      "decision": "insertado",
+      "id_real": 71
+    },
+    "hombre_economico_primitivo": {
+      "decision": "insertado",
+      "id_real": 72
+    },
+    "pueblos_africanos": {
+      "decision": "insertado",
+      "id_real": 73
+    },
+    "culturas_americanas_primitivas": {
+      "decision": "insertado",
+      "id_real": 74
+    },
+    "holismo": {
+      "decision": "insertado",
+      "id_real": 75
+    },
+    "metodo_etnografico": {
+      "decision": "insertado",
+      "id_real": 76
+    },
+    "papue_melanesios": {
+      "decision": "insertado",
+      "id_real": 77
+    },
+    "motu": {
+      "decision": "insertado",
+      "id_real": 78
+    },
+    "tribus_del_golfo_de_papua": {
+      "decision": "insertado",
+      "id_real": 79
+    },
+    "hiri": {
+      "decision": "insertado",
+      "id_real": 80
+    },
+    "massim_meridionales": {
+      "decision": "insertado",
+      "id_real": 81
+    }
+  },
+  "relaciones_revisadas": []
+}
