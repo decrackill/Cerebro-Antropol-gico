@@ -1085,6 +1085,2757 @@
       "metadata": {
         "id_gemini": "civilizacion_china"
       }
+    },
+    {
+      "id": 115,
+      "tipo": "cultura",
+      "nombre": "Asia oriental",
+      "descripcion": "Región donde la expansión de la civilización china condujo a una notable uniformidad cultural.",
+      "metadatos": "{\"id_gemini\": \"asia_oriental\"}",
+      "metadata": {
+        "id_gemini": "asia_oriental"
+      }
+    },
+    {
+      "id": 116,
+      "tipo": "cultura",
+      "nombre": "Estados Unidos",
+      "descripcion": "País donde la raza negra vive en estrecho contacto con la civilización moderna, enfrentando un fuerte antagonismo racial.",
+      "metadatos": "{\"id_gemini\": \"estados_unidos\"}",
+      "metadata": {
+        "id_gemini": "estados_unidos"
+      }
+    },
+    {
+      "id": 117,
+      "tipo": "autor",
+      "nombre": "Mary White Ovington",
+      "descripcion": "Autor mencionado por Boas en relación con la supuesta inferioridad dogmática de la raza negra en Estados Unidos.",
+      "metadatos": "{\"id_gemini\": \"ovington\"}",
+      "metadata": {
+        "id_gemini": "ovington"
+      }
+    },
+    {
+      "id": 118,
+      "tipo": "autor",
+      "nombre": "Carl von Linné",
+      "descripcion": "Investigador que atribuyó características mentales a cada uno de sus tipos raciales.",
+      "metadatos": "{\"id_gemini\": \"linneo\"}",
+      "metadata": {
+        "id_gemini": "linneo"
+      }
+    },
+    {
+      "id": 119,
+      "tipo": "autor",
+      "nombre": "Henri de Boulainvilliers ",
+      "descripcion": "Estudioso del siglo XVIII que, al analizar la historia política de Francia, infirió dotes mentales superiores para los francos sobre los celtas.",
+      "metadatos": "{\"id_gemini\": \"boulainvilliers\"}",
+      "metadata": {
+        "id_gemini": "boulainvilliers"
+      }
+    },
+    {
+      "id": 120,
+      "tipo": "cultura",
+      "nombre": "Francos",
+      "descripcion": "Pueblo histórico de Europa, a quienes Boulainvilliers atribuía dotes mentales superiores en su teoría sobre la aristocracia francesa.",
+      "metadatos": "{\"id_gemini\": \"francos\"}",
+      "metadata": {
+        "id_gemini": "francos"
+      }
+    },
+    {
+      "id": 121,
+      "tipo": "cultura",
+      "nombre": "Celtas",
+      "descripcion": "Pueblo histórico de Europa, considerado por Boulainvilliers como el origen de la mayoría de la población francesa, y a quienes oponía a los francos.",
+      "metadatos": "{\"id_gemini\": \"celtas\"}",
+      "metadata": {
+        "id_gemini": "celtas"
+      }
+    },
+    {
+      "id": 122,
+      "tipo": "autor",
+      "nombre": "John Beddoe",
+      "descripcion": "Autor más reciente que se refiere a las características mentales de diversos tipos en Escocia e Inglaterra.",
+      "metadatos": "{\"id_gemini\": \"john_beddoe\"}",
+      "metadata": {
+        "id_gemini": "john_beddoe"
+      }
+    },
+    {
+      "id": 123,
+      "tipo": "autor",
+      "nombre": "Alfred Ploetz",
+      "descripcion": "Autor que atribuye características mentales a las distintas razas.",
+      "metadatos": "{\"id_gemini\": \"a_ploetz\"}",
+      "metadata": {
+        "id_gemini": "a_ploetz"
+      }
+    },
+    {
+      "id": 124,
+      "tipo": "autor",
+      "nombre": "Arthur de Gobineau",
+      "descripcion": "Desarrolló ideas sobre la permanencia de la forma física y funciones mentales de las razas, y la excelencia superior del europeo noroccidental, ejerciendo gran influencia.",
+      "metadatos": "{\"id_gemini\": \"gobineau\"}",
+      "metadata": {
+        "id_gemini": "gobineau"
+      }
+    },
+    {
+      "id": 125,
+      "tipo": "concepto",
+      "nombre": "Permanencia racial",
+      "descripcion": "Idea defendida por Gobineau, que postula la inalterabilidad de la forma física y las funciones mentales de las razas a lo largo del tiempo.",
+      "metadatos": "{\"id_gemini\": \"permanencia_racial\"}",
+      "metadata": {
+        "id_gemini": "permanencia_racial"
+      }
+    },
+    {
+      "id": 126,
+      "tipo": "cultura",
+      "nombre": "Europeo noroccidental",
+      "descripcion": "Grupo racial al que Gobineau atribuía una excelencia superior en su obra.",
+      "metadatos": "{\"id_gemini\": \"europeo_noroccidental\"}",
+      "metadata": {
+        "id_gemini": "europeo_noroccidental"
+      }
+    },
+    {
+      "id": 127,
+      "tipo": "autor",
+      "nombre": "Gustav Klemm",
+      "descripcion": "Autor que en 1843 dividió la humanidad en una mitad activa o 'masculina' y una pasiva o 'femenina' basándose en consideraciones culturales.",
+      "metadatos": "{\"id_gemini\": \"klemm\"}",
+      "metadata": {
+        "id_gemini": "klemm"
+      }
+    },
+    {
+      "id": 128,
+      "tipo": "concepto",
+      "nombre": "División humanidad activa/pasiva",
+      "descripcion": "Clasificación de la humanidad propuesta por Klemm, distinguiendo entre una mitad 'activa' (ej. europeos) y una 'pasiva' (ej. mongólicos, negros), asociándolas a diferentes características mentales y culturales.",
+      "metadatos": "{\"id_gemini\": \"division_humanidad_activa_pasiva\"}",
+      "metadata": {
+        "id_gemini": "division_humanidad_activa_pasiva"
+      }
+    },
+    {
+      "id": 129,
+      "tipo": "obra",
+      "nombre": "Historia General de la Cultura de la Humanidad",
+      "descripcion": "Obra de Klemm (1845) donde expone su división de la humanidad en activa y pasiva.",
+      "metadatos": "{\"id_gemini\": \"attgemeine_cultur_geschichte_der_menschheil\"}",
+      "metadata": {
+        "id_gemini": "attgemeine_cultur_geschichte_der_menschheil"
+      }
+    },
+    {
+      "id": 130,
+      "tipo": "cultura",
+      "nombre": "Europeos",
+      "descripcion": "Grupo clasificado por Klemm como la mitad activa de la humanidad, caracterizado por fuerza de voluntad, deseo de dominio, actividad y progreso.",
+      "metadatos": "{\"id_gemini\": \"europeos\"}",
+      "metadata": {
+        "id_gemini": "europeos"
+      }
+    },
+    {
+      "id": 131,
+      "tipo": "cultura",
+      "nombre": "Persas",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"persas\"}",
+      "metadata": {
+        "id_gemini": "persas"
+      }
+    },
+    {
+      "id": 132,
+      "tipo": "cultura",
+      "nombre": "Griegos",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"griegos\"}",
+      "metadata": {
+        "id_gemini": "griegos"
+      }
+    },
+    {
+      "id": 133,
+      "tipo": "cultura",
+      "nombre": "Romanos",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"romanos\"}",
+      "metadata": {
+        "id_gemini": "romanos"
+      }
+    },
+    {
+      "id": 134,
+      "tipo": "cultura",
+      "nombre": "Pueblos germánicos",
+      "descripcion": "Grupo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"pueblos_germanicos\"}",
+      "metadata": {
+        "id_gemini": "pueblos_germanicos"
+      }
+    },
+    {
+      "id": 135,
+      "tipo": "cultura",
+      "nombre": "Turcos",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"turcos\"}",
+      "metadata": {
+        "id_gemini": "turcos"
+      }
+    },
+    {
+      "id": 136,
+      "tipo": "cultura",
+      "nombre": "Tártaros",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"tartaros\"}",
+      "metadata": {
+        "id_gemini": "tartaros"
+      }
+    },
+    {
+      "id": 137,
+      "tipo": "cultura",
+      "nombre": "Cherqueses",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"cherqueses\"}",
+      "metadata": {
+        "id_gemini": "cherqueses"
+      }
+    },
+    {
+      "id": 138,
+      "tipo": "cultura",
+      "nombre": "Incas del Perú",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"incas_del_peru\"}",
+      "metadata": {
+        "id_gemini": "incas_del_peru"
+      }
+    },
+    {
+      "id": 139,
+      "tipo": "cultura",
+      "nombre": "Polinesios",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'activo' de la humanidad. También mencionados por Boas en el contexto de la invasión europea.",
+      "metadatos": "{\"id_gemini\": \"polinesios\"}",
+      "metadata": {
+        "id_gemini": "polinesios"
+      }
+    },
+    {
+      "id": 140,
+      "tipo": "cultura",
+      "nombre": "Mongólicos",
+      "descripcion": "Grupo racial cuya forma corporal fue la base principal para la descripción de la mitad pasiva de la humanidad por Klemm.",
+      "metadatos": "{\"id_gemini\": \"mongolicos\"}",
+      "metadata": {
+        "id_gemini": "mongolicos"
+      }
+    },
+    {
+      "id": 141,
+      "tipo": "cultura",
+      "nombre": "Papúes",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'pasivo' de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"papues\"}",
+      "metadata": {
+        "id_gemini": "papues"
+      }
+    },
+    {
+      "id": 142,
+      "tipo": "cultura",
+      "nombre": "Malayos",
+      "descripcion": "Pueblo que Klemm incluyó en el grupo 'pasivo' de la humanidad. También descrito por Morton como activo e ingenioso.",
+      "metadatos": "{\"id_gemini\": \"malayos\"}",
+      "metadata": {
+        "id_gemini": "malayos"
+      }
+    },
+    {
+      "id": 143,
+      "tipo": "cultura",
+      "nombre": "Indios americanos",
+      "descripcion": "Término general para los pueblos indígenas de América, incluidos por Klemm en la mitad pasiva y por Carus en la raza del crepúsculo. Nott los considera inútiles de civilizar.",
+      "metadatos": "{\"id_gemini\": \"indios_americanos\"}",
+      "metadata": {
+        "id_gemini": "indios_americanos"
+      }
+    },
+    {
+      "id": 144,
+      "tipo": "autor",
+      "nombre": "Adolf Wuttke",
+      "descripcion": "Autor que aceptó las opiniones de Klemm sobre la división de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"wuttke\"}",
+      "metadata": {
+        "id_gemini": "wuttke"
+      }
+    },
+    {
+      "id": 145,
+      "tipo": "autor",
+      "nombre": "Carl Gustav Carus",
+      "descripcion": "Autor que en 1849 reconoció la división de Klemm como cultural y basó sus propias teorías raciales en la especulación fisiológica.",
+      "metadatos": "{\"id_gemini\": \"carl_gustav_carus\"}",
+      "metadata": {
+        "id_gemini": "carl_gustav_carus"
+      }
+    },
+    {
+      "id": 146,
+      "tipo": "obra",
+      "nombre": "Sistema de Fisiología",
+      "descripcion": "Obra de Carl Gustav Carus (1838) donde expresa por primera vez sus puntos de vista sobre las razas humanas.",
+      "metadatos": "{\"id_gemini\": \"sistema_de_fisiologia\"}",
+      "metadata": {
+        "id_gemini": "sistema_de_fisiologia"
+      }
+    },
+    {
+      "id": 147,
+      "tipo": "concepto",
+      "nombre": "Razas de Carus (diurna, nocturna, amanecer, crepúsculo)",
+      "descripcion": "Clasificación racial de Carus basada en analogías con el ciclo día/noche, asignando características y grupos raciales específicos a cada una (ej. europeos como diurna, negros como nocturna).",
+      "metadatos": "{\"id_gemini\": \"razas_de_carus\"}",
+      "metadata": {
+        "id_gemini": "razas_de_carus"
+      }
+    },
+    {
+      "id": 148,
+      "tipo": "cultura",
+      "nombre": "Asiáticos occidentales",
+      "descripcion": "Grupo racial que Carl Gustav Carus asoció con la 'raza diurna', junto con los europeos.",
+      "metadatos": "{\"id_gemini\": \"asiaticos_occidentales\"}",
+      "metadata": {
+        "id_gemini": "asiaticos_occidentales"
+      }
+    },
+    {
+      "id": 149,
+      "tipo": "cultura",
+      "nombre": "Indostánica",
+      "descripcion": "Raza a la que Carl Gustav Carus otorgaba primacía como 'creadora de la verdad'.",
+      "metadatos": "{\"id_gemini\": \"indostanica\"}",
+      "metadata": {
+        "id_gemini": "indostanica"
+      }
+    },
+    {
+      "id": 150,
+      "tipo": "cultura",
+      "nombre": "Egipcia",
+      "descripcion": "Raza a la que Carl Gustav Carus otorgaba primacía como 'creadora de la belleza'.",
+      "metadatos": "{\"id_gemini\": \"egipcia\"}",
+      "metadata": {
+        "id_gemini": "egipcia"
+      }
+    },
+    {
+      "id": 151,
+      "tipo": "cultura",
+      "nombre": "Judía",
+      "descripcion": "Raza a la que Carl Gustav Carus otorgaba primacía como 'creadora del amor humano'.",
+      "metadatos": "{\"id_gemini\": \"judia\"}",
+      "metadata": {
+        "id_gemini": "judia"
+      }
+    },
+    {
+      "id": 152,
+      "tipo": "autor",
+      "nombre": "Samuel G. Morton",
+      "descripcion": "Autor americano cuyas conclusiones sobre tipos raciales y el debate poligénesis/monogenismo fueron influyentes y se basaron en una investigación cuidadosa.",
+      "metadatos": "{\"id_gemini\": \"samuel_g_morton\"}",
+      "metadata": {
+        "id_gemini": "samuel_g_morton"
+      }
+    },
+    {
+      "id": 153,
+      "tipo": "concepto",
+      "nombre": "Poligénesis",
+      "descripcion": "Teoría que postula un origen múltiple para las razas humanas, apoyada por Samuel G. Morton.",
+      "metadatos": "{\"id_gemini\": \"poligenesis\"}",
+      "metadata": {
+        "id_gemini": "poligenesis"
+      }
+    },
+    {
+      "id": 154,
+      "tipo": "concepto",
+      "nombre": "Monogenismo",
+      "descripcion": "Teoría que postula un origen único para las razas humanas, en contraste con la poligénesis.",
+      "metadatos": "{\"id_gemini\": \"monogenismo\"}",
+      "metadata": {
+        "id_gemini": "monogenismo"
+      }
+    },
+    {
+      "id": 155,
+      "tipo": "cultura",
+      "nombre": "Raza caucásica",
+      "descripcion": "Tipo racial que Morton distinguía por su 'facilidad para lograr el más alto desarrollo intelectual'.",
+      "metadatos": "{\"id_gemini\": \"raza_caucasiana\"}",
+      "metadata": {
+        "id_gemini": "raza_caucasiana"
+      }
+    },
+    {
+      "id": 156,
+      "tipo": "autor",
+      "nombre": "James Dawson",
+      "descripcion": "Observador de la vida australiana que ofreció puntos de vista diferentes a la mayoría de los observadores, posiblemente influido por un espíritu de benevolencia.",
+      "metadatos": "{\"id_gemini\": \"darwin\", \"id_editado\": \"dawson\"}",
+      "metadata": {
+        "id_gemini": "darwin",
+        "id_editado": "dawson"
+      }
+    },
+    {
+      "id": 157,
+      "tipo": "autor",
+      "nombre": "George Combe",
+      "descripcion": "Frenólogo que en el apéndice de la obra de Morton discutió la relación entre la forma de la cabeza y el carácter, destacando el tamaño del cerebro.",
+      "metadatos": "{\"id_gemini\": \"george_combe\"}",
+      "metadata": {
+        "id_gemini": "george_combe"
+      }
+    },
+    {
+      "id": 158,
+      "tipo": "concepto",
+      "nombre": "Frenología",
+      "descripcion": "Pseudociencia que estudia la relación entre la forma del cráneo y las facultades mentales, discutida por George Combe.",
+      "metadatos": "{\"id_gemini\": \"frenologia\"}",
+      "metadata": {
+        "id_gemini": "frenologia"
+      }
+    },
+    {
+      "id": 159,
+      "tipo": "autor",
+      "nombre": "Josiah Clark",
+      "descripcion": "Autor que, junto con George R. Gliddon, escribió 'Types of Mankind', defendiendo la poligénesis y la permanencia de tipos raciales para justificar la esclavitud.",
+      "metadatos": "{\"id_gemini\": \"j_c_nott\"}",
+      "metadata": {
+        "id_gemini": "j_c_nott"
+      }
+    },
+    {
+      "id": 160,
+      "tipo": "autor",
+      "nombre": "George Robins",
+      "descripcion": "Autor que, junto con J. C. Nott, escribió 'Types of Mankind'.",
+      "metadatos": "{\"id_gemini\": \"george_r_gliddon\"}",
+      "metadata": {
+        "id_gemini": "george_r_gliddon"
+      }
+    },
+    {
+      "id": 161,
+      "tipo": "obra",
+      "nombre": "Types of Mankind",
+      "descripcion": "Obra de J. C. Nott y George R. Gliddon que defendía la diversidad original y permanencia de las razas para justificar la esclavitud.",
+      "metadatos": "{\"id_gemini\": \"types_of_mankind\"}",
+      "metadata": {
+        "id_gemini": "types_of_mankind"
+      }
+    },
+    {
+      "id": 162,
+      "tipo": "autor",
+      "nombre": "Houston Stewart Chamberlain",
+      "descripcion": "Autor que adoptó un argumento similar al de Gobineau, enfatizando la importancia de una estirpe excelente y la crianza sin cruzamientos para la civilización, y atribuyendo la degeneración a la mezcla racial.",
+      "metadatos": "{\"id_gemini\": \"houston_stewart_chamberlain\"}",
+      "metadata": {
+        "id_gemini": "houston_stewart_chamberlain"
+      }
+    },
+    {
+      "id": 163,
+      "tipo": "concepto",
+      "nombre": "Crianza sin cruzamientos",
+      "descripcion": "Principio defendido por Chamberlain, que considera esencial para el desarrollo de una gran civilización, junto con una estirpe excelente y selección adecuada.",
+      "metadatos": "{\"id_gemini\": \"crianza_sin_cruzamientos\"}",
+      "metadata": {
+        "id_gemini": "crianza_sin_cruzamientos"
+      }
+    },
+    {
+      "id": 164,
+      "tipo": "autor",
+      "nombre": "Madison Grant",
+      "descripcion": "Autor cuyas obras reflejan la influencia de Gobineau y Chamberlain, elogiando al blanco nórdico y profetizando males por la mezcla racial.",
+      "metadatos": "{\"id_gemini\": \"madison_grant\"}",
+      "metadata": {
+        "id_gemini": "madison_grant"
+      }
+    },
+    {
+      "id": 165,
+      "tipo": "cultura",
+      "nombre": "Raza nórdica",
+      "descripcion": "Clasificación racial a la que Madison Grant atribuía todas las características culturales eminentes y de la que provenían figuras históricas importantes según él.",
+      "metadatos": "{\"id_gemini\": \"raza_nordica\"}",
+      "metadata": {
+        "id_gemini": "raza_nordica"
+      }
+    },
+    {
+      "id": 166,
+      "tipo": "cultura",
+      "nombre": "Roma",
+      "descripcion": "Civilización antigua cuyas tradiciones y valores Madison Grant atribuye a un origen nórdico.",
+      "metadatos": "{\"id_gemini\": \"roma\"}",
+      "metadata": {
+        "id_gemini": "roma"
+      }
+    },
+    {
+      "id": 167,
+      "tipo": "autor",
+      "nombre": "Lothrop Stoddard",
+      "descripcion": "Autor que escribió sobre las 'capacidades especializadas' de la raza y cómo el cruzamiento con estirpes diferentes lleva a la mediocridad.",
+      "metadatos": "{\"id_gemini\": \"lothrop_stoddard\"}",
+      "metadata": {
+        "id_gemini": "lothrop_stoddard"
+      }
+    },
+    {
+      "id": 168,
+      "tipo": "autor",
+      "nombre": "Egon von Eickstedt",
+      "descripcion": "Autor que intentó establecer una psicología de las razas, considerando la forma corporal y el comportamiento mental como una unidad, aunque su razonamiento fue criticado por Boas.",
+      "metadatos": "{\"id_gemini\": \"e_von_eickstedt\"}",
+      "metadata": {
+        "id_gemini": "e_von_eickstedt"
+      }
+    },
+    {
+      "id": 169,
+      "tipo": "concepto",
+      "nombre": "Psicología de las razas",
+      "descripcion": "Un enfoque de estudio que busca correlacionar las características psicológicas con la clasificación racial, intentado por E. von Eickstedt.",
+      "metadatos": "{\"id_gemini\": \"psicologia_de_las_razas\"}",
+      "metadata": {
+        "id_gemini": "psicologia_de_las_razas"
+      }
+    },
+    {
+      "id": 170,
+      "tipo": "concepto",
+      "nombre": "Elemento racial-psicológico",
+      "descripcion": "Concepto central en la psicología de las razas de Von Eickstedt, que postula una unidad estructural entre la forma corporal y el comportamiento mental de las razas.",
+      "metadatos": "{\"id_gemini\": \"elemento_racial_psicologico\"}",
+      "metadata": {
+        "id_gemini": "elemento_racial_psicologico"
+      }
+    },
+    {
+      "id": 171,
+      "tipo": "autor",
+      "nombre": "Theophile Simar",
+      "descripcion": "Autor de 'Etude Critique sur la Fondattion de la Doctrine des Races', que ofrece una presentación histórica de las teorías raciales, aunque criticado por Boas por su sesgo.",
+      "metadatos": "{\"id_gemini\": \"theophile_simar\"}",
+      "metadata": {
+        "id_gemini": "theophile_simar"
+      }
+    },
+    {
+      "id": 172,
+      "tipo": "obra",
+      "nombre": "Estudio crítico sobre la fundación de la doctrina de las razas",
+      "descripcion": "Obra de Theophile Simar que ofrece una presentación histórica de las teorías raciales, aunque su punto de vista es criticado por Boas.",
+      "metadatos": "{\"id_gemini\": \"etude_critique_sur_la_fondattion_de_la_doctrine_des_races\"}",
+      "metadata": {
+        "id_gemini": "etude_critique_sur_la_fondattion_de_la_doctrine_des_races"
+      }
+    },
+    {
+      "id": 173,
+      "tipo": "autor",
+      "nombre": "Johann Gottfried",
+      "descripcion": "Autor mencionado por Boas en relación con la escuela romántica y la interpretación errónea de sus conceptos sobre el 'genio de las culturas' por Simar.",
+      "metadatos": "{\"id_gemini\": \"herder\"}",
+      "metadata": {
+        "id_gemini": "herder"
+      }
+    },
+    {
+      "id": 174,
+      "tipo": "escuela",
+      "nombre": "Escuela romántica",
+      "descripcion": "Corriente de pensamiento que, junto con Herder, abordó el 'genio de las culturas', y fue malinterpretada por Simar según Boas.",
+      "metadatos": "{\"id_gemini\": \"escuela_romantica\"}",
+      "metadata": {
+        "id_gemini": "escuela_romantica"
+      }
+    },
+    {
+      "id": 175,
+      "tipo": "autor",
+      "nombre": "Jacques Barzun",
+      "descripcion": "Autor de 'Race. A Study of Modern Superstition', citado por Boas en la discusión de las teorías raciales.",
+      "metadatos": "{\"id_gemini\": \"jacques_barzon\"}",
+      "metadata": {
+        "id_gemini": "jacques_barzon"
+      }
+    },
+    {
+      "id": 176,
+      "tipo": "obra",
+      "nombre": "Raza: Un estudio de la superstición moderna",
+      "descripcion": "Obra de Jacques Barzón, mencionada por Boas en el contexto de las teorías raciales.",
+      "metadatos": "{\"id_gemini\": \"race_a_study_of_modern_superstition\"}",
+      "metadata": {
+        "id_gemini": "race_a_study_of_modern_superstition"
+      }
+    },
+    {
+      "id": 177,
+      "tipo": "debate",
+      "nombre": "Determinismo racial y cultural",
+      "descripcion": "Debate central en el texto sobre si el origen racial determina el carácter, la capacidad mental o la trayectoria cultural de un pueblo, con varios autores (Gobineau, Morton, etc.) defendiendo el determinismo y Boas criticándolo.",
+      "metadatos": "{\"id_gemini\": \"debate_determinismo_racial\"}",
+      "metadata": {
+        "id_gemini": "debate_determinismo_racial"
+      }
+    },
+    {
+      "id": 178,
+      "tipo": "autor",
+      "nombre": "Gregorio Weinberg",
+      "descripcion": "Director de la serie 'Dimensión de los Problemas' bajo la cual se publicó la edición en español de la obra de Boas.",
+      "metadatos": "{\"id_gemini\": \"gregorio_weinberg\"}",
+      "metadata": {
+        "id_gemini": "gregorio_weinberg"
+      }
+    },
+    {
+      "id": 179,
+      "tipo": "obra",
+      "nombre": "Cuestiones fundamentales de antropología",
+      "descripcion": "obra fundamental de Franz Boas, cuya primera edición apareció en 1911 y fue corregida en 1938.",
+      "metadatos": "{\"id_gemini\": \"the_mind_of_primitive_man\"}",
+      "metadata": {
+        "id_gemini": "the_mind_of_primitive_man"
+      }
+    },
+    {
+      "id": 180,
+      "tipo": "autor",
+      "nombre": "Susana W. de Ferdkin",
+      "descripcion": "Traductora de la 3ª edición corregida de 'The Mind of Primitive Man' al castellano.",
+      "metadatos": "{\"id_gemini\": \"susana_w_de_ferkd\\u00edn\"}",
+      "metadata": {
+        "id_gemini": "susana_w_de_ferkdín"
+      }
+    },
+    {
+      "id": 181,
+      "tipo": "autor",
+      "nombre": "Robert Lowie",
+      "descripcion": "Antropólogo y discípulo de Franz Boas, citado en el estudio preliminar.",
+      "metadatos": "{\"id_gemini\": \"robert_lowie\"}",
+      "metadata": {
+        "id_gemini": "robert_lowie"
+      }
+    },
+    {
+      "id": 182,
+      "tipo": "autor",
+      "nombre": "Ruth Benedict",
+      "descripcion": "Antropóloga y discípula dilecta de Franz Boas, a quien se atribuye haber transformado la antropología en una disciplina seria.",
+      "metadatos": "{\"id_gemini\": \"ruth_benedict\"}",
+      "metadata": {
+        "id_gemini": "ruth_benedict"
+      }
+    },
+    {
+      "id": 183,
+      "tipo": "autor",
+      "nombre": "Abraham Monk",
+      "descripcion": "Sociólogo y trabajador social argentino. Profesor de Sociología Cultural (UBA) y autor del estudio preliminar de la edición en español de 1964 de 'Cuestiones fundamentales de antropología cultural'",
+      "metadatos": "{\"id_gemini\": \"abraham_monk\"}",
+      "metadata": {
+        "id_gemini": "abraham_monk"
+      }
+    },
+    {
+      "id": 184,
+      "tipo": "concepto",
+      "nombre": "Determinismo geográfico-ecológico",
+      "descripcion": "Enfoque conceptual que postula que el clima, el paisaje y los recursos de subsistencia moldean la idiosincrasia humana y la cultura.",
+      "metadatos": "{\"id_gemini\": \"determinismo_geografico_ecologico\"}",
+      "metadata": {
+        "id_gemini": "determinismo_geografico_ecologico"
+      }
+    },
+    {
+      "id": 185,
+      "tipo": "cultura",
+      "nombre": "Islas Marquesas",
+      "descripcion": "Cultura mencionada como ejemplo donde la pobreza de alimentos llevaba al infanticidio femenino como pauta cultural.",
+      "metadatos": "{\"id_gemini\": \"islas_marquesas\"}",
+      "metadata": {
+        "id_gemini": "islas_marquesas"
+      }
+    },
+    {
+      "id": 186,
+      "tipo": "concepto",
+      "nombre": "Infanticidio femenino",
+      "descripcion": "Pauta cultural de las Islas Marquesas para contrarrestar la superpoblación debido a la escasez de alimentos.",
+      "metadatos": "{\"id_gemini\": \"infanticidio_femenino\"}",
+      "metadata": {
+        "id_gemini": "infanticidio_femenino"
+      }
+    },
+    {
+      "id": 187,
+      "tipo": "concepto",
+      "nombre": "Superpoblación",
+      "descripcion": "Condición de exceso de población que algunas culturas buscan contrarrestar mediante pautas como el infanticidio.",
+      "metadatos": "{\"id_gemini\": \"superpoblacion\"}",
+      "metadata": {
+        "id_gemini": "superpoblacion"
+      }
+    },
+    {
+      "id": 188,
+      "tipo": "concepto",
+      "nombre": "Poliginia",
+      "descripcion": "Forma de matrimonio donde un hombre tiene múltiples esposas, mencionada en relación con la estructura social de las Marquesas.",
+      "metadatos": "{\"id_gemini\": \"poliginia\"}",
+      "metadata": {
+        "id_gemini": "poliginia"
+      }
+    },
+    {
+      "id": 189,
+      "tipo": "concepto",
+      "nombre": "Homosexualidad masculina",
+      "descripcion": "Práctica mencionada en relación con la estructura social de las Marquesas.",
+      "metadatos": "{\"id_gemini\": \"homosexualismo_masculino\"}",
+      "metadata": {
+        "id_gemini": "homosexualismo_masculino"
+      }
+    },
+    {
+      "id": 190,
+      "tipo": "concepto",
+      "nombre": "Determinismo ambiental",
+      "descripcion": "Idea de que el medio ambiente determina inexorablemente las características culturales y sociales de un grupo.",
+      "metadatos": "{\"id_gemini\": \"determinismo_ambiental\"}",
+      "metadata": {
+        "id_gemini": "determinismo_ambiental"
+      }
+    },
+    {
+      "id": 191,
+      "tipo": "concepto",
+      "nombre": "Canibalismo",
+      "descripcion": "Práctica mencionada como una alternativa cultural para asegurar la continuidad grupal ante condiciones adversas.",
+      "metadatos": "{\"id_gemini\": \"canibalismo\"}",
+      "metadata": {
+        "id_gemini": "canibalismo"
+      }
+    },
+    {
+      "id": 192,
+      "tipo": "concepto",
+      "nombre": "Infanticidio indiscriminado",
+      "descripcion": "Práctica mencionada como una alternativa cultural para asegurar la continuidad grupal ante condiciones adversas.",
+      "metadatos": "{\"id_gemini\": \"infanticidio_indiscriminado\"}",
+      "metadata": {
+        "id_gemini": "infanticidio_indiscriminado"
+      }
+    },
+    {
+      "id": 193,
+      "tipo": "concepto",
+      "nombre": "Agricultura intensiva",
+      "descripcion": "Estrategia económica mencionada como una alternativa cultural para asegurar la continuidad grupal ante condiciones adversas.",
+      "metadatos": "{\"id_gemini\": \"agricultura_intensiva\"}",
+      "metadata": {
+        "id_gemini": "agricultura_intensiva"
+      }
+    },
+    {
+      "id": 194,
+      "tipo": "concepto",
+      "nombre": "Reduccionismo",
+      "descripcion": "Enfoque simplista que, según Boas, Ratzel aplicaba al no advertir la capacidad creadora del hombre.",
+      "metadatos": "{\"id_gemini\": \"reduccionismo\"}",
+      "metadata": {
+        "id_gemini": "reduccionismo"
+      }
+    },
+    {
+      "id": 195,
+      "tipo": "cultura",
+      "nombre": "Península de Cumberland",
+      "descripcion": "Región ártica donde Franz Boas realizó trabajo de campo con grupos esquimales a partir de 1883.",
+      "metadatos": "{\"id_gemini\": \"peninsula_cumberland\"}",
+      "metadata": {
+        "id_gemini": "peninsula_cumberland"
+      }
+    },
+    {
+      "id": 196,
+      "tipo": "cultura",
+      "nombre": "Estrecho de Davis",
+      "descripcion": "Región ártica donde Boas encontró esquimales que no habían visto a un europeo.",
+      "metadatos": "{\"id_gemini\": \"estrecho_davis\"}",
+      "metadata": {
+        "id_gemini": "estrecho_davis"
+      }
+    },
+    {
+      "id": 197,
+      "tipo": "concepto",
+      "nombre": "Chamanismo",
+      "descripcion": "Prácticas y artes secretas en las que los esquimales iniciaron a Boas.",
+      "metadatos": "{\"id_gemini\": \"chamanismo\"}",
+      "metadata": {
+        "id_gemini": "chamanismo"
+      }
+    },
+    {
+      "id": 198,
+      "tipo": "concepto",
+      "nombre": "Mitos",
+      "descripcion": "Relatos tradicionales de los esquimales que Boas estudió, relacionados con sus rituales.",
+      "metadatos": "{\"id_gemini\": \"mitos\"}",
+      "metadata": {
+        "id_gemini": "mitos"
+      }
+    },
+    {
+      "id": 199,
+      "tipo": "concepto",
+      "nombre": "Rituales",
+      "descripcion": "Prácticas de los esquimales destinadas a precaverse de la diosa Sedna, estudiadas por Boas.",
+      "metadatos": "{\"id_gemini\": \"rituales\"}",
+      "metadata": {
+        "id_gemini": "rituales"
+      }
+    },
+    {
+      "id": 200,
+      "tipo": "concepto",
+      "nombre": "Sedna",
+      "descripcion": "Diosa de los mundos infraterrenales en la mitología esquimal.",
+      "metadatos": "{\"id_gemini\": \"sedna\"}",
+      "metadata": {
+        "id_gemini": "sedna"
+      }
+    },
+    {
+      "id": 201,
+      "tipo": "concepto",
+      "nombre": "Concepción de cultura de Boas",
+      "descripcion": "La comprensión de Boas de la cultura como un proceso de creación orgánica y viva, y no como una adaptación mecánica.",
+      "metadatos": "{\"id_gemini\": \"concepcion_boas_cultura\"}",
+      "metadata": {
+        "id_gemini": "concepcion_boas_cultura"
+      }
+    },
+    {
+      "id": 202,
+      "tipo": "escuela",
+      "nombre": "Corrientes evolucionistas",
+      "descripcion": "Escuelas de pensamiento antropológico que Boas criticó por forzar paralelismos culturales y por su limitado sustento etnográfico.",
+      "metadatos": "{\"id_gemini\": \"corrientes_evolucionistas\"}",
+      "metadata": {
+        "id_gemini": "corrientes_evolucionistas"
+      }
+    },
+    {
+      "id": 203,
+      "tipo": "escuela",
+      "nombre": "Escuela difusionista",
+      "descripcion": "Escuela de pensamiento antropológico que Boas criticó por su interpretación simplista de la diversidad cultural.",
+      "metadatos": "{\"id_gemini\": \"escuela_difusionista\"}",
+      "metadata": {
+        "id_gemini": "escuela_difusionista"
+      }
+    },
+    {
+      "id": 204,
+      "tipo": "concepto",
+      "nombre": "Préstamo cultural",
+      "descripcion": "Concepto central de la escuela difusionista, referido a la transferencia de elementos culturales entre pueblos.",
+      "metadatos": "{\"id_gemini\": \"prestamo_cultural\"}",
+      "metadata": {
+        "id_gemini": "prestamo_cultural"
+      }
+    },
+    {
+      "id": 205,
+      "tipo": "concepto",
+      "nombre": "Incorporación cultural",
+      "descripcion": "Concepto de la escuela difusionista, referido a la asimilación de complejos culturales por otros grupos.",
+      "metadatos": "{\"id_gemini\": \"incorporacion_cultural\"}",
+      "metadata": {
+        "id_gemini": "incorporacion_cultural"
+      }
+    },
+    {
+      "id": 206,
+      "tipo": "concepto",
+      "nombre": "Trazos culturales",
+      "descripcion": "Elementos o características específicas de una cultura, cuya aceptación o rechazo es un objeto de estudio para Boas.",
+      "metadatos": "{\"id_gemini\": \"trazos_culturales\"}",
+      "metadata": {
+        "id_gemini": "trazos_culturales"
+      }
+    },
+    {
+      "id": 207,
+      "tipo": "escuela",
+      "nombre": "Antropología Cultural Norteamericana",
+      "descripcion": "Corriente antropológica dominada por la aversión anti-teórica de Boas durante casi medio siglo y en la que influyeron sus discípulos.",
+      "metadatos": "{\"id_gemini\": \"antropologia_cultural_norteamericana\"}",
+      "metadata": {
+        "id_gemini": "antropologia_cultural_norteamericana"
+      }
+    },
+    {
+      "id": 208,
+      "tipo": "autor",
+      "nombre": "Abram Kardiner",
+      "descripcion": "Autor que evaluó la contribución y debilidad de Boas, destacando su énfasis en la certidumbre y precisión en antropología.",
+      "metadatos": "{\"id_gemini\": \"abram_kardiner\"}",
+      "metadata": {
+        "id_gemini": "abram_kardiner"
+      }
+    },
+    {
+      "id": 209,
+      "tipo": "concepto",
+      "nombre": "Identidad de la estructura mental humana",
+      "descripcion": "Postulado de Adolph Bastian y luego de Boas, que sostiene que todos los humanos comparten una estructura psíquica similar que produce formas de pensamiento idénticas.",
+      "metadatos": "{\"id_gemini\": \"identidad_estructura_mental_humana\"}",
+      "metadata": {
+        "id_gemini": "identidad_estructura_mental_humana"
+      }
+    },
+    {
+      "id": 210,
+      "tipo": "concepto",
+      "nombre": "Ideas elementales",
+      "descripcion": "Concepto de Adolph Bastian que refiere a las formas fundamentales de pensamiento congénitas, comunes a toda la especie humana, que causan creencias y costumbres.",
+      "metadatos": "{\"id_gemini\": \"ideas_elementales\"}",
+      "metadata": {
+        "id_gemini": "ideas_elementales"
+      }
+    },
+    {
+      "id": 211,
+      "tipo": "concepto",
+      "nombre": "Selección natural",
+      "descripcion": "Premisa darwiniana que, según el texto, fue maliciosamente manipulada para justificar teorías racistas.",
+      "metadatos": "{\"id_gemini\": \"seleccion_natural\"}",
+      "metadata": {
+        "id_gemini": "seleccion_natural"
+      }
+    },
+    {
+      "id": 212,
+      "tipo": "autor",
+      "nombre": "Ludwig Gumplowicz",
+      "descripcion": "Sociólogo y jurista austrohúngaro, exponente del darwinismo social y la teoría del conflicto. Usaba el término 'raza' para definir grupos sociales en lucha constante, representando el determinismo sociopolítico que la antropología de Boas rebatió al separar biología de cultura.",
+      "metadatos": "{\"id_gemini\": \"gumplowicz\"}",
+      "metadata": {
+        "id_gemini": "gumplowicz"
+      }
+    },
+    {
+      "id": 213,
+      "tipo": "autor",
+      "nombre": "Louis Agassiz",
+      "descripcion": "Naturalista y geólogo suizo-estadounidense, destacado defensor del poligenismo (la idea de que las razas humanas tienen orígenes biológicos evolutivos separados). Se convirtió en un referente del racismo científico del siglo XIX al utilizar argumentos de la historia natural para justificar la jerarquía racial y la segregación, una postura opuesta a la unidad psíquica de la humanidad y al antirracismo metodológico de Franz Boas.",
+      "metadatos": "{\"id_gemini\": \"agassiz\"}",
+      "metadata": {
+        "id_gemini": "agassiz"
+      }
+    },
+    {
+      "id": 214,
+      "tipo": "concepto",
+      "nombre": "Teorías pseudocientíficas del racismo",
+      "descripcion": "Conjunto de teorías que, manipulando premisas darwinianas, pretendían racionalizar la persecución de grupos étnicos y el dominio arbitrario.",
+      "metadatos": "{\"id_gemini\": \"teorias_pseudocientificas_racismo\"}",
+      "metadata": {
+        "id_gemini": "teorias_pseudocientificas_racismo"
+      }
+    },
+    {
+      "id": 215,
+      "tipo": "concepto",
+      "nombre": "Grupos étnicos",
+      "descripcion": "Colectividades humanas cuyos miembros se identifican entre sí en función de una herencia común compartida, que incluye elementos culturales, lingüísticos, históricos, religiosos y de adscripción identitaria. Históricamente, estos colectivos fueron biologizados y subordinados por el racismo científico, pero la antropología moderna los estudia como construcciones sociales dinámicas y relacionales.",
+      "metadatos": "{\"id_gemini\": \"grupos_etnicos\"}",
+      "metadata": {
+        "id_gemini": "grupos_etnicos"
+      }
+    },
+    {
+      "id": 216,
+      "tipo": "concepto",
+      "nombre": "Diferencias raciales",
+      "descripcion": "Variaciones físicas entre razas que Boas reconoció, pero negó que justificaran afirmaciones de inferioridad.",
+      "metadatos": "{\"id_gemini\": \"diferencias_raciales\"}",
+      "metadata": {
+        "id_gemini": "diferencias_raciales"
+      }
+    },
+    {
+      "id": 217,
+      "tipo": "cultura",
+      "nombre": "Razas negras",
+      "descripcion": "Grupo racial mencionado por Boas para ejemplificar que las diferencias morfológicas no implican incapacidad constitucional.",
+      "metadatos": "{\"id_gemini\": \"razas_negras\"}",
+      "metadata": {
+        "id_gemini": "razas_negras"
+      }
+    },
+    {
+      "id": 218,
+      "tipo": "concepto",
+      "nombre": "Totalitarismo nazi",
+      "descripcion": "Sistema político e ideológico que promovía teorías racistas y fue combatido por Franz Boas.",
+      "metadatos": "{\"id_gemini\": \"totalitarismo_nazi\"}",
+      "metadata": {
+        "id_gemini": "totalitarismo_nazi"
+      }
+    },
+    {
+      "id": 219,
+      "tipo": "concepto",
+      "nombre": "Prejuicio racial",
+      "descripcion": "Actitud irracional de aversión o discriminación hacia grupos por su raza, que Boas combatió incansablemente.",
+      "metadatos": "{\"id_gemini\": \"prejuicio_racial\"}",
+      "metadata": {
+        "id_gemini": "prejuicio_racial"
+      }
+    },
+    {
+      "id": 220,
+      "tipo": "concepto",
+      "nombre": "Irracionalidad del hombre primitivo",
+      "descripcion": "Teoría refutada por Boas, que postulaba una falta de racionalidad en las culturas no occidentales.",
+      "metadatos": "{\"id_gemini\": \"irracionalidad_hombre_primitivo\"}",
+      "metadata": {
+        "id_gemini": "irracionalidad_hombre_primitivo"
+      }
+    },
+    {
+      "id": 221,
+      "tipo": "concepto",
+      "nombre": "Mentalidad prelógica",
+      "descripcion": "Teoría refutada por Boas, que sugería una forma de pensamiento cualitativamente diferente en sociedades 'primitivas'.",
+      "metadatos": "{\"id_gemini\": \"mentalidad_prelogica\"}",
+      "metadata": {
+        "id_gemini": "mentalidad_prelogica"
+      }
+    },
+    {
+      "id": 222,
+      "tipo": "concepto",
+      "nombre": "Etnocentrismo",
+      "descripcion": "Actitud de juzgar otras culturas con los propios juicios de valor, contra la cual Boas advirtió a la antropología.",
+      "metadatos": "{\"id_gemini\": \"etnocentrismo\"}",
+      "metadata": {
+        "id_gemini": "etnocentrismo"
+      }
+    },
+    {
+      "id": 223,
+      "tipo": "autor",
+      "nombre": "Edward Sapir",
+      "descripcion": "Lingüista y antropólogo, discípulo de Franz Boas y figura influyente en la antropología cultural norteamericana.",
+      "metadatos": "{\"id_gemini\": \"edward_sapir\"}",
+      "metadata": {
+        "id_gemini": "edward_sapir"
+      }
+    },
+    {
+      "id": 224,
+      "tipo": "autor",
+      "nombre": "Margaret Mead",
+      "descripcion": "Antropóloga, discípula de Franz Boas, conocida por sus estudios sobre la adolescencia y el género en Samoa y Nueva Guinea.",
+      "metadatos": "{\"id_gemini\": \"margaret_mead\"}",
+      "metadata": {
+        "id_gemini": "margaret_mead"
+      }
+    },
+    {
+      "id": 225,
+      "tipo": "autor",
+      "nombre": "Ralph Linton",
+      "descripcion": "Antropólogo, discípulo de Franz Boas, conocido por sus trabajos sobre el estatus y el rol.",
+      "metadatos": "{\"id_gemini\": \"ralph_linton\"}",
+      "metadata": {
+        "id_gemini": "ralph_linton"
+      }
+    },
+    {
+      "id": 226,
+      "tipo": "autor",
+      "nombre": "Alfred Kroeber",
+      "descripcion": "Antropólogo, discípulo de Franz Boas y una figura central en la antropología cultural norteamericana, conocido por su enfoque holístico.",
+      "metadatos": "{\"id_gemini\": \"alfred_kroeber\"}",
+      "metadata": {
+        "id_gemini": "alfred_kroeber"
+      }
+    },
+    {
+      "id": 227,
+      "tipo": "autor",
+      "nombre": "Georg Buschan",
+      "descripcion": "Autor mencionado como fuente de datos generales sobre civilizaciones antiguas.",
+      "metadatos": "{\"id_gemini\": \"georg_buschan\"}",
+      "metadata": {
+        "id_gemini": "georg_buschan"
+      }
+    },
+    {
+      "id": 228,
+      "tipo": "cultura",
+      "nombre": "Egipcios",
+      "descripcion": "Civilización antigua mencionada como ejemplo de un pueblo que podría haber juzgado a los antepasados europeos como 'atrasados'.",
+      "metadatos": "{\"id_gemini\": \"egipcios\"}",
+      "metadata": {
+        "id_gemini": "egipcios"
+      }
+    },
+    {
+      "id": 229,
+      "tipo": "concepto",
+      "nombre": "Edad de Piedra",
+      "descripcion": "Período prehistórico en el que vivían los habitantes de Europa noroccidental hace 2000-3000 años antes de Cristo.",
+      "metadatos": "{\"id_gemini\": \"edad_de_piedra\"}",
+      "metadata": {
+        "id_gemini": "edad_de_piedra"
+      }
+    },
+    {
+      "id": 230,
+      "tipo": "cultura",
+      "nombre": "Japoneses",
+      "descripcion": "Pueblo mencionado como ejemplo de cómo una opinión pasada sobre su 'atraso' se revocaría con el tiempo debido a su progreso cultural.",
+      "metadatos": "{\"id_gemini\": \"japoneses\"}",
+      "metadata": {
+        "id_gemini": "japoneses"
+      }
+    },
+    {
+      "id": 231,
+      "tipo": "cultura",
+      "nombre": "Asia occidental",
+      "descripcion": "Región donde florecieron civilizaciones antiguas en sus inicios, mencionada en el contexto del desarrollo cultural.",
+      "metadatos": "{\"id_gemini\": \"asia_occidental\"}",
+      "metadata": {
+        "id_gemini": "asia_occidental"
+      }
+    },
+    {
+      "id": 232,
+      "tipo": "cultura",
+      "nombre": "Antiguo Perú",
+      "descripcion": "Civilización del Nuevo Mundo con un alto nivel de organización política y logros culturales.",
+      "metadatos": "{\"id_gemini\": \"antiguo_peru\"}",
+      "metadata": {
+        "id_gemini": "antiguo_peru"
+      }
+    },
+    {
+      "id": 233,
+      "tipo": "cultura",
+      "nombre": "América Central",
+      "descripcion": "Región donde se desarrollaron civilizaciones del Nuevo Mundo con altos niveles culturales.",
+      "metadatos": "{\"id_gemini\": \"america_central\"}",
+      "metadata": {
+        "id_gemini": "america_central"
+      }
+    },
+    {
+      "id": 234,
+      "tipo": "concepto",
+      "nombre": "Viejo Mundo",
+      "descripcion": "Término para referirse a los continentes de Europa, Asia y África en contraste con el Nuevo Mundo.",
+      "metadatos": "{\"id_gemini\": \"viejo_mundo\"}",
+      "metadata": {
+        "id_gemini": "viejo_mundo"
+      }
+    },
+    {
+      "id": 235,
+      "tipo": "concepto",
+      "nombre": "Nuevo Mundo",
+      "descripcion": "Término para referirse al continente americano en contraste con el Viejo Mundo.",
+      "metadatos": "{\"id_gemini\": \"nuevo_mundo\"}",
+      "metadata": {
+        "id_gemini": "nuevo_mundo"
+      }
+    },
+    {
+      "id": 236,
+      "tipo": "cultura",
+      "nombre": "América",
+      "descripcion": "Continente donde el hombre existió desde épocas geológicas, mencionado en el contexto de la edad del género humano.",
+      "metadatos": "{\"id_gemini\": \"america\"}",
+      "metadata": {
+        "id_gemini": "america"
+      }
+    },
+    {
+      "id": 237,
+      "tipo": "cultura",
+      "nombre": "Columbia Británica",
+      "descripcion": "Región donde Franz Boas realizó experiencias de campo en 1897 y escuchó un prejuicio contra los judíos.",
+      "metadatos": "{\"id_gemini\": \"columbia_britanica\"}",
+      "metadata": {
+        "id_gemini": "columbia_britanica"
+      }
+    },
+    {
+      "id": 238,
+      "tipo": "cultura",
+      "nombre": "Judíos",
+      "descripcion": "Grupo étnico mencionado en una anécdota sobre prejuicios escuchada por Boas en el trabajo de campo.",
+      "metadatos": "{\"id_gemini\": \"judios\"}",
+      "metadata": {
+        "id_gemini": "judios"
+      }
+    },
+    {
+      "id": 239,
+      "tipo": "concepto",
+      "nombre": "Clasificación de razas",
+      "descripcion": "El problema estadístico de categorizar razas, buscando formas locales extremas que no muestren superposición.",
+      "metadatos": "{\"id_gemini\": \"clasificacion_de_razas\"}",
+      "metadata": {
+        "id_gemini": "clasificacion_de_razas"
+      }
+    },
+    {
+      "id": 240,
+      "tipo": "cultura",
+      "nombre": "Negros de África",
+      "descripcion": "Un tipo racial extremo mencionado por Boas en su clasificación de razas.",
+      "metadatos": "{\"id_gemini\": \"negros_de_africa\"}",
+      "metadata": {
+        "id_gemini": "negros_de_africa"
+      }
+    },
+    {
+      "id": 241,
+      "tipo": "cultura",
+      "nombre": "Bosquimanos",
+      "descripcion": "Un tipo racial extremo mencionado por Boas en su clasificación de razas.",
+      "metadatos": "{\"id_gemini\": \"bosquimanos\"}",
+      "metadata": {
+        "id_gemini": "bosquimanos"
+      }
+    },
+    {
+      "id": 242,
+      "tipo": "cultura",
+      "nombre": "Mongólicos del norte",
+      "descripcion": "Un tipo racial extremo mencionado por Boas en su clasificación de razas.",
+      "metadatos": "{\"id_gemini\": \"mongolicos_del_norte\"}",
+      "metadata": {
+        "id_gemini": "mongolicos_del_norte"
+      }
+    },
+    {
+      "id": 243,
+      "tipo": "cultura",
+      "nombre": "Australianos",
+      "descripcion": "Un tipo racial extremo mencionado por Boas en su clasificación de razas.",
+      "metadatos": "{\"id_gemini\": \"australianos_cultura\"}",
+      "metadata": {
+        "id_gemini": "australianos_cultura"
+      }
+    },
+    {
+      "id": 244,
+      "tipo": "cultura",
+      "nombre": "Australoides de Asia meridional",
+      "descripcion": "Un tipo racial extremo mencionado por Boas en su clasificación de razas.",
+      "metadatos": "{\"id_gemini\": \"australoides_asia_meridional\"}",
+      "metadata": {
+        "id_gemini": "australoides_asia_meridional"
+      }
+    },
+    {
+      "id": 245,
+      "tipo": "cultura",
+      "nombre": "Pueblo de África del norte",
+      "descripcion": "Grupo intermedio comparado con tipos europeos y negros en la clasificación racial de Boas.",
+      "metadatos": "{\"id_gemini\": \"pueblo_africa_norte\"}",
+      "metadata": {
+        "id_gemini": "pueblo_africa_norte"
+      }
+    },
+    {
+      "id": 246,
+      "tipo": "cultura",
+      "nombre": "Pueblo de la India",
+      "descripcion": "Grupo intermedio comparado con tipos europeos, mongólicos y australianos en la clasificación racial de Boas.",
+      "metadatos": "{\"id_gemini\": \"pueblo_india\"}",
+      "metadata": {
+        "id_gemini": "pueblo_india"
+      }
+    },
+    {
+      "id": 247,
+      "tipo": "concepto",
+      "nombre": "Herencia racial",
+      "descripcion": "Concepto reexaminado por Boas, que se refiere a la idea de que los rasgos raciales caracterizan a todos los miembros de una raza de forma inalterable.",
+      "metadatos": "{\"id_gemini\": \"herencia_racial\"}",
+      "metadata": {
+        "id_gemini": "herencia_racial"
+      }
+    },
+    {
+      "id": 248,
+      "tipo": "cultura",
+      "nombre": "Suecos",
+      "descripcion": "Grupo humano usado como ejemplo para ilustrar la 'herencia racial' con rasgos como cabello rubio y ojos azules.",
+      "metadatos": "{\"id_gemini\": \"suecos\"}",
+      "metadata": {
+        "id_gemini": "suecos"
+      }
+    },
+    {
+      "id": 249,
+      "tipo": "cultura",
+      "nombre": "Alemanes del norte",
+      "descripcion": "Grupo humano usado para mostrar la superposición de rasgos raciales con los suecos e italianos.",
+      "metadatos": "{\"id_gemini\": \"alemanes_del_norte\"}",
+      "metadata": {
+        "id_gemini": "alemanes_del_norte"
+      }
+    },
+    {
+      "id": 250,
+      "tipo": "cultura",
+      "nombre": "Sicilianas",
+      "descripcion": "Población estudiada por su índice cefálico para demostrar que individuos con la misma apariencia corporal pueden no ser genéticamente idénticos a otros grupos.",
+      "metadatos": "{\"id_gemini\": \"sicilianas\"}",
+      "metadata": {
+        "id_gemini": "sicilianas"
+      }
+    },
+    {
+      "id": 251,
+      "tipo": "cultura",
+      "nombre": "Bohemios",
+      "descripcion": "Población estudiada por su índice cefálico para demostrar que individuos con la misma apariencia corporal pueden no ser genéticamente idénticos a otros grupos.",
+      "metadatos": "{\"id_gemini\": \"bohemios_cultura\"}",
+      "metadata": {
+        "id_gemini": "bohemios_cultura"
+      }
+    },
+    {
+      "id": 252,
+      "tipo": "concepto",
+      "nombre": "Identidad constitucional",
+      "descripcion": "Concepto biológico que se refiere a la identidad genética de las personas, que solo puede descubrirse por crianza pura y cruzamiento, no por la apariencia física.",
+      "metadatos": "{\"id_gemini\": \"identidad_constitucional\"}",
+      "metadata": {
+        "id_gemini": "identidad_constitucional"
+      }
+    },
+    {
+      "id": 253,
+      "tipo": "concepto",
+      "nombre": "Identidad morfológica aparente",
+      "descripcion": "Concepto que describe la similitud superficial basada en la apariencia física, en contraste con la identidad genética o constitucional.",
+      "metadatos": "{\"id_gemini\": \"identidad_morfologica_aparente\"}",
+      "metadata": {
+        "id_gemini": "identidad_morfologica_aparente"
+      }
+    },
+    {
+      "id": 254,
+      "tipo": "concepto",
+      "nombre": "Crianza pura",
+      "descripcion": "Proceso por el cual la identidad constitucional puede ser descubierta, también produce linajes familiares que se parecen mucho si persiste por tiempo prolongado.",
+      "metadatos": "{\"id_gemini\": \"crianza_pura\"}",
+      "metadata": {
+        "id_gemini": "crianza_pura"
+      }
+    },
+    {
+      "id": 255,
+      "tipo": "concepto",
+      "nombre": "Ley mendeliana de la herencia",
+      "descripcion": "Ley que establece que la distribución de frecuencia de formas en la prole de una pareja está determinada por las características de los padres.",
+      "metadatos": "{\"id_gemini\": \"ley_mendeliana_de_la_herencia\"}",
+      "metadata": {
+        "id_gemini": "ley_mendeliana_de_la_herencia"
+      }
+    },
+    {
+      "id": 256,
+      "tipo": "autor",
+      "nombre": "Ottokar Lorenz",
+      "descripcion": "Investigador que calculó el número de antepasados del ex Emperador de Alemania, ilustrando el fenómeno de la 'pérdida de antepasados'.",
+      "metadatos": "{\"id_gemini\": \"o_lorenz\"}",
+      "metadata": {
+        "id_gemini": "o_lorenz"
+      }
+    },
+    {
+      "id": 257,
+      "tipo": "concepto",
+      "nombre": "Pérdida de antepasados",
+      "descripcion": "Fenómeno en genealogía donde el número real de antepasados de un individuo es menor al teórico debido a interalianzas entre las mismas familias.",
+      "metadatos": "{\"id_gemini\": \"perdida_de_antepasados\"}",
+      "metadata": {
+        "id_gemini": "perdida_de_antepasados"
+      }
+    },
+    {
+      "id": 258,
+      "tipo": "cultura",
+      "nombre": "Esquimal de Smith Sound",
+      "descripcion": "Comunidad aislada del Norte de Groenlandia usada como ejemplo de poblaciones con un número reducido de antepasados debido a su endogamia y pequeño tamaño.",
+      "metadatos": "{\"id_gemini\": \"esquimal_smith_sound\"}",
+      "metadata": {
+        "id_gemini": "esquimal_smith_sound"
+      }
+    },
+    {
+      "id": 259,
+      "tipo": "autor",
+      "nombre": "Wilhelm Jankowsky",
+      "descripcion": "Autor de 'Die Blutsverwandschaft im Volk und ín der Stuttgart', citado por Boas para cálculos de parentescos colaterales.",
+      "metadatos": "{\"id_gemini\": \"jankowsky\"}",
+      "metadata": {
+        "id_gemini": "jankowsky"
+      }
+    },
+    {
+      "id": 260,
+      "tipo": "obra",
+      "nombre": "Die Blutsverwandschaft im Volk und ín der Stuttgart",
+      "descripcion": "Obra de W. Jankowsky sobre el parentesco en el pueblo, citada por Boas.",
+      "metadatos": "{\"id_gemini\": \"die_blutsverwandschaft_im_volk_und_in_der_stuttgart\"}",
+      "metadata": {
+        "id_gemini": "die_blutsverwandschaft_im_volk_und_in_der_stuttgart"
+      }
+    },
+    {
+      "id": 261,
+      "tipo": "concepto",
+      "nombre": "Linajes familiares",
+      "descripcion": "Las líneas genéticas o de descendencia que constituyen una raza o población, cuyas características determinan el carácter de la raza.",
+      "metadatos": "{\"id_gemini\": \"linajes_familiares\"}",
+      "metadata": {
+        "id_gemini": "linajes_familiares"
+      }
+    },
+    {
+      "id": 262,
+      "tipo": "autor",
+      "nombre": "Helen Dean King",
+      "descripcion": "Helen Dean King (1869–1955), genetista y bióloga estadounidense de la Wistar Institute. Pionera en la investigación genética de mamíferos, llevó a cabo experimentos a largo plazo sobre endogamia extrema en ratas. Demostró cuantitativamente que la crianza pura reduce la variabilidad fraternal al fijar rasgos genéticos homogéneos. Sus estudios fueron cruciales para la antropología física de Boas al proveer una base empírica sobre cómo opera la consanguinidad y la selección, desmitificando la idea de una degeneración biológica intrínseca.",
+      "metadatos": "{\"id_gemini\": \"king\"}",
+      "metadata": {
+        "id_gemini": "king"
+      }
+    },
+    {
+      "id": 263,
+      "tipo": "concepto",
+      "nombre": "Variabilidad fraternal",
+      "descripcion": "Medida del grado de dispersión de formas entre hermanos y hermanas de la misma familia.",
+      "metadatos": "{\"id_gemini\": \"variabilidad_fraternal\"}",
+      "metadata": {
+        "id_gemini": "variabilidad_fraternal"
+      }
+    },
+    {
+      "id": 264,
+      "tipo": "concepto",
+      "nombre": "Índice cefálico",
+      "descripcion": "Medida antropométrica expresada como la relación porcentual entre el ancho máximo y el largo máximo de la cabeza. Históricamente utilizada por la antropología física del siglo XIX para clasificar rígidamente a las poblaciones en tipos raciales fijos. Franz Boas revolucionó el uso de este indicador al demostrar empíricamente su plasticidad fenotípica frente a cambios ambientales en hijos de inmigrantes, convirtiéndolo en una prueba matemática contra el determinismo biológico.",
+      "metadatos": "{\"id_gemini\": \"indice_cefalico\"}",
+      "metadata": {
+        "id_gemini": "indice_cefalico"
+      }
+    },
+    {
+      "id": 265,
+      "tipo": "cultura",
+      "nombre": "Armenios",
+      "descripcion": "Grupo humano cuyo índice cefálico se usa como ejemplo en los estudios de variabilidad de Boas.",
+      "metadatos": "{\"id_gemini\": \"armenios_cultura\"}",
+      "metadata": {
+        "id_gemini": "armenios_cultura"
+      }
+    },
+    {
+      "id": 266,
+      "tipo": "cultura",
+      "nombre": "Bastardos Sudafricanos",
+      "descripcion": "Población descendiente de hotentotes y holandeses, estudiada por su origen mixto y la uniformidad de sus linajes familiares a pesar de la variabilidad fraternal.",
+      "metadatos": "{\"id_gemini\": \"bastardos_sudafricanos\"}",
+      "metadata": {
+        "id_gemini": "bastardos_sudafricanos"
+      }
+    },
+    {
+      "id": 267,
+      "tipo": "cultura",
+      "nombre": "Hotentotes",
+      "descripcion": "Uno de los grupos parentales de los Bastardos Sudafricanos.",
+      "metadatos": "{\"id_gemini\": \"hotentotes\"}",
+      "metadata": {
+        "id_gemini": "hotentotes"
+      }
+    },
+    {
+      "id": 268,
+      "tipo": "cultura",
+      "nombre": "Boers",
+      "descripcion": "Uno de los grupos parentales de los Bastardos Sudafricanos.",
+      "metadatos": "{\"id_gemini\": \"boers\"}",
+      "metadata": {
+        "id_gemini": "boers"
+      }
+    },
+    {
+      "id": 269,
+      "tipo": "cultura",
+      "nombre": "Indios Chippewa",
+      "descripcion": "Población de Canadá, estudiada por su origen mixto (indios, franceses, irlandeses) y la uniformidad de sus linajes familiares.",
+      "metadatos": "{\"id_gemini\": \"indios_chippewa\"}",
+      "metadata": {
+        "id_gemini": "indios_chippewa"
+      }
+    },
+    {
+      "id": 270,
+      "tipo": "cultura",
+      "nombre": "Missisauga",
+      "descripcion": "Rama local de los indios Chippewa, estudiada en relación con la variabilidad del índice cefálico.",
+      "metadatos": "{\"id_gemini\": \"missisauga\"}",
+      "metadata": {
+        "id_gemini": "missisauga"
+      }
+    },
+    {
+      "id": 271,
+      "tipo": "cultura",
+      "nombre": "Franceses",
+      "descripcion": "Uno de los grupos de origen de los indios Chippewa.",
+      "metadatos": "{\"id_gemini\": \"franceses_cultura\"}",
+      "metadata": {
+        "id_gemini": "franceses_cultura"
+      }
+    },
+    {
+      "id": 272,
+      "tipo": "cultura",
+      "nombre": "Irlandeses",
+      "descripcion": "Uno de los grupos de origen de los indios Chippewa.",
+      "metadatos": "{\"id_gemini\": \"irlandeses_cultura\"}",
+      "metadata": {
+        "id_gemini": "irlandeses_cultura"
+      }
+    },
+    {
+      "id": 273,
+      "tipo": "cultura",
+      "nombre": "Negros Americanos",
+      "descripcion": "Población que representa una antigua mezcla de blancos y negros, con uniformidad de linajes familiares.",
+      "metadatos": "{\"id_gemini\": \"negros_americanos\"}",
+      "metadata": {
+        "id_gemini": "negros_americanos"
+      }
+    },
+    {
+      "id": 274,
+      "tipo": "autor",
+      "nombre": "Fritz Lenz",
+      "descripcion": "Fritz Lenz (1887–1976), médico, eugenetista y genetista alemán, destacado por ser uno de los principales teóricos del racismo científico y la higiene racial en la Alemania de entreguerras y el régimen nazi. Franz Boas criticó duramente sus postulados teóricos, demostrando que Lenz subestimaba deliberadamente la inmensa variabilidad genética y fenotípica existente dentro de una misma población o 'raza' para justificar de forma pseudocientífica la homogeneidad y pureza biológica de los grupos humanos.",
+      "metadatos": "{\"id_gemini\": \"fritz_lenz\"}",
+      "metadata": {
+        "id_gemini": "fritz_lenz"
+      }
+    },
+    {
+      "id": 275,
+      "tipo": "concepto",
+      "nombre": "Diferencias genéticas intraraciales",
+      "descripcion": "Las variaciones genéticas existentes dentro de una misma raza, cuya significación es un punto de discusión.",
+      "metadatos": "{\"id_gemini\": \"diferencias_geneticas_intraraciales\"}",
+      "metadata": {
+        "id_gemini": "diferencias_geneticas_intraraciales"
+      }
+    },
+    {
+      "id": 276,
+      "tipo": "autor",
+      "nombre": "Wilhelm Johannsen",
+      "descripcion": "Wilhelm Johannsen (1857–1927), botánico, genetista y pionero de la biología danés, famoso por introducir los términos gene, genotipo y fenotipo. Sus experimentos con líneas puras demostraron que la apariencia externa (fenotipo) de una población biológica esconde una profunda diversidad de constituciones genéticas subyacentes (genotipos). Franz Boas utilizó este hito científico como pilar metodológico para argumentar que las 'razas' humanas no son unidades biológicas puras, sino conglomerados de múltiples líneas genéticas familiares altamente variables.",
+      "metadatos": "{\"id_gemini\": \"johannsen\"}",
+      "metadata": {
+        "id_gemini": "johannsen"
+      }
+    },
+    {
+      "id": 277,
+      "tipo": "concepto",
+      "nombre": "Fenotipo",
+      "descripcion": "Conjunto de rasgos físicos, morfológicos y conductuales observables de un organismo, resultantes de la interacción entre su constitución genética (genotipo) y las presiones e influencias del medio ambiente. En la antropología de Franz Boas, el estudio del fenotipo —particularmente a través de la plasticidad de caracteres como el índice cefálico— sirvió para demostrar que las formas corporales humanas no son fijas ni inmutables, sino dinámicas y adaptativas.",
+      "metadatos": "{\"id_gemini\": \"fenotipo_genetica\"}",
+      "metadata": {
+        "id_gemini": "fenotipo_genetica"
+      }
+    },
+    {
+      "id": 278,
+      "tipo": "concepto",
+      "nombre": "Genotipos",
+      "descripcion": "La composición genética subyacente de un organismo, en la cual Johannsen disolvió el fenotipo.",
+      "metadatos": "{\"id_gemini\": \"genotipos_genetica\"}",
+      "metadata": {
+        "id_gemini": "genotipos_genetica"
+      }
+    },
+    {
+      "id": 279,
+      "tipo": "autor",
+      "nombre": "Orator Fuller Cook",
+      "descripcion": "Orator Fuller Cook (1867–1949), botánico, agrónomo y biólogo estadounidense. Propuso una visión de la evolución orgánica que descompone las categorías taxonómicas rígidas, considerando a la especie no como una entidad homogénea, sino como un complejo dinámico de líneas de descendencia distintas donde la única realidad biológica fundamental es el individuo y su progenie. Franz Boas utiliza su perspectiva para desmantelar metodológicamente el concepto de 'raza' como un tipo estático, alineándolo con la variabilidad de las líneas familiares.",
+      "metadatos": "{\"id_gemini\": \"o_f_cook\"}",
+      "metadata": {
+        "id_gemini": "o_f_cook"
+      }
+    },
+    {
+      "id": 280,
+      "tipo": "concepto",
+      "nombre": "Homogeneidad de la población",
+      "descripcion": "Estado de una población donde los linajes familiares son muy similares, o la variabilidad de linajes es baja.",
+      "metadatos": "{\"id_gemini\": \"homogeneidad_poblacional\"}",
+      "metadata": {
+        "id_gemini": "homogeneidad_poblacional"
+      }
+    },
+    {
+      "id": 281,
+      "tipo": "concepto",
+      "nombre": "Semejanza fraterna",
+      "descripcion": "Grado de parecido entre hermanos y hermanas, que Boas señala que depende de la composición (homogeneidad/heterogeneidad) de la población.",
+      "metadatos": "{\"id_gemini\": \"semejanza_fraterna\"}",
+      "metadata": {
+        "id_gemini": "semejanza_fraterna"
+      }
+    },
+    {
+      "id": 282,
+      "tipo": "autor",
+      "nombre": "Francis Galton",
+      "descripcion": "Francis Galton (1822–1911), polímata, estadístico y antropólogo británico, célebre por fundar la eugenesia moderna y desarrollar métodos estadísticos clave como la correlación y la regresión a la media para cuantificar la herencia de rasgos físicos. Aunque su trabajo buscaba justificar la mejora selectiva de la especie humana y el determinismo biológico, Franz Boas adoptó sus herramientas estadísticas y metodológicas sobre la semejanza familiar para demostrar cuantitativamente la enorme variabilidad interna de los grupos humanos, desmantelando la premisa de la homogeneidad racial.",
+      "metadatos": "{\"id_gemini\": \"francis_galton\"}",
+      "metadata": {
+        "id_gemini": "francis_galton"
+      }
+    },
+    {
+      "id": 283,
+      "tipo": "concepto",
+      "nombre": "Coeficiente de regresión",
+      "descripcion": "Medida estadística desarrollada originalmente por Francis Galton en el marco de la biometría para cuantificar el grado de semejanza y la transmisión de rasgos físicos entre parientes biológicos (padres e hijos, hermanos). Franz Boas utiliza este análisis estadístico de la herencia para probar que la variabilidad interna de los linajes familiares es masiva, demostrando que los tipos físicos individuales no están rígidamente determinados por un promedio racial homogéneo, sino sujetos a una constante dispersión matemática.",
+      "metadatos": "{\"id_gemini\": \"coeficiente_de_regresion\"}",
+      "metadata": {
+        "id_gemini": "coeficiente_de_regresion"
+      }
+    },
+    {
+      "id": 284,
+      "tipo": "cultura",
+      "nombre": "Worcester, Massachusetts",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"worcester_massachusetts\"}",
+      "metadata": {
+        "id_gemini": "worcester_massachusetts"
+      }
+    },
+    {
+      "id": 285,
+      "tipo": "cultura",
+      "nombre": "Judíos del Este de Europa",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"judios_este_europa\"}",
+      "metadata": {
+        "id_gemini": "judios_este_europa"
+      }
+    },
+    {
+      "id": 286,
+      "tipo": "cultura",
+      "nombre": "Blancos del Blue Ridge",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"blancos_blue_ridge\"}",
+      "metadata": {
+        "id_gemini": "blancos_blue_ridge"
+      }
+    },
+    {
+      "id": 287,
+      "tipo": "cultura",
+      "nombre": "Italianos del Centro",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"italianos_del_centro\"}",
+      "metadata": {
+        "id_gemini": "italianos_del_centro"
+      }
+    },
+    {
+      "id": 288,
+      "tipo": "cultura",
+      "nombre": "Holandeses",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"holandeses_cultura\"}",
+      "metadata": {
+        "id_gemini": "holandeses_cultura"
+      }
+    },
+    {
+      "id": 289,
+      "tipo": "cultura",
+      "nombre": "Escoceses",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"escoceses_cultura\"}",
+      "metadata": {
+        "id_gemini": "escoceses_cultura"
+      }
+    },
+    {
+      "id": 290,
+      "tipo": "cultura",
+      "nombre": "Negro-blancos de Nueva York",
+      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
+      "metadatos": "{\"id_gemini\": \"negro_blancos_nueva_york\"}",
+      "metadata": {
+        "id_gemini": "negro_blancos_nueva_york"
+      }
+    },
+    {
+      "id": 291,
+      "tipo": "autor",
+      "nombre": "Félix von Luschan",
+      "descripcion": "Félix von Luschan (1854–1924), médico, antropólogo y etnólogo austriaco. Realizó extensos estudios antropométricos en el sur de Asia Menor, donde demostró que la población contemporánea exhibía una altísima variabilidad física debido a la histórica mezcla biológica entre pueblos braquicéfalos ('cabezas redondas') y dolicocéfalos ('cabezas alargadas'), refutando la existencia de razas puras en la región. Desarrolló la escala cromática que lleva su nombre para el estudio de la pigmentación cutánea y mantuvo una postura firmemente opuesta al racismo científico y al antisemitismo.",
+      "metadatos": "{\"id_gemini\": \"felix_von_luschan\"}",
+      "metadata": {
+        "id_gemini": "felix_von_luschan"
+      }
+    },
+    {
+      "id": 292,
+      "tipo": "cultura",
+      "nombre": "Pueblo de cabeza redonda del Asia Central",
+      "descripcion": "Grupo humano que se mezcló con el pueblo de cabeza alargada de la costa de Siria en Asia Menor.",
+      "metadatos": "{\"id_gemini\": \"pueblo_cabeza_redonda_asia_central\"}",
+      "metadata": {
+        "id_gemini": "pueblo_cabeza_redonda_asia_central"
+      }
+    },
+    {
+      "id": 293,
+      "tipo": "cultura",
+      "nombre": "Pueblo de cabeza alargada de la costa de Siria",
+      "descripcion": "Grupo humano que se mezcló con el pueblo de cabeza redonda del Asia Central en Asia Menor.",
+      "metadatos": "{\"id_gemini\": \"pueblo_cabeza_alargada_costa_siria\"}",
+      "metadata": {
+        "id_gemini": "pueblo_cabeza_alargada_costa_siria"
+      }
+    },
+    {
+      "id": 294,
+      "tipo": "cultura",
+      "nombre": "Italianos del norte",
+      "descripcion": "Grupo humano de cabeza ancha que se alió con los italianos del sud en Italia central, aumentando la variabilidad de la forma de la cabeza.",
+      "metadatos": "{\"id_gemini\": \"italianos_del_norte\"}",
+      "metadata": {
+        "id_gemini": "italianos_del_norte"
+      }
+    },
+    {
+      "id": 295,
+      "tipo": "cultura",
+      "nombre": "Italianos del sud",
+      "descripcion": "Grupo humano de cabeza alta que se alió con los italianos del norte en Italia central, aumentando la variabilidad de la forma de la cabeza.",
+      "metadatos": "{\"id_gemini\": \"italianos_del_sud\"}",
+      "metadata": {
+        "id_gemini": "italianos_del_sud"
+      }
+    },
+    {
+      "id": 296,
+      "tipo": "concepto",
+      "nombre": "Selección (biológica)",
+      "descripcion": "Mecanismo clave en la cría de animales domésticos, donde se eligen individuos con ciertos rasgos para la reproducción.",
+      "metadatos": "{\"id_gemini\": \"seleccion_biologica\"}",
+      "metadata": {
+        "id_gemini": "seleccion_biologica"
+      }
+    },
+    {
+      "id": 297,
+      "tipo": "concepto",
+      "nombre": "Barreras sociales",
+      "descripcion": "Obstáculos sociales que, aunque intentan impedir la mezcla de diferentes castas o razas, son destruidos con el tiempo, llevando a la mezcla de poblaciones.",
+      "metadatos": "{\"id_gemini\": \"barreras_sociales\"}",
+      "metadata": {
+        "id_gemini": "barreras_sociales"
+      }
+    },
+    {
+      "id": 298,
+      "tipo": "cultura",
+      "nombre": "Patricios",
+      "descripcion": "Clase social en Roma que, a pesar de las barreras, se mezcló con los plebeyos.",
+      "metadatos": "{\"id_gemini\": \"patricios\"}",
+      "metadata": {
+        "id_gemini": "patricios"
+      }
+    },
+    {
+      "id": 299,
+      "tipo": "cultura",
+      "nombre": "Plebeyos",
+      "descripcion": "Clase social en Roma que se mezcló con los patricios a pesar de la oposición.",
+      "metadatos": "{\"id_gemini\": \"plebeyos\"}",
+      "metadata": {
+        "id_gemini": "plebeyos"
+      }
+    },
+    {
+      "id": 300,
+      "tipo": "concepto",
+      "nombre": "Incae",
+      "descripcion": "Una división del hueso occipital por una sutura transversal, observada con inusual frecuencia en Perú, usada como ejemplo de peculiaridades de grupos aislados.",
+      "metadatos": "{\"id_gemini\": \"incae\"}",
+      "metadata": {
+        "id_gemini": "incae"
+      }
+    },
+    {
+      "id": 301,
+      "tipo": "cultura",
+      "nombre": "Indios Pueblo",
+      "descripcion": "Grupo humano donde se ha observado una alta frecuencia de la característica 'Incae'.",
+      "metadatos": "{\"id_gemini\": \"indios_pueblo\"}",
+      "metadata": {
+        "id_gemini": "indios_pueblo"
+      }
+    },
+    {
+      "id": 302,
+      "tipo": "concepto",
+      "nombre": "Torus palatinus",
+      "descripcion": "Una arruga a lo largo de la línea media del paladar, observada con gran frecuencia entre los lapones y en las costas orientales del Báltico.",
+      "metadatos": "{\"id_gemini\": \"torus_palatinus\"}",
+      "metadata": {
+        "id_gemini": "torus_palatinus"
+      }
+    },
+    {
+      "id": 303,
+      "tipo": "cultura",
+      "nombre": "Lapones",
+      "descripcion": "Grupo humano donde se ha observado una alta frecuencia del 'torus palatinus'.",
+      "metadatos": "{\"id_gemini\": \"lapones\"}",
+      "metadata": {
+        "id_gemini": "lapones"
+      }
+    },
+    {
+      "id": 304,
+      "tipo": "cultura",
+      "nombre": "Españoles",
+      "descripcion": "Grupo humano que, junto con los italianos del sud, entra en contacto y se mezcla en la República Argentina.",
+      "metadatos": "{\"id_gemini\": \"espanoles_cultura\"}",
+      "metadata": {
+        "id_gemini": "espanoles_cultura"
+      }
+    },
+    {
+      "id": 305,
+      "tipo": "cultura",
+      "nombre": "República Argentina",
+      "descripcion": "Lugar donde los italianos del sud y los españoles entran en contacto y se mezclan, observándose cambios en la distribución de nacimientos.",
+      "metadatos": "{\"id_gemini\": \"republica_argentina\"}",
+      "metadata": {
+        "id_gemini": "republica_argentina"
+      }
+    },
+    {
+      "id": 306,
+      "tipo": "autor",
+      "nombre": "Raymond Pearl",
+      "descripcion": "Raymond Pearl (1879–1940), biólogo, demógrafo y biometrista estadounidense. Pionero en la aplicación de la estadística a la biología y la genética de poblaciones. Su trabajo sobre la alteración en la proporción de nacimientos por sexo en poblaciones mestizas de Argentina fue utilizado por Franz Boas para demostrar la plasticidad y variabilidad de los procesos demográficos y reproductivos ante el mestizaje y el cambio ambiental, desafiando el determinismo biológico de la eugenesia ortodoxa de la que Pearl fue un notable crítico interno",
+      "metadatos": "{\"id_gemini\": \"pearl\"}",
+      "metadata": {
+        "id_gemini": "pearl"
+      }
+    },
+    {
+      "id": 307,
+      "tipo": "concepto",
+      "nombre": "Reconstrucción de poblaciones de origen mixto",
+      "descripcion": "La tarea de intentar inferir los elementos componentes originales de una población mestiza, que Boas considera extremadamente difícil o imposible.",
+      "metadatos": "{\"id_gemini\": \"reconstruccion_poblaciones_mixtas\"}",
+      "metadata": {
+        "id_gemini": "reconstruccion_poblaciones_mixtas"
+      }
+    },
+    {
+      "id": 308,
+      "tipo": "autor",
+      "nombre": "Conrad Rieger",
+      "descripcion": "Conrad Rieger (1855–1939), psiquiatra y médico alemán. Investigó cómo las condiciones fisiológicas, el desarrollo muscular y las fuerzas mecánicas influyen en la morfología del cráneo. Sus tesis fueron fundamentales para que Franz Boas argumentara la plasticidad del índice cefálico, demostrando que la forma de la cabeza no es un rasgo racial genéticamente fijo, sino una estructura moldeable por factores ambientales y funcionales.",
+      "metadatos": "{\"id_gemini\": \"rieger\"}",
+      "metadata": {
+        "id_gemini": "rieger"
+      }
+    },
+    {
+      "id": 309,
+      "tipo": "autor",
+      "nombre": "Joseph Engel",
+      "descripcion": "Joseph Engel (1816–1899), renombrado anatomista austríaco y profesor de patología. Sus investigaciones pioneras sobre el crecimiento óseo y el efecto de la tracción y presión muscular sobre los huesos del cráneo proporcionaron a Franz Boas una base anatómica sólida para defender la plasticidad fenotípica, evidenciando que la morfología craneal se modifica por factores funcionales y mecánicos a lo largo de la vida del individuo.",
+      "metadatos": "{\"id_gemini\": \"engel\"}",
+      "metadata": {
+        "id_gemini": "engel"
+      }
+    },
+    {
+      "id": 310,
+      "tipo": "autor",
+      "nombre": "Gustav Walcher",
+      "descripcion": "Coautor de una teoría que explica las diferentes formas de cabeza por la consideración de la posición del infante en la cuna.",
+      "metadatos": "{\"id_gemini\": \"walcher\"}",
+      "metadata": {
+        "id_gemini": "walcher"
+      }
+    },
+    {
+      "id": 311,
+      "tipo": "autor",
+      "nombre": "Anton Nyström",
+      "descripcion": "Coautor de una teoría que explica las diferentes formas de cabeza por la consideración de la posición del infante en la cuna.",
+      "metadatos": "{\"id_gemini\": \"nystrom\"}",
+      "metadata": {
+        "id_gemini": "nystrom"
+      }
+    },
+    {
+      "id": 312,
+      "tipo": "autor",
+      "nombre": "Otto Ammon",
+      "descripcion": "Pionero en observaciones sobre las diferencias entre tipos urbanos y rurales, demostrando que la población urbana de Haden difiere de la rural.",
+      "metadatos": "{\"id_gemini\": \"ammon\"}",
+      "metadata": {
+        "id_gemini": "ammon"
+      }
+    },
+    {
+      "id": 313,
+      "tipo": "cultura",
+      "nombre": "Población de Haden",
+      "descripcion": "Población urbana y rural estudiada por Ammon, que mostró diferencias en la forma de la cabeza, estatura y pigmentación.",
+      "metadatos": "{\"id_gemini\": \"haden_cultura\"}",
+      "metadata": {
+        "id_gemini": "haden_cultura"
+      }
+    },
+    {
+      "id": 314,
+      "tipo": "autor",
+      "nombre": "Ridolfo Livi",
+      "descripcion": "Autor que realizó observaciones en ciudades de Italia, demostrando diferencias entre la población urbana y rural.",
+      "metadatos": "{\"id_gemini\": \"livi\"}",
+      "metadata": {
+        "id_gemini": "livi"
+      }
+    },
+    {
+      "id": 315,
+      "tipo": "concepto",
+      "nombre": "Migración selectiva",
+      "descripcion": "Mecanismo que, según Ammon, explica las diferencias entre poblaciones urbanas y rurales debido a la migración diferencial de individuos con ciertas características.",
+      "metadatos": "{\"id_gemini\": \"migracion_selectiva\"}",
+      "metadata": {
+        "id_gemini": "migracion_selectiva"
+      }
+    },
+    {
+      "id": 316,
+      "tipo": "autor",
+      "nombre": "Harry L. Shapiro",
+      "descripcion": "Autor que estudió los cambios en la forma física de los japoneses nacidos en Hawái.",
+      "metadatos": "{\"id_gemini\": \"schapiro\"}",
+      "metadata": {
+        "id_gemini": "schapiro"
+      }
+    },
+    {
+      "id": 317,
+      "tipo": "cultura",
+      "nombre": "Japoneses de Hawái",
+      "descripcion": "Población estudiada para observar la influencia directa del ambiente en la forma corporal de los descendientes de inmigrantes.",
+      "metadatos": "{\"id_gemini\": \"hawaii\"}",
+      "metadata": {
+        "id_gemini": "hawaii"
+      }
+    },
+    {
+      "id": 318,
+      "tipo": "cultura",
+      "nombre": "Hebreos",
+      "descripcion": "Grupo étnico cuyo índice cefálico fue estudiado en sus descendientes nacidos en América, mostrando cambios ambientales.",
+      "metadatos": "{\"id_gemini\": \"hebreos_cultura\"}",
+      "metadata": {
+        "id_gemini": "hebreos_cultura"
+      }
+    },
+    {
+      "id": 319,
+      "tipo": "cultura",
+      "nombre": "Napolitanos",
+      "descripcion": "Población cuyo índice cefálico fue estudiado, mostrando similitudes con los sicilianos en los cambios observados en América.",
+      "metadatos": "{\"id_gemini\": \"napolitanos\"}",
+      "metadata": {
+        "id_gemini": "napolitanos"
+      }
+    },
+    {
+      "id": 320,
+      "tipo": "cultura",
+      "nombre": "Puertorriqueños",
+      "descripcion": "Población cuyo índice cefálico sugiere inestabilidad de la forma, mostrando cambios en relación con la mezcla racial y el ambiente.",
+      "metadatos": "{\"id_gemini\": \"puertorriquenos_cultura\"}",
+      "metadata": {
+        "id_gemini": "puertorriquenos_cultura"
+      }
+    },
+    {
+      "id": 321,
+      "tipo": "cultura",
+      "nombre": "Mulatos",
+      "descripcion": "Grupo poblacional con mezcla de sangre negra estudiado en Puerto Rico y La Habana por su índice cefálico.",
+      "metadatos": "{\"id_gemini\": \"mulatos_cultura\"}",
+      "metadata": {
+        "id_gemini": "mulatos_cultura"
+      }
+    },
+    {
+      "id": 322,
+      "tipo": "cultura",
+      "nombre": "Población de La Habana",
+      "descripcion": "Lugar donde Georges Rouma realizó observaciones sobre el índice cefálico de niños blancos, mulatos y negros.",
+      "metadatos": "{\"id_gemini\": \"la_habana\"}",
+      "metadata": {
+        "id_gemini": "la_habana"
+      }
+    },
+    {
+      "id": 323,
+      "tipo": "autor",
+      "nombre": "Georges Rouma",
+      "descripcion": "Autor que realizó observaciones sobre el índice cefálico de niños blancos, mulatos y negros en La Habana.",
+      "metadatos": "{\"id_gemini\": \"georges_rouma\"}",
+      "metadata": {
+        "id_gemini": "georges_rouma"
+      }
+    },
+    {
+      "id": 324,
+      "tipo": "autor",
+      "nombre": "Gunnar Dahlberg",
+      "descripcion": "Recolectó material en Noruega para un estudio del índice cefálico de mellizos.",
+      "metadatos": "{\"id_gemini\": \"dahlberg\"}",
+      "metadata": {
+        "id_gemini": "dahlberg"
+      }
+    },
+    {
+      "id": 325,
+      "tipo": "cultura",
+      "nombre": "Población de Noruega",
+      "descripcion": "Lugar donde se recolectó material para el estudio del índice cefálico de mellizos por Dahlberg.",
+      "metadatos": "{\"id_gemini\": \"noruega_cultura\"}",
+      "metadata": {
+        "id_gemini": "noruega_cultura"
+      }
+    },
+    {
+      "id": 326,
+      "tipo": "autor",
+      "nombre": "Newman",
+      "descripcion": "Realizó una investigación detallada del desarrollo corporal y mental de mellizos idénticos criados aparte, demostrando la influencia ambiental.",
+      "metadatos": "{\"id_gemini\": \"newman\"}",
+      "metadata": {
+        "id_gemini": "newman"
+      }
+    },
+    {
+      "id": 327,
+      "tipo": "cultura",
+      "nombre": "Tasmanios",
+      "descripcion": "Tribu cuya extinción, provocada por un excesivo índice de mortalidad y bajo índice de natalidad, se cita como ejemplo de cambio poblacional por selección.",
+      "metadatos": "{\"id_gemini\": \"tasmanios\"}",
+      "metadata": {
+        "id_gemini": "tasmanios"
+      }
+    },
+    {
+      "id": 328,
+      "tipo": "cultura",
+      "nombre": "Indios californianos",
+      "descripcion": "Tribu cuya extinción, provocada por un excesivo índice de mortalidad y bajo índice de natalidad, se cita como ejemplo de cambio poblacional por selección.",
+      "metadatos": "{\"id_gemini\": \"indios_californianos\"}",
+      "metadata": {
+        "id_gemini": "indios_californianos"
+      }
+    },
+    {
+      "id": 329,
+      "tipo": "concepto",
+      "nombre": "Estratificación social",
+      "descripcion": "Fenómeno presente en poblaciones heterogéneas donde existen correlaciones entre la forma corporal y factores como natalidad, morbilidad, apareamiento y segregación.",
+      "metadatos": "{\"id_gemini\": \"estratificacion_social_antropologia\"}",
+      "metadata": {
+        "id_gemini": "estratificacion_social_antropologia"
+      }
+    },
+    {
+      "id": 330,
+      "tipo": "cultura",
+      "nombre": "Población de Mesopotamia",
+      "descripcion": "Región donde se presume una eliminación gradual de los kurdos rubios debido a la fuerte insolación, lo que implica una selección por pigmentación.",
+      "metadatos": "{\"id_gemini\": \"mesopotamia\"}",
+      "metadata": {
+        "id_gemini": "mesopotamia"
+      }
+    },
+    {
+      "id": 331,
+      "tipo": "cultura",
+      "nombre": "Kurdos rubios",
+      "descripcion": "Grupo poblacional estudiado por von Luschan, que se presume sufre una eliminación gradual en las llanuras de Mesopotamia debido a la insolación y malaria.",
+      "metadatos": "{\"id_gemini\": \"kurdos_rubios\"}",
+      "metadata": {
+        "id_gemini": "kurdos_rubios"
+      }
+    },
+    {
+      "id": 332,
+      "tipo": "concepto",
+      "nombre": "Adaptación biológica",
+      "descripcion": "Proceso por el cual los tipos raciales cambian gradualmente en una población expuesta a condiciones ambientales específicas, como la insolación en los trópicos.",
+      "metadatos": "{\"id_gemini\": \"adaptacion_biologica\"}",
+      "metadata": {
+        "id_gemini": "adaptacion_biologica"
+      }
+    },
+    {
+      "id": 333,
+      "tipo": "autor",
+      "nombre": "Eugen Fischer",
+      "descripcion": "Autor que sostiene el punto de vista de que rasgos corporales determinados por la domesticación pueden haberse desarrollado independientemente en diversas partes del mundo.",
+      "metadatos": "{\"id_gemini\": \"eugen_fischer\"}",
+      "metadata": {
+        "id_gemini": "eugen_fischer"
+      }
+    },
+    {
+      "id": 334,
+      "tipo": "autor",
+      "nombre": "Arthur Willey",
+      "descripcion": "Cita sus principios de divergencia, convergencia y paralelismo evolutivo en mamíferos.",
+      "metadatos": "{\"id_gemini\": \"arthur_w_willey\"}",
+      "metadata": {
+        "id_gemini": "arthur_w_willey"
+      }
+    },
+    {
+      "id": 335,
+      "tipo": "concepto",
+      "nombre": "Divergencia evolutiva",
+      "descripcion": "Uno de los tres principios evolutivos (junto a convergencia y paralelismo) citados por Arthur W. Willey para explicar la evolución de las formas animales.",
+      "metadatos": "{\"id_gemini\": \"divergencia_evolutiva\"}",
+      "metadata": {
+        "id_gemini": "divergencia_evolutiva"
+      }
+    },
+    {
+      "id": 336,
+      "tipo": "concepto",
+      "nombre": "Convergencia evolutiva",
+      "descripcion": "Uno de los tres principios evolutivos (junto a divergencia y paralelismo) citado por Arthur W. Willey para explicar la evolución de las formas animales.",
+      "metadatos": "{\"id_gemini\": \"convergencia_evolutiva\"}",
+      "metadata": {
+        "id_gemini": "convergencia_evolutiva"
+      }
+    },
+    {
+      "id": 337,
+      "tipo": "concepto",
+      "nombre": "Prognatismo del arco alveolar",
+      "descripcion": "Rasgo físico en el negro, donde la porción inferior de la cara tiene dimensiones mayores, recordando el aspecto de los grandes antropoides.",
+      "metadatos": "{\"id_gemini\": \"prognatismo_alveolar\"}",
+      "metadata": {
+        "id_gemini": "prognatismo_alveolar"
+      }
+    },
+    {
+      "id": 338,
+      "tipo": "autor",
+      "nombre": "Hermann Klaatsch",
+      "descripcion": "Autor que, junto a Straz y Schoetensack, considera al australiano como el tipo de hombre más antiguo y generalizado.",
+      "metadatos": "{\"id_gemini\": \"klaatsch\"}",
+      "metadata": {
+        "id_gemini": "klaatsch"
+      }
+    },
+    {
+      "id": 339,
+      "tipo": "autor",
+      "nombre": "Baronik Štrác",
+      "descripcion": "Autor que, junto a Klaatsch y Schoetensack, considera al australiano como el tipo de hombre más antiguo y generalizado.",
+      "metadatos": "{\"id_gemini\": \"straz\"}",
+      "metadata": {
+        "id_gemini": "straz"
+      }
+    },
+    {
+      "id": 340,
+      "tipo": "autor",
+      "nombre": "Otto Schoetensack",
+      "descripcion": "Otto Schoetensack (1850–1912), geólogo y paleoantropólogo alemán, famoso por descubrir la mandíbula de Homo heidelbergensis. Junto a H. Klaatsch y B. Štrác, defendió la tesis de que los aborígenes australianos representaban morfológicamente el tipo humano más antiguo y generalizado. Franz Boas discutió metodológicamente estas posturas para demostrar que clasificar a poblaciones contemporáneas como 'tipos originales' o fósiles vivientes ignoraba la variabilidad interna y la constante evolución plástica de todos los grupos humanos.",
+      "metadatos": "{\"id_gemini\": \"schoetensack\"}",
+      "metadata": {
+        "id_gemini": "schoetensack"
+      }
+    },
+    {
+      "id": 341,
+      "tipo": "cultura",
+      "nombre": "Australiano (tipo humano)",
+      "descripcion": "Tipo de hombre considerado por algunos como el más antiguo y generalizado, con características primitivas como delgadez de vértebras y poca curvatura de la columna.",
+      "metadatos": "{\"id_gemini\": \"australiano_antropologia\"}",
+      "metadata": {
+        "id_gemini": "australiano_antropologia"
+      }
+    },
+    {
+      "id": 342,
+      "tipo": "autor",
+      "nombre": "Cunningham",
+      "descripcion": "Fue el primero en observar la delgadez de las vértebras y la poco desarrollada curvatura de la columna vertebral en el tipo australiano.",
+      "metadatos": "{\"id_gemini\": \"cunningham\"}",
+      "metadata": {
+        "id_gemini": "cunningham"
+      }
+    },
+    {
+      "id": 343,
+      "tipo": "concepto",
+      "nombre": "Inferioridad morfológica",
+      "descripcion": "Deducción errónea que atribuye inferioridad mental a razas que exhiben características físicas consideradas 'inferiores'.",
+      "metadatos": "{\"id_gemini\": \"inferioridad_morfologica\"}",
+      "metadata": {
+        "id_gemini": "inferioridad_morfologica"
+      }
+    },
+    {
+      "id": 344,
+      "tipo": "autor",
+      "nombre": "Karl Pearson",
+      "descripcion": "Realizó una investigación sobre la relación entre inteligencia y el tamaño y forma de la cabeza, concluyendo que hay poca relación.",
+      "metadatos": "{\"id_gemini\": \"karl_pearson\"}",
+      "metadata": {
+        "id_gemini": "karl_pearson"
+      }
+    },
+    {
+      "id": 345,
+      "tipo": "autor",
+      "nombre": "Léonce Manouvrier",
+      "descripcion": "Sostuvo que las características del sistema óseo, muscular, visceral o circulatorio no tienen relación directa con la capacidad mental del hombre.",
+      "metadatos": "{\"id_gemini\": \"manouvrier\"}",
+      "metadata": {
+        "id_gemini": "manouvrier"
+      }
+    },
+    {
+      "id": 346,
+      "tipo": "autor",
+      "nombre": "Paul Topinard",
+      "descripcion": "Científico que recopiló datos sobre la capacidad craneana de diferentes grupos, como europeos neolíticos, mongólicos y negros africanos.",
+      "metadatos": "{\"id_gemini\": \"topinard\"}",
+      "metadata": {
+        "id_gemini": "topinard"
+      }
+    },
+    {
+      "id": 347,
+      "tipo": "cultura",
+      "nombre": "Europeos del período Neolítico",
+      "descripcion": "Grupo poblacional de Europa en el período Neolítico, cuya capacidad craneana fue estudiada por Topinard.",
+      "metadatos": "{\"id_gemini\": \"neolitico_europa\"}",
+      "metadata": {
+        "id_gemini": "neolitico_europa"
+      }
+    },
+    {
+      "id": 348,
+      "tipo": "cultura",
+      "nombre": "Europeos modernos",
+      "descripcion": "Grupo poblacional europeo contemporáneo, cuya capacidad craneana fue estudiada por Topinard para comparar con períodos anteriores.",
+      "metadatos": "{\"id_gemini\": \"europa_moderna\"}",
+      "metadata": {
+        "id_gemini": "europa_moderna"
+      }
+    },
+    {
+      "id": 349,
+      "tipo": "cultura",
+      "nombre": "Negros del Océano Pacífico",
+      "descripcion": "Grupo poblacional cuya capacidad craneana fue estudiada por Topinard para comparaciones raciales.",
+      "metadatos": "{\"id_gemini\": \"negros_oceano_pacifico\"}",
+      "metadata": {
+        "id_gemini": "negros_oceano_pacifico"
+      }
+    },
+    {
+      "id": 350,
+      "tipo": "concepto",
+      "nombre": "Hombres eminentes",
+      "descripcion": "Categoría utilizada en estudios para comparar el tamaño del cerebro con la aptitud, mostrando un promedio de capacidad craneana superior al general.",
+      "metadatos": "{\"id_gemini\": \"hombres_eminentes\"}",
+      "metadata": {
+        "id_gemini": "hombres_eminentes"
+      }
+    },
+    {
+      "id": 351,
+      "tipo": "autor",
+      "nombre": "Ferreira",
+      "descripcion": "Autor que observó un mayor tamaño de los cerebros en las clases profesionales respecto a los trabajadores incultos.",
+      "metadatos": "{\"id_gemini\": \"ferreira\"}",
+      "metadata": {
+        "id_gemini": "ferreira"
+      }
+    },
+    {
+      "id": 352,
+      "tipo": "concepto",
+      "nombre": "Individuos microcefálicos",
+      "descripcion": "Individuos con falta de desarrollo cerebral, cuyo caso fundamental refuerza la idea de que un aumento de tamaño del cerebro acompaña a un aumento de la aptitud.",
+      "metadatos": "{\"id_gemini\": \"microcefalicos\"}",
+      "metadata": {
+        "id_gemini": "microcefalicos"
+      }
+    },
+    {
+      "id": 353,
+      "tipo": "autor",
+      "nombre": "Henry H. Donaldson",
+      "descripcion": "Coautor que estudió la correlación entre el tamaño del cerebro y el número de células y fibras, concluyendo que es débil.",
+      "metadatos": "{\"id_gemini\": \"donaldson\"}",
+      "metadata": {
+        "id_gemini": "donaldson"
+      }
+    },
+    {
+      "id": 354,
+      "tipo": "autor",
+      "nombre": "Franklin P. Mall",
+      "descripcion": "Expuso que las diferencias raciales estructurales en el cerebro son difíciles de descubrir y que ninguna ha resistido una crítica seria.",
+      "metadatos": "{\"id_gemini\": \"franklin_p_mall\"}",
+      "metadata": {
+        "id_gemini": "franklin_p_mall"
+      }
+    },
+    {
+      "id": 355,
+      "tipo": "concepto",
+      "nombre": "Densidad de población",
+      "descripcion": "Fenómeno que ha cambiado enormemente en el transcurso del tiempo y está condicionado por factores como la agricultura intensiva y la productividad del hábitat.",
+      "metadatos": "{\"id_gemini\": \"densidad_poblacion\"}",
+      "metadata": {
+        "id_gemini": "densidad_poblacion"
+      }
+    },
+    {
+      "id": 356,
+      "tipo": "concepto",
+      "nombre": "Caza y recolección",
+      "descripcion": "Estrategia de subsistencia del hombre en tiempos primitivos, que limitaba la densidad de población a la productividad del hábitat.",
+      "metadatos": "{\"id_gemini\": \"caza_y_recoleccion\"}",
+      "metadata": {
+        "id_gemini": "caza_y_recoleccion"
+      }
+    },
+    {
+      "id": 357,
+      "tipo": "cultura",
+      "nombre": "Pueblos de Asia Central",
+      "descripcion": "Región de origen de los pueblos mongólicos que invadieron Asia Meridional, contribuyendo a la expansión de la raza mongólica.",
+      "metadatos": "{\"id_gemini\": \"asia_central\"}",
+      "metadata": {
+        "id_gemini": "asia_central"
+      }
+    },
+    {
+      "id": 358,
+      "tipo": "cultura",
+      "nombre": "Población de Asia Meridional",
+      "descripcion": "Región que fue objeto de invasión por pueblos mongólicos y donde el territorio negro pudo haber sido más extenso en tiempos pretéritos.",
+      "metadatos": "{\"id_gemini\": \"asia_meridional\"}",
+      "metadata": {
+        "id_gemini": "asia_meridional"
+      }
+    },
+    {
+      "id": 359,
+      "tipo": "cultura",
+      "nombre": "Población del África al sur del Sahara",
+      "descripcion": "Región donde se encuentran actualmente negros, delimitando el área principal de esta raza.",
+      "metadatos": "{\"id_gemini\": \"africa_sub_sahariana\"}",
+      "metadata": {
+        "id_gemini": "africa_sub_sahariana"
+      }
+    },
+    {
+      "id": 360,
+      "tipo": "concepto",
+      "nombre": "Pueblos negroides",
+      "descripcion": "Grupo de poblaciones con características físicas similares a los negros, encontrados en lugares aislados fuera del África subsahariana, como Filipinas, Malaya y Andamán.",
+      "metadatos": "{\"id_gemini\": \"pueblos_negroides\"}",
+      "metadata": {
+        "id_gemini": "pueblos_negroides"
+      }
+    },
+    {
+      "id": 361,
+      "tipo": "cultura",
+      "nombre": "Población de las Islas Filipinas",
+      "descripcion": "Lugar donde se encuentran grupos de pueblos negroides, fuera del área principal africana.",
+      "metadatos": "{\"id_gemini\": \"islas_filipinas\"}",
+      "metadata": {
+        "id_gemini": "islas_filipinas"
+      }
+    },
+    {
+      "id": 362,
+      "tipo": "cultura",
+      "nombre": "Población de la Península Malaya",
+      "descripcion": "Lugar donde se encuentran grupos de pueblos negroides, fuera del área principal africana.",
+      "metadatos": "{\"id_gemini\": \"peninsula_malaya\"}",
+      "metadata": {
+        "id_gemini": "peninsula_malaya"
+      }
+    },
+    {
+      "id": 363,
+      "tipo": "cultura",
+      "nombre": "Población de las Islas Andamán",
+      "descripcion": "Lugar donde se encuentran grupos de pueblos negroides, fuera del área principal africana.",
+      "metadatos": "{\"id_gemini\": \"islas_andaman\"}",
+      "metadata": {
+        "id_gemini": "islas_andaman"
+      }
+    },
+    {
+      "id": 364,
+      "tipo": "concepto",
+      "nombre": "Raza del Océano Índico",
+      "descripcion": "Clasificación racial propuesta para los negros, que habitaron gran parte de las tierras limítrofes con dicho océano, incluyendo África y el sur de Asia.",
+      "metadatos": "{\"id_gemini\": \"raza_oceano_indico\"}",
+      "metadata": {
+        "id_gemini": "raza_oceano_indico"
+      }
+    },
+    {
+      "id": 365,
+      "tipo": "concepto",
+      "nombre": "Raza del Océano Pacífico",
+      "descripcion": "Clasificación racial propuesta para los mongólicos, que poblaron gran parte de las tierras limítrofes con dicho océano, incluyendo Asia Oriental y América.",
+      "metadatos": "{\"id_gemini\": \"raza_oceano_pacifico\"}",
+      "metadata": {
+        "id_gemini": "raza_oceano_pacifico"
+      }
+    },
+    {
+      "id": 366,
+      "tipo": "cultura",
+      "nombre": "Antiguos habitantes de la India",
+      "descripcion": "Tipo principal que no encaja fácilmente en la clasificación dual de raza del Océano Índico y Pacífico, presumiblemente por sus propias características distintivas.",
+      "metadatos": "{\"id_gemini\": \"antiguos_habitantes_india\"}",
+      "metadata": {
+        "id_gemini": "antiguos_habitantes_india"
+      }
+    },
+    {
+      "id": 367,
+      "tipo": "concepto",
+      "nombre": "Negros pigmeos",
+      "descripcion": "Tipo racial representado por los bosquimanos, caracterizado por estatura diminuta, piel amarillenta clara, rostro aplastado y cabellos rizados.",
+      "metadatos": "{\"id_gemini\": \"negros_pigmeos\"}",
+      "metadata": {
+        "id_gemini": "negros_pigmeos"
+      }
+    },
+    {
+      "id": 368,
+      "tipo": "concepto",
+      "nombre": "Psicología fisiológica",
+      "descripcion": "Campo de estudio que se ocupa de los determinantes orgánicos de las funciones mentales.",
+      "metadatos": "{\"id_gemini\": \"psicologia_fisiologica\"}",
+      "metadata": {
+        "id_gemini": "psicologia_fisiologica"
+      }
+    },
+    {
+      "id": 369,
+      "tipo": "escuela",
+      "nombre": "Conductismo",
+      "descripcion": "Corriente psicológica que se alejó de la actitud unilateral de la psicología fisiológica, centrando su estudio en la conducta observable.",
+      "metadatos": "{\"id_gemini\": \"conductismo\"}",
+      "metadata": {
+        "id_gemini": "conductismo"
+      }
+    },
+    {
+      "id": 370,
+      "tipo": "escuela",
+      "nombre": "Escuela freudiana",
+      "descripcion": "Corriente psicológica que se alejó de la actitud unilateral de la psicología fisiológica, centrando su estudio en la psique y el inconsciente.",
+      "metadatos": "{\"id_gemini\": \"escuela_freudiana\"}",
+      "metadata": {
+        "id_gemini": "escuela_freudiana"
+      }
+    },
+    {
+      "id": 371,
+      "tipo": "concepto",
+      "nombre": "Inteligencia innata",
+      "descripcion": "La creencia de que la inteligencia de un individuo está determinada biológicamente desde el nacimiento.",
+      "metadatos": "{\"id_gemini\": \"inteligencia_innata\"}",
+      "metadata": {
+        "id_gemini": "inteligencia_innata"
+      }
+    },
+    {
+      "id": 372,
+      "tipo": "concepto",
+      "nombre": "Origen racial como determinante cultural",
+      "descripcion": "La idea de que la cultura de un grupo humano está intrínsecamente determinada por su origen racial o características biológicas hereditarias.",
+      "metadatos": "{\"id_gemini\": \"origen_racial_determinante_cultural\"}",
+      "metadata": {
+        "id_gemini": "origen_racial_determinante_cultural"
+      }
+    },
+    {
+      "id": 373,
+      "tipo": "concepto",
+      "nombre": "Nature, not nurture (Naturaleza, no crianza)",
+      "descripcion": "Fórmula que sugiere que todo lo que el hombre es o hace depende de su herencia genética más que de su educación o ambiente.",
+      "metadatos": "{\"id_gemini\": \"nature_not_nurture\"}",
+      "metadata": {
+        "id_gemini": "nature_not_nurture"
+      }
+    },
+    {
+      "id": 374,
+      "tipo": "concepto",
+      "nombre": "Determinación constitucional de la mentalidad",
+      "descripcion": "La suposición de que el comportamiento mental de una persona está predeterminado por su constitución física o biológica, y que la composición de una población define su comportamiento mental colectivo.",
+      "metadatos": "{\"id_gemini\": \"determinacion_constitucional_mentalidad\"}",
+      "metadata": {
+        "id_gemini": "determinacion_constitucional_mentalidad"
+      }
+    },
+    {
+      "id": 375,
+      "tipo": "concepto",
+      "nombre": "Leyes mendelianas",
+      "descripcion": "Principios de la herencia genética propuestos por Mendel, que algunos extendieron a los rasgos mentales y raciales para argumentar su permanencia.",
+      "metadatos": "{\"id_gemini\": \"leyes_mendelianas\"}",
+      "metadata": {
+        "id_gemini": "leyes_mendelianas"
+      }
+    },
+    {
+      "id": 376,
+      "tipo": "autor",
+      "nombre": "Roland B. Dixon",
+      "descripcion": "Antropólogo mencionado por Franz Boas, que clasificó a los individuos por grupos locales según la forma de la cabeza, rostro y nariz y supuso que las combinaciones de las divisiones de estos tres elementos representaban los tipos fundamentales.",
+      "metadatos": "{\"id_gemini\": \"dixon_roland_b\"}",
+      "metadata": {
+        "id_gemini": "dixon_roland_b"
+      }
+    },
+    {
+      "id": 377,
+      "tipo": "concepto",
+      "nombre": "Clasificación de tipos constitucionales",
+      "descripcion": "Método de clasificación de personas, desarrollado principalmente por médicos, basado en la dependencia recíproca entre la forma corporal y las condiciones patológicas, conceptualizando formas constitucionales.",
+      "metadatos": "{\"id_gemini\": \"clasificacion_tipos_constitucionales\"}",
+      "metadata": {
+        "id_gemini": "clasificacion_tipos_constitucionales"
+      }
+    },
+    {
+      "id": 378,
+      "tipo": "autor",
+      "nombre": "Ernst Kretschmer",
+      "descripcion": "Autor cuyas ideas sobre tipos constitucionales, expresadas en términos métricos exactos, son mencionadas en el texto como variables similares a las discutidas previamente.",
+      "metadatos": "{\"id_gemini\": \"kretschmer\"}",
+      "metadata": {
+        "id_gemini": "kretschmer"
+      }
+    },
+    {
+      "id": 379,
+      "tipo": "concepto",
+      "nombre": "Diferencias raciales hereditarias mentales",
+      "descripcion": "La creencia de que existen variaciones innatas y heredables en las características mentales entre distintas razas humanas.",
+      "metadatos": "{\"id_gemini\": \"diferencias_raciales_hereditarias_mentales\"}",
+      "metadata": {
+        "id_gemini": "diferencias_raciales_hereditarias_mentales"
+      }
+    },
+    {
+      "id": 380,
+      "tipo": "escuela",
+      "nombre": "Racionalistas del siglo XVIII",
+      "descripcion": "Corriente de pensamiento que, con Rousseau, creía en la existencia de una vida natural simple y feliz.",
+      "metadatos": "{\"id_gemini\": \"racionalismo_siglo_xviii\"}",
+      "metadata": {
+        "id_gemini": "racionalismo_siglo_xviii"
+      }
+    },
+    {
+      "id": 381,
+      "tipo": "autor",
+      "nombre": "Jean-Jacques Rousseau",
+      "descripcion": "Filósofo asociado con los racionalistas del siglo XVIII que creía en una vida natural simple y feliz.",
+      "metadatos": "{\"id_gemini\": \"rousseau\"}",
+      "metadata": {
+        "id_gemini": "rousseau"
+      }
+    },
+    {
+      "id": 382,
+      "tipo": "autor",
+      "nombre": "Karl Ritter",
+      "descripcion": "Estudioso que acentuó el punto de vista geográfico, estudiando la influencia del ambiente en la vida del hombre.",
+      "metadatos": "{\"id_gemini\": \"karl_ritter\"}",
+      "metadata": {
+        "id_gemini": "karl_ritter"
+      }
+    },
+    {
+      "id": 383,
+      "tipo": "autor",
+      "nombre": "Theodor Waitz",
+      "descripcion": "Autor que postuló que el grado de civilización de un pueblo o individuo es producto exclusivo de su capacidad mental y aptitudes, las cuales dependen del grado de cultura alcanzado.",
+      "metadatos": "{\"id_gemini\": \"theodor_waitz\"}",
+      "metadata": {
+        "id_gemini": "theodor_waitz"
+      }
+    },
+    {
+      "id": 384,
+      "tipo": "obra",
+      "nombre": "Folk Psychology (Wundt)",
+      "descripcion": "Obra de Wundt que refleja la despreocupación por las razas en el estudio de la cultura.",
+      "metadatos": "{\"id_gemini\": \"folk_psychology_wundt\"}",
+      "metadata": {
+        "id_gemini": "folk_psychology_wundt"
+      }
+    },
+    {
+      "id": 385,
+      "tipo": "autor",
+      "nombre": "Wilhelm Wundt",
+      "descripcion": "Autor de 'Folk Psychology', un tratado general que muestra despreocupación por las razas en el estudio de la cultura.",
+      "metadatos": "{\"id_gemini\": \"wundt\"}",
+      "metadata": {
+        "id_gemini": "wundt"
+      }
+    },
+    {
+      "id": 386,
+      "tipo": "obra",
+      "nombre": "Science of Society",
+      "descripcion": "Obra de Sumner que refleja la despreocupación por las razas en los estudios sociológicos.",
+      "metadatos": "{\"id_gemini\": \"science_of_society_sumner\"}",
+      "metadata": {
+        "id_gemini": "science_of_society_sumner"
+      }
+    },
+    {
+      "id": 387,
+      "tipo": "autor",
+      "nombre": "William Graham",
+      "descripcion": "Autor de 'Science of Society', una obra que muestra despreocupación por las razas en los estudios sociológicos.",
+      "metadatos": "{\"id_gemini\": \"sumner\"}",
+      "metadata": {
+        "id_gemini": "sumner"
+      }
+    },
+    {
+      "id": 388,
+      "tipo": "concepto",
+      "nombre": "Curva de distribución de variables",
+      "descripcion": "Representación gráfica utilizada para ilustrar cómo se distribuyen las frecuencias de las observaciones de una variable, mostrando el grado de uniformidad o variabilidad de una serie.",
+      "metadatos": "{\"id_gemini\": \"curva_distribucion_variables\"}",
+      "metadata": {
+        "id_gemini": "curva_distribucion_variables"
+      }
+    },
+    {
+      "id": 389,
+      "tipo": "concepto",
+      "nombre": "Índice de largo-ancho",
+      "descripcion": "También llamado índice cefálico, es la razón del ancho máximo de la cabeza expresada en porcentaje del largo de la cabeza.",
+      "metadatos": "{\"id_gemini\": \"indice_largo_ancho\"}",
+      "metadata": {
+        "id_gemini": "indice_largo_ancho"
+      }
     }
   ],
   "relaciones": [
@@ -2015,14 +4766,6 @@
       "tipo": "relacionado_con",
       "peso": 1.0,
       "fuente": "La estructura social se organiza a través de los sistemas de parentesco"
-    },
-    {
-      "id": 117,
-      "origen_id": 20,
-      "destino_id": 21,
-      "tipo": "relacionado_con",
-      "peso": 1.0,
-      "fuente": "Endocanibalismo y exocanibalismo son formas opuestas de la práctica caníbal"
     }
   ]
 }

@@ -13,6 +13,8 @@ const COLOR_POR_TIPO = {
   escuela: '#BA7517',
   cultura: '#639922',
   debate: '#D4537E',
+  poblacion: '#3A9BDC',
+  corriente: '#C9A227',
 }
 
 export function inicializarVisualizacion(nodos, relaciones) {

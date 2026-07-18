@@ -19,7 +19,7 @@ Lee el texto y extrae:
 2. Relaciones entre entidades (nuevas o existentes), citando el fragmento de texto
    que justifica cada relación.
 
-TIPOS DE NODO válidos: autor, obra, concepto, escuela, cultura, debate
+TIPOS DE NODO válidos: autor, obra, concepto, escuela, cultura, debate, poblacion, corriente
 TIPOS DE RELACIÓN válidos: influenciado_por, critica_a, desarrolla_concepto,
   pertenece_a, estudia_a, contemporaneo_de, precursor_de, parte_del_debate, redefine_a
 
@@ -61,10 +61,45 @@ reales, no más. Si tu borrador interno tiene más de 10, es señal de que está
 sobreextrayendo — vuelve a filtrar con el criterio de arriba antes de responder.
 
 CRITERIO ESTRICTO PARA EL TIPO "autor":
-Solo personas con un rol intelectual relevante (autores, teóricos, mentores académicos).
-NO incluyas menciones incidentales como financistas, editores técnicos, traductores,
-o comerciantes que aparecen una sola vez sin aporte teórico — esos, si quieres
-preservarlos, van en el campo "nota" de una relación, no como nodo propio.
+Solo personas con un rol intelectual relevante: autores de obras propias, teóricos
+que desarrollan o critican conceptos, o mentores académicos con relación directa
+documentada con otro autor del grafo.
+
+RECHAZA automáticamente cualquier autor cuya ÚNICA justificación sea una de estas
+formas de mención de paso (si tu descripción del nodo suena a esto, NO LO EXTRAIGAS):
+- "Autor mencionado/citado como fuente de datos generales sobre X"
+- "Autor citado en relación con la frecuencia de [rasgo] entre [población]"
+- Cualquier persona que aparece UNA SOLA VEZ en una nota al pie o cita de referencia
+  bibliográfica erudita, sin que el texto principal discuta sus ideas.
+- Un nombre que solo respalda un dato estadístico o anecdótico puntual (ej: "según
+  Lissauer, el torus palatinus es frecuente entre los lapones") sin que el propio
+  autor tenga una teoría, obra o debate asociado en el resto del texto.
+
+PRUEBA DE FUEGO: si al terminar de leer todo el fragmento no podrías escribir una
+relación de tipo "desarrolla_concepto", "critica_a", "influenciado_por" o similar
+para esa persona (solo "estudia_a" con una cita de una sola frase de referencia
+bibliográfica), entonces NO es un autor del grafo — es una nota al pie, ignórala
+por completo, ni siquiera la menciones en tu respuesta.
+
+CRITERIO PARA DISTINGUIR "cultura" DE "poblacion":
+- "cultura" = un sistema de prácticas, creencias y organización social con nombre
+  propio y descripción cualitativa (ej: "cultura trobriandesa", "culturas melanesias").
+- "poblacion" = un grupo humano/étnico/racial identificado principalmente por su
+  ubicación geográfica, ascendencia o composición demográfica, sin que el foco sea
+  su sistema cultural (ej: "lapones", "indios Pueblo", "aborígenes del Nordeste
+  asiático", "civilización china" como bloque poblacional-histórico).
+Si dudas, pregúntate: ¿el texto describe PRÁCTICAS/CREENCIAS (-> cultura) o
+DESCRIBE UN GRUPO/ORIGEN/DEMOGRAFÍA (-> poblacion)?
+
+CRITERIO PARA DISTINGUIR "escuela" DE "corriente":
+- "escuela" = una institución o grupo académico organizado con miembros
+  identificables y una sede/tradición formal (ej: "Escuela de Cambridge",
+  "Escuela de Chicago").
+- "corriente" = una tendencia o línea de pensamiento transversal, sin una
+  institución formal detrás (ej: "evolucionismo unilineal", "particularismo
+  histórico", "difusionismo").
+Si el texto no menciona una institución concreta ni miembros formales, usa
+"corriente" en vez de "escuela".
 
 REGLAS PARA IDs NUEVOS:
 - Formato: minúsculas, sin tildes, sin espacios (usa guion bajo). Ej: "levi_strauss"
@@ -86,7 +121,7 @@ ESQUEMA DE SALIDA — devuelve ÚNICAMENTE este JSON, sin texto adicional ni mar
   "nodos_nuevos": [
     {{
       "id": "string — id propuesto, solo si es una entidad NUEVA",
-      "tipo": "autor|obra|concepto|escuela|cultura|debate",
+      "tipo": "autor|obra|concepto|escuela|cultura|debate|poblacion|corriente",
       "nombre": "string — nombre legible",
       "descripcion": "string — 1-2 oraciones basadas en el texto",
       "justificacion_concepto": "string — SOLO si tipo=concepto: por qué es un término establecido fuera de este libro. Omite este campo para otros tipos.",

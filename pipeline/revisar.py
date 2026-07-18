@@ -6,6 +6,7 @@ exactamente donde quedaste, sin duplicar ni perder nada.
 Uso: python revisar.py
 """
 import json
+import re
 import sqlite3
 from pathlib import Path
 from difflib import get_close_matches
@@ -16,6 +17,26 @@ CANDIDATOS_PATH = BASE_DIR / "candidatos_pendientes.json"
 ESTADO_PATH = BASE_DIR / "revision_estado.json"
 
 UMBRAL_SIMILITUD = 0.75
+
+PATRON_AUTOR_SUPERFICIAL = re.compile(
+    r"(autor (mencionad|citad)o (como|en relaci)|citad[oa] en relaci[oó]n con la frecuencia)",
+    re.IGNORECASE,
+)
+
+
+def barra_progreso(hechos, total, ancho=30):
+    if total == 0:
+        return "[sin candidatos]"
+    proporcion = hechos / total
+    llenos = int(ancho * proporcion)
+    return f"[{'█' * llenos}{'░' * (ancho - llenos)}] {hechos}/{total} ({proporcion*100:.0f}%)"
+
+
+def es_autor_superficial(nodo):
+    if nodo["tipo"] != "autor":
+        return False
+    desc = nodo.get("descripcion", nodo.get("resumen", ""))
+    return bool(PATRON_AUTOR_SUPERFICIAL.search(desc))
 
 
 def pedir_opcion(mensaje, validas, alias=None):
@@ -61,6 +82,14 @@ def resolver_id(referencia, mapa_gemini_a_real, ids_validos):
     return mapa_gemini_a_real.get(referencia)
 
 
+def relacion_ya_existe(conn, origen, destino, tipo):
+    fila = conn.execute(
+        "SELECT 1 FROM relaciones WHERE origen_id = ? AND destino_id = ? AND tipo = ?",
+        (origen, destino, tipo),
+    ).fetchone()
+    return fila is not None
+
+
 def main():
     if not CANDIDATOS_PATH.exists():
         print("✗ No hay candidatos_pendientes.json. Corre extractor.py primero.")
@@ -79,19 +108,27 @@ def main():
 
     nodos_nuevos = candidatos.get("nodos_nuevos", [])
     pendientes_nodos = [n for n in nodos_nuevos if n["id"] not in estado["nodos_revisados"]]
+    ya_hechos_nodos = len(nodos_nuevos) - len(pendientes_nodos)
 
     print("═" * 60)
-    print(f"NODOS NUEVOS — {len(pendientes_nodos)} pendientes de {len(nodos_nuevos)} totales")
-    if len(pendientes_nodos) < len(nodos_nuevos):
-        print(f"  (retomando; {len(nodos_nuevos) - len(pendientes_nodos)} ya revisados en sesión anterior)")
+    print("NODOS NUEVOS")
+    print(f"  {barra_progreso(ya_hechos_nodos, len(nodos_nuevos))}")
     print("═" * 60)
 
     for n in pendientes_nodos:
         id_gemini = n["id"]
         print(f"\n[{n['confianza'].upper()}] {n['tipo']} — {n['nombre']} (id propuesto: {id_gemini})")
         print(f"  {n.get('descripcion', n.get('resumen', ''))}")
+        print(f"  Progreso: {barra_progreso(ya_hechos_nodos, len(nodos_nuevos))}")
         if n.get("justificacion_concepto") and n["tipo"] == "concepto":
             print(f"  Justificación: {n['justificacion_concepto']}")
+
+        if es_autor_superficial(n):
+            print(f"  ⚠ Detectado como autor superficial (mención de nota al pie) — descartado automáticamente sin preguntar.")
+            estado["nodos_revisados"][id_gemini] = {"decision": "descartado_auto", "id_real": None}
+            guardar_estado(estado)
+            ya_hechos_nodos += 1
+            continue
 
         similares = buscar_similares(n["nombre"], list(catalogo.keys()))
         decision_tomada = False
@@ -139,7 +176,7 @@ def main():
                 nuevo_nombre = input(f"  Nombre [{n['nombre']}]: ") or n["nombre"]
                 nueva_desc = input(f"  Descripción [{n.get('descripcion', n.get('resumen', ''))}]: ") or n.get("descripcion", n.get("resumen", ""))
 
-                tipos_validos = {"autor", "obra", "concepto", "escuela", "cultura", "debate"}
+                tipos_validos = {"autor", "obra", "concepto", "escuela", "cultura", "debate", "poblacion", "corriente"}
                 entrada_tipo = input(f"  Tipo [{n['tipo']}] (opciones: {', '.join(sorted(tipos_validos))}): ").strip().lower()
                 if entrada_tipo == "":
                     nuevo_tipo = n["tipo"]
@@ -149,9 +186,17 @@ def main():
                     print(f"  ⚠ Tipo '{entrada_tipo}' no reconocido, se mantiene el original '{n['tipo']}'")
                     nuevo_tipo = n["tipo"]
 
+                nuevo_id_propuesto = input(f"  Id propuesto [{id_gemini}] (solo cosmético, no afecta el mapeo interno): ").strip()
+                if nuevo_id_propuesto == "":
+                    nuevo_id_propuesto = id_gemini
+
+                metadatos = {"id_gemini": id_gemini}
+                if nuevo_id_propuesto != id_gemini:
+                    metadatos["id_editado"] = nuevo_id_propuesto
+
                 cur = conn.execute(
                     "INSERT INTO nodos (tipo, nombre, descripcion, metadatos) VALUES (?, ?, ?, ?)",
-                    (nuevo_tipo, nuevo_nombre, nueva_desc, json.dumps({"id_gemini": id_gemini})),
+                    (nuevo_tipo, nuevo_nombre, nueva_desc, json.dumps(metadatos)),
                 )
                 id_real = cur.lastrowid
                 conn.commit()
@@ -159,17 +204,21 @@ def main():
                 catalogo[nuevo_nombre] = id_real
                 estado["nodos_revisados"][id_gemini] = {"decision": "insertado", "id_real": id_real}
                 guardar_estado(estado)
-                print(f"  ✓ Insertado (editado, id real: {id_real}, tipo: {nuevo_tipo})")
+                print(f"  ✓ Insertado (editado, id real: {id_real}, tipo: {nuevo_tipo}, id guardado: {nuevo_id_propuesto})")
             else:
                 estado["nodos_revisados"][id_gemini] = {"decision": "descartado", "id_real": None}
                 guardar_estado(estado)
                 print("  ✗ Descartado")
 
+        ya_hechos_nodos += 1
+
     print("\n" + "═" * 60)
     relaciones_nuevas = candidatos.get("relaciones_nuevas", [])
     ids_validos = {row[0] for row in conn.execute("SELECT id FROM nodos")}
     pendientes_rels = [r for r in relaciones_nuevas if clave_relacion(r) not in estado["relaciones_revisadas"]]
-    print(f"RELACIONES NUEVAS — {len(pendientes_rels)} pendientes de {len(relaciones_nuevas)} totales")
+    ya_hechos_rels = len(relaciones_nuevas) - len(pendientes_rels)
+    print("RELACIONES NUEVAS")
+    print(f"  {barra_progreso(ya_hechos_rels, len(relaciones_nuevas))}")
     print("═" * 60)
 
     for r in pendientes_rels:
@@ -181,15 +230,25 @@ def main():
             print(f"\n⚠ Relación omitida — nodo no mapeado: {r['origen']} → {r['destino']}")
             estado["relaciones_revisadas"].append(clave)
             guardar_estado(estado)
+            ya_hechos_rels += 1
             continue
         if origen not in ids_validos or destino not in ids_validos:
             print(f"\n⚠ Relación omitida — nodo no existe en DB: {origen} → {destino}")
             estado["relaciones_revisadas"].append(clave)
             guardar_estado(estado)
+            ya_hechos_rels += 1
+            continue
+
+        if relacion_ya_existe(conn, origen, destino, r["tipo"]):
+            print(f"\n⚠ Relación YA EXISTE en la DB, se omite automáticamente: {r['origen']} → {r['destino']} ({r['tipo']})")
+            estado["relaciones_revisadas"].append(clave)
+            guardar_estado(estado)
+            ya_hechos_rels += 1
             continue
 
         print(f"\n[{r['confianza'].upper()}] {r['origen']} → {r['destino']} --{r['tipo']}-->")
         print(f'  Cita: "{r["cita_textual"]}"')
+        print(f"  Progreso: {barra_progreso(ya_hechos_rels, len(relaciones_nuevas))}")
         if r.get("fuente"):
             print(f"  Fuente: {r['fuente']}")
         resp = pedir_opcion(
@@ -209,6 +268,7 @@ def main():
 
         estado["relaciones_revisadas"].append(clave)
         guardar_estado(estado)
+        ya_hechos_rels += 1
 
     conn.close()
 
