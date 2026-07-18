@@ -5,3 +5,13 @@ dist/
 __pycache__/
 candidatos_pendientes.json
 libros/*.pdf
+pipeline/candidatos_procesados_*.json
+pipeline/extraccion_log_*.json
+pipeline/extraction_run.log
+pipeline/revision_estado.json
+pipeline/recuperacion_estado.json
+pipeline/limpieza_estado.json
+pipeline/checkpoint_*.json
+pipeline/conexion_automatica_no_resueltas.json
+pipeline/modo_manual_chunk_actual.json
+pipeline/prompt_manual_chunk_*.txt
