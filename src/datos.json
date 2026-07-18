@@ -3836,6 +3836,831 @@
       "metadata": {
         "id_gemini": "indice_largo_ancho"
       }
+    },
+    {
+      "id": 390,
+      "tipo": "autor",
+      "nombre": "Gerland",
+      "descripcion": "Autor mencionado por Boas en el contexto de la discusión sobre la aptitud racial de los europeos antiguos.",
+      "metadatos": "{\"id_gemini\": \"gerland\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "gerland",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 391,
+      "tipo": "autor",
+      "nombre": "Ratzel",
+      "descripcion": "Autor mencionado por Boas en el contexto de la discusión sobre la aptitud racial de los europeos antiguos.",
+      "metadatos": "{\"id_gemini\": \"ratzel\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "ratzel",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 392,
+      "tipo": "autor",
+      "nombre": "Barth",
+      "descripcion": "Autor que, junto con Nachtigal, ha dado a conocer el pasado de Bornú.",
+      "metadatos": "{\"id_gemini\": \"barth\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "barth",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 393,
+      "tipo": "autor",
+      "nombre": "Nachtigal",
+      "descripcion": "Autor que, junto con Barth, ha dado a conocer el pasado de Bornú.",
+      "metadatos": "{\"id_gemini\": \"nachtigal\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "nachtigal",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 394,
+      "tipo": "autor",
+      "nombre": "Ovington",
+      "descripcion": "Autor mencionado por Boas en relación con la supuesta inferioridad dogmática de la raza negra en Estados Unidos.",
+      "metadatos": "{\"id_gemini\": \"ovington\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "ovington",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 395,
+      "tipo": "autor",
+      "nombre": "Linneo",
+      "descripcion": "Investigador que atribuyó características mentales a cada uno de sus tipos raciales.",
+      "metadatos": "{\"id_gemini\": \"linneo\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "linneo",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 396,
+      "tipo": "autor",
+      "nombre": "Boulainvilliers",
+      "descripcion": "Estudioso del siglo XVIII que, al analizar la historia política de Francia, infirió dotes mentales superiores para los francos sobre los celtas.",
+      "metadatos": "{\"id_gemini\": \"boulainvilliers\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "boulainvilliers",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 397,
+      "tipo": "autor",
+      "nombre": "A. Ploetz",
+      "descripcion": "Autor que atribuye características mentales a las distintas razas.",
+      "metadatos": "{\"id_gemini\": \"a_ploetz\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "a_ploetz",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 398,
+      "tipo": "autor",
+      "nombre": "Gobineau",
+      "descripcion": "Desarrolló ideas sobre la permanencia de la forma física y funciones mentales de las razas, y la excelencia superior del europeo noroccidental, ejerciendo gran influencia.",
+      "metadatos": "{\"id_gemini\": \"gobineau\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "gobineau",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 399,
+      "tipo": "autor",
+      "nombre": "Klemm",
+      "descripcion": "Autor que en 1843 dividió la humanidad en una mitad activa o 'masculina' y una pasiva o 'femenina' basándose en consideraciones culturales.",
+      "metadatos": "{\"id_gemini\": \"klemm\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "klemm",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 400,
+      "tipo": "obra",
+      "nombre": "Attgemeine Cultur-Geschichte der Menschheil",
+      "descripcion": "Obra de Klemm (1845) donde expone su división de la humanidad en activa y pasiva.",
+      "metadatos": "{\"id_gemini\": \"attgemeine_cultur_geschichte_der_menschheil\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "attgemeine_cultur_geschichte_der_menschheil",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 401,
+      "tipo": "autor",
+      "nombre": "Wuttke",
+      "descripcion": "Autor que aceptó las opiniones de Klemm sobre la división de la humanidad.",
+      "metadatos": "{\"id_gemini\": \"wuttke\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "wuttke",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 402,
+      "tipo": "autor",
+      "nombre": "Dawson",
+      "descripcion": "Observador de la vida australiana que ofreció puntos de vista diferentes a la mayoría de los observadores, posiblemente influido por un espíritu de benevolencia.",
+      "metadatos": "{\"id_gemini\": \"darwin\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "darwin",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 403,
+      "tipo": "autor",
+      "nombre": "J. C. Nott",
+      "descripcion": "Autor que, junto con George R. Gliddon, escribió 'Types of Mankind', defendiendo la poligénesis y la permanencia de tipos raciales para justificar la esclavitud.",
+      "metadatos": "{\"id_gemini\": \"j_c_nott\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "j_c_nott",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 404,
+      "tipo": "autor",
+      "nombre": "George R. Gliddon",
+      "descripcion": "Autor que, junto con J. C. Nott, escribió 'Types of Mankind'.",
+      "metadatos": "{\"id_gemini\": \"george_r_gliddon\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "george_r_gliddon",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 405,
+      "tipo": "autor",
+      "nombre": "E. von Eickstedt",
+      "descripcion": "Autor que intentó establecer una psicología de las razas, considerando la forma corporal y el comportamiento mental como una unidad, aunque su razonamiento fue criticado por Boas.",
+      "metadatos": "{\"id_gemini\": \"e_von_eickstedt\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "e_von_eickstedt",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 406,
+      "tipo": "obra",
+      "nombre": "Etude Critique sur la Fondattion de la Doctrine des Races",
+      "descripcion": "Obra de Theophile Simar que ofrece una presentación histórica de las teorías raciales, aunque su punto de vista es criticado por Boas.",
+      "metadatos": "{\"id_gemini\": \"etude_critique_sur_la_fondattion_de_la_doctrine_des_races\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "etude_critique_sur_la_fondattion_de_la_doctrine_des_races",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 407,
+      "tipo": "autor",
+      "nombre": "Herder",
+      "descripcion": "Autor mencionado por Boas en relación con la escuela romántica y la interpretación errónea de sus conceptos sobre el 'genio de las culturas' por Simar.",
+      "metadatos": "{\"id_gemini\": \"herder\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "herder",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 408,
+      "tipo": "autor",
+      "nombre": "Jacques Barzón",
+      "descripcion": "Autor de 'Race. A Study of Modern Superstition', citado por Boas en la discusión de las teorías raciales.",
+      "metadatos": "{\"id_gemini\": \"jacques_barzon\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "jacques_barzon",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 409,
+      "tipo": "obra",
+      "nombre": "Race. A Study of Modern Superstition",
+      "descripcion": "Obra de Jacques Barzón, mencionada por Boas en el contexto de las teorías raciales.",
+      "metadatos": "{\"id_gemini\": \"race_a_study_of_modern_superstition\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "race_a_study_of_modern_superstition",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 410,
+      "tipo": "obra",
+      "nombre": "The Mind of Primitive Man",
+      "descripcion": "Título original en inglés de una obra fundamental de Franz Boas, cuya primera edición apareció en 1911 y fue corregida en 1943.",
+      "metadatos": "{\"id_gemini\": \"the_mind_of_primitive_man\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "the_mind_of_primitive_man",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 411,
+      "tipo": "obra",
+      "nombre": "Cuestiones fundamentales de antropología cultural",
+      "descripcion": "Título de la primera edición castellana (1964) de la obra 'The Mind of Primitive Man' de Franz Boas, mantenido por razones editoriales.",
+      "metadatos": "{\"id_gemini\": \"cuestiones_fundamentales_antropologia_cultural\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "cuestiones_fundamentales_antropologia_cultural",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 412,
+      "tipo": "concepto",
+      "nombre": "Homosexualismo masculino",
+      "descripcion": "Práctica mencionada en relación con la estructura social de las Marquesas.",
+      "metadatos": "{\"id_gemini\": \"homosexualismo_masculino\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "homosexualismo_masculino",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 413,
+      "tipo": "autor",
+      "nombre": "George Grant Mac Curdy",
+      "descripcion": "Autor mencionado como fuente de datos generales sobre civilizaciones antiguas.",
+      "metadatos": "{\"id_gemini\": \"george_grant_mac_curdy\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "george_grant_mac_curdy",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 414,
+      "tipo": "autor",
+      "nombre": "Albrecht Penck",
+      "descripcion": "Autor citado en el texto en relación con la estimación de la edad del género humano.",
+      "metadatos": "{\"id_gemini\": \"albrecht_penck\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "albrecht_penck",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 415,
+      "tipo": "autor",
+      "nombre": "Lotry",
+      "descripcion": "Biólogo que enfatizó la importancia de la identidad constitucional frente a la identidad morfológica aparente.",
+      "metadatos": "{\"id_gemini\": \"lotry\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "lotry",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 416,
+      "tipo": "autor",
+      "nombre": "O. Lorenz",
+      "descripcion": "Investigador que calculó el número de antepasados del ex Emperador de Alemania, ilustrando el fenómeno de la 'pérdida de antepasados'.",
+      "metadatos": "{\"id_gemini\": \"o_lorenz\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "o_lorenz",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 417,
+      "tipo": "autor",
+      "nombre": "Jankowsky",
+      "descripcion": "Autor de 'Die Blutsverwandschaft im Volk und ín der Stuttgart', citado por Boas para cálculos de parentescos colaterales.",
+      "metadatos": "{\"id_gemini\": \"jankowsky\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "jankowsky",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 418,
+      "tipo": "autor",
+      "nombre": "King",
+      "descripcion": "Realizó experimentos con ratas que demostraron que la crianza pura disminuye la variabilidad fraternal.",
+      "metadatos": "{\"id_gemini\": \"king\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "king",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 419,
+      "tipo": "autor",
+      "nombre": "Johannsen",
+      "descripcion": "Biólogo que realizó una disolución de la especie (fenotipo) en una serie de genotipos, comparado por Boas con su análisis de raza.",
+      "metadatos": "{\"id_gemini\": \"johannsen\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "johannsen",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 420,
+      "tipo": "autor",
+      "nombre": "O. F. Cook",
+      "descripcion": "Autor que consideraba a la especie como un complejo de líneas distintas, reconociendo solo al individuo y sus descendientes.",
+      "metadatos": "{\"id_gemini\": \"o_f_cook\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "o_f_cook",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 421,
+      "tipo": "autor",
+      "nombre": "Mathews",
+      "descripcion": "Autor citado en relación con la frecuencia de 'Incae' entre los indios Pueblo.",
+      "metadatos": "{\"id_gemini\": \"mathews\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "mathews",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 422,
+      "tipo": "autor",
+      "nombre": "Lissauer",
+      "descripcion": "Autor citado en relación con la frecuencia del 'torus palatinus' entre los lapones.",
+      "metadatos": "{\"id_gemini\": \"lissauer\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "lissauer",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 423,
+      "tipo": "autor",
+      "nombre": "Pearl",
+      "descripcion": "Observó que la distribución de nacimientos masculinos y femeninos es diferente en familias mixtas de la República Argentina.",
+      "metadatos": "{\"id_gemini\": \"pearl\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "pearl",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 424,
+      "tipo": "autor",
+      "nombre": "Buzina",
+      "descripcion": "Coautor de un estudio sobre la forma de la mano y su relación con diversas ocupaciones.",
+      "metadatos": "{\"id_gemini\": \"buzina\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "buzina",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 425,
+      "tipo": "autor",
+      "nombre": "Lebzelter",
+      "descripcion": "Coautor de un estudio sobre la forma de la mano y su relación con diversas ocupaciones.",
+      "metadatos": "{\"id_gemini\": \"lebzelter\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "lebzelter",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 426,
+      "tipo": "autor",
+      "nombre": "Rieger",
+      "descripcion": "Autor que atribuye las diferencias en la forma de la cabeza al efecto de condiciones fisiológicas y mecánicas.",
+      "metadatos": "{\"id_gemini\": \"rieger\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "rieger",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 427,
+      "tipo": "autor",
+      "nombre": "Engel",
+      "descripcion": "Autor que destaca el efecto de la presión de los músculos sobre las formas de la cabeza.",
+      "metadatos": "{\"id_gemini\": \"engel\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "engel",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 428,
+      "tipo": "autor",
+      "nombre": "Walcher",
+      "descripcion": "Coautor de una teoría que explica las diferentes formas de cabeza por la consideración de la posición del infante en la cuna.",
+      "metadatos": "{\"id_gemini\": \"walcher\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "walcher",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 429,
+      "tipo": "autor",
+      "nombre": "Nyström",
+      "descripcion": "Coautor de una teoría que explica las diferentes formas de cabeza por la consideración de la posición del infante en la cuna.",
+      "metadatos": "{\"id_gemini\": \"nystrom\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "nystrom",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 430,
+      "tipo": "autor",
+      "nombre": "Ammon",
+      "descripcion": "Pionero en observaciones sobre las diferencias entre tipos urbanos y rurales, demostrando que la población urbana de Haden difiere de la rural.",
+      "metadatos": "{\"id_gemini\": \"ammon\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "ammon",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 431,
+      "tipo": "autor",
+      "nombre": "Livi",
+      "descripcion": "Autor que realizó observaciones en ciudades de Italia, demostrando diferencias entre la población urbana y rural.",
+      "metadatos": "{\"id_gemini\": \"livi\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "livi",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 432,
+      "tipo": "autor",
+      "nombre": "Guthe",
+      "descripcion": "Autor citado por Boas en relación con los estudios sobre la influencia del ambiente en la forma corporal de los descendientes de inmigrantes.",
+      "metadatos": "{\"id_gemini\": \"guthe\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "guthe",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 433,
+      "tipo": "autor",
+      "nombre": "Hirsch",
+      "descripcion": "Autor citado por Boas en relación con los estudios sobre la influencia del ambiente en la forma corporal de los descendientes de inmigrantes.",
+      "metadatos": "{\"id_gemini\": \"hirsch\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "hirsch",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 434,
+      "tipo": "autor",
+      "nombre": "Schapiro",
+      "descripcion": "Autor que estudió los cambios en la forma física de los japoneses nacidos en Hawái.",
+      "metadatos": "{\"id_gemini\": \"schapiro\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "schapiro",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 435,
+      "tipo": "concepto",
+      "nombre": "Mellizos idénticos",
+      "descripcion": "Mellizos engendrados en un solo óvulo, cuya identidad genética los hace ideales para estudios sobre la influencia del ambiente en el desarrollo corporal y mental.",
+      "metadatos": "{\"id_gemini\": \"mellizos_identicos\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "mellizos_identicos",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 436,
+      "tipo": "autor",
+      "nombre": "Von Verschuer",
+      "descripcion": "Demostró que durante la adolescencia los mellizos idénticos son más desemejantes que en otras etapas, lo que indica variabilidad por causas exteriores.",
+      "metadatos": "{\"id_gemini\": \"von_verschuer\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "von_verschuer",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 437,
+      "tipo": "autor",
+      "nombre": "Dahlberg",
+      "descripcion": "Recolectó material en Noruega para un estudio del índice cefálico de mellizos.",
+      "metadatos": "{\"id_gemini\": \"dahlberg\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "dahlberg",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 438,
+      "tipo": "concepto",
+      "nombre": "Malaria",
+      "descripcion": "Enfermedad cuya incidencia se relaciona con la pigmentación de la piel, exponiendo más a los individuos poco pigmentados y ejerciendo una presión selectiva.",
+      "metadatos": "{\"id_gemini\": \"malaria\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "malaria",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 439,
+      "tipo": "concepto",
+      "nombre": "Forma doméstica humana",
+      "descripcion": "Concepto que aplica los cambios corporales observados en animales domesticados a la evolución humana, sugiriendo que muchos rasgos humanos son resultado de la domesticación.",
+      "metadatos": "{\"id_gemini\": \"forma_domestica_humana\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "forma_domestica_humana",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 440,
+      "tipo": "concepto",
+      "nombre": "Albinismo",
+      "descripcion": "Pérdida de pigmentación que, junto con la melanosis, se considera un rasgo que puede haberse desarrollado independientemente en diferentes regiones.",
+      "metadatos": "{\"id_gemini\": \"albinismo\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "albinismo",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 441,
+      "tipo": "concepto",
+      "nombre": "Melanosis",
+      "descripcion": "Aumento de pigmentación que, junto con el albinismo, se considera un rasgo que puede haberse desarrollado independientemente en diferentes regiones.",
+      "metadatos": "{\"id_gemini\": \"melanosis\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "melanosis",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 442,
+      "tipo": "concepto",
+      "nombre": "Desarrollo paralelo",
+      "descripcion": "Fenómeno en la evolución biológica donde formas similares se desarrollan independientemente sin un parentesco genético directo.",
+      "metadatos": "{\"id_gemini\": \"desarrollo_paralelo\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "desarrollo_paralelo",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 443,
+      "tipo": "autor",
+      "nombre": "Arthur W. Willey",
+      "descripcion": "Cita sus principios de divergencia, convergencia y paralelismo evolutivo en mamíferos.",
+      "metadatos": "{\"id_gemini\": \"arthur_w_willey\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "arthur_w_willey",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 444,
+      "tipo": "concepto",
+      "nombre": "Mamíferos marsupiales (Metatheria)",
+      "descripcion": "Grupo de mamíferos que presenta series paralelas con los mamíferos placentarios, ilustrando principios de evolución como la divergencia, convergencia y paralelismo.",
+      "metadatos": "{\"id_gemini\": \"mamiferos_marsupiales\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "mamiferos_marsupiales",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 445,
+      "tipo": "concepto",
+      "nombre": "Mamíferos placentarios (Eutheria)",
+      "descripcion": "Grupo de mamíferos que presenta series paralelas con los mamíferos marsupiales, ilustrando principios de evolución como la divergencia, convergencia y paralelismo.",
+      "metadatos": "{\"id_gemini\": \"mamiferos_placentarios\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "mamiferos_placentarios",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 446,
+      "tipo": "autor",
+      "nombre": "Klaatsch",
+      "descripcion": "Autor que, junto a Straz y Schoetensack, considera al australiano como el tipo de hombre más antiguo y generalizado.",
+      "metadatos": "{\"id_gemini\": \"klaatsch\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "klaatsch",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 447,
+      "tipo": "autor",
+      "nombre": "Straz",
+      "descripcion": "Autor que, junto a Klaatsch y Schoetensack, considera al australiano como el tipo de hombre más antiguo y generalizado.",
+      "metadatos": "{\"id_gemini\": \"straz\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "straz",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 448,
+      "tipo": "autor",
+      "nombre": "Schoetensack",
+      "descripcion": "Autor que, junto a Klaatsch y Straz, considera al australiano como el tipo de hombre más antiguo y generalizado.",
+      "metadatos": "{\"id_gemini\": \"schoetensack\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "schoetensack",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 449,
+      "tipo": "autor",
+      "nombre": "Manouvrier",
+      "descripcion": "Sostuvo que las características del sistema óseo, muscular, visceral o circulatorio no tienen relación directa con la capacidad mental del hombre.",
+      "metadatos": "{\"id_gemini\": \"manouvrier\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "manouvrier",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 450,
+      "tipo": "concepto",
+      "nombre": "Peso del cerebro",
+      "descripcion": "Método utilizado para averiguar el tamaño del sistema nervioso central, comparado entre diferentes razas y grupos sociales.",
+      "metadatos": "{\"id_gemini\": \"peso_cerebro\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "peso_cerebro",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 451,
+      "tipo": "concepto",
+      "nombre": "Capacidad craneana",
+      "descripcion": "Método utilizado para averiguar el tamaño del sistema nervioso central, midiendo el volumen de la cavidad craneana.",
+      "metadatos": "{\"id_gemini\": \"capacidad_craneana\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "capacidad_craneana",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 452,
+      "tipo": "autor",
+      "nombre": "Topinard",
+      "descripcion": "Científico que recopiló datos sobre la capacidad craneana de diferentes grupos, como europeos neolíticos, mongólicos y negros africanos.",
+      "metadatos": "{\"id_gemini\": \"topinard\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "topinard",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 453,
+      "tipo": "concepto",
+      "nombre": "Criminales (grupo de estudio)",
+      "descripcion": "Categoría social estudiada por Manouvrier, cuya capacidad craneana se comparó con la de la población general y hombres eminentes.",
+      "metadatos": "{\"id_gemini\": \"criminales\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "criminales",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 454,
+      "tipo": "autor",
+      "nombre": "Donaldson",
+      "descripcion": "Coautor que estudió la correlación entre el tamaño del cerebro y el número de células y fibras, concluyendo que es débil.",
+      "metadatos": "{\"id_gemini\": \"donaldson\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "donaldson",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 455,
+      "tipo": "autor",
+      "nombre": "G. Levin",
+      "descripcion": "Presentó un resumen del estado del conocimiento en 1937, demostrando que los signos de inferioridad cerebral carecen de justificación.",
+      "metadatos": "{\"id_gemini\": \"g_levin\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "g_levin",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 456,
+      "tipo": "cultura",
+      "nombre": "Población de Turkestán",
+      "descripcion": "Región hasta donde la raza europea se extendía en un período anterior al siglo XV.",
+      "metadatos": "{\"id_gemini\": \"turkestan\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "turkestan",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 457,
+      "tipo": "cultura",
+      "nombre": "Población del África del Sud",
+      "descripcion": "Región donde los bosquimanos, un tipo de negro pigmeo, están representados en su forma extrema.",
+      "metadatos": "{\"id_gemini\": \"africa_del_sud\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "africa_del_sud",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 458,
+      "tipo": "autor",
+      "nombre": "Kretschmer",
+      "descripcion": "Autor cuyas ideas sobre tipos constitucionales, expresadas en términos métricos exactos, son mencionadas en el texto como variables similares a las discutidas previamente.",
+      "metadatos": "{\"id_gemini\": \"kretschmer\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "kretschmer",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 459,
+      "tipo": "autor",
+      "nombre": "Rousseau",
+      "descripcion": "Filósofo asociado con los racionalistas del siglo XVIII que creía en una vida natural simple y feliz.",
+      "metadatos": "{\"id_gemini\": \"rousseau\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "rousseau",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 460,
+      "tipo": "autor",
+      "nombre": "Wundt",
+      "descripcion": "Autor de 'Folk Psychology', un tratado general que muestra despreocupación por las razas en el estudio de la cultura.",
+      "metadatos": "{\"id_gemini\": \"wundt\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "wundt",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 461,
+      "tipo": "autor",
+      "nombre": "Sumner",
+      "descripcion": "Autor de 'Science of Society', una obra que muestra despreocupación por las razas en los estudios sociológicos.",
+      "metadatos": "{\"id_gemini\": \"sumner\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "sumner",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 462,
+      "tipo": "concepto",
+      "nombre": "Dolicocéfalo",
+      "descripcion": "Individuos con un índice cefálico de menos de 75, caracterizados por una cabeza alargada.",
+      "metadatos": "{\"id_gemini\": \"dolicoc\\u00e9falo\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "dolicocéfalo",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 463,
+      "tipo": "concepto",
+      "nombre": "Mesocéfalo",
+      "descripcion": "Individuos con un índice cefálico entre 75 y 80.",
+      "metadatos": "{\"id_gemini\": \"mesoc\\u00e9falo\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "mesocéfalo",
+        "insertado_por": "conectar_automatico"
+      }
+    },
+    {
+      "id": 464,
+      "tipo": "concepto",
+      "nombre": "Braquicéfalo",
+      "descripcion": "Individuos con un índice cefálico de más de 80, caracterizados por una cabeza baja y redonda.",
+      "metadatos": "{\"id_gemini\": \"braquic\\u00e9falo\", \"insertado_por\": \"conectar_automatico\"}",
+      "metadata": {
+        "id_gemini": "braquicéfalo",
+        "insertado_por": "conectar_automatico"
+      }
     }
   ],
   "relaciones": [
@@ -4766,6 +5591,2358 @@
       "tipo": "relacionado_con",
       "peso": 1.0,
       "fuente": "La estructura social se organiza a través de los sistemas de parentesco"
+    },
+    {
+      "id": 118,
+      "origen_id": 2,
+      "destino_id": 97,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 119,
+      "origen_id": 2,
+      "destino_id": 177,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 120,
+      "origen_id": 2,
+      "destino_id": 69,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 121,
+      "origen_id": 2,
+      "destino_id": 74,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 122,
+      "origen_id": 2,
+      "destino_id": 73,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 123,
+      "origen_id": 2,
+      "destino_id": 390,
+      "tipo": "cita_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 124,
+      "origen_id": 2,
+      "destino_id": 391,
+      "tipo": "cita_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 125,
+      "origen_id": 2,
+      "destino_id": 102,
+      "tipo": "ejemplifica_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 126,
+      "origen_id": 102,
+      "destino_id": 100,
+      "tipo": "desarrollada_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 127,
+      "origen_id": 102,
+      "destino_id": 101,
+      "tipo": "desarrollada_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 128,
+      "origen_id": 105,
+      "destino_id": 104,
+      "tipo": "invadio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 129,
+      "origen_id": 106,
+      "destino_id": 107,
+      "tipo": "difundido_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 130,
+      "origen_id": 106,
+      "destino_id": 108,
+      "tipo": "difundido_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 131,
+      "origen_id": 109,
+      "destino_id": 110,
+      "tipo": "ejemplo_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 132,
+      "origen_id": 392,
+      "destino_id": 110,
+      "tipo": "estudio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 133,
+      "origen_id": 393,
+      "destino_id": 110,
+      "tipo": "estudio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 134,
+      "origen_id": 106,
+      "destino_id": 105,
+      "tipo": "influencio_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 135,
+      "origen_id": 106,
+      "destino_id": 113,
+      "tipo": "facilito_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 136,
+      "origen_id": 114,
+      "destino_id": 115,
+      "tipo": "expandida_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 137,
+      "origen_id": 2,
+      "destino_id": 116,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 138,
+      "origen_id": 2,
+      "destino_id": 394,
+      "tipo": "cita_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 139,
+      "origen_id": 395,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 140,
+      "origen_id": 396,
+      "destino_id": 120,
+      "tipo": "estudio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 141,
+      "origen_id": 396,
+      "destino_id": 121,
+      "tipo": "estudio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 142,
+      "origen_id": 396,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 143,
+      "origen_id": 122,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 144,
+      "origen_id": 397,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 145,
+      "origen_id": 398,
+      "destino_id": 125,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 146,
+      "origen_id": 398,
+      "destino_id": 126,
+      "tipo": "defiende_superioridad_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 147,
+      "origen_id": 398,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 148,
+      "origen_id": 399,
+      "destino_id": 128,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 149,
+      "origen_id": 399,
+      "destino_id": 400,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 150,
+      "origen_id": 399,
+      "destino_id": 130,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 151,
+      "origen_id": 399,
+      "destino_id": 131,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 152,
+      "origen_id": 399,
+      "destino_id": 100,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 153,
+      "origen_id": 399,
+      "destino_id": 132,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 154,
+      "origen_id": 399,
+      "destino_id": 133,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 155,
+      "origen_id": 399,
+      "destino_id": 134,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 156,
+      "origen_id": 399,
+      "destino_id": 135,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 157,
+      "origen_id": 399,
+      "destino_id": 136,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 158,
+      "origen_id": 399,
+      "destino_id": 137,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 159,
+      "origen_id": 399,
+      "destino_id": 138,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 160,
+      "origen_id": 399,
+      "destino_id": 139,
+      "tipo": "clasifica_como_activo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 161,
+      "origen_id": 399,
+      "destino_id": 140,
+      "tipo": "clasifica_como_pasivo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 162,
+      "origen_id": 399,
+      "destino_id": 141,
+      "tipo": "clasifica_como_pasivo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 163,
+      "origen_id": 399,
+      "destino_id": 142,
+      "tipo": "clasifica_como_pasivo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 164,
+      "origen_id": 399,
+      "destino_id": 143,
+      "tipo": "clasifica_como_pasivo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 165,
+      "origen_id": 401,
+      "destino_id": 399,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 166,
+      "origen_id": 145,
+      "destino_id": 399,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 167,
+      "origen_id": 145,
+      "destino_id": 146,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 168,
+      "origen_id": 145,
+      "destino_id": 147,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 169,
+      "origen_id": 147,
+      "destino_id": 130,
+      "tipo": "representado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 170,
+      "origen_id": 147,
+      "destino_id": 148,
+      "tipo": "representado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 171,
+      "origen_id": 147,
+      "destino_id": 73,
+      "tipo": "representado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 172,
+      "origen_id": 147,
+      "destino_id": 140,
+      "tipo": "representado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 173,
+      "origen_id": 147,
+      "destino_id": 143,
+      "tipo": "representado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 174,
+      "origen_id": 145,
+      "destino_id": 152,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 175,
+      "origen_id": 145,
+      "destino_id": 149,
+      "tipo": "otorga_primacia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 176,
+      "origen_id": 145,
+      "destino_id": 150,
+      "tipo": "otorga_primacia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 177,
+      "origen_id": 145,
+      "destino_id": 151,
+      "tipo": "otorga_primacia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 178,
+      "origen_id": 152,
+      "destino_id": 153,
+      "tipo": "defiende",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 179,
+      "origen_id": 152,
+      "destino_id": 154,
+      "tipo": "opuesto_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 180,
+      "origen_id": 152,
+      "destino_id": 155,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 181,
+      "origen_id": 152,
+      "destino_id": 140,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 182,
+      "origen_id": 152,
+      "destino_id": 142,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 183,
+      "origen_id": 152,
+      "destino_id": 143,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 184,
+      "origen_id": 152,
+      "destino_id": 73,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 185,
+      "origen_id": 152,
+      "destino_id": 65,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 186,
+      "origen_id": 152,
+      "destino_id": 69,
+      "tipo": "describe_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 187,
+      "origen_id": 402,
+      "destino_id": 69,
+      "tipo": "estudio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 188,
+      "origen_id": 157,
+      "destino_id": 152,
+      "tipo": "colaboro_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 189,
+      "origen_id": 157,
+      "destino_id": 158,
+      "tipo": "practica",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 190,
+      "origen_id": 157,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 191,
+      "origen_id": 403,
+      "destino_id": 404,
+      "tipo": "colaboro_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 192,
+      "origen_id": 403,
+      "destino_id": 161,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 193,
+      "origen_id": 403,
+      "destino_id": 153,
+      "tipo": "defiende",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 194,
+      "origen_id": 403,
+      "destino_id": 143,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 195,
+      "origen_id": 404,
+      "destino_id": 161,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 196,
+      "origen_id": 162,
+      "destino_id": 398,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 197,
+      "origen_id": 162,
+      "destino_id": 163,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 198,
+      "origen_id": 162,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 199,
+      "origen_id": 2,
+      "destino_id": 162,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 200,
+      "origen_id": 164,
+      "destino_id": 398,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 201,
+      "origen_id": 164,
+      "destino_id": 162,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 202,
+      "origen_id": 164,
+      "destino_id": 165,
+      "tipo": "defiende_superioridad_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 203,
+      "origen_id": 164,
+      "destino_id": 166,
+      "tipo": "atribuye_origen_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 204,
+      "origen_id": 167,
+      "destino_id": 177,
+      "tipo": "contribuye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 205,
+      "origen_id": 405,
+      "destino_id": 169,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 206,
+      "origen_id": 405,
+      "destino_id": 170,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 207,
+      "origen_id": 2,
+      "destino_id": 405,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 208,
+      "origen_id": 171,
+      "destino_id": 406,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 209,
+      "origen_id": 171,
+      "destino_id": 177,
+      "tipo": "estudio",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 210,
+      "origen_id": 171,
+      "destino_id": 407,
+      "tipo": "malinterpreta_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 211,
+      "origen_id": 171,
+      "destino_id": 174,
+      "tipo": "malinterpreta_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 212,
+      "origen_id": 2,
+      "destino_id": 171,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 213,
+      "origen_id": 408,
+      "destino_id": 409,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+    },
+    {
+      "id": 214,
+      "origen_id": 2,
+      "destino_id": 410,
+      "tipo": "publica",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 215,
+      "origen_id": 410,
+      "destino_id": 411,
+      "tipo": "publicado_como_traduccion",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 216,
+      "origen_id": 180,
+      "destino_id": 410,
+      "tipo": "traduce_obra",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 217,
+      "origen_id": 181,
+      "destino_id": 2,
+      "tipo": "es_discípulo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 218,
+      "origen_id": 182,
+      "destino_id": 2,
+      "tipo": "es_discípulo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 219,
+      "origen_id": 183,
+      "destino_id": 411,
+      "tipo": "escribe_estudio_preliminar_para",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 220,
+      "origen_id": 178,
+      "destino_id": 411,
+      "tipo": "dirige_publicacion",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 221,
+      "origen_id": 2,
+      "destino_id": 184,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 222,
+      "origen_id": 391,
+      "destino_id": 184,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 223,
+      "origen_id": 184,
+      "destino_id": 190,
+      "tipo": "es_tipo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 224,
+      "origen_id": 185,
+      "destino_id": 186,
+      "tipo": "practica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 225,
+      "origen_id": 186,
+      "destino_id": 187,
+      "tipo": "es_respuesta_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 226,
+      "origen_id": 185,
+      "destino_id": 188,
+      "tipo": "presenta_rasgo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 227,
+      "origen_id": 185,
+      "destino_id": 412,
+      "tipo": "presenta_rasgo",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 228,
+      "origen_id": 391,
+      "destino_id": 194,
+      "tipo": "usa_enfoque",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 229,
+      "origen_id": 2,
+      "destino_id": 391,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 230,
+      "origen_id": 2,
+      "destino_id": 195,
+      "tipo": "realiza_trabajo_de_campo_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 231,
+      "origen_id": 2,
+      "destino_id": 196,
+      "tipo": "realiza_trabajo_de_campo_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 232,
+      "origen_id": 65,
+      "destino_id": 197,
+      "tipo": "practica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 233,
+      "origen_id": 65,
+      "destino_id": 198,
+      "tipo": "practica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 234,
+      "origen_id": 65,
+      "destino_id": 199,
+      "tipo": "practica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 235,
+      "origen_id": 65,
+      "destino_id": 200,
+      "tipo": "venera_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 236,
+      "origen_id": 2,
+      "destino_id": 201,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 237,
+      "origen_id": 2,
+      "destino_id": 202,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 238,
+      "origen_id": 2,
+      "destino_id": 203,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 239,
+      "origen_id": 203,
+      "destino_id": 204,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 240,
+      "origen_id": 203,
+      "destino_id": 205,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 241,
+      "origen_id": 203,
+      "destino_id": 206,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 242,
+      "origen_id": 2,
+      "destino_id": 207,
+      "tipo": "influye_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 243,
+      "origen_id": 208,
+      "destino_id": 2,
+      "tipo": "evalua_contribucion_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 244,
+      "origen_id": 85,
+      "destino_id": 209,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 245,
+      "origen_id": 85,
+      "destino_id": 210,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 246,
+      "origen_id": 2,
+      "destino_id": 85,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 247,
+      "origen_id": 214,
+      "destino_id": 211,
+      "tipo": "manipula_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 248,
+      "origen_id": 398,
+      "destino_id": 214,
+      "tipo": "promueve_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 249,
+      "origen_id": 212,
+      "destino_id": 214,
+      "tipo": "promueve_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 250,
+      "origen_id": 213,
+      "destino_id": 214,
+      "tipo": "promueve_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 251,
+      "origen_id": 399,
+      "destino_id": 214,
+      "tipo": "promueve_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 252,
+      "origen_id": 2,
+      "destino_id": 214,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 253,
+      "origen_id": 2,
+      "destino_id": 216,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 254,
+      "origen_id": 2,
+      "destino_id": 217,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 255,
+      "origen_id": 2,
+      "destino_id": 218,
+      "tipo": "lucha_contra",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 256,
+      "origen_id": 2,
+      "destino_id": 219,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 257,
+      "origen_id": 2,
+      "destino_id": 220,
+      "tipo": "refuta",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 258,
+      "origen_id": 2,
+      "destino_id": 221,
+      "tipo": "refuta",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 259,
+      "origen_id": 2,
+      "destino_id": 222,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 260,
+      "origen_id": 2,
+      "destino_id": 223,
+      "tipo": "es_mentor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 261,
+      "origen_id": 2,
+      "destino_id": 224,
+      "tipo": "es_mentor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 262,
+      "origen_id": 2,
+      "destino_id": 225,
+      "tipo": "es_mentor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 263,
+      "origen_id": 2,
+      "destino_id": 182,
+      "tipo": "es_mentor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 264,
+      "origen_id": 2,
+      "destino_id": 226,
+      "tipo": "es_mentor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 265,
+      "origen_id": 227,
+      "destino_id": 232,
+      "tipo": "es_fuente_sobre",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 266,
+      "origen_id": 413,
+      "destino_id": 232,
+      "tipo": "es_fuente_sobre",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 267,
+      "origen_id": 414,
+      "destino_id": 229,
+      "tipo": "es_fuente_sobre",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 268,
+      "origen_id": 228,
+      "destino_id": 126,
+      "tipo": "contemporaneo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 269,
+      "origen_id": 126,
+      "destino_id": 229,
+      "tipo": "practica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 270,
+      "origen_id": 232,
+      "destino_id": 235,
+      "tipo": "ubica_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 271,
+      "origen_id": 233,
+      "destino_id": 235,
+      "tipo": "ubica_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 272,
+      "origen_id": 234,
+      "destino_id": 235,
+      "tipo": "contrasta_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+    },
+    {
+      "id": 273,
+      "origen_id": 2,
+      "destino_id": 239,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 274,
+      "origen_id": 2,
+      "destino_id": 247,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 275,
+      "origen_id": 415,
+      "destino_id": 252,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 276,
+      "origen_id": 252,
+      "destino_id": 253,
+      "tipo": "contrasta_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 277,
+      "origen_id": 252,
+      "destino_id": 254,
+      "tipo": "descubierta_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 278,
+      "origen_id": 2,
+      "destino_id": 255,
+      "tipo": "discute_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 279,
+      "origen_id": 416,
+      "destino_id": 257,
+      "tipo": "estudia_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 280,
+      "origen_id": 417,
+      "destino_id": 260,
+      "tipo": "autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 281,
+      "origen_id": 2,
+      "destino_id": 261,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 282,
+      "origen_id": 418,
+      "destino_id": 254,
+      "tipo": "estudia_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 283,
+      "origen_id": 418,
+      "destino_id": 263,
+      "tipo": "estudia_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 284,
+      "origen_id": 2,
+      "destino_id": 264,
+      "tipo": "aplica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 285,
+      "origen_id": 266,
+      "destino_id": 267,
+      "tipo": "descendiente_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 286,
+      "origen_id": 266,
+      "destino_id": 268,
+      "tipo": "descendiente_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 287,
+      "origen_id": 269,
+      "destino_id": 271,
+      "tipo": "descendiente_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 288,
+      "origen_id": 269,
+      "destino_id": 272,
+      "tipo": "descendiente_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 289,
+      "origen_id": 274,
+      "destino_id": 275,
+      "tipo": "subestima_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 290,
+      "origen_id": 2,
+      "destino_id": 275,
+      "tipo": "discute_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 291,
+      "origen_id": 2,
+      "destino_id": 261,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 292,
+      "origen_id": 419,
+      "destino_id": 277,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 293,
+      "origen_id": 419,
+      "destino_id": 278,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 294,
+      "origen_id": 2,
+      "destino_id": 419,
+      "tipo": "contemporaneo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 295,
+      "origen_id": 420,
+      "destino_id": 280,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 296,
+      "origen_id": 282,
+      "destino_id": 281,
+      "tipo": "estudia_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 297,
+      "origen_id": 282,
+      "destino_id": 283,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 298,
+      "origen_id": 2,
+      "destino_id": 282,
+      "tipo": "contemporaneo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 299,
+      "origen_id": 291,
+      "destino_id": 264,
+      "tipo": "aplica_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 300,
+      "origen_id": 291,
+      "destino_id": 292,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 301,
+      "origen_id": 291,
+      "destino_id": 293,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 302,
+      "origen_id": 298,
+      "destino_id": 297,
+      "tipo": "ejemplo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 303,
+      "origen_id": 299,
+      "destino_id": 297,
+      "tipo": "ejemplo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 304,
+      "origen_id": 138,
+      "destino_id": 300,
+      "tipo": "muestra_caracteristica",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 305,
+      "origen_id": 301,
+      "destino_id": 300,
+      "tipo": "muestra_caracteristica",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 306,
+      "origen_id": 421,
+      "destino_id": 300,
+      "tipo": "estudia_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 307,
+      "origen_id": 303,
+      "destino_id": 302,
+      "tipo": "muestra_caracteristica",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 308,
+      "origen_id": 422,
+      "destino_id": 302,
+      "tipo": "estudia_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 309,
+      "origen_id": 295,
+      "destino_id": 305,
+      "tipo": "migra_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 310,
+      "origen_id": 304,
+      "destino_id": 305,
+      "tipo": "migra_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 311,
+      "origen_id": 423,
+      "destino_id": 305,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 312,
+      "origen_id": 2,
+      "destino_id": 307,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 313,
+      "origen_id": 130,
+      "destino_id": 239,
+      "tipo": "ejemplo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 314,
+      "origen_id": 142,
+      "destino_id": 239,
+      "tipo": "ejemplo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 315,
+      "origen_id": 143,
+      "destino_id": 239,
+      "tipo": "ejemplo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 316,
+      "origen_id": 2,
+      "destino_id": 97,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 317,
+      "origen_id": 424,
+      "destino_id": 425,
+      "tipo": "contemporaneo_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 318,
+      "origen_id": 430,
+      "destino_id": 313,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 319,
+      "origen_id": 430,
+      "destino_id": 315,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 320,
+      "origen_id": 431,
+      "destino_id": 315,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 321,
+      "origen_id": 2,
+      "destino_id": 432,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 322,
+      "origen_id": 2,
+      "destino_id": 433,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 323,
+      "origen_id": 434,
+      "destino_id": 317,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 324,
+      "origen_id": 2,
+      "destino_id": 318,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 325,
+      "origen_id": 2,
+      "destino_id": 250,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 326,
+      "origen_id": 2,
+      "destino_id": 319,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 327,
+      "origen_id": 2,
+      "destino_id": 320,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 328,
+      "origen_id": 2,
+      "destino_id": 273,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 329,
+      "origen_id": 2,
+      "destino_id": 321,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 330,
+      "origen_id": 323,
+      "destino_id": 322,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 331,
+      "origen_id": 436,
+      "destino_id": 435,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 332,
+      "origen_id": 437,
+      "destino_id": 325,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 333,
+      "origen_id": 326,
+      "destino_id": 435,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 334,
+      "origen_id": 296,
+      "destino_id": 327,
+      "tipo": "afecta_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 335,
+      "origen_id": 296,
+      "destino_id": 328,
+      "tipo": "afecta_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 336,
+      "origen_id": 296,
+      "destino_id": 329,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 337,
+      "origen_id": 291,
+      "destino_id": 331,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 338,
+      "origen_id": 291,
+      "destino_id": 438,
+      "tipo": "relaciona_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 339,
+      "origen_id": 438,
+      "destino_id": 332,
+      "tipo": "impulsa",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 340,
+      "origen_id": 333,
+      "destino_id": 442,
+      "tipo": "sostiene_teoria",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 341,
+      "origen_id": 333,
+      "destino_id": 439,
+      "tipo": "sostiene_teoria",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 342,
+      "origen_id": 333,
+      "destino_id": 440,
+      "tipo": "relaciona_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 343,
+      "origen_id": 333,
+      "destino_id": 441,
+      "tipo": "relaciona_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 344,
+      "origen_id": 443,
+      "destino_id": 335,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 345,
+      "origen_id": 443,
+      "destino_id": 336,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 346,
+      "origen_id": 443,
+      "destino_id": 442,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 347,
+      "origen_id": 443,
+      "destino_id": 444,
+      "tipo": "ejemplifica_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 348,
+      "origen_id": 443,
+      "destino_id": 445,
+      "tipo": "ejemplifica_con",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 349,
+      "origen_id": 446,
+      "destino_id": 341,
+      "tipo": "sostiene_teoria",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 350,
+      "origen_id": 447,
+      "destino_id": 341,
+      "tipo": "sostiene_teoria",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 351,
+      "origen_id": 448,
+      "destino_id": 341,
+      "tipo": "sostiene_teoria",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 352,
+      "origen_id": 342,
+      "destino_id": 341,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 353,
+      "origen_id": 343,
+      "destino_id": 453,
+      "tipo": "aplicado_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 354,
+      "origen_id": 344,
+      "destino_id": 451,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 355,
+      "origen_id": 449,
+      "destino_id": 451,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 356,
+      "origen_id": 449,
+      "destino_id": 350,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 357,
+      "origen_id": 449,
+      "destino_id": 453,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 358,
+      "origen_id": 452,
+      "destino_id": 451,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 359,
+      "origen_id": 452,
+      "destino_id": 347,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 360,
+      "origen_id": 452,
+      "destino_id": 348,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 361,
+      "origen_id": 452,
+      "destino_id": 140,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 362,
+      "origen_id": 452,
+      "destino_id": 240,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 363,
+      "origen_id": 452,
+      "destino_id": 349,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 364,
+      "origen_id": 282,
+      "destino_id": 350,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 365,
+      "origen_id": 351,
+      "destino_id": 450,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 366,
+      "origen_id": 454,
+      "destino_id": 450,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 367,
+      "origen_id": 423,
+      "destino_id": 450,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 368,
+      "origen_id": 455,
+      "destino_id": 343,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 369,
+      "origen_id": 193,
+      "destino_id": 355,
+      "tipo": "condiciona",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 370,
+      "origen_id": 356,
+      "destino_id": 355,
+      "tipo": "limita",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 371,
+      "origen_id": 456,
+      "destino_id": 130,
+      "tipo": "limita_expansion_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 372,
+      "origen_id": 357,
+      "destino_id": 140,
+      "tipo": "origen_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 373,
+      "origen_id": 360,
+      "destino_id": 361,
+      "tipo": "localizado_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 374,
+      "origen_id": 360,
+      "destino_id": 362,
+      "tipo": "localizado_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 375,
+      "origen_id": 360,
+      "destino_id": 363,
+      "tipo": "localizado_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 376,
+      "origen_id": 364,
+      "destino_id": 240,
+      "tipo": "incluye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 377,
+      "origen_id": 365,
+      "destino_id": 140,
+      "tipo": "incluye_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 378,
+      "origen_id": 367,
+      "destino_id": 241,
+      "tipo": "ejemplificado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 379,
+      "origen_id": 241,
+      "destino_id": 457,
+      "tipo": "localizado_en",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+    },
+    {
+      "id": 380,
+      "origen_id": 2,
+      "destino_id": 372,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 381,
+      "origen_id": 368,
+      "destino_id": 372,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 382,
+      "origen_id": 369,
+      "destino_id": 368,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 383,
+      "origen_id": 370,
+      "destino_id": 368,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 384,
+      "origen_id": 371,
+      "destino_id": 368,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 385,
+      "origen_id": 373,
+      "destino_id": 379,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 386,
+      "origen_id": 282,
+      "destino_id": 373,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 387,
+      "origen_id": 368,
+      "destino_id": 374,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 388,
+      "origen_id": 375,
+      "destino_id": 374,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 389,
+      "origen_id": 333,
+      "destino_id": 379,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 390,
+      "origen_id": 407,
+      "destino_id": 184,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 391,
+      "origen_id": 382,
+      "destino_id": 184,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 392,
+      "origen_id": 383,
+      "destino_id": 372,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 393,
+      "origen_id": 89,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 394,
+      "origen_id": 46,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 395,
+      "origen_id": 39,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 396,
+      "origen_id": 85,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 397,
+      "origen_id": 86,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 398,
+      "origen_id": 29,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 399,
+      "origen_id": 45,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 400,
+      "origen_id": 460,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 401,
+      "origen_id": 384,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 402,
+      "origen_id": 461,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 403,
+      "origen_id": 386,
+      "destino_id": 216,
+      "tipo": "critica_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 404,
+      "origen_id": 2,
+      "destino_id": 411,
+      "tipo": "es_autor_de",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 405,
+      "origen_id": 376,
+      "destino_id": 239,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 406,
+      "origen_id": 377,
+      "destino_id": 239,
+      "tipo": "redefine_a",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 407,
+      "origen_id": 458,
+      "destino_id": 377,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 408,
+      "origen_id": 264,
+      "destino_id": 389,
+      "tipo": "es_referido_como",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 409,
+      "origen_id": 389,
+      "destino_id": 462,
+      "tipo": "define",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 410,
+      "origen_id": 389,
+      "destino_id": 463,
+      "tipo": "define",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+    },
+    {
+      "id": 411,
+      "origen_id": 389,
+      "destino_id": 464,
+      "tipo": "define",
+      "peso": 1.0,
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
     }
   ]
 }

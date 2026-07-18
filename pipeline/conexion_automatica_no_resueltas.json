@@ -1,0 +1,92 @@
+[
+  {
+    "origen": "2",
+    "destino": "razas_de_africa",
+    "tipo": "estudia_a",
+    "nota": "Boas analiza cómo la asimilación de la civilización es diferente para las razas de África, Australia y América en comparación con la Europa antigua.",
+    "cita_textual": "estos pueblos eran más parecidos al hombre civilizado de sus tiempos que las razas de África, Australia y América a los invasores europeos de períodos posteriores.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+  },
+  {
+    "origen": "civilizacion_arabiga",
+    "destino": "razas_negras_de_africa",
+    "tipo": "influyo_en",
+    "nota": "La civilización arábiga influyó en las razas negras de África.",
+    "cita_textual": "Es interesante observar de qué manera influyeron sobre las razas negras de África.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
+  },
+  {
+    "origen": "2",
+    "destino": "relativismo_cultural",
+    "tipo": "desarrolla_concepto",
+    "nota": "La insistencia de Boas en el relativismo cultural fue una norma para el trabajo de campo.",
+    "cita_textual": "su insistencia en el relativismo cultural y reconstruccionismo histórico fueron en rigor normas destinadas a guiar los trabajos de campo.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+  },
+  {
+    "origen": "2",
+    "destino": "reconstruccionismo_historico",
+    "tipo": "desarrolla_concepto",
+    "nota": "La insistencia de Boas en el reconstruccionismo histórico fue una norma para el trabajo de campo.",
+    "cita_textual": "su insistencia en el relativismo cultural y reconstruccionismo histórico fueron en rigor normas destinadas a guiar los trabajos de campo.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+  },
+  {
+    "origen": "asia_oriental",
+    "destino": "civilizacion",
+    "tipo": "presenta_rasgo",
+    "nota": "La civilización floreció en Asia oriental en sus inicios.",
+    "cita_textual": "en la época en que las civilizaciones del Asia oriental y occidental estaban en su infancia.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+  },
+  {
+    "origen": "asia_occidental",
+    "destino": "civilizacion",
+    "tipo": "presenta_rasgo",
+    "nota": "La civilización floreció en Asia occidental en sus inicios.",
+    "cita_textual": "en la época en que las civilizaciones del Asia oriental y occidental estaban en su infancia.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
+  },
+  {
+    "origen": "india",
+    "destino": "barreras_sociales",
+    "tipo": "ejemplo_de",
+    "nota": "El sistema de castas de la India es un ejemplo de barreras sociales que no lograron impedir la mezcla.",
+    "cita_textual": "Esto es cierto aún en tan rígidos sistemas de casta como los de la India.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+  },
+  {
+    "origen": "melanesios",
+    "destino": "clasificacion_de_razas",
+    "tipo": "ejemplo_de",
+    "nota": "Boas menciona a los melanesios como un tipo racial extremo en su discusión sobre la clasificación de razas.",
+    "cita_textual": "Los europeos, los negros de África y melanesios, los bosquimanos, los mongólicos del norte, los diversos grupos malayos, tipos australianos y australoi-des de Asia meridional y quizás algunos grupos de indios americanos serían tales tipos raciales.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+  },
+  {
+    "origen": "manouvrier",
+    "destino": "capacidad_mental",
+    "tipo": "critica_a",
+    "nota": "Manouvrier sostuvo que no hay relación entre características físicas y capacidad mental.",
+    "cita_textual": "creo necesario repetirlas aquí: 'La responsabilidad de probar que otras medidas y observaciones psicológicas más sutiles conduci-rían a resultados más definidos puede quedar ahora, a mi juicio, para aquellos que a priori consideran probable tal asociación. A mí personalmente, el resultado de la presente investigación me ha convencido de que hay poca relación entre el físico exterior y el carácter psíquico del hombre'.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+  },
+  {
+    "origen": "franklin_p_mall",
+    "destino": "diferencias_raciales_geneticas",
+    "tipo": "estudia_a",
+    "nota": "Mall expuso que las diferencias raciales estructurales en el cerebro son difíciles de descubrir.",
+    "cita_textual": "El status de nuestro conocimiento ha sido bien expuesto por Franklin P. Mall, quien sostiene que debido a la gran variabilidad de los individuos que constituyen cada raza, las diferencias raciales son sumamente difíciles de descubrir, y que hasta el presente no se ha encontrado ninguna que resista a una crítica seria.",
+    "confianza": "alta",
+    "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
+  }
+]
