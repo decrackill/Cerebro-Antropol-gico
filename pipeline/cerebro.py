@@ -538,11 +538,11 @@ def herramienta_limpieza_automatica(aplicar=False):
     fusiones = []
     ya_usados = set()
     for tipo, items in por_tipo.items():
-        for id_a, nombre_a, _ in items:
+        for id_a, nombre_a in items:
             if id_a in ya_usados:
                 continue
             norm_a = normalizar(nombre_a)
-            for id_b, nombre_b, _ in items:
+            for id_b, nombre_b in items:
                 if id_b == id_a or id_b in ya_usados:
                     continue
                 norm_b = normalizar(nombre_b)
@@ -599,7 +599,7 @@ def herramienta_limpieza_automatica(aplicar=False):
 
     conn.close()
     if not aplicar:
-        print("\nPara aplicar: cerebro.py → opción 6 con --aplicar")
+        print("\nPara aplicar de verdad: corré la opción 6 de nuevo y elegí 'aplicar'.")
 
 
 # ═══════════════════════════════════════════════════════════════════════════
