@@ -606,8 +606,9 @@ def herramienta_limpieza_automatica(aplicar=False):
 # 7. CONEXIÓN AUTOMÁTICA DE RELACIONES
 # ═══════════════════════════════════════════════════════════════════════════
 
-def herramienta_conectar_automatico():
+def herramienta_conectar_automatico(umbral=None, dry_run=False):
     """Conecta relaciones pendientes: resuelve ids por fuzzy match e inserta nodos huérfanos."""
+    umbral = umbral if umbral is not None else UMBRAL_FUZZY
     if not CANDIDATOS_PATH.exists():
         print("✗ No hay candidatos_pendientes.json.")
         return
@@ -618,7 +619,7 @@ def herramienta_conectar_automatico():
     catalogo = {nombre: (id_, tipo) for id_, tipo, nombre in filas}
 
     print("═" * 60)
-    print(f"CONEXIÓN AUTOMÁTICA (umbral: {UMBRAL_FUZZY})")
+    print(f"CONEXIÓN AUTOMÁTICA (umbral: {umbral}){' — DRY RUN' if dry_run else ''}")
     print("═" * 60)
 
     log_nodos = []
@@ -626,6 +627,9 @@ def herramienta_conectar_automatico():
     for n in candidatos.get("nodos_nuevos", []):
         if n["nombre"] in catalogo:
             mapa_id[n["id"]] = catalogo[n["nombre"]][0]
+        elif dry_run:
+            mapa_id[n["id"]] = f"DRY:{n['nombre']}"
+            log_nodos.append(n["nombre"])
         else:
             cur = conn.execute(
                 "INSERT INTO nodos (tipo, nombre, descripcion, metadatos) VALUES (?, ?, ?, ?)",
@@ -647,21 +651,21 @@ def herramienta_conectar_automatico():
 
         origen = mapa_id.get(r["origen"])
         if origen is None and nombre_o:
-            sims = get_close_matches(nombre_o, list(catalogo.keys()), n=1, cutoff=UMBRAL_FUZZY)
+            sims = get_close_matches(nombre_o, list(catalogo.keys()), n=1, cutoff=umbral)
             if sims:
                 origen = catalogo[sims[0]][0]
 
         destino = mapa_id.get(r["destino"])
         if destino is None and nombre_d:
-            sims = get_close_matches(nombre_d, list(catalogo.keys()), n=1, cutoff=UMBRAL_FUZZY)
+            sims = get_close_matches(nombre_d, list(catalogo.keys()), n=1, cutoff=umbral)
             if sims:
                 destino = catalogo[sims[0]][0]
 
-        if origen is None or destino is None:
+        if origen is None or destino is None or isinstance(origen, str) or isinstance(destino, str):
             no_resolubles += 1
             continue
 
-        if not relacion_ya_existe(conn, origen, destino, r["tipo"]):
+        if not dry_run and not relacion_ya_existe(conn, origen, destino, r["tipo"]):
             conn.execute(
                 "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
                 (origen, destino, r["tipo"], r.get("fuente")),
@@ -921,10 +925,17 @@ def herramienta_limpiar():
             bloqueos.append("revision_estado.json con progreso a medias")
 
     if bloqueos:
-        print("⚠ No se limpiará — hay cosas pendientes:")
+        print("⚠ Hay cosas pendientes:")
         for b in bloqueos:
             print(f"  - {b}")
-        return
+        resp = pedir_opcion(
+            "  ¿Forzar limpieza de todos modos? (arriesgado) (s/n): ",
+            validas={"s", "n"}, alias={"si": "s", "sí": "s"},
+        )
+        if resp != "s":
+            print("Cancelado.")
+            return
+        print("  ⚠ Forzando pese a advertencias...")
 
     candidatos = list(BASE_DIR.glob("candidatos_procesados_*.json"))
     logs_ok = []
@@ -949,6 +960,29 @@ def herramienta_limpiar():
 
 
 # ═══════════════════════════════════════════════════════════════════════════
+# WRAPPERS INTERACTIVOS (devuelven parámetros que antes iban por CLI)
+# ═══════════════════════════════════════════════════════════════════════════
+
+def herramienta_limpieza_automatica_menu():
+    """Wrapper que pregunta si aplicar de verdad o solo simular."""
+    resp = pedir_opcion(
+        "  ¿Simular (dry-run, no cambia nada) o aplicar de verdad? (simular/aplicar): ",
+        validas={"simular", "aplicar"}, alias={"s": "simular", "a": "aplicar"},
+    )
+    herramienta_limpieza_automatica(aplicar=(resp == "aplicar"))
+
+def herramienta_conectar_automatico_menu():
+    """Wrapper que pregunta umbral y simular/aplicar."""
+    umbral_str = input("  Umbral de similitud fuzzy [0.80]: ").strip()
+    umbral = float(umbral_str) if umbral_str else 0.80
+    resp = pedir_opcion(
+        "  ¿Simular o aplicar de verdad? (simular/aplicar): ",
+        validas={"simular", "aplicar"}, alias={"s": "simular", "a": "aplicar"},
+    )
+    herramienta_conectar_automatico(umbral=umbral, dry_run=(resp == "simular"))
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # MENÚ PRINCIPAL
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -958,8 +992,8 @@ OPCIONES = {
     "3":  ("Fusionar duplicados automático (0 rel → se fusionan solos)", herramienta_fusionar_auto),
     "4":  ("Limpieza asistida de nodos aislados/ruido", herramienta_limpieza_asistida),
     "5":  ("Limpieza automática de ruido (sin preguntar)", herramienta_limpiar_auto),
-    "6":  ("Limpieza automática segura (fusión + eliminación)", lambda: herramienta_limpieza_automatica(aplicar=False)),
-    "7":  ("Conexión automática de relaciones pendientes", herramienta_conectar_automatico),
+    "6":  ("Limpieza automática segura (fusión + eliminación)", herramienta_limpieza_automatica_menu),
+    "7":  ("Conexión automática de relaciones pendientes", herramienta_conectar_automatico_menu),
     "8":  ("Recuperar relaciones perdidas", herramienta_recuperar_relaciones),
     "9":  ("Reforzar esquema de la DB", herramienta_reforzar_esquema),
     "10": ("Auditoría completa (diagnóstico)", herramienta_auditoria),
@@ -970,8 +1004,9 @@ OPCIONES = {
 }
 
 EXTRAE = {
-    "1": "Extraer un libro nuevo (llama extractor.py)",
-    "2": "Verificar cobertura de un libro (llama verificar_extraccion.py)",
+    "e1": "Extraer un libro nuevo (llama extractor.py)",
+    "e2": "Modo manual — generar prompt para chat web / pegar respuesta",
+    "e3": "Verificar cobertura de un libro (llama verificar_extraccion.py)",
 }
 
 
@@ -981,6 +1016,17 @@ def extraer():
         print("Cancelado.")
         return
     subprocess.run([sys.executable, str(BASE_DIR / "extractor.py"), ruta])
+
+def modo_manual_menu():
+    ruta = input("Ruta del PDF (ej: ../libros/nombre.pdf): ").strip()
+    if not ruta:
+        print("Cancelado.")
+        return
+    accion = pedir_opcion(
+        "  ¿Generar prompt (para pegar en chat) o pegar respuesta del chat? (generar/pegar): ",
+        validas={"generar", "pegar"}, alias={"g": "generar", "p": "pegar"},
+    )
+    subprocess.run([sys.executable, str(BASE_DIR / "modo_manual.py"), ruta, accion])
 
 def verificar():
     stem = input("Nombre del PDF SIN extensión (ej: boas-f-1911...): ").strip()
@@ -996,8 +1042,8 @@ def main():
         print("  CEREBRO ANTROPOLÓGICO — CENTRO DE COMANDOS UNIFICADO")
         print("═" * 60)
         print("  ── Extracción ──")
-        print(f"  E1) {EXTRAE['1']}")
-        print(f"  E2) {EXTRAE['2']}")
+        for clave, descripcion in EXTRAE.items():
+            print(f"  {clave}) {descripcion}")
         print("  ── Herramientas del grafo ──")
         for clave, (descripcion, _) in OPCIONES.items():
             print(f"  {clave:>2}) {descripcion}")
@@ -1007,6 +1053,8 @@ def main():
         if eleccion == "e1":
             extraer()
         elif eleccion == "e2":
+            modo_manual_menu()
+        elif eleccion == "e3":
             verificar()
         elif eleccion in OPCIONES:
             descripcion, accion = OPCIONES[eleccion]
