@@ -93,7 +93,7 @@ def main():
         destino_id = nombre_a_id.get(destino_nombre)
         if origen_id and destino_id:
             conn.execute(
-                "INSERT OR IGNORE INTO relaciones (origen_id, destino_id, tipo, nota) VALUES (?, ?, ?, ?)",
+                "INSERT OR IGNORE INTO relaciones (origen_id, destino_id, tipo, fuente) VALUES (?, ?, ?, ?)",
                 (origen_id, destino_id, tipo, nota),
             )
 

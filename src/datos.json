@@ -3940,6 +3940,34 @@
       "descripcion": "Estado avanzado de desarrollo social y cultural",
       "metadatos": null,
       "metadata": {}
+    },
+    {
+      "id": 474,
+      "tipo": "obra",
+      "nombre": "Los argonautas del Pacífico Occidental",
+      "descripcion": "Estudio etnográfico de 1922 sobre el intercambio ceremonial Kula en las islas Trobriand.",
+      "metadatos": "{\"anio\": 1922}",
+      "metadata": {
+        "anio": 1922
+      }
+    },
+    {
+      "id": 475,
+      "tipo": "concepto",
+      "nombre": "Reciprocidad",
+      "descripcion": "Principio de intercambio mutuo de bienes, favores o gestos entre individuos o grupos.",
+      "metadatos": "{}",
+      "metadata": {}
+    },
+    {
+      "id": 477,
+      "tipo": "cultura",
+      "nombre": "Trobriandeses",
+      "descripcion": "Pueblo de las islas Trobriand, Papúa Nueva Guinea, célebres por el intercambio Kula.",
+      "metadatos": "{\"region\": \"Melanesia\"}",
+      "metadata": {
+        "region": "Melanesia"
+      }
     }
   ],
   "relaciones": [
@@ -6862,6 +6890,54 @@
       "tipo": "ejemplo_de",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
+    },
+    {
+      "id": 422,
+      "origen_id": 3,
+      "destino_id": 474,
+      "tipo": "influenciado_por",
+      "peso": 1.0,
+      "fuente": null
+    },
+    {
+      "id": 423,
+      "origen_id": 3,
+      "destino_id": 475,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "A través del análisis del Kula"
+    },
+    {
+      "id": 424,
+      "origen_id": 3,
+      "destino_id": 16,
+      "tipo": "pertenece_a",
+      "peso": 1.0,
+      "fuente": "Uno de sus fundadores"
+    },
+    {
+      "id": 425,
+      "origen_id": 3,
+      "destino_id": 477,
+      "tipo": "estudia_a",
+      "peso": 1.0,
+      "fuente": "Trabajo de campo 1915-1918"
+    },
+    {
+      "id": 426,
+      "origen_id": 43,
+      "destino_id": 475,
+      "tipo": "desarrolla_concepto",
+      "peso": 1.0,
+      "fuente": "En 'Ensayo sobre el don' (1925)"
+    },
+    {
+      "id": 427,
+      "origen_id": 3,
+      "destino_id": 43,
+      "tipo": "contemporaneo_de",
+      "peso": 1.0,
+      "fuente": null
     }
   ]
 }

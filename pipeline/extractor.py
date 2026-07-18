@@ -93,7 +93,14 @@ class APIKeyRotator:
         return len(self.keys)
 
 
-api_rotator = APIKeyRotator()
+_api_rotator = None
+
+
+def _get_api_rotator():
+    global _api_rotator
+    if _api_rotator is None:
+        _api_rotator = APIKeyRotator()
+    return _api_rotator
 
 
 def cargar_nodos_existentes():
@@ -187,12 +194,12 @@ def procesar_chunk(texto_chunk, nodos_existentes, nodos_nuevos_acumulados, log_f
     prompt_sistema = build_prompt_extraccion_grafo(catalogo_completo)
 
     intentos = 0
-    max_intentos = api_rotator.total_keys() + 1
+    max_intentos = _get_api_rotator().total_keys() + 1
 
     while intentos < max_intentos:
         try:
-            client = api_rotator.get_client()
-            key_type = api_rotator.get_key_type()
+            client = _get_api_rotator().get_client()
+            key_type = _get_api_rotator().get_key_type()
 
             if key_type == "openrouter":
                 respuesta = client.chat.completions.create(
@@ -217,8 +224,8 @@ def procesar_chunk(texto_chunk, nodos_existentes, nodos_nuevos_acumulados, log_f
             if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str or "rate_limit" in error_str.lower():
                 intentos += 1
                 if intentos < max_intentos:
-                    print(f"  ⚠ Key {api_rotator.current_key_index()} ({key_type}) sin cuota, rotando a siguiente...")
-                    api_rotator.rotate()
+                    print(f"  ⚠ Key {_get_api_rotator().current_key_index()} ({key_type}) sin cuota, rotando a siguiente...")
+                    _get_api_rotator().rotate()
                     time.sleep(2)
                 else:
                     print(f"  ⚠ Todas las keys agotadas en chunk {indice_chunk}")
@@ -269,9 +276,9 @@ def main():
     print(f"◈ Leyendo {args.pdf}...")
     paginas = extraer_paginas_pdf(args.pdf)
     print(f"  {len(paginas)} páginas extraídas")
-    print(f"  {api_rotator.total_keys()} API key(s) disponible(s) para rotación")
-    for i in range(api_rotator.total_keys()):
-        tipo = api_rotator.key_types[i]
+    print(f"  {_get_api_rotator().total_keys()} API key(s) disponible(s) para rotación")
+    for i in range(_get_api_rotator().total_keys()):
+        tipo = _get_api_rotator().key_types[i]
         print(f"    - Key {i+1}: {tipo}")
 
     chunks = dividir_en_chunks(paginas)
@@ -366,7 +373,7 @@ def main():
     print(f"  Guardado en {out_path}")
     if log_fallos:
         print(f"  ⚠ {len(log_fallos)} chunk(s) fallaron — ver {log_path.name}")
-    print(f"  Siguiente paso: python revisar.py")
+    print(f"  Siguiente paso: python cerebro.py")
 
 
 if __name__ == "__main__":

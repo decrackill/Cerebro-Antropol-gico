@@ -8,6 +8,7 @@ parámetros acepta una herramienta puntual sin ejecutarla.
 
 Uso: python cerebro.py
 """
+import csv
 import inspect
 import json
 import re
@@ -24,6 +25,19 @@ CANDIDATOS_PATH = BASE_DIR / "candidatos_pendientes.json"
 REVISION_ESTADO_PATH = BASE_DIR / "revision_estado.json"
 LIMPIEZA_ESTADO_PATH = BASE_DIR / "limpieza_estado.json"
 RECUPERACION_ESTADO_PATH = BASE_DIR / "recuperacion_estado.json"
+REVISION_TOTAL_ESTADO_PATH = BASE_DIR / "revision_total_estado.json"
+REVISION_TOTAL_LOG_PATH = BASE_DIR / "revision_total_log.csv"
+
+CRITERIOS_POR_TIPO = {
+    "autor": "Si la única razón de existir es una mención de una línea sin relación real, no debería seguir como nodo propio.",
+    "obra": "Confirmá que sea un título real y no una variante mal cortada de otro ya existente.",
+    "concepto": "Debe poder nombrarse en 1-4 palabras sin parafrasear el texto. Si no, no es concepto.",
+    "escuela": "Requiere institución/sede/miembros identificables. Si no los tiene, probablemente sea 'corriente'.",
+    "corriente": "Tendencia de pensamiento sin organización formal. Es la opción segura cuando dudás entre escuela y corriente.",
+    "cultura": "El foco debe ser prácticas/creencias/organización social, no origen o demografía.",
+    "poblacion": "El foco debe ser origen/demografía/ubicación, no un sistema cultural. Nunca se fusiona con un nodo cultura.",
+    "debate": "Debe representar una discusión/tensión entre posiciones, no un concepto aislado.",
+}
 
 UMBRAL_SIMILITUD = 0.80
 UMBRAL_FUZZY = 0.80
@@ -50,6 +64,8 @@ EXCLUSIONES_FUSION_NOMBRES_NOMBRES = {
     frozenset({"Australianos", "Aborígenes australianos"}),
     frozenset({"Japoneses", "Japoneses de Hawái"}),
 }
+
+EXCLUSIONES_FUSION = set()
 
 
 def _es_exclusion_fusion(nombre_a, nombre_b):
@@ -147,7 +163,7 @@ def normalizar_tipo_relacion(tipo: str) -> str:
 
 
 def _conectar_db():
-    conn = _conectar_db()
+    conn = sqlite3.connect(DB_PATH)
     conn.execute("PRAGMA foreign_keys = ON")
     return conn
 
@@ -1131,6 +1147,199 @@ def herramienta_limpiar_auto():
 
 
 # ═══════════════════════════════════════════════════════════════════════════
+# FASE 4 · LIMPIEZA — 15. Revisión total (FASE 3C)
+# ═══════════════════════════════════════════════════════════════════════════
+
+def _cargar_estado_revision_total():
+    if REVISION_TOTAL_ESTADO_PATH.exists():
+        return json.loads(REVISION_TOTAL_ESTADO_PATH.read_text(encoding="utf-8"))
+    return {}
+
+def _guardar_estado_revision_total(estado):
+    REVISION_TOTAL_ESTADO_PATH.write_text(json.dumps(estado, ensure_ascii=False, indent=2), encoding="utf-8")
+
+def _registrar_log_revision_total(id_, tipo, nombre, decision, detalle):
+    nuevo = not REVISION_TOTAL_LOG_PATH.exists()
+    with open(REVISION_TOTAL_LOG_PATH, "a", encoding="utf-8", newline="") as f:
+        writer = csv.writer(f)
+        if nuevo:
+            writer.writerow(["id", "tipo", "nombre", "decision", "detalle", "fecha"])
+        fecha = __import__("datetime").datetime.now().strftime("%Y-%m-%d %H:%M")
+        writer.writerow([id_, tipo, nombre, decision, detalle or "", fecha])
+
+def _relaciones_de(conn, id_):
+    return conn.execute("""
+        SELECT r.tipo, n2.nombre, 's' FROM relaciones r JOIN nodos n2 ON r.destino_id = n2.id WHERE r.origen_id = ?
+        UNION ALL
+        SELECT r.tipo, n1.nombre, 'e' FROM relaciones r JOIN nodos n1 ON r.origen_id = n1.id WHERE r.destino_id = ?
+    """, (id_, id_)).fetchall()
+
+def herramienta_revision_total(tamano_lote=None):
+    """
+    FASE 3C — Revisión total: recorre TODOS los nodos de la DB (no solo los
+    marcados por heurísticas de ruido), agrupados por tipo, aplicando la
+    checklist liviana + criterio específico del tipo. Decisiones posibles:
+    Mantener / Reclasificar / Fusionar / Eliminar / Saltar (pendiente). La
+    fusión SOLO se permite entre nodos del MISMO tipo (operacionaliza la
+    regla cultura/población y análogas). Registro mínimo: checkpoint JSON
+    retomable + una línea de CSV por decisión, sin informes largos.
+
+    Parámetros:
+      tamano_lote (int, default None = sin límite): corta la sesión tras
+        esa cantidad de decisiones nuevas, para no sentirla interminable.
+    """
+    conn = sqlite3.connect(DB_PATH)
+    estado = _cargar_estado_revision_total()
+
+    filas = conn.execute("SELECT id, tipo, nombre, descripcion FROM nodos ORDER BY tipo, id").fetchall()
+    total = len(filas)
+    pendientes = [f for f in filas if str(f[0]) not in estado]
+    ya_hechos = total - len(pendientes)
+
+    print("═" * 60)
+    print("FASE 3C — REVISIÓN TOTAL")
+    print(f"  {_barra_progreso(ya_hechos, total)}")
+    print("═" * 60)
+
+    if not pendientes:
+        print("\n✓ Todos los nodos ya fueron revisados.")
+        print("  Borrá revision_total_estado.json si querés re-auditar todo de cero.")
+        conn.close()
+        return
+
+    catalogo_por_tipo = defaultdict(dict)
+    for id2, tipo2, nombre2, _d in filas:
+        catalogo_por_tipo[tipo2][nombre2] = id2
+
+    tipo_actual_mostrado = None
+    hechos_en_esta_sesion = 0
+
+    for id_, tipo, nombre, desc in pendientes:
+        if tamano_lote and hechos_en_esta_sesion >= tamano_lote:
+            print(f"\n◈ Lote de {tamano_lote} completado. Corré la opción de nuevo para el siguiente.")
+            break
+
+        if tipo != tipo_actual_mostrado:
+            tipo_actual_mostrado = tipo
+            print(f"\n{'─' * 60}")
+            print(f"TIPO: {tipo.upper()}  —  criterio: {CRITERIOS_POR_TIPO.get(tipo, '(sin criterio específico)')}")
+            print(f"{'─' * 60}")
+
+        desc = desc or ""
+        print(f"\n[{ya_hechos + hechos_en_esta_sesion + 1}/{total}] id={id_}  {nombre}")
+        print(f"  {desc}")
+
+        rels = _relaciones_de(conn, id_)
+        if rels:
+            resumen_rels = ", ".join(f"{t} {'→' if d=='s' else '←'} {o}" for t, o, d in rels[:4])
+            extra = f" (+{len(rels)-4} más)" if len(rels) > 4 else ""
+            print(f"  Relaciones ({len(rels)}): {resumen_rels}{extra}")
+        else:
+            print("  Relaciones: ninguna")
+
+        nombres_mismo_tipo = list(catalogo_por_tipo[tipo].keys())
+        similares = [
+            n for n in get_close_matches(nombre, nombres_mismo_tipo, n=3, cutoff=UMBRAL_SIMILITUD)
+            if catalogo_por_tipo[tipo][n] != id_
+            and frozenset({catalogo_por_tipo[tipo][n], id_}) not in EXCLUSIONES_FUSION
+        ]
+        if similares:
+            print(f"  ⚠ Posible duplicado de: {', '.join(similares)}")
+
+        resp = pedir_opcion(
+            "  Decisión (mantener/reclasificar/fusionar/eliminar/saltar): ",
+            validas={"mantener", "reclasificar", "fusionar", "eliminar", "saltar"},
+            alias={"m": "mantener", "r": "reclasificar", "f": "fusionar", "e": "eliminar", "s": "saltar"},
+        )
+
+        detalle = ""
+        if resp == "mantener":
+            print("  ✓ Mantenido")
+
+        elif resp == "reclasificar":
+            nuevo_tipo = pedir_opcion(
+                f"  Nuevo tipo ({tipo}) [{'/'.join(sorted(TIPOS_VALIDOS_NODO))}]: ",
+                validas=TIPOS_VALIDOS_NODO,
+            )
+            conn.execute("UPDATE nodos SET tipo = ? WHERE id = ?", (nuevo_tipo, id_))
+            conn.commit()
+            detalle = f"nuevo_tipo={nuevo_tipo}"
+            print(f"  ✓ Reclasificado a '{nuevo_tipo}'")
+
+        elif resp == "fusionar":
+            objetivo = input("  Nombre o id del nodo con el que fusionar (debe ser del mismo tipo): ").strip()
+            id_destino = None
+            if objetivo.isdigit():
+                id_destino = int(objetivo)
+            else:
+                coincidencias = get_close_matches(objetivo, nombres_mismo_tipo, n=1, cutoff=0.6)
+                if coincidencias:
+                    id_destino = catalogo_por_tipo[tipo][coincidencias[0]]
+
+            tipo_destino = None
+            if id_destino is not None:
+                fila_destino = conn.execute("SELECT tipo FROM nodos WHERE id = ?", (id_destino,)).fetchone()
+                tipo_destino = fila_destino[0] if fila_destino else None
+
+            if id_destino is None or id_destino == id_ or tipo_destino is None:
+                print("  ⚠ No se pudo resolver el nodo destino, se deja pendiente.")
+                estado[str(id_)] = {"decision": "pendiente"}
+                _guardar_estado_revision_total(estado)
+                _registrar_log_revision_total(id_, tipo, nombre, "pendiente", "fusión no resuelta")
+                hechos_en_esta_sesion += 1
+                continue
+
+            if tipo_destino != tipo:
+                print(f"  ⚠ El destino es tipo '{tipo_destino}', distinto de '{tipo}' — fusión bloqueada.")
+                estado[str(id_)] = {"decision": "pendiente"}
+                _guardar_estado_revision_total(estado)
+                _registrar_log_revision_total(id_, tipo, nombre, "pendiente", f"fusión bloqueada: destino tipo {tipo_destino}")
+                hechos_en_esta_sesion += 1
+                continue
+
+            fusionar_nodos(conn, id_destino, id_)
+            detalle = f"fusionado_en={id_destino}"
+            print(f"  ✓ Fusionado en id={id_destino}")
+
+        elif resp == "eliminar":
+            confirmar = pedir_opcion(
+                f"  Confirmar eliminación de '{nombre}' y sus {len(rels)} relación(es)? (s/n): ",
+                validas={"s", "n"}, alias={"si": "s", "sí": "s"},
+            )
+            if confirmar != "s":
+                print("  Cancelado, se deja pendiente.")
+                estado[str(id_)] = {"decision": "pendiente"}
+                _guardar_estado_revision_total(estado)
+                _registrar_log_revision_total(id_, tipo, nombre, "pendiente", "eliminación cancelada")
+                hechos_en_esta_sesion += 1
+                continue
+            eliminar_nodo_cascada(conn, id_)
+            print("  ✓ Eliminado")
+
+        else:
+            print("  → Pendiente")
+
+        estado[str(id_)] = {"decision": resp, "detalle": detalle}
+        _guardar_estado_revision_total(estado)
+        _registrar_log_revision_total(id_, tipo, nombre, resp, detalle)
+        hechos_en_esta_sesion += 1
+
+    conn.close()
+    total_ahora = ya_hechos + hechos_en_esta_sesion
+    print(f"\n{_barra_progreso(total_ahora, total)}")
+    if total_ahora >= total:
+        print("\n✓ FASE 3C completa — todos los nodos fueron revisados.")
+        print(f"  Log completo en {REVISION_TOTAL_LOG_PATH.name}")
+    print("\n◈ Después de terminar: opción 3 (recuperar relaciones), 4 (auditoría), 11 (exportar).")
+
+def herramienta_revision_total_menu():
+    """Wrapper interactivo: pregunta si querés limitar la sesión a un lote."""
+    lote_str = input("  ¿Tamaño de lote para esta sesión? (Enter = sin límite): ").strip()
+    tamano = int(lote_str) if lote_str.isdigit() else None
+    herramienta_revision_total(tamano_lote=tamano)
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # FASE 6 · MANTENIMIENTO — 11. Exportar / 12. Reforzar esquema / 13. Limpiar
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -1310,6 +1519,7 @@ OPCIONES = {
     "12": ("Reforzar esquema de la DB (una sola vez en la vida del proyecto)", herramienta_reforzar_esquema),
     "13": ("Limpiar archivos temporales", herramienta_limpiar),
     "14": ("Mantenimiento automático completo (atajo: 5+3+11+4)", herramienta_mantenimiento),
+    "15": ("Revisión total FASE 3C — TODOS los nodos, checklist completa", herramienta_revision_total_menu),
     "0":  ("Salir", None),
 }
 
@@ -1380,7 +1590,7 @@ def main():
         print("  ── FASE 3 · Diagnóstico ──")
         print(f"   4) {OPCIONES['4'][0]}")
         print("  ── FASE 4 · Limpieza y deduplicación ──")
-        for clave in ("5", "6", "7", "8", "9"):
+        for clave in ("5", "6", "7", "8", "9", "15"):
             print(f"  {clave:>2}) {OPCIONES[clave][0]}")
         print("  ── FASE 5 · Confirmar ──")
         print(f"  10) {OPCIONES['10'][0]}")
