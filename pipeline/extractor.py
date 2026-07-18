@@ -98,6 +98,7 @@ api_rotator = APIKeyRotator()
 
 def cargar_nodos_existentes():
     conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA foreign_keys = ON")
     filas = conn.execute("SELECT id, tipo, nombre FROM nodos").fetchall()
     conn.close()
     existentes = [{"id": f[0], "tipo": f[1], "nombre": f[2]} for f in filas]

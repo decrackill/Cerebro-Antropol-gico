@@ -44,14 +44,112 @@ PATRON_AUTOR_SUPERFICIAL = re.compile(
 # Pares de ids que el algoritmo de similitud detecta como "posibles duplicados"
 # pero que ya confirmaste manualmente que son entidades distintas. Se excluyen
 # de TODAS las herramientas de fusión (manual, automática y segura).
-EXCLUSIONES_FUSION = {
-    frozenset({236, 67}),
-    frozenset({236, 233}),
-    frozenset({243, 69}),
-    frozenset({230, 317}),
+EXCLUSIONES_FUSION_NOMBRES_NOMBRES = {
+    frozenset({"América", "Norteamérica"}),
+    frozenset({"América", "América Central"}),
+    frozenset({"Australianos", "Aborígenes australianos"}),
+    frozenset({"Japoneses", "Japoneses de Hawái"}),
 }
 
+
+def _es_exclusion_fusion(nombre_a, nombre_b):
+    return frozenset({nombre_a, nombre_b}) in EXCLUSIONES_FUSION_NOMBRES_NOMBRES
+
 TIPOS_VALIDOS_NODO = {"autor", "obra", "concepto", "escuela", "cultura", "debate", "poblacion", "corriente"}
+
+TIPOS_VALIDOS_RELACION = {
+    "influenciado_por", "critica_a", "desarrolla_concepto", "pertenece_a",
+    "estudia_a", "contemporaneo_de", "precursor_de", "parte_del_debate", "redefine_a",
+}
+
+TIPOS_ALIAS_RELACION = {
+    "influyó_en": "influenciado_por",
+    "influye_en": "influenciado_por",
+    "influencio_a": "influenciado_por",
+    "autor_de": "pertenece_a",
+    "es_autor_de": "pertenece_a",
+    "estudio": "estudia_a",
+    "escribe_estudio_preliminar_para": "estudia_a",
+    "describe_a": "estudia_a",
+    "ejemplifica_con": "desarrolla_concepto",
+    "ejemplo_de": "desarrolla_concepto",
+    "ejemplo_en": "desarrolla_concepto",
+    "ejemplificado_por": "desarrolla_concepto",
+    "practica_concepto": "desarrolla_concepto",
+    "promueve_concepto": "desarrolla_concepto",
+    "incorpora_concepto": "desarrolla_concepto",
+    "discute_concepto": "desarrolla_concepto",
+    "estudia_concepto": "desarrolla_concepto",
+    "sostiene_teoria": "desarrolla_concepto",
+    "defiende": "desarrolla_concepto",
+    "defiende_superioridad_de": "critica_a",
+    "refuta": "critica_a",
+    "lucha_contra": "critica_a",
+    "opuesto_a": "critica_a",
+    "contrasta_con": "critica_a",
+    "malinterpreta_a": "critica_a",
+    "limita": "critica_a",
+    "limita_expansion_a": "critica_a",
+    "subestima_concepto": "critica_a",
+    "manipula_concepto": "critica_a",
+    "colabora_con": "contemporaneo_de",
+    "colaboro_con": "contemporaneo_de",
+    "es_mentor_de": "precursor_de",
+    "mentor_de": "precursor_de",
+    "es_discípulo_de": "influenciado_por",
+    "clasifica_como_activo": "desarrolla_concepto",
+    "clasifica_como_pasivo": "desarrolla_concepto",
+    "presenta_rasgo": "desarrolla_concepto",
+    "representado_por": "desarrolla_concepto",
+    "relacionado_con": "contemporaneo_de",
+    "contribuye_a": "desarrolla_concepto",
+    "trata_de": "desarrolla_concepto",
+    "es_fuente_sobre": "estudia_a",
+    "cita_a": "estudia_a",
+    "localizado_en": "pertenece_a",
+    "ubica_en": "pertenece_a",
+    "incluye_a": "pertenece_a",
+    "realiza_trabajo_de_campo_en": "estudia_a",
+    "migra_a": "pertenece_a",
+    "prologa_obra": "pertenece_a",
+    "otorga_primacia_a": "desarrolla_concepto",
+    "venera_concepto": "desarrolla_concepto",
+    "usa_enfoque": "desarrolla_concepto",
+    "traduce_obra": "pertenece_a",
+    "publicado_como_traduccion": "pertenece_a",
+    "publica": "pertenece_a",
+    "origen_de": "precursor_de",
+    "facilito_por": "influenciado_por",
+    "expandida_en": "pertenece_a",
+    "evalua_contribucion_de": "estudia_a",
+    "dirige_publicacion": "pertenece_a",
+    "difundido_en": "pertenece_a",
+    "descubierta_por": "desarrolla_concepto",
+    "dedica_obra_a": "pertenece_a",
+    "considera_indispensable": "desarrolla_concepto",
+    "condiciona": "influenciado_por",
+    "atribuye_origen_a": "precursor_de",
+    "aplicado_a": "desarrolla_concepto",
+    "es_respuesta_a": "critica_a",
+    "es_tipo_de": "pertenece_a",
+}
+
+
+def normalizar_tipo_relacion(tipo: str) -> str:
+    """Normaliza un tipo de relación: minúsculas, sin espacios extra,
+    resuelto contra TIPOS_ALIAS_RELACION."""
+    t = tipo.strip().lower().replace(" ", "_")
+    if t in TIPOS_VALIDOS_RELACION:
+        return t
+    if t in TIPOS_ALIAS_RELACION:
+        return TIPOS_ALIAS_RELACION[t]
+    return t
+
+
+def _conectar_db():
+    conn = _conectar_db()
+    conn.execute("PRAGMA foreign_keys = ON")
+    return conn
 
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -202,10 +300,13 @@ def herramienta_revisar():
 
     candidatos = json.loads(CANDIDATOS_PATH.read_text(encoding="utf-8"))
     estado = _cargar_estado_revision()
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
 
-    filas = conn.execute("SELECT id, nombre FROM nodos").fetchall()
-    catalogo = {nombre: id_ for id_, nombre in filas}
+    filas = conn.execute("SELECT id, nombre, tipo FROM nodos").fetchall()
+    catalogo = {nombre: id_ for id_, nombre, tipo in filas}
+    catalogo_por_tipo = defaultdict(dict)
+    for id_, nombre, tipo in filas:
+        catalogo_por_tipo[tipo][nombre] = id_
     mapa_gemini_a_real = {
         id_gemini: info["id_real"]
         for id_gemini, info in estado["nodos_revisados"].items()
@@ -236,7 +337,8 @@ def herramienta_revisar():
             ya_hechos_nodos += 1
             continue
 
-        similares = get_close_matches(n["nombre"], list(catalogo.keys()), n=3, cutoff=0.75)
+        nombres_mismo_tipo = list(catalogo_por_tipo.get(n["tipo"], {}).keys())
+        similares = get_close_matches(n["nombre"], nombres_mismo_tipo, n=3, cutoff=0.75)
         decision_tomada = False
 
         if similares:
@@ -246,7 +348,7 @@ def herramienta_revisar():
                 validas={"s", "n", "omitir"}, alias={"si": "s", "sí": "s", "o": "omitir"},
             )
             if resp == "s":
-                id_real = catalogo[similares[0]]
+                id_real = catalogo_por_tipo[n["tipo"]][similares[0]]
                 mapa_gemini_a_real[id_gemini] = id_real
                 estado["nodos_revisados"][id_gemini] = {"decision": "reutilizado", "id_real": id_real}
                 _guardar_estado_revision(estado)
@@ -264,10 +366,27 @@ def herramienta_revisar():
                 validas={"s", "n", "editar"}, alias={"si": "s", "sí": "s", "e": "editar"},
             )
             if resp == "s":
-                cur = conn.execute(
-                    "INSERT INTO nodos (tipo, nombre, descripcion, metadatos) VALUES (?, ?, ?, ?)",
-                    (n["tipo"], n["nombre"], n.get("descripcion", n.get("resumen", "")), json.dumps({"id_gemini": id_gemini})),
-                )
+                tipo_final = n["tipo"].strip().lower()
+                if tipo_final not in TIPOS_VALIDOS_NODO:
+                    print(f"  ⚠ Tipo no reconocido: '{n['tipo']}'")
+                    entrada = input(f"  Corregí el tipo ({'/'.join(sorted(TIPOS_VALIDOS_NODO))}): ").strip().lower()
+                    tipo_final = entrada if entrada in TIPOS_VALIDOS_NODO else tipo_final
+                metadatos = {"id_gemini": id_gemini}
+                if n.get("justificacion_concepto"):
+                    metadatos["justificacion_concepto"] = n["justificacion_concepto"]
+                if n.get("confianza"):
+                    metadatos["confianza"] = n["confianza"]
+                try:
+                    cur = conn.execute(
+                        "INSERT INTO nodos (tipo, nombre, descripcion, metadatos) VALUES (?, ?, ?, ?)",
+                        (tipo_final, n["nombre"], n.get("descripcion", n.get("resumen", "")), json.dumps(metadatos, ensure_ascii=False)),
+                    )
+                except sqlite3.IntegrityError:
+                    print(f"  ✗ Ya existe un nodo con el nombre '{n['nombre']}' (UNIQUE). Se omite.")
+                    estado["nodos_revisados"][id_gemini] = {"decision": "omitido_duplicado_nombre", "id_real": None}
+                    _guardar_estado_revision(estado)
+                    ya_hechos_nodos += 1
+                    continue
                 id_real = cur.lastrowid
                 conn.commit()
                 mapa_gemini_a_real[id_gemini] = id_real
@@ -326,7 +445,7 @@ def herramienta_revisar():
             ya_hechos_rels += 1
             continue
 
-        if relacion_ya_existe(conn, origen, destino, r["tipo"]):
+        if relacion_ya_existe(conn, origen, destino, normalizar_tipo_relacion(r["tipo"])):
             print(f"\n⚠ Relación YA EXISTE, se omite: {r['origen']} → {r['destino']} ({r['tipo']})")
             estado["relaciones_revisadas"].append(clave)
             _guardar_estado_revision(estado)
@@ -342,7 +461,7 @@ def herramienta_revisar():
         if resp == "s":
             conn.execute(
                 "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
-                (origen, destino, r["tipo"], r.get("fuente")),
+                (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente")),
             )
             conn.commit()
             print("  ✓ Insertada")
@@ -407,7 +526,7 @@ def herramienta_conectar_automatico(umbral=None, dry_run=False):
         return
 
     candidatos = json.loads(CANDIDATOS_PATH.read_text(encoding="utf-8"))
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     filas = conn.execute("SELECT id, tipo, nombre FROM nodos").fetchall()
     catalogo = {nombre: (id_, tipo) for id_, tipo, nombre in filas}
     ids_validos = {id_ for id_, _, _ in filas}
@@ -454,13 +573,13 @@ def herramienta_conectar_automatico(umbral=None, dry_run=False):
             insertadas += 1
             continue
 
-        if relacion_ya_existe(conn, origen, destino, r["tipo"]):
+        if relacion_ya_existe(conn, origen, destino, normalizar_tipo_relacion(r["tipo"])):
             ya_existian += 1
             continue
 
         conn.execute(
             "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
-            (origen, destino, r["tipo"], r.get("fuente")),
+            (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente")),
         )
         conn.commit()
         insertadas += 1
@@ -503,7 +622,7 @@ def herramienta_recuperar_relaciones():
         print("✗ No hay archivos de candidatos.")
         return
 
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     mapa = construir_mapa_resolucion(conn)
 
     estado = set()
@@ -528,12 +647,12 @@ def herramienta_recuperar_relaciones():
                 estado.add(clave)
                 continue
 
-            if relacion_ya_existe(conn, origen, destino, r["tipo"]):
+            if relacion_ya_existe(conn, origen, destino, normalizar_tipo_relacion(r["tipo"])):
                 ya_existian += 1
             else:
                 conn.execute(
                     "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
-                    (origen, destino, r["tipo"], r.get("fuente")),
+                    (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente")),
                 )
                 conn.commit()
                 insertadas += 1
@@ -558,7 +677,7 @@ def herramienta_auditoria():
     las relaciones), y duplicados sospechosos por similitud de nombre
     dentro de cada tipo.
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
 
     print("═" * 60)
     print("PROGRESO DE REVISIÓN PENDIENTE")
@@ -654,7 +773,7 @@ def herramienta_auditoria():
     for tipo, items in por_tipo.items():
         for i, (id_a, nombre_a) in enumerate(items):
             for id_b, nombre_b in items[i + 1:]:
-                if frozenset({id_a, id_b}) in EXCLUSIONES_FUSION:
+                if _es_exclusion_fusion(nombre_a, nombre_b):
                     continue
                 s = similitud(nombre_a, nombre_b)
                 if s >= UMBRAL_SIMILITUD:
@@ -677,7 +796,7 @@ def herramienta_limpieza_automatica(aplicar=False):
     CONTENIDO en el nombre largo (mismo tipo) y el corto tiene 0 relaciones
     (caso típico: 'Rieger' vs 'Conrad Rieger'). Elimina nodos con 0
     relaciones que coinciden con vocabulario médico/biológico puntual
-    (craneometría, antropometría, etc.). Respeta EXCLUSIONES_FUSION. Todo
+    (craneometría, antropometría, etc.). Respeta EXCLUSIONES_FUSION_NOMBRES. Todo
     lo que no encaja en estas dos reglas queda listado como 'ambiguo' para
     que lo resuelvas con las opciones 6/7/8.
 
@@ -685,7 +804,7 @@ def herramienta_limpieza_automatica(aplicar=False):
       aplicar (bool, default False): si es False, solo simula y muestra el
         reporte sin tocar la base de datos.
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     filas = conn.execute("SELECT id, tipo, nombre, descripcion FROM nodos ORDER BY tipo, id").fetchall()
     grados = cargar_grados(conn)
 
@@ -705,7 +824,7 @@ def herramienta_limpieza_automatica(aplicar=False):
                 norm_b = normalizar(nombre_b)
                 if norm_a == norm_b:
                     continue
-                if frozenset({id_a, id_b}) in EXCLUSIONES_FUSION:
+                if _es_exclusion_fusion(nombre_a, nombre_b):
                     continue
                 if not (norm_a in norm_b or norm_b in norm_a):
                     continue
@@ -777,11 +896,11 @@ def herramienta_fusionar_duplicados():
     """
     Fusiona nodos duplicados UNO POR UNO: te muestra ambos candidatos y su
     número de relaciones para que decidas cuál mantener. Salta
-    automáticamente los pares en EXCLUSIONES_FUSION. Usá esta opción para
+    automáticamente los pares en EXCLUSIONES_FUSION_NOMBRES. Usá esta opción para
     los casos que 'Limpieza automática segura' dejó como 'ambiguos' (mismo
     tipo, alta similitud, pero ninguno de los dos está claramente aislado).
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     filas = conn.execute("SELECT id, tipo, nombre FROM nodos ORDER BY tipo, id").fetchall()
     grados = cargar_grados(conn)
     por_tipo = defaultdict(list)
@@ -797,7 +916,7 @@ def herramienta_fusionar_duplicados():
             for id_b, nombre_b in items[i + 1:]:
                 if id_b in vistos:
                     continue
-                if frozenset({id_a, id_b}) in EXCLUSIONES_FUSION:
+                if _es_exclusion_fusion(nombre_a, nombre_b):
                     continue
                 if similitud(nombre_a, nombre_b) >= UMBRAL_SIMILITUD:
                     grupos.append({"a": (id_a, nombre_a, grados.get(id_a, 0)), "b": (id_b, nombre_b, grados.get(id_b, 0))})
@@ -834,9 +953,9 @@ def herramienta_fusionar_auto():
     Fusión automática más simple que la 'segura': si de un par similar UNO
     de los dos tiene 0 relaciones y el otro tiene al menos 1, se fusionan
     sin preguntar (no exige containment de nombres como la opción 5, solo
-    similitud + aislamiento de uno de los dos). Respeta EXCLUSIONES_FUSION.
+    similitud + aislamiento de uno de los dos). Respeta EXCLUSIONES_FUSION_NOMBRES.
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     filas = conn.execute("SELECT id, tipo, nombre FROM nodos ORDER BY tipo, id").fetchall()
     grados = cargar_grados(conn)
     por_tipo = defaultdict(list)
@@ -852,7 +971,7 @@ def herramienta_fusionar_auto():
             for id_b, nombre_b in items[i + 1:]:
                 if id_b in vistos:
                     continue
-                if frozenset({id_a, id_b}) in EXCLUSIONES_FUSION:
+                if _es_exclusion_fusion(nombre_a, nombre_b):
                     continue
                 if similitud(nombre_a, nombre_b) >= UMBRAL_SIMILITUD:
                     grupos.append({"a": (id_a, nombre_a, grados.get(id_a, 0)), "b": (id_b, nombre_b, grados.get(id_b, 0))})
@@ -902,7 +1021,7 @@ def herramienta_limpieza_asistida():
     (incluye los 8 tipos válidos) / Eliminar (en cascada) / Saltar.
     Checkpoint retomable en limpieza_estado.json.
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     estado = _cargar_estado_limpieza()
     filas = conn.execute("SELECT id, tipo, nombre, descripcion FROM nodos ORDER BY id").fetchall()
     grados = cargar_grados(conn)
@@ -986,7 +1105,7 @@ def herramienta_limpiar_auto():
     revisaste manualmente unas cuantas veces y confiás en el patrón, o en
     modo --dry-run mental (revisá el reporte de la opción 5 primero).
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     filas = conn.execute("SELECT id, tipo, nombre, descripcion FROM nodos ORDER BY id").fetchall()
     grados = cargar_grados(conn)
 
@@ -1029,7 +1148,7 @@ def herramienta_reforzar_esquema():
     Requisito: no debe haber duplicados exactos todavía en 'relaciones'
     (si los hay, corré primero la opción 5 o 6).
     """
-    conn = sqlite3.connect(DB_PATH)
+    conn = _conectar_db()
     conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_relacion_unica ON relaciones (origen_id, destino_id, tipo)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_relaciones_origen ON relaciones (origen_id)")
     conn.execute("CREATE INDEX IF NOT EXISTS idx_relaciones_destino ON relaciones (destino_id)")
