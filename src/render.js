@@ -94,14 +94,15 @@ export function inicializarVisualizacion(nodos, relaciones) {
       randomize: true,
       animate: true,
       animationDuration: 800,
-      nodeRepulsion: 8000,
-      idealEdgeLength: 100,
-      edgeElasticity: 0.1,
-      gravity: 0.3,
-      numIter: 2500,
+      nodeRepulsion: 25000,
+      idealEdgeLength: 180,
+      edgeElasticity: 0.05,
+      gravity: 0.15,
+      numIter: 4000,
       tile: true,
       packComponents: true,
-      componentSpacing: 150,
+      componentSpacing: 200,
+      nodeDimensionsIncludeLabels: true,
     },
   })
 
@@ -109,6 +110,14 @@ export function inicializarVisualizacion(nodos, relaciones) {
   cy.on('mouseover', 'edge', (evt) => evt.target.addClass('resaltada'))
   cy.on('mouseout', 'edge', (evt) => evt.target.removeClass('resaltada'))
   document.getElementById('cerrar-panel').addEventListener('click', ocultarPanel)
+
+  cy.on('zoom', () => {
+    const zoomActual = cy.zoom()
+    cy.style()
+      .selector('node')
+      .style('label', zoomActual > 0.6 ? 'data(label)' : '')
+      .update()
+  })
 }
 
 function mostrarPanel(nodo) {

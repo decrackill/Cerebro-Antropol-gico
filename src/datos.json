@@ -41,14 +41,6 @@
       "metadata": {}
     },
     {
-      "id": 6,
-      "tipo": "autor",
-      "nombre": "Pierre Bourdieu",
-      "descripcion": "Habitus, campo, capital simbólico",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
       "id": 7,
       "tipo": "obra",
       "nombre": "Tristes Trópicos",
@@ -73,14 +65,6 @@
       "metadata": {}
     },
     {
-      "id": 10,
-      "tipo": "obra",
-      "nombre": "La Estructura del Acto Humano",
-      "descripcion": "1942",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
       "id": 11,
       "tipo": "obra",
       "nombre": "Cannibalism and Culture",
@@ -93,14 +77,6 @@
       "tipo": "obra",
       "nombre": "La Interpretación de las Culturas",
       "descripcion": "1973",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 13,
-      "tipo": "obra",
-      "nombre": "La Distinción",
-      "descripcion": "1979",
       "metadatos": null,
       "metadata": {}
     },
@@ -129,46 +105,6 @@
       "metadata": {}
     },
     {
-      "id": 17,
-      "tipo": "concepto",
-      "nombre": "Materialismo cultural",
-      "descripcion": "El ambiente y tecnología moldean la cultura",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 18,
-      "tipo": "concepto",
-      "nombre": "Interpretativismo",
-      "descripcion": "Cultura como sistema de significados",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 19,
-      "tipo": "concepto",
-      "nombre": "Habitus",
-      "descripcion": "Disposiciones incorporadas por socialización",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 20,
-      "tipo": "concepto",
-      "nombre": "Endocanibalismo",
-      "descripcion": "Consumo ritual de los muertos de la propia comunidad",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 21,
-      "tipo": "concepto",
-      "nombre": "Exocanibalismo",
-      "descripcion": "Consumo ritual de enemigos",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
       "id": 22,
       "tipo": "concepto",
       "nombre": "Kinship",
@@ -185,34 +121,10 @@
       "metadata": {}
     },
     {
-      "id": 24,
-      "tipo": "escuela",
-      "nombre": "Escuela del Estructuralismo",
-      "descripcion": "Corriente de Lévi-Strauss",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 25,
-      "tipo": "escuela",
-      "nombre": "Escuela de Chicago",
-      "descripcion": "Boas, antropología cultural",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
       "id": 26,
       "tipo": "escuela",
       "nombre": "Funcionalismo social",
       "descripcion": "Malinowski, Radcliffe-Brown",
-      "metadatos": null,
-      "metadata": {}
-    },
-    {
-      "id": 27,
-      "tipo": "escuela",
-      "nombre": "Corriente materialista cultural",
-      "descripcion": "Harris, ecología cultural",
       "metadatos": null,
       "metadata": {}
     },
@@ -447,56 +359,6 @@
       }
     },
     {
-      "id": 51,
-      "tipo": "obra",
-      "nombre": "El mito en la psicología primitiva",
-      "descripcion": "Obra de Bronisław Malinowski publicada en 1926.",
-      "metadatos": "{\"id_gemini\": \"el_mito_en_la_psicologia_primitiva\"}",
-      "metadata": {
-        "id_gemini": "el_mito_en_la_psicologia_primitiva"
-      }
-    },
-    {
-      "id": 52,
-      "tipo": "obra",
-      "nombre": "Crimen y costumbre en la sociedad salvaje",
-      "descripcion": "Obra de Bronisław Malinowski publicada en 1926.",
-      "metadatos": "{\"id_gemini\": \"crimen_y_costumbre_en_la_sociedad_salvaje\"}",
-      "metadata": {
-        "id_gemini": "crimen_y_costumbre_en_la_sociedad_salvaje"
-      }
-    },
-    {
-      "id": 53,
-      "tipo": "obra",
-      "nombre": "El padre en la psicología primitiva",
-      "descripcion": "Obra de Bronisław Malinowski publicada en 1927.",
-      "metadatos": "{\"id_gemini\": \"el_padre_en_la_psicologia_primitiva\"}",
-      "metadata": {
-        "id_gemini": "el_padre_en_la_psicologia_primitiva"
-      }
-    },
-    {
-      "id": 54,
-      "tipo": "obra",
-      "nombre": "Sexo y represión en la sociedad salvaje",
-      "descripcion": "Obra de Bronisław Malinowski publicada en 1927.",
-      "metadatos": "{\"id_gemini\": \"sexo_y_represion_en_la_sociedad_salvaje\"}",
-      "metadata": {
-        "id_gemini": "sexo_y_represion_en_la_sociedad_salvaje"
-      }
-    },
-    {
-      "id": 55,
-      "tipo": "obra",
-      "nombre": "La vida sexual de los salvajes del Noroeste de la Melanesia",
-      "descripcion": "Obra de Bronisław Malinowski publicada en 1929.",
-      "metadatos": "{\"id_gemini\": \"la_vida_sexual_de_los_salvajes_del_noroeste_de_la_melanesia\"}",
-      "metadata": {
-        "id_gemini": "la_vida_sexual_de_los_salvajes_del_noroeste_de_la_melanesia"
-      }
-    },
-    {
       "id": 56,
       "tipo": "obra",
       "nombre": "«Cultura» (artículo de Malinowski)",
@@ -504,16 +366,6 @@
       "metadatos": "{\"id_gemini\": \"articulo_cultura_malinowski\"}",
       "metadata": {
         "id_gemini": "articulo_cultura_malinowski"
-      }
-    },
-    {
-      "id": 57,
-      "tipo": "obra",
-      "nombre": "Los jardines del Coral y su magia",
-      "descripcion": "Obra de Bronisław Malinowski publicada en 1935.",
-      "metadatos": "{\"id_gemini\": \"los_jardines_del_coral_y_su_magia\"}",
-      "metadata": {
-        "id_gemini": "los_jardines_del_coral_y_su_magia"
       }
     },
     {
@@ -1004,16 +856,6 @@
       "metadatos": "{\"id_gemini\": \"mahometismo\"}",
       "metadata": {
         "id_gemini": "mahometismo"
-      }
-    },
-    {
-      "id": 107,
-      "tipo": "cultura",
-      "nombre": "Sahara",
-      "descripcion": "Región geográfica donde se difundió el mahometismo.",
-      "metadatos": "{\"id_gemini\": \"sahara\"}",
-      "metadata": {
-        "id_gemini": "sahara"
       }
     },
     {
@@ -1518,16 +1360,6 @@
       }
     },
     {
-      "id": 158,
-      "tipo": "concepto",
-      "nombre": "Frenología",
-      "descripcion": "Pseudociencia que estudia la relación entre la forma del cráneo y las facultades mentales, discutida por George Combe.",
-      "metadatos": "{\"id_gemini\": \"frenologia\"}",
-      "metadata": {
-        "id_gemini": "frenologia"
-      }
-    },
-    {
       "id": 159,
       "tipo": "autor",
       "nombre": "Josiah Clark",
@@ -1618,16 +1450,6 @@
       }
     },
     {
-      "id": 168,
-      "tipo": "autor",
-      "nombre": "Egon von Eickstedt",
-      "descripcion": "Autor que intentó establecer una psicología de las razas, considerando la forma corporal y el comportamiento mental como una unidad, aunque su razonamiento fue criticado por Boas.",
-      "metadatos": "{\"id_gemini\": \"e_von_eickstedt\"}",
-      "metadata": {
-        "id_gemini": "e_von_eickstedt"
-      }
-    },
-    {
       "id": 169,
       "tipo": "concepto",
       "nombre": "Psicología de las razas",
@@ -1688,16 +1510,6 @@
       }
     },
     {
-      "id": 175,
-      "tipo": "autor",
-      "nombre": "Jacques Barzun",
-      "descripcion": "Autor de 'Race. A Study of Modern Superstition', citado por Boas en la discusión de las teorías raciales.",
-      "metadatos": "{\"id_gemini\": \"jacques_barzon\"}",
-      "metadata": {
-        "id_gemini": "jacques_barzon"
-      }
-    },
-    {
       "id": 176,
       "tipo": "obra",
       "nombre": "Raza: Un estudio de la superstición moderna",
@@ -1725,16 +1537,6 @@
       "metadatos": "{\"id_gemini\": \"gregorio_weinberg\"}",
       "metadata": {
         "id_gemini": "gregorio_weinberg"
-      }
-    },
-    {
-      "id": 179,
-      "tipo": "obra",
-      "nombre": "Cuestiones fundamentales de antropología",
-      "descripcion": "obra fundamental de Franz Boas, cuya primera edición apareció en 1911 y fue corregida en 1938.",
-      "metadatos": "{\"id_gemini\": \"the_mind_of_primitive_man\"}",
-      "metadata": {
-        "id_gemini": "the_mind_of_primitive_man"
       }
     },
     {
@@ -1828,16 +1630,6 @@
       }
     },
     {
-      "id": 189,
-      "tipo": "concepto",
-      "nombre": "Homosexualidad masculina",
-      "descripcion": "Práctica mencionada en relación con la estructura social de las Marquesas.",
-      "metadatos": "{\"id_gemini\": \"homosexualismo_masculino\"}",
-      "metadata": {
-        "id_gemini": "homosexualismo_masculino"
-      }
-    },
-    {
       "id": 190,
       "tipo": "concepto",
       "nombre": "Determinismo ambiental",
@@ -1845,16 +1637,6 @@
       "metadatos": "{\"id_gemini\": \"determinismo_ambiental\"}",
       "metadata": {
         "id_gemini": "determinismo_ambiental"
-      }
-    },
-    {
-      "id": 191,
-      "tipo": "concepto",
-      "nombre": "Canibalismo",
-      "descripcion": "Práctica mencionada como una alternativa cultural para asegurar la continuidad grupal ante condiciones adversas.",
-      "metadatos": "{\"id_gemini\": \"canibalismo\"}",
-      "metadata": {
-        "id_gemini": "canibalismo"
       }
     },
     {
@@ -2438,26 +2220,6 @@
       }
     },
     {
-      "id": 250,
-      "tipo": "cultura",
-      "nombre": "Sicilianas",
-      "descripcion": "Población estudiada por su índice cefálico para demostrar que individuos con la misma apariencia corporal pueden no ser genéticamente idénticos a otros grupos.",
-      "metadatos": "{\"id_gemini\": \"sicilianas\"}",
-      "metadata": {
-        "id_gemini": "sicilianas"
-      }
-    },
-    {
-      "id": 251,
-      "tipo": "cultura",
-      "nombre": "Bohemios",
-      "descripcion": "Población estudiada por su índice cefálico para demostrar que individuos con la misma apariencia corporal pueden no ser genéticamente idénticos a otros grupos.",
-      "metadatos": "{\"id_gemini\": \"bohemios_cultura\"}",
-      "metadata": {
-        "id_gemini": "bohemios_cultura"
-      }
-    },
-    {
       "id": 252,
       "tipo": "concepto",
       "nombre": "Identidad constitucional",
@@ -2578,26 +2340,6 @@
       }
     },
     {
-      "id": 264,
-      "tipo": "concepto",
-      "nombre": "Índice cefálico",
-      "descripcion": "Medida antropométrica expresada como la relación porcentual entre el ancho máximo y el largo máximo de la cabeza. Históricamente utilizada por la antropología física del siglo XIX para clasificar rígidamente a las poblaciones en tipos raciales fijos. Franz Boas revolucionó el uso de este indicador al demostrar empíricamente su plasticidad fenotípica frente a cambios ambientales en hijos de inmigrantes, convirtiéndolo en una prueba matemática contra el determinismo biológico.",
-      "metadatos": "{\"id_gemini\": \"indice_cefalico\"}",
-      "metadata": {
-        "id_gemini": "indice_cefalico"
-      }
-    },
-    {
-      "id": 265,
-      "tipo": "cultura",
-      "nombre": "Armenios",
-      "descripcion": "Grupo humano cuyo índice cefálico se usa como ejemplo en los estudios de variabilidad de Boas.",
-      "metadatos": "{\"id_gemini\": \"armenios_cultura\"}",
-      "metadata": {
-        "id_gemini": "armenios_cultura"
-      }
-    },
-    {
       "id": 266,
       "tipo": "cultura",
       "nombre": "Bastardos Sudafricanos",
@@ -2608,26 +2350,6 @@
       }
     },
     {
-      "id": 267,
-      "tipo": "cultura",
-      "nombre": "Hotentotes",
-      "descripcion": "Uno de los grupos parentales de los Bastardos Sudafricanos.",
-      "metadatos": "{\"id_gemini\": \"hotentotes\"}",
-      "metadata": {
-        "id_gemini": "hotentotes"
-      }
-    },
-    {
-      "id": 268,
-      "tipo": "cultura",
-      "nombre": "Boers",
-      "descripcion": "Uno de los grupos parentales de los Bastardos Sudafricanos.",
-      "metadatos": "{\"id_gemini\": \"boers\"}",
-      "metadata": {
-        "id_gemini": "boers"
-      }
-    },
-    {
       "id": 269,
       "tipo": "cultura",
       "nombre": "Indios Chippewa",
@@ -2635,36 +2357,6 @@
       "metadatos": "{\"id_gemini\": \"indios_chippewa\"}",
       "metadata": {
         "id_gemini": "indios_chippewa"
-      }
-    },
-    {
-      "id": 270,
-      "tipo": "cultura",
-      "nombre": "Missisauga",
-      "descripcion": "Rama local de los indios Chippewa, estudiada en relación con la variabilidad del índice cefálico.",
-      "metadatos": "{\"id_gemini\": \"missisauga\"}",
-      "metadata": {
-        "id_gemini": "missisauga"
-      }
-    },
-    {
-      "id": 271,
-      "tipo": "cultura",
-      "nombre": "Franceses",
-      "descripcion": "Uno de los grupos de origen de los indios Chippewa.",
-      "metadatos": "{\"id_gemini\": \"franceses_cultura\"}",
-      "metadata": {
-        "id_gemini": "franceses_cultura"
-      }
-    },
-    {
-      "id": 272,
-      "tipo": "cultura",
-      "nombre": "Irlandeses",
-      "descripcion": "Uno de los grupos de origen de los indios Chippewa.",
-      "metadatos": "{\"id_gemini\": \"irlandeses_cultura\"}",
-      "metadata": {
-        "id_gemini": "irlandeses_cultura"
       }
     },
     {
@@ -2705,16 +2397,6 @@
       "metadatos": "{\"id_gemini\": \"johannsen\"}",
       "metadata": {
         "id_gemini": "johannsen"
-      }
-    },
-    {
-      "id": 277,
-      "tipo": "concepto",
-      "nombre": "Fenotipo",
-      "descripcion": "Conjunto de rasgos físicos, morfológicos y conductuales observables de un organismo, resultantes de la interacción entre su constitución genética (genotipo) y las presiones e influencias del medio ambiente. En la antropología de Franz Boas, el estudio del fenotipo —particularmente a través de la plasticidad de caracteres como el índice cefálico— sirvió para demostrar que las formas corporales humanas no son fijas ni inmutables, sino dinámicas y adaptativas.",
-      "metadatos": "{\"id_gemini\": \"fenotipo_genetica\"}",
-      "metadata": {
-        "id_gemini": "fenotipo_genetica"
       }
     },
     {
@@ -2775,86 +2457,6 @@
       "metadatos": "{\"id_gemini\": \"coeficiente_de_regresion\"}",
       "metadata": {
         "id_gemini": "coeficiente_de_regresion"
-      }
-    },
-    {
-      "id": 284,
-      "tipo": "cultura",
-      "nombre": "Worcester, Massachusetts",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"worcester_massachusetts\"}",
-      "metadata": {
-        "id_gemini": "worcester_massachusetts"
-      }
-    },
-    {
-      "id": 285,
-      "tipo": "cultura",
-      "nombre": "Judíos del Este de Europa",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"judios_este_europa\"}",
-      "metadata": {
-        "id_gemini": "judios_este_europa"
-      }
-    },
-    {
-      "id": 286,
-      "tipo": "cultura",
-      "nombre": "Blancos del Blue Ridge",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"blancos_blue_ridge\"}",
-      "metadata": {
-        "id_gemini": "blancos_blue_ridge"
-      }
-    },
-    {
-      "id": 287,
-      "tipo": "cultura",
-      "nombre": "Italianos del Centro",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"italianos_del_centro\"}",
-      "metadata": {
-        "id_gemini": "italianos_del_centro"
-      }
-    },
-    {
-      "id": 288,
-      "tipo": "cultura",
-      "nombre": "Holandeses",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"holandeses_cultura\"}",
-      "metadata": {
-        "id_gemini": "holandeses_cultura"
-      }
-    },
-    {
-      "id": 289,
-      "tipo": "cultura",
-      "nombre": "Escoceses",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"escoceses_cultura\"}",
-      "metadata": {
-        "id_gemini": "escoceses_cultura"
-      }
-    },
-    {
-      "id": 290,
-      "tipo": "cultura",
-      "nombre": "Negro-blancos de Nueva York",
-      "descripcion": "Población de estudio utilizada por Boas para ejemplificar la variabilidad del índice cefálico y el coeficiente de regresión.",
-      "metadatos": "{\"id_gemini\": \"negro_blancos_nueva_york\"}",
-      "metadata": {
-        "id_gemini": "negro_blancos_nueva_york"
-      }
-    },
-    {
-      "id": 291,
-      "tipo": "autor",
-      "nombre": "Félix von Luschan",
-      "descripcion": "Félix von Luschan (1854–1924), médico, antropólogo y etnólogo austriaco. Realizó extensos estudios antropométricos en el sur de Asia Menor, donde demostró que la población contemporánea exhibía una altísima variabilidad física debido a la histórica mezcla biológica entre pueblos braquicéfalos ('cabezas redondas') y dolicocéfalos ('cabezas alargadas'), refutando la existencia de razas puras en la región. Desarrolló la escala cromática que lleva su nombre para el estudio de la pigmentación cutánea y mantuvo una postura firmemente opuesta al racismo científico y al antisemitismo.",
-      "metadatos": "{\"id_gemini\": \"felix_von_luschan\"}",
-      "metadata": {
-        "id_gemini": "felix_von_luschan"
       }
     },
     {
@@ -2938,16 +2540,6 @@
       }
     },
     {
-      "id": 300,
-      "tipo": "concepto",
-      "nombre": "Incae",
-      "descripcion": "Una división del hueso occipital por una sutura transversal, observada con inusual frecuencia en Perú, usada como ejemplo de peculiaridades de grupos aislados.",
-      "metadatos": "{\"id_gemini\": \"incae\"}",
-      "metadata": {
-        "id_gemini": "incae"
-      }
-    },
-    {
       "id": 301,
       "tipo": "cultura",
       "nombre": "Indios Pueblo",
@@ -2955,26 +2547,6 @@
       "metadatos": "{\"id_gemini\": \"indios_pueblo\"}",
       "metadata": {
         "id_gemini": "indios_pueblo"
-      }
-    },
-    {
-      "id": 302,
-      "tipo": "concepto",
-      "nombre": "Torus palatinus",
-      "descripcion": "Una arruga a lo largo de la línea media del paladar, observada con gran frecuencia entre los lapones y en las costas orientales del Báltico.",
-      "metadatos": "{\"id_gemini\": \"torus_palatinus\"}",
-      "metadata": {
-        "id_gemini": "torus_palatinus"
-      }
-    },
-    {
-      "id": 303,
-      "tipo": "cultura",
-      "nombre": "Lapones",
-      "descripcion": "Grupo humano donde se ha observado una alta frecuencia del 'torus palatinus'.",
-      "metadatos": "{\"id_gemini\": \"lapones\"}",
-      "metadata": {
-        "id_gemini": "lapones"
       }
     },
     {
@@ -3018,26 +2590,6 @@
       }
     },
     {
-      "id": 308,
-      "tipo": "autor",
-      "nombre": "Conrad Rieger",
-      "descripcion": "Conrad Rieger (1855–1939), psiquiatra y médico alemán. Investigó cómo las condiciones fisiológicas, el desarrollo muscular y las fuerzas mecánicas influyen en la morfología del cráneo. Sus tesis fueron fundamentales para que Franz Boas argumentara la plasticidad del índice cefálico, demostrando que la forma de la cabeza no es un rasgo racial genéticamente fijo, sino una estructura moldeable por factores ambientales y funcionales.",
-      "metadatos": "{\"id_gemini\": \"rieger\"}",
-      "metadata": {
-        "id_gemini": "rieger"
-      }
-    },
-    {
-      "id": 309,
-      "tipo": "autor",
-      "nombre": "Joseph Engel",
-      "descripcion": "Joseph Engel (1816–1899), renombrado anatomista austríaco y profesor de patología. Sus investigaciones pioneras sobre el crecimiento óseo y el efecto de la tracción y presión muscular sobre los huesos del cráneo proporcionaron a Franz Boas una base anatómica sólida para defender la plasticidad fenotípica, evidenciando que la morfología craneal se modifica por factores funcionales y mecánicos a lo largo de la vida del individuo.",
-      "metadatos": "{\"id_gemini\": \"engel\"}",
-      "metadata": {
-        "id_gemini": "engel"
-      }
-    },
-    {
       "id": 310,
       "tipo": "autor",
       "nombre": "Gustav Walcher",
@@ -3065,16 +2617,6 @@
       "metadatos": "{\"id_gemini\": \"ammon\"}",
       "metadata": {
         "id_gemini": "ammon"
-      }
-    },
-    {
-      "id": 313,
-      "tipo": "cultura",
-      "nombre": "Población de Haden",
-      "descripcion": "Población urbana y rural estudiada por Ammon, que mostró diferencias en la forma de la cabeza, estatura y pigmentación.",
-      "metadatos": "{\"id_gemini\": \"haden_cultura\"}",
-      "metadata": {
-        "id_gemini": "haden_cultura"
       }
     },
     {
@@ -3118,86 +2660,6 @@
       }
     },
     {
-      "id": 318,
-      "tipo": "cultura",
-      "nombre": "Hebreos",
-      "descripcion": "Grupo étnico cuyo índice cefálico fue estudiado en sus descendientes nacidos en América, mostrando cambios ambientales.",
-      "metadatos": "{\"id_gemini\": \"hebreos_cultura\"}",
-      "metadata": {
-        "id_gemini": "hebreos_cultura"
-      }
-    },
-    {
-      "id": 319,
-      "tipo": "cultura",
-      "nombre": "Napolitanos",
-      "descripcion": "Población cuyo índice cefálico fue estudiado, mostrando similitudes con los sicilianos en los cambios observados en América.",
-      "metadatos": "{\"id_gemini\": \"napolitanos\"}",
-      "metadata": {
-        "id_gemini": "napolitanos"
-      }
-    },
-    {
-      "id": 320,
-      "tipo": "cultura",
-      "nombre": "Puertorriqueños",
-      "descripcion": "Población cuyo índice cefálico sugiere inestabilidad de la forma, mostrando cambios en relación con la mezcla racial y el ambiente.",
-      "metadatos": "{\"id_gemini\": \"puertorriquenos_cultura\"}",
-      "metadata": {
-        "id_gemini": "puertorriquenos_cultura"
-      }
-    },
-    {
-      "id": 321,
-      "tipo": "cultura",
-      "nombre": "Mulatos",
-      "descripcion": "Grupo poblacional con mezcla de sangre negra estudiado en Puerto Rico y La Habana por su índice cefálico.",
-      "metadatos": "{\"id_gemini\": \"mulatos_cultura\"}",
-      "metadata": {
-        "id_gemini": "mulatos_cultura"
-      }
-    },
-    {
-      "id": 322,
-      "tipo": "cultura",
-      "nombre": "Población de La Habana",
-      "descripcion": "Lugar donde Georges Rouma realizó observaciones sobre el índice cefálico de niños blancos, mulatos y negros.",
-      "metadatos": "{\"id_gemini\": \"la_habana\"}",
-      "metadata": {
-        "id_gemini": "la_habana"
-      }
-    },
-    {
-      "id": 323,
-      "tipo": "autor",
-      "nombre": "Georges Rouma",
-      "descripcion": "Autor que realizó observaciones sobre el índice cefálico de niños blancos, mulatos y negros en La Habana.",
-      "metadatos": "{\"id_gemini\": \"georges_rouma\"}",
-      "metadata": {
-        "id_gemini": "georges_rouma"
-      }
-    },
-    {
-      "id": 324,
-      "tipo": "autor",
-      "nombre": "Gunnar Dahlberg",
-      "descripcion": "Recolectó material en Noruega para un estudio del índice cefálico de mellizos.",
-      "metadatos": "{\"id_gemini\": \"dahlberg\"}",
-      "metadata": {
-        "id_gemini": "dahlberg"
-      }
-    },
-    {
-      "id": 325,
-      "tipo": "cultura",
-      "nombre": "Población de Noruega",
-      "descripcion": "Lugar donde se recolectó material para el estudio del índice cefálico de mellizos por Dahlberg.",
-      "metadatos": "{\"id_gemini\": \"noruega_cultura\"}",
-      "metadata": {
-        "id_gemini": "noruega_cultura"
-      }
-    },
-    {
       "id": 326,
       "tipo": "autor",
       "nombre": "Newman",
@@ -3238,16 +2700,6 @@
       }
     },
     {
-      "id": 330,
-      "tipo": "cultura",
-      "nombre": "Población de Mesopotamia",
-      "descripcion": "Región donde se presume una eliminación gradual de los kurdos rubios debido a la fuerte insolación, lo que implica una selección por pigmentación.",
-      "metadatos": "{\"id_gemini\": \"mesopotamia\"}",
-      "metadata": {
-        "id_gemini": "mesopotamia"
-      }
-    },
-    {
       "id": 331,
       "tipo": "cultura",
       "nombre": "Kurdos rubios",
@@ -3278,16 +2730,6 @@
       }
     },
     {
-      "id": 334,
-      "tipo": "autor",
-      "nombre": "Arthur Willey",
-      "descripcion": "Cita sus principios de divergencia, convergencia y paralelismo evolutivo en mamíferos.",
-      "metadatos": "{\"id_gemini\": \"arthur_w_willey\"}",
-      "metadata": {
-        "id_gemini": "arthur_w_willey"
-      }
-    },
-    {
       "id": 335,
       "tipo": "concepto",
       "nombre": "Divergencia evolutiva",
@@ -3308,16 +2750,6 @@
       }
     },
     {
-      "id": 337,
-      "tipo": "concepto",
-      "nombre": "Prognatismo del arco alveolar",
-      "descripcion": "Rasgo físico en el negro, donde la porción inferior de la cara tiene dimensiones mayores, recordando el aspecto de los grandes antropoides.",
-      "metadatos": "{\"id_gemini\": \"prognatismo_alveolar\"}",
-      "metadata": {
-        "id_gemini": "prognatismo_alveolar"
-      }
-    },
-    {
       "id": 338,
       "tipo": "autor",
       "nombre": "Hermann Klaatsch",
@@ -3335,16 +2767,6 @@
       "metadatos": "{\"id_gemini\": \"straz\"}",
       "metadata": {
         "id_gemini": "straz"
-      }
-    },
-    {
-      "id": 340,
-      "tipo": "autor",
-      "nombre": "Otto Schoetensack",
-      "descripcion": "Otto Schoetensack (1850–1912), geólogo y paleoantropólogo alemán, famoso por descubrir la mandíbula de Homo heidelbergensis. Junto a H. Klaatsch y B. Štrác, defendió la tesis de que los aborígenes australianos representaban morfológicamente el tipo humano más antiguo y generalizado. Franz Boas discutió metodológicamente estas posturas para demostrar que clasificar a poblaciones contemporáneas como 'tipos originales' o fósiles vivientes ignoraba la variabilidad interna y la constante evolución plástica de todos los grupos humanos.",
-      "metadatos": "{\"id_gemini\": \"schoetensack\"}",
-      "metadata": {
-        "id_gemini": "schoetensack"
       }
     },
     {
@@ -3455,16 +2877,6 @@
       "metadatos": "{\"id_gemini\": \"ferreira\"}",
       "metadata": {
         "id_gemini": "ferreira"
-      }
-    },
-    {
-      "id": 352,
-      "tipo": "concepto",
-      "nombre": "Individuos microcefálicos",
-      "descripcion": "Individuos con falta de desarrollo cerebral, cuyo caso fundamental refuerza la idea de que un aumento de tamaño del cerebro acompaña a un aumento de la aptitud.",
-      "metadatos": "{\"id_gemini\": \"microcefalicos\"}",
-      "metadata": {
-        "id_gemini": "microcefalicos"
       }
     },
     {
@@ -3815,26 +3227,6 @@
       "metadatos": "{\"id_gemini\": \"sumner\"}",
       "metadata": {
         "id_gemini": "sumner"
-      }
-    },
-    {
-      "id": 388,
-      "tipo": "concepto",
-      "nombre": "Curva de distribución de variables",
-      "descripcion": "Representación gráfica utilizada para ilustrar cómo se distribuyen las frecuencias de las observaciones de una variable, mostrando el grado de uniformidad o variabilidad de una serie.",
-      "metadatos": "{\"id_gemini\": \"curva_distribucion_variables\"}",
-      "metadata": {
-        "id_gemini": "curva_distribucion_variables"
-      }
-    },
-    {
-      "id": 389,
-      "tipo": "concepto",
-      "nombre": "Índice de largo-ancho",
-      "descripcion": "También llamado índice cefálico, es la razón del ancho máximo de la cabeza expresada en porcentaje del largo de la cabeza.",
-      "metadatos": "{\"id_gemini\": \"indice_largo_ancho\"}",
-      "metadata": {
-        "id_gemini": "indice_largo_ancho"
       }
     },
     {
@@ -4190,17 +3582,6 @@
       }
     },
     {
-      "id": 422,
-      "tipo": "autor",
-      "nombre": "Lissauer",
-      "descripcion": "Autor citado en relación con la frecuencia del 'torus palatinus' entre los lapones.",
-      "metadatos": "{\"id_gemini\": \"lissauer\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "lissauer",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
       "id": 423,
       "tipo": "autor",
       "nombre": "Pearl",
@@ -4252,28 +3633,6 @@
       "metadatos": "{\"id_gemini\": \"engel\", \"insertado_por\": \"conectar_automatico\"}",
       "metadata": {
         "id_gemini": "engel",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 428,
-      "tipo": "autor",
-      "nombre": "Walcher",
-      "descripcion": "Coautor de una teoría que explica las diferentes formas de cabeza por la consideración de la posición del infante en la cuna.",
-      "metadatos": "{\"id_gemini\": \"walcher\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "walcher",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 429,
-      "tipo": "autor",
-      "nombre": "Nyström",
-      "descripcion": "Coautor de una teoría que explica las diferentes formas de cabeza por la consideración de la posición del infante en la cuna.",
-      "metadatos": "{\"id_gemini\": \"nystrom\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "nystrom",
         "insertado_por": "conectar_automatico"
       }
     },
@@ -4355,28 +3714,6 @@
       }
     },
     {
-      "id": 437,
-      "tipo": "autor",
-      "nombre": "Dahlberg",
-      "descripcion": "Recolectó material en Noruega para un estudio del índice cefálico de mellizos.",
-      "metadatos": "{\"id_gemini\": \"dahlberg\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "dahlberg",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 438,
-      "tipo": "concepto",
-      "nombre": "Malaria",
-      "descripcion": "Enfermedad cuya incidencia se relaciona con la pigmentación de la piel, exponiendo más a los individuos poco pigmentados y ejerciendo una presión selectiva.",
-      "metadatos": "{\"id_gemini\": \"malaria\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "malaria",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
       "id": 439,
       "tipo": "concepto",
       "nombre": "Forma doméstica humana",
@@ -4384,28 +3721,6 @@
       "metadatos": "{\"id_gemini\": \"forma_domestica_humana\", \"insertado_por\": \"conectar_automatico\"}",
       "metadata": {
         "id_gemini": "forma_domestica_humana",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 440,
-      "tipo": "concepto",
-      "nombre": "Albinismo",
-      "descripcion": "Pérdida de pigmentación que, junto con la melanosis, se considera un rasgo que puede haberse desarrollado independientemente en diferentes regiones.",
-      "metadatos": "{\"id_gemini\": \"albinismo\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "albinismo",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 441,
-      "tipo": "concepto",
-      "nombre": "Melanosis",
-      "descripcion": "Aumento de pigmentación que, junto con el albinismo, se considera un rasgo que puede haberse desarrollado independientemente en diferentes regiones.",
-      "metadatos": "{\"id_gemini\": \"melanosis\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "melanosis",
         "insertado_por": "conectar_automatico"
       }
     },
@@ -4597,17 +3912,6 @@
       }
     },
     {
-      "id": 459,
-      "tipo": "autor",
-      "nombre": "Rousseau",
-      "descripcion": "Filósofo asociado con los racionalistas del siglo XVIII que creía en una vida natural simple y feliz.",
-      "metadatos": "{\"id_gemini\": \"rousseau\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "rousseau",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
       "id": 460,
       "tipo": "autor",
       "nombre": "Wundt",
@@ -4630,37 +3934,12 @@
       }
     },
     {
-      "id": 462,
+      "id": 466,
       "tipo": "concepto",
-      "nombre": "Dolicocéfalo",
-      "descripcion": "Individuos con un índice cefálico de menos de 75, caracterizados por una cabeza alargada.",
-      "metadatos": "{\"id_gemini\": \"dolicoc\\u00e9falo\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "dolicocéfalo",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 463,
-      "tipo": "concepto",
-      "nombre": "Mesocéfalo",
-      "descripcion": "Individuos con un índice cefálico entre 75 y 80.",
-      "metadatos": "{\"id_gemini\": \"mesoc\\u00e9falo\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "mesocéfalo",
-        "insertado_por": "conectar_automatico"
-      }
-    },
-    {
-      "id": 464,
-      "tipo": "concepto",
-      "nombre": "Braquicéfalo",
-      "descripcion": "Individuos con un índice cefálico de más de 80, caracterizados por una cabeza baja y redonda.",
-      "metadatos": "{\"id_gemini\": \"braquic\\u00e9falo\", \"insertado_por\": \"conectar_automatico\"}",
-      "metadata": {
-        "id_gemini": "braquicéfalo",
-        "insertado_por": "conectar_automatico"
-      }
+      "nombre": "Civilización",
+      "descripcion": "Estado avanzado de desarrollo social y cultural",
+      "metadatos": null,
+      "metadata": {}
     }
   ],
   "relaciones": [
@@ -4713,14 +3992,6 @@
       "fuente": null
     },
     {
-      "id": 7,
-      "origen_id": 6,
-      "destino_id": 13,
-      "tipo": "escribió",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
       "id": 8,
       "origen_id": 14,
       "destino_id": 15,
@@ -4737,41 +4008,9 @@
       "fuente": null
     },
     {
-      "id": 10,
-      "origen_id": 11,
-      "destino_id": 17,
-      "tipo": "trata_de",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
-      "id": 11,
-      "origen_id": 12,
-      "destino_id": 18,
-      "tipo": "trata_de",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
       "id": 12,
       "origen_id": 12,
       "destino_id": 23,
-      "tipo": "trata_de",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
-      "id": 13,
-      "origen_id": 13,
-      "destino_id": 19,
-      "tipo": "trata_de",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
-      "id": 14,
-      "origen_id": 7,
-      "destino_id": 20,
       "tipo": "trata_de",
       "peso": 1.0,
       "fuente": null
@@ -4785,33 +4024,9 @@
       "fuente": null
     },
     {
-      "id": 16,
-      "origen_id": 1,
-      "destino_id": 24,
-      "tipo": "pertenece_a",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
       "id": 17,
       "origen_id": 3,
       "destino_id": 26,
-      "tipo": "pertenece_a",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
-      "id": 18,
-      "origen_id": 4,
-      "destino_id": 27,
-      "tipo": "pertenece_a",
-      "peso": 1.0,
-      "fuente": null
-    },
-    {
-      "id": 19,
-      "origen_id": 2,
-      "destino_id": 25,
       "tipo": "pertenece_a",
       "peso": 1.0,
       "fuente": null
@@ -4846,14 +4061,6 @@
       "destino_id": 4,
       "tipo": "influyó_en",
       "peso": 0.8,
-      "fuente": null
-    },
-    {
-      "id": 24,
-      "origen_id": 20,
-      "destino_id": 21,
-      "tipo": "relacionado_con",
-      "peso": 0.6,
       "fuente": null
     },
     {
@@ -5273,46 +4480,6 @@
       "fuente": "argonautas.pdf, p.1-26"
     },
     {
-      "id": 77,
-      "origen_id": 3,
-      "destino_id": 51,
-      "tipo": "autor_de",
-      "peso": 1.0,
-      "fuente": "argonautas.pdf, p.1-26"
-    },
-    {
-      "id": 78,
-      "origen_id": 3,
-      "destino_id": 52,
-      "tipo": "autor_de",
-      "peso": 1.0,
-      "fuente": "argonautas.pdf, p.1-26"
-    },
-    {
-      "id": 79,
-      "origen_id": 3,
-      "destino_id": 53,
-      "tipo": "autor_de",
-      "peso": 1.0,
-      "fuente": "argonautas.pdf, p.1-26"
-    },
-    {
-      "id": 80,
-      "origen_id": 3,
-      "destino_id": 54,
-      "tipo": "autor_de",
-      "peso": 1.0,
-      "fuente": "argonautas.pdf, p.1-26"
-    },
-    {
-      "id": 81,
-      "origen_id": 3,
-      "destino_id": 55,
-      "tipo": "autor_de",
-      "peso": 1.0,
-      "fuente": "argonautas.pdf, p.1-26"
-    },
-    {
       "id": 82,
       "origen_id": 3,
       "destino_id": 56,
@@ -5325,14 +4492,6 @@
       "origen_id": 3,
       "destino_id": 74,
       "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "argonautas.pdf, p.1-26"
-    },
-    {
-      "id": 84,
-      "origen_id": 3,
-      "destino_id": 57,
-      "tipo": "autor_de",
       "peso": 1.0,
       "fuente": "argonautas.pdf, p.1-26"
     },
@@ -5529,14 +4688,6 @@
       "fuente": "Malinowski estudió tribus del golfo de Papua en su primer trabajo de campo"
     },
     {
-      "id": 109,
-      "origen_id": 43,
-      "destino_id": 10,
-      "tipo": "autor_de",
-      "peso": 1.0,
-      "fuente": "Mauss es autor de La Estructura del Acto Humano"
-    },
-    {
       "id": 110,
       "origen_id": 32,
       "destino_id": 82,
@@ -5677,14 +4828,6 @@
       "origen_id": 105,
       "destino_id": 104,
       "tipo": "invadio",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
-    },
-    {
-      "id": 129,
-      "origen_id": 106,
-      "destino_id": 107,
-      "tipo": "difundido_en",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
     },
@@ -6157,14 +5300,6 @@
       "origen_id": 157,
       "destino_id": 152,
       "tipo": "colaboro_con",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
-    },
-    {
-      "id": 189,
-      "origen_id": 157,
-      "destino_id": 158,
-      "tipo": "practica",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.12-20"
     },
@@ -6921,46 +6056,6 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
     },
     {
-      "id": 284,
-      "origen_id": 2,
-      "destino_id": 264,
-      "tipo": "aplica_concepto",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 285,
-      "origen_id": 266,
-      "destino_id": 267,
-      "tipo": "descendiente_de",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 286,
-      "origen_id": 266,
-      "destino_id": 268,
-      "tipo": "descendiente_de",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 287,
-      "origen_id": 269,
-      "destino_id": 271,
-      "tipo": "descendiente_de",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 288,
-      "origen_id": 269,
-      "destino_id": 272,
-      "tipo": "descendiente_de",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
       "id": 289,
       "origen_id": 274,
       "destino_id": 275,
@@ -6981,14 +6076,6 @@
       "origen_id": 2,
       "destino_id": 261,
       "tipo": "redefine_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 292,
-      "origen_id": 419,
-      "destino_id": 277,
-      "tipo": "desarrolla_concepto",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
     },
@@ -7041,30 +6128,6 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
     },
     {
-      "id": 299,
-      "origen_id": 291,
-      "destino_id": 264,
-      "tipo": "aplica_concepto",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 300,
-      "origen_id": 291,
-      "destino_id": 292,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 301,
-      "origen_id": 291,
-      "destino_id": 293,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
       "id": 302,
       "origen_id": 298,
       "destino_id": 297,
@@ -7077,46 +6140,6 @@
       "origen_id": 299,
       "destino_id": 297,
       "tipo": "ejemplo_de",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 304,
-      "origen_id": 138,
-      "destino_id": 300,
-      "tipo": "muestra_caracteristica",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 305,
-      "origen_id": 301,
-      "destino_id": 300,
-      "tipo": "muestra_caracteristica",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 306,
-      "origen_id": 421,
-      "destino_id": 300,
-      "tipo": "estudia_concepto",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 307,
-      "origen_id": 303,
-      "destino_id": 302,
-      "tipo": "muestra_caracteristica",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
-    },
-    {
-      "id": 308,
-      "origen_id": 422,
-      "destino_id": 302,
-      "tipo": "estudia_concepto",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
     },
@@ -7193,14 +6216,6 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
     },
     {
-      "id": 318,
-      "origen_id": 430,
-      "destino_id": 313,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
       "id": 319,
       "origen_id": 430,
       "destino_id": 315,
@@ -7241,38 +6256,6 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
     },
     {
-      "id": 324,
-      "origen_id": 2,
-      "destino_id": 318,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 325,
-      "origen_id": 2,
-      "destino_id": 250,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 326,
-      "origen_id": 2,
-      "destino_id": 319,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 327,
-      "origen_id": 2,
-      "destino_id": 320,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
       "id": 328,
       "origen_id": 2,
       "destino_id": 273,
@@ -7281,33 +6264,9 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
     },
     {
-      "id": 329,
-      "origen_id": 2,
-      "destino_id": 321,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 330,
-      "origen_id": 323,
-      "destino_id": 322,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
       "id": 331,
       "origen_id": 436,
       "destino_id": 435,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 332,
-      "origen_id": 437,
-      "destino_id": 325,
       "tipo": "estudia_a",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
@@ -7345,30 +6304,6 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
     },
     {
-      "id": 337,
-      "origen_id": 291,
-      "destino_id": 331,
-      "tipo": "estudia_a",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 338,
-      "origen_id": 291,
-      "destino_id": 438,
-      "tipo": "relaciona_con",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 339,
-      "origen_id": 438,
-      "destino_id": 332,
-      "tipo": "impulsa",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
       "id": 340,
       "origen_id": 333,
       "destino_id": 442,
@@ -7381,22 +6316,6 @@
       "origen_id": 333,
       "destino_id": 439,
       "tipo": "sostiene_teoria",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 342,
-      "origen_id": 333,
-      "destino_id": 440,
-      "tipo": "relaciona_con",
-      "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
-    },
-    {
-      "id": 343,
-      "origen_id": 333,
-      "destino_id": 441,
-      "tipo": "relaciona_con",
       "peso": 1.0,
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.50-58"
     },
@@ -7913,36 +6832,36 @@
       "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
     },
     {
-      "id": 408,
-      "origen_id": 264,
-      "destino_id": 389,
-      "tipo": "es_referido_como",
+      "id": 415,
+      "origen_id": 115,
+      "destino_id": 466,
+      "tipo": "presenta_rasgo",
       "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
     },
     {
-      "id": 409,
-      "origen_id": 389,
-      "destino_id": 462,
-      "tipo": "define",
+      "id": 416,
+      "origen_id": 231,
+      "destino_id": 466,
+      "tipo": "presenta_rasgo",
       "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.1-11"
     },
     {
-      "id": 410,
-      "origen_id": 389,
-      "destino_id": 463,
-      "tipo": "define",
+      "id": 417,
+      "origen_id": 246,
+      "destino_id": 297,
+      "tipo": "ejemplo_de",
       "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
     },
     {
-      "id": 411,
-      "origen_id": 389,
-      "destino_id": 464,
-      "tipo": "define",
+      "id": 419,
+      "origen_id": 68,
+      "destino_id": 239,
+      "tipo": "ejemplo_de",
       "peso": 1.0,
-      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.21-30"
+      "fuente": "boas-f-1911-cuestiones-fundamentales-de-antropologia-cultural.pdf, p.31-40"
     }
   ]
 }
