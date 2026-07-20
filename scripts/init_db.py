@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS relaciones (
     )),
     peso REAL DEFAULT 1.0,
     fuente TEXT,
+    cita_textual TEXT,
     FOREIGN KEY (origen_id) REFERENCES nodos(id),
     FOREIGN KEY (destino_id) REFERENCES nodos(id)
 );
@@ -93,8 +94,8 @@ def main():
         destino_id = nombre_a_id.get(destino_nombre)
         if origen_id and destino_id:
             conn.execute(
-                "INSERT OR IGNORE INTO relaciones (origen_id, destino_id, tipo, fuente) VALUES (?, ?, ?, ?)",
-                (origen_id, destino_id, tipo, nota),
+                "INSERT OR IGNORE INTO relaciones (origen_id, destino_id, tipo, fuente, cita_textual) VALUES (?, ?, ?, ?, ?)",
+                (origen_id, destino_id, tipo, nota, None),
             )
 
     conn.commit()

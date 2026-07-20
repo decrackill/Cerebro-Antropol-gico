@@ -191,3 +191,21 @@ main {
   color: #fff;
   text-decoration: underline;
 }
+
+#panel-cita {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #e94560;
+  padding: 8px 10px;
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #ccc;
+}
+
+#panel-cita em {
+  color: #ecf0f1;
+}
+
+#panel-cita.oculto {
+  display: none;
+}

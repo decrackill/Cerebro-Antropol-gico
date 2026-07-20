@@ -31,6 +31,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
         target: r.destino_id || r.destino,
         label: r.tipo,
         nota: r.nota || r.fuente,
+        cita: r.cita_textual || '',
       },
     })),
   ]
@@ -131,11 +132,20 @@ function mostrarPanel(nodo) {
   conectadas.forEach((edge) => {
     const otroId = edge.data('source') === nodo.id ? edge.data('target') : edge.data('source')
     const otro = cy.getElementById(otroId).data('label')
+    const cita = edge.data('cita')
 
     const li = document.createElement('li')
-    li.textContent = `${edge.data('label')} → ${otro}`
     li.classList.add('relacion-link')
-    li.addEventListener('click', () => saltarANodo(otroId))
+    li.textContent = `${edge.data('label')} → ${otro}`
+    if (cita) {
+      li.title = cita
+    }
+    li.addEventListener('click', () => {
+      saltarANodo(otroId)
+      if (cita) {
+        mostrarCita(edge.data('label'), otro, cita)
+      }
+    })
     ul.appendChild(li)
   })
 
@@ -156,6 +166,18 @@ function saltarANodo(id) {
 
 function ocultarPanel() {
   document.getElementById('panel').classList.add('oculto')
+  ocultarCita()
+}
+
+function mostrarCita(tipo, destino, cita) {
+  const div = document.getElementById('panel-cita')
+  div.innerHTML = `<strong>Cita textual:</strong> <em>"${cita}"</em>`
+  div.classList.remove('oculto')
+}
+
+function ocultarCita() {
+  const div = document.getElementById('panel-cita')
+  if (div) div.classList.add('oculto')
 }
 
 export function filtrarPorTipo(tipo) {

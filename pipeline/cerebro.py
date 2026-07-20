@@ -230,11 +230,24 @@ def fusionar_nodos(conn, id_mantener, id_borrar):
 
     conn.execute("UPDATE relaciones SET origen_id = ? WHERE origen_id = ?", (id_mantener, id_borrar))
     conn.execute("UPDATE relaciones SET destino_id = ? WHERE destino_id = ?", (id_mantener, id_borrar))
-    conn.execute("""
-        DELETE FROM relaciones WHERE id NOT IN (
-            SELECT MIN(id) FROM relaciones GROUP BY origen_id, destino_id, tipo
-        )
-    """)
+
+    dupes = conn.execute("""
+        SELECT MIN(id) as keep_id, origen_id, destino_id, tipo
+        FROM relaciones GROUP BY origen_id, destino_id, tipo HAVING COUNT(*) > 1
+    """).fetchall()
+    for keep_id, o, d, t in dupes:
+        best = conn.execute("""
+            SELECT id, cita_textual FROM relaciones
+            WHERE origen_id = ? AND destino_id = ? AND tipo = ?
+            ORDER BY CASE WHEN cita_textual IS NOT NULL AND cita_textual != '' THEN 0 ELSE 1 END, id
+            LIMIT 1
+        """, (o, d, t)).fetchone()
+        if best and best[1]:
+            conn.execute("UPDATE relaciones SET cita_textual = ? WHERE id = ?", (best[1], keep_id))
+        conn.execute("""
+            DELETE FROM relaciones WHERE origen_id = ? AND destino_id = ? AND tipo = ? AND id != ?
+        """, (o, d, t, keep_id))
+
     conn.execute("DELETE FROM nodos WHERE id = ?", (id_borrar,))
     conn.commit()
 
@@ -476,8 +489,8 @@ def herramienta_revisar():
         resp = pedir_opcion("  ¿Aprobar? (s/n): ", validas={"s", "n"}, alias={"si": "s", "sí": "s"})
         if resp == "s":
             conn.execute(
-                "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
-                (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente")),
+                "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
+                (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente"), r.get("cita_textual")),
             )
             conn.commit()
             print("  ✓ Insertada")
@@ -594,8 +607,8 @@ def herramienta_conectar_automatico(umbral=None, dry_run=False):
             continue
 
         conn.execute(
-            "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
-            (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente")),
+            "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
+            (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente"), r.get("cita_textual")),
         )
         conn.commit()
         insertadas += 1
@@ -667,8 +680,8 @@ def herramienta_recuperar_relaciones():
                 ya_existian += 1
             else:
                 conn.execute(
-                    "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente) VALUES (?, ?, ?, 1.0, ?)",
-                    (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente")),
+                    "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
+                    (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente"), r.get("cita_textual")),
                 )
                 conn.commit()
                 insertadas += 1

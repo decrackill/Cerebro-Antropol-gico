@@ -3,6 +3,8 @@ dist/
 .env
 *.pyc
 __pycache__/
+.mimocode/
+data/grafo.db.bak
 candidatos_pendientes.json
 libros/*.pdf
 pipeline/candidatos_procesados_*.json
