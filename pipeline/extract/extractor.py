@@ -20,11 +20,11 @@ from openai import OpenAI
 from dotenv import load_dotenv
 import fitz  # PyMuPDF
 
-from prompts import build_prompt_extraccion_grafo
+from .prompts import build_prompt_extraccion_grafo
 
-BASE_DIR = Path(__file__).parent
-load_dotenv(BASE_DIR / ".env")
-DB_PATH = BASE_DIR.parent / "data" / "grafo.db"
+from ..core.config import DB_PATH, ENV_PATH, CACHE_DIR, STATE_DIR, LOGS_DIR
+
+load_dotenv(ENV_PATH)
 
 GEMINI_MODEL = "gemini-2.5-flash"
 OPENROUTER_MODEL = "google/gemini-2.5-flash"
@@ -110,7 +110,7 @@ def cargar_nodos_existentes():
     conn.close()
     existentes = [{"id": f[0], "tipo": f[1], "nombre": f[2]} for f in filas]
 
-    pendientes_path = BASE_DIR / "candidatos_pendientes.json"
+    pendientes_path = CACHE_DIR / "candidatos_pendientes.json"
     if pendientes_path.exists():
         pendientes = json.loads(pendientes_path.read_text(encoding="utf-8"))
         for n in pendientes.get("nodos_nuevos", []):
@@ -167,7 +167,7 @@ def normalizar_tipos(resultado):
 
 
 def get_checkpoint_path(nombre_pdf):
-    return BASE_DIR / f"checkpoint_{Path(nombre_pdf).stem}.json"
+    return STATE_DIR / f"checkpoint_{Path(nombre_pdf).stem}.json"
 
 
 def cargar_checkpoint(nombre_pdf):
@@ -336,7 +336,7 @@ def main():
         print(f"\n⚠ Error en fragmento {i}/{len(chunks)}: {e}")
         print(f"  Guardando resultados parciales ({len(nodos_acumulados)} nodos, {len(relaciones_acumuladas)} relaciones)...")
 
-    out_path = BASE_DIR / "candidatos_pendientes.json"
+    out_path = CACHE_DIR / "candidatos_pendientes.json"
 
     if out_path.exists():
         previo = json.loads(out_path.read_text(encoding="utf-8"))
@@ -352,7 +352,7 @@ def main():
         encoding="utf-8",
     )
 
-    log_path = BASE_DIR / f"extraccion_log_{Path(args.pdf).stem}.json"
+    log_path = LOGS_DIR / f"extraccion_log_{Path(args.pdf).stem}.json"
     log_path.write_text(
         json.dumps({
             "pdf": nombre_pdf,

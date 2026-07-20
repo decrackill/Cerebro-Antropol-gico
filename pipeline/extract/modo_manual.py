@@ -16,16 +16,16 @@ Uso:
 """
 import sys
 import json
-import sqlite3
 from pathlib import Path
 
-from extractor import (
+from .extractor import (
     extraer_paginas_pdf, dividir_en_chunks, cargar_checkpoint, guardar_checkpoint,
-    chunk_ya_procesado, cargar_nodos_existentes, normalizar_tipos, BASE_DIR,
+    chunk_ya_procesado, cargar_nodos_existentes, normalizar_tipos,
 )
-from prompts import build_prompt_extraccion_grafo
+from .prompts import build_prompt_extraccion_grafo
+from ..core.config import CACHE_DIR
 
-CHUNK_ACTUAL_PATH = BASE_DIR / "modo_manual_chunk_actual.json"
+CHUNK_ACTUAL_PATH = CACHE_DIR / "modo_manual_chunk_actual.json"
 
 
 def generar(ruta_pdf):

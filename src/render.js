@@ -171,7 +171,13 @@ function ocultarPanel() {
 
 function mostrarCita(tipo, destino, cita) {
   const div = document.getElementById('panel-cita')
-  div.innerHTML = `<strong>Cita textual:</strong> <em>"${cita}"</em>`
+  div.textContent = ''
+  const strong = document.createElement('strong')
+  strong.textContent = 'Cita textual: '
+  const em = document.createElement('em')
+  em.textContent = `"${cita}"`
+  div.appendChild(strong)
+  div.appendChild(em)
   div.classList.remove('oculto')
 }
 
