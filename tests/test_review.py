@@ -3,13 +3,38 @@
 
 def test_normalizar_tipo_relacion():
     from pipeline.core.utils import normalizar_tipo_relacion
-    # Tipo directo
+    # Tipo canonical directo
     assert normalizar_tipo_relacion("influenciado_por") == "influenciado_por"
-    # Alias
-    assert normalizar_tipo_relacion("autor_de") == "pertenece_a"
+    assert normalizar_tipo_relacion("critica_a") == "critica_a"
+    assert normalizar_tipo_relacion("desarrolla_concepto") == "desarrolla_concepto"
+    assert normalizar_tipo_relacion("pertenece_a") == "pertenece_a"
+    assert normalizar_tipo_relacion("estudia_a") == "estudia_a"
+    assert normalizar_tipo_relacion("contemporaneo_de") == "contemporaneo_de"
+    assert normalizar_tipo_relacion("precursor_de") == "precursor_de"
+    assert normalizar_tipo_relacion("parte_del_debate") == "parte_del_debate"
+    assert normalizar_tipo_relacion("redefine_a") == "redefine_a"
+    
+    # Alias correctos (sinónimos reales)
     assert normalizar_tipo_relacion("influyó_en") == "influenciado_por"
+    assert normalizar_tipo_relacion("influye_en") == "influenciado_por"
+    assert normalizar_tipo_relacion("refuta") == "critica_a"
+    assert normalizar_tipo_relacion("estudio") == "estudia_a"
+    assert normalizar_tipo_relacion("localizado_en") == "pertenece_a"
+    assert normalizar_tipo_relacion("origen_de") == "precursor_de"
+    
+    # Tipos que NO deben cambiar (ya no son aliases)
+    assert normalizar_tipo_relacion("autor_de") == "autor_de"
+    assert normalizar_tipo_relacion("colabora_con") == "colabora_con"
+    assert normalizar_tipo_relacion("es_mentor_de") == "es_mentor_de"
+    assert normalizar_tipo_relacion("clasifica_como_activo") == "clasifica_como_activo"
+    assert normalizar_tipo_relacion("contribuye_a") == "contribuye_a"
+    assert normalizar_tipo_relacion("relacionado_con") == "relacionado_con"
+    assert normalizar_tipo_relacion("defiende_superioridad_de") == "defiende_superioridad_de"
+    assert normalizar_tipo_relacion("limita") == "limita"
+    
     # Minúsculas y espacios
     assert normalizar_tipo_relacion("  CRITICA_A  ") == "critica_a"
+    assert normalizar_tipo_relacion(" Influyó_En ") == "influenciado_por"
 
 
 def test_similitud():
