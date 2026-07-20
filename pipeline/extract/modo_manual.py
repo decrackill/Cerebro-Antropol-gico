@@ -55,7 +55,7 @@ TEXTO A ANALIZAR (fragmento {i}/{len(chunks)}, páginas {chunk['pagina_inicio']}
 {chunk['texto']}
 """
 
-    salida = BASE_DIR / f"prompt_manual_chunk_{i}.txt"
+    salida = CACHE_DIR / f"prompt_manual_chunk_{i}.txt"
     salida.write_text(contenido, encoding="utf-8")
 
     CHUNK_ACTUAL_PATH.write_text(json.dumps({
@@ -117,7 +117,7 @@ def pegar(ruta_pdf):
     for r in nuevas_rels:
         r["fuente"] = fuente_str
 
-    out_path = BASE_DIR / "candidatos_pendientes.json"
+    out_path = CACHE_DIR / "candidatos_pendientes.json"
     if out_path.exists():
         previo = json.loads(out_path.read_text(encoding="utf-8"))
         nuevos = previo.get("nodos_nuevos", []) + nuevos
@@ -134,7 +134,7 @@ def pegar(ruta_pdf):
     guardar_checkpoint(nombre_pdf, checkpoint)
 
     CHUNK_ACTUAL_PATH.unlink()
-    (BASE_DIR / f"prompt_manual_chunk_{info['chunk_index']}.txt").unlink(missing_ok=True)
+    (CACHE_DIR / f"prompt_manual_chunk_{info['chunk_index']}.txt").unlink(missing_ok=True)
 
     print(f"\n✓ Integrado: +{len(resultado.get('nodos_nuevos', []))} nodos, +{len(resultado.get('relaciones_nuevas', []))} relaciones")
     print(f"  Checkpoint actualizado: chunk {info['chunk_index']}/{info['total_chunks']} marcado como hecho")

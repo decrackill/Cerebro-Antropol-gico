@@ -340,7 +340,7 @@ from ..core.config import (
     REVISION_TOTAL_ESTADO_PATH, REVISION_TOTAL_LOG_PATH,
     CRITERIOS_POR_TIPO, TIPOS_VALIDOS_NODO,
 )
-from ..core.db import cargar_grados, eliminar_nodo_cascada
+from ..core.db import cargar_grados, eliminar_nodo_cascada, fusionar_nodos
 
 
 def _cargar_estado_revision_total():
