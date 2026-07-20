@@ -8,6 +8,7 @@ Uso: python extractor.py ../libros/argonautas.pdf
 Opcional: python extractor.py ../libros/argonautas.pdf --max-chunks 5
 Para reiniciar desde cero: python extractor.py ../libros/argonautas.pdf --reset
 """
+import logging
 import sys
 import json
 import sqlite3
@@ -25,6 +26,8 @@ from .prompts import build_prompt_extraccion_grafo
 from ..core.config import DB_PATH, ENV_PATH, CACHE_DIR, STATE_DIR, LOGS_DIR
 
 load_dotenv(ENV_PATH)
+
+logger = logging.getLogger("cerebro.extractor")
 
 GEMINI_MODEL = "gemini-2.5-flash"
 OPENROUTER_MODEL = "google/gemini-2.5-flash"

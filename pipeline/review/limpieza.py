@@ -3,6 +3,7 @@
 Funciones para limpiar nodos ruido y fusionar duplicados.
 """
 import json
+import logging
 from collections import defaultdict
 
 from ..core.config import (
@@ -19,6 +20,8 @@ from ..core.utils import (
     detectar_duplicados, es_nodo_ruido, es_nodo_ruido_aislado,
     normalizar_tipo_relacion,
 )
+
+logger = logging.getLogger("cerebro.limpieza")
 
 
 def _cargar_estado_limpieza():

@@ -3,6 +3,7 @@
 Función de auditoría completa de la base de datos.
 """
 import json
+import logging
 import re
 from collections import defaultdict
 
@@ -12,6 +13,8 @@ from ..core.config import (
 )
 from ..core.db import conectar_db
 from ..core.utils import similitud, es_exclusion_fusion
+
+logger = logging.getLogger("cerebro.auditoria")
 
 
 def herramienta_auditoria():

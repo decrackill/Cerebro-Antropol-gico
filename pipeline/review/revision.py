@@ -3,6 +3,7 @@
 Funciones para revisar manual y automática mente los candidatos extraídos.
 """
 import json
+import logging
 from collections import defaultdict
 from difflib import get_close_matches
 
@@ -16,6 +17,8 @@ from ..core.utils import (
     normalizar_tipo_relacion, pedir_opcion, barra_progreso,
     clave_relacion, similitud,
 )
+
+logger = logging.getLogger("cerebro.revision")
 
 
 def _cargar_estado_revision():
