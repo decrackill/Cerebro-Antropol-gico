@@ -41,9 +41,9 @@ def tmp_db():
             origen_id INTEGER NOT NULL,
             destino_id INTEGER NOT NULL,
             tipo TEXT NOT NULL CHECK(tipo IN (
-                'influenciado_por', 'critica_a', 'desarrolla_concepto',
-                'pertenece_a', 'estudia_a', 'contemporaneo_de',
-                'precursor_de', 'parte_del_debate', 'redefine_a'
+                'autor_de', 'influenciado_por', 'critica_a', 'desarrolla_concepto',
+                'redefine_a', 'precursor_de', 'pertenece_a', 'estudia_a',
+                'contemporaneo_de', 'parte_del_debate', 'es_mentor_de', 'colabora_con'
             )),
             peso REAL DEFAULT 1.0,
             fuente TEXT,

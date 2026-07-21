@@ -40,9 +40,9 @@ TIPOS_VALIDOS_NODO = {
 }
 
 TIPOS_VALIDOS_RELACION = {
-    "influenciado_por", "critica_a", "desarrolla_concepto", "pertenece_a",
-    "estudia_a", "contemporaneo_de", "precursor_de", "parte_del_debate",
-    "redefine_a",
+    "autor_de", "influenciado_por", "critica_a", "desarrolla_concepto",
+    "redefine_a", "precursor_de", "pertenece_a", "estudia_a",
+    "contemporaneo_de", "parte_del_debate", "es_mentor_de", "colabora_con",
 }
 
 # ── Aliases de tipos de relación ───────────────────────────────────────

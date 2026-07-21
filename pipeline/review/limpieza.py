@@ -13,7 +13,7 @@ from ..core.config import (
 )
 from ..core.db import (
     conectar_db, fusionar_nodos, eliminar_nodo_cascada,
-    cargar_grados,
+    cargar_grados, validar_relacion,
 )
 from ..core.utils import (
     normalizar, similitud, pedir_opcion, es_exclusion_fusion,
@@ -280,6 +280,7 @@ def herramienta_recuperar_relaciones():
     insertadas = 0
     ya_existian = 0
     no_resolubles = 0
+    rechazadas = 0
     for archivo in archivos:
         datos = json.loads(archivo.read_text(encoding="utf-8"))
         for r in datos.get("relaciones_nuevas", []):
@@ -295,15 +296,21 @@ def herramienta_recuperar_relaciones():
                 estado.add(clave)
                 continue
 
-            if relacion_ya_existe(conn, origen, destino, normalizar_tipo_relacion(r["tipo"])):
+            tipo_norm = normalizar_tipo_relacion(r["tipo"])
+            if relacion_ya_existe(conn, origen, destino, tipo_norm):
                 ya_existian += 1
             else:
-                conn.execute(
-                    "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
-                    (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente"), r.get("cita_textual")),
-                )
-                conn.commit()
-                insertadas += 1
+                ok, error = validar_relacion(conn, origen, destino, tipo_norm,
+                                             r.get("fuente"), r.get("cita_textual"))
+                if ok:
+                    conn.execute(
+                        "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
+                        (origen, destino, tipo_norm, r.get("fuente"), r.get("cita_textual")),
+                    )
+                    conn.commit()
+                    insertadas += 1
+                else:
+                    rechazadas += 1
 
             estado.add(clave)
             RECUPERACION_ESTADO_PATH.write_text(
@@ -311,4 +318,4 @@ def herramienta_recuperar_relaciones():
             )
 
     conn.close()
-    print(f"Recuperadas: {insertadas} | Ya existían: {ya_existian} | No resolubles: {no_resolubles}")
+    print(f"Recuperadas: {insertadas} | Ya existían: {ya_existian} | No resolubles: {no_resolubles} | Rechazadas: {rechazadas}")

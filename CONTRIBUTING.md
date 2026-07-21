@@ -7,6 +7,18 @@
 3. Configurar `.env` con API keys
 4. Ejecutar tests: `pytest`
 
+## Ontología
+
+El proyecto se rige por el [MANIFIESTO_ONTOLOGICO.md](docs/ontology/MANIFIESTO_ONTOLOGICO.md) (v1.1).
+
+**Regla fundamental**: El Manifiesto es la fuente de verdad. Nunca adaptar el Manifiesto al código; siempre adaptar el código al Manifiesto.
+
+Al agregar o modificar código que afecte:
+- Tipos de nodo → verificar §4.2 del Manifiesto
+- Tipos de relación → verificar §5.1 del Manifiesto
+- Inserción de relaciones → usar `validar_relacion()` (ver ARCHITECTURE.md)
+- Firewall epistemológico → verificar §5.3 del Manifiesto
+
 ## Convenciones de Código
 
 ### Python

@@ -20,8 +20,14 @@ Lee el texto y extrae:
    que justifica cada relación.
 
 TIPOS DE NODO válidos: autor, obra, concepto, escuela, cultura, debate, poblacion, corriente
-TIPOS DE RELACIÓN válidos: influenciado_por, critica_a, desarrolla_concepto,
-  pertenece_a, estudia_a, contemporaneo_de, precursor_de, parte_del_debate, redefine_a
+TIPOS DE RELACIÓN válidos: autor_de, influenciado_por, critica_a, desarrolla_concepto,
+  redefine_a, precursor_de, pertenece_a, estudia_a, contemporaneo_de,
+  parte_del_debate, es_mentor_de, colabora_con
+
+FIREWALL EPISTEMOLÓGICO (obligatorio):
+- Un nodo "poblacion" SOLO puede ser DESTINO de "estudia_a" u ORIGEN de "parte_del_debate".
+- NUNCA conectes "poblacion" con "cultura" o "concepto" de forma directa.
+- Si el texto describe causalidad entre población y cultura, NO extraigas esa relación.
 
 CRITERIO ESTRICTO PARA EL TIPO "concepto" (leer con cuidado, es la fuente #1 de errores):
 

@@ -4,8 +4,11 @@ dist/
 *.pyc
 __pycache__/
 .mimocode/
+.pytest_cache/
 data/grafo.db
 data/grafo.db.bak
+data/grafo_backup_*.db
 runtime/
 libros/*.pdf
 src/datos.json
+*.log

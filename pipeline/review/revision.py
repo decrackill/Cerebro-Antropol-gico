@@ -12,7 +12,7 @@ from ..core.config import (
     TIPOS_VALIDOS_NODO, PATRON_AUTOR_SUPERFICIAL,
     CUTOFF_FUZZY_REVISION,
 )
-from ..core.db import conectar_db, relacion_ya_existe
+from ..core.db import conectar_db, relacion_ya_existe, validar_relacion
 from ..core.utils import (
     normalizar_tipo_relacion, pedir_opcion, barra_progreso,
     clave_relacion, similitud,
@@ -210,12 +210,18 @@ def herramienta_revisar():
             print(f"  Fuente: {r['fuente']}")
         resp = pedir_opcion("  ¿Aprobar? (s/n): ", validas={"s", "n"}, alias={"si": "s", "sí": "s"})
         if resp == "s":
-            conn.execute(
-                "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
-                (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente"), r.get("cita_textual")),
-            )
-            conn.commit()
-            print("  ✓ Insertada")
+            tipo_norm = normalizar_tipo_relacion(r["tipo"])
+            ok, error = validar_relacion(conn, origen, destino, tipo_norm,
+                                         r.get("fuente"), r.get("cita_textual"))
+            if ok:
+                conn.execute(
+                    "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
+                    (origen, destino, tipo_norm, r.get("fuente"), r.get("cita_textual")),
+                )
+                conn.commit()
+                print("  ✓ Insertada")
+            else:
+                print(f"  ✗ Rechazada: {error}")
         else:
             print("  ✗ Descartada")
         estado["relaciones_revisadas"].append(clave)
@@ -292,6 +298,7 @@ def herramienta_conectar_automatico(umbral=None, dry_run=False):
     insertadas = 0
     ya_existian = 0
     no_resolubles = 0
+    rechazadas = 0
     for r in candidatos.get("relaciones_nuevas", []):
         origen = _resolver_referencia_conexion(r["origen"], mapa_id, catalogo, nombres_por_id_gemini, umbral, ids_validos)
         destino = _resolver_referencia_conexion(r["destino"], mapa_id, catalogo, nombres_por_id_gemini, umbral, ids_validos)
@@ -304,20 +311,27 @@ def herramienta_conectar_automatico(umbral=None, dry_run=False):
             insertadas += 1
             continue
 
-        if relacion_ya_existe(conn, origen, destino, normalizar_tipo_relacion(r["tipo"])):
+        tipo_norm = normalizar_tipo_relacion(r["tipo"])
+        if relacion_ya_existe(conn, origen, destino, tipo_norm):
             ya_existian += 1
             continue
 
-        conn.execute(
-            "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
-            (origen, destino, normalizar_tipo_relacion(r["tipo"]), r.get("fuente"), r.get("cita_textual")),
-        )
-        conn.commit()
-        insertadas += 1
+        ok, error = validar_relacion(conn, origen, destino, tipo_norm,
+                                     r.get("fuente"), r.get("cita_textual"))
+        if ok:
+            conn.execute(
+                "INSERT INTO relaciones (origen_id, destino_id, tipo, peso, fuente, cita_textual) VALUES (?, ?, ?, 1.0, ?, ?)",
+                (origen, destino, tipo_norm, r.get("fuente"), r.get("cita_textual")),
+            )
+            conn.commit()
+            insertadas += 1
+        else:
+            rechazadas += 1
+            print(f"  ⚠ Rechazada: {r.get('origen')}→{r.get('destino')} ({tipo_norm}): {error}")
 
     conn.close()
     etiqueta = "Simuladas como insertables" if dry_run else "Insertadas"
-    print(f"\n{etiqueta}: {insertadas} | Ya existían: {ya_existian} | No resolubles: {no_resolubles}")
+    print(f"\n{etiqueta}: {insertadas} | Ya existían: {ya_existian} | No resolubles: {no_resolubles} | Rechazadas: {rechazadas}")
 
 
 def herramienta_conectar_automatico_menu():

@@ -1,10 +1,15 @@
 # Arquitectura — Cerebro Antropológico
 
+**Autoridad máxima**: [MANIFIESTO_ONTOLOGICO.md](MANIFIESTO_ONTOLOGICO.md) v1.1
+
 ## Visión General
 
 Aplicación de grafo de conocimiento interactivo para antropología.
 Extrae entidades de PDFs académicos usando LLMs (Gemini/OpenRouter), las almacena en SQLite
 y las visualiza como grafo navegable en el navegador via Cytoscape.js.
+
+La ontología del grafo está definida formalmente en el Manifiesto Ontológico v1.1.
+Este documento describe la implementación técnica, no la ontología.
 
 ## Estructura del Proyecto
 
@@ -13,13 +18,13 @@ Cerebro-antropologico/
 │
 ├── pipeline/                    # Código Python del pipeline
 │   ├── core/                    # Módulos fundamentales
-│   │   ├── config.py           # Constantes, paths, umbrales
-│   │   ├── db.py               # Conexión CRUD, fusión, cascada
+│   │   ├── config.py           # Constantes, paths, umbrales, tipos canónicos
+│   │   ├── db.py               # CRUD, fusión, cascada, validar_relacion()
 │   │   └── utils.py            # Similitud, normalización, UI helpers
 │   │
 │   ├── extract/                 # Extracción de PDFs
 │   │   ├── extractor.py        # Motor PDF→LLM
-│   │   ├── prompts.py          # Templates de prompt
+│   │   ├── prompts.py          # Templates de prompt (incluye firewall)
 │   │   └── modo_manual.py      # Modo manual sin API
 │   │
 │   ├── review/                  # Revisión y limpieza
@@ -53,11 +58,18 @@ Cerebro-antropologico/
 ├── data/                        # Base de datos SQLite
 │   └── grafo.db
 │
+├── tests/                       # Tests automatizados
+│   ├── test_firewall.py        # Tests de validación ontológica (56)
+│   ├── test_database.py        # Tests de DB
+│   ├── test_review.py          # Tests de revisión
+│   └── ...
+│
 ├── libros/                      # PDFs fuente
 │
-├── ARCHITECTURE.md
-├── ROADMAP.md
-├── README.md
+├── MANIFIESTO_ONTOLOGICO.md     # Fuente de verdad ontológica (v1.1)
+├── ARCHITECTURE.md              # Este archivo
+├── ROADMAP.md                   # Roadmap del proyecto
+├── README.md                    # Guía de inicio
 ├── requirements.txt
 └── .gitignore
 ```
@@ -87,6 +99,10 @@ Cerebro-antropologico/
 │  └────┬────┘  └────┬────┘  └────┬─────┘           │
 │       │            │            │                   │
 │  ┌────▼────────────▼────────────▼─────┐            │
+│  │        validar_relacion()          │            │
+│  │  (validación ontológica central)   │            │
+│  └────────────────────────────────────┘            │
+│  ┌────────────────────────────────────┐            │
 │  │           cli/menu.py              │            │
 │  └────────────────────────────────────┘            │
 └──────────────────────┬──────────────────────────────┘
@@ -104,6 +120,8 @@ PDF → extractor.py → runtime/cache/candidatos_pendientes.json
                          │
                     cli/menu.py (review)
                          │
+                    validar_relacion()  ← validación ontológica
+                         │
                     data/grafo.db
                          │
                     scripts/export_json.py
@@ -113,20 +131,102 @@ PDF → extractor.py → runtime/cache/candidatos_pendientes.json
                     Frontend (Cytoscape.js)
 ```
 
-## Módulos del Pipeline
+## Ontología (implementada)
 
-| Módulo | Responsabilidad | Líneas |
-|--------|-----------------|--------|
-| `core/config.py` | Constantes, paths, umbrales | ~140 |
-| `core/db.py` | Conexión CRUD, fusión, cascada | ~140 |
-| `core/utils.py` | Similitud, normalización, UI helpers | ~100 |
-| `extract/extractor.py` | Motor de extracción PDF→LLM | ~380 |
-| `extract/prompts.py` | Templates de prompt LLM | ~150 |
-| `extract/modo_manual.py` | Modo manual sin API | ~160 |
-| `review/revision.py` | Revisión de candidatos + total | ~440 |
-| `review/limpieza.py` | Limpieza, deduplicación, recuperación | ~310 |
-| `review/auditoria.py` | Diagnóstico de integridad | ~130 |
-| `cli/menu.py` | CLI menu system | ~180 |
+Ver [MANIFIESTO_ONTOLOGICO.md](MANIFIESTO_ONTOLOGICO.md) para la especificación completa.
+
+### Tipos de Nodo (8)
+
+| Tipo | Definición |
+|------|------------|
+| `autor` | Agente histórico productor de conocimiento |
+| `obra` | Objeto textual con identidad bibliográfica |
+| `concepto` | Unidad teórica o categoría de análisis |
+| `escuela` | Tradición delimitada por linaje o institución |
+| `corriente` | Paradigma teórico que atraviesa escuelas |
+| `cultura` | Grupo humano definido etnográficamente |
+| `poblacion` | Categoría clasificatoria histórica/racial |
+| `debate` | Controversia académica documentada |
+
+### Relaciones Canónicas — Nivel A (12)
+
+| # | Relación | Simetría | Origen | Destino |
+|---|----------|----------|--------|---------|
+| 1 | `autor_de` | Asimétrica | autor | obra |
+| 2 | `influenciado_por` | Asimétrica | autor, obra, escuela, corriente, concepto | autor, obra, escuela, corriente, concepto |
+| 3 | `critica_a` | Asimétrica | autor, obra, escuela, corriente | autor, obra, escuela, corriente, concepto |
+| 4 | `desarrolla_concepto` | Asimétrica | autor, obra, escuela, corriente | concepto |
+| 5 | `redefine_a` | Asimétrica | autor, obra, concepto | concepto |
+| 6 | `precursor_de` | Asimétrica | autor, obra, escuela, corriente, concepto | autor, obra, escuela, corriente, concepto |
+| 7 | `pertenece_a` | Asimétrica | autor, concepto, escuela | escuela, corriente |
+| 8 | `estudia_a` | Asimétrica | autor, obra | poblacion, cultura |
+| 9 | `contemporaneo_de` | Simétrica | autor | autor |
+| 10 | `parte_del_debate` | Asimétrica | autor, obra, concepto, poblacion, escuela, corriente | debate |
+| 11 | `es_mentor_de` | Asimétrica | autor | autor |
+| 12 | `colabora_con` | Simétrica | autor | autor |
+
+### Relaciones Conceptuales — Nivel B (3, experimentales)
+
+| Relación | Simetría | Origen | Destino |
+|----------|----------|--------|---------|
+| `contradice` | Asimétrica | concepto | concepto |
+| `relacionado_con` | Simétrica | concepto | concepto |
+| `depende_de` | Asimétrica | concepto | concepto |
+
+### Firewall Epistemológico
+
+**Regla absoluta** (Manifiesto §5.3):
+- `poblacion` como **origen** → solo `parte_del_debate`
+- `poblacion` como **destino** → solo `estudia_a`
+
+## Sistema de Validación
+
+Toda inserción de relaciones pasa por `validar_relacion()` en `pipeline/core/db.py`.
+
+### Flujo de validación
+
+```
+INSERT INTO relaciones
+    │
+    ▼
+validar_relacion(conn, origen_id, destino_id, tipo, fuente, cita_textual)
+    │
+    ├── 1. Tipo de relación canónico (TIPOS_VALIDOS_RELACION)
+    ├── 2. No reflexividad (origen ≠ destino)
+    ├── 3. Firewall epistemológico (poblacion)
+    ├── 4. Compatibilidad origen/destino (COMPATIBILIDAD_RELACIONES)
+    └── 5. Evidencia documental (fuente o cita_textual)
+    │
+    ▼
+(True, None)  → INSERT permitido
+(False, error) → INSERT rechazado
+```
+
+### Puntos de integración
+
+| Archivo | Función | Punto de INSERT |
+|---------|---------|-----------------|
+| `review/revision.py` | `herramienta_revisar()` | Línea ~214 |
+| `review/revision.py` | `herramienta_conectar_automatico()` | Línea ~312 |
+| `review/limpieza.py` | `herramienta_recuperar_relaciones()` | Línea ~302 |
+
+## Base de Datos
+
+### Tabla `nodos`
+- `id` (INTEGER PK AUTOINCREMENT)
+- `tipo` (TEXT NOT NULL, CHECK en 8 tipos)
+- `nombre` (TEXT NOT NULL UNIQUE)
+- `descripcion` (TEXT)
+- `metadatos` (TEXT DEFAULT '{}')
+
+### Tabla `relaciones`
+- `id` (INTEGER PK AUTOINCREMENT)
+- `origen_id` (INTEGER NOT NULL, FK → nodos)
+- `destino_id` (INTEGER NOT NULL, FK → nodos)
+- `tipo` (TEXT NOT NULL, CHECK en 12 tipos canónicos)
+- `peso` (REAL DEFAULT 1.0)
+- `fuente` (TEXT)
+- `cita_textual` (TEXT)
 
 ## Convenciones
 
@@ -136,28 +236,19 @@ PDF → extractor.py → runtime/cache/candidatos_pendientes.json
 - **DB**: Siempre con `PRAGMA foreign_keys = ON`
 - **Context managers**: Usar `with` para conexiones DB
 - **Runtime data**: En `runtime/`, nunca en el código
+- **Validación**: Siempre pasar por `validar_relacion()` antes de INSERT
 
-## Base de Datos
+## Módulos del Pipeline
 
-### Tabla `nodos`
-- `id` (INTEGER PK AUTOINCREMENT)
-- `tipo` (TEXT NOT NULL, CHECK en 8 tipos válidos)
-- `nombre` (TEXT NOT NULL UNIQUE)
-- `descripcion` (TEXT)
-- `metadatos` (TEXT DEFAULT '{}')
-
-### Tabla `relaciones`
-- `id` (INTEGER PK AUTOINCREMENT)
-- `origen_id` (INTEGER NOT NULL, FK → nodos)
-- `destino_id` (INTEGER NOT NULL, FK → nodos)
-- `tipo` (TEXT NOT NULL, CHECK en 9 tipos válidos)
-- `peso` (REAL DEFAULT 1.0)
-- `fuente` (TEXT)
-- `cita_textual` (TEXT)
-
-### Tipos de Nodo (8)
-autor, obra, concepto, escuela, cultura, debate, poblacion, corriente
-
-### Tipos de Relación (9)
-influenciado_por, critica_a, desarrolla_concepto, pertenece_a,
-estudia_a, contemporaneo_de, precursor_de, parte_del_debate, redefine_a
+| Módulo | Responsabilidad |
+|--------|-----------------|
+| `core/config.py` | Constantes, paths, umbrales, tipos canónicos |
+| `core/db.py` | Conexión CRUD, fusión, cascada, `validar_relacion()` |
+| `core/utils.py` | Similitud, normalización, UI helpers |
+| `extract/extractor.py` | Motor de extracción PDF→LLM |
+| `extract/prompts.py` | Templates de prompt LLM (incluye firewall) |
+| `extract/modo_manual.py` | Modo manual sin API |
+| `review/revision.py` | Revisión de candidatos + total |
+| `review/limpieza.py` | Limpieza, deduplicación, recuperación |
+| `review/auditoria.py` | Diagnóstico de integridad |
+| `cli/menu.py` | CLI menu system |

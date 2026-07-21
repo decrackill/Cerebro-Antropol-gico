@@ -5,7 +5,7 @@ Todas las funciones de CRUD, fusión y consulta de la DB.
 import json
 import sqlite3
 
-from .config import DB_PATH
+from .config import DB_PATH, TIPOS_VALIDOS_RELACION, TIPOS_VALIDOS_NODO
 
 
 def conectar_db() -> sqlite3.Connection:
@@ -136,3 +136,134 @@ def relaciones_de(conn: sqlite3.Connection, id_: int) -> list[dict]:
          "otro_nombre": r[4], "otro_id": r[5], "direccion": r[6]}
         for r in filas
     ]
+
+# ═══════════════════════════════════════════════════════════════════════════
+# VALIDACIÓN CENTRALIZADA DE RELACIONES (Manifiesto v1.1)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# Mapa de compatibilidad: tipo_relacion -> (origenes_validos, destinos_validos)
+COMPATIBILIDAD_RELACIONES = {
+    "autor_de":              ({"autor"}, {"obra"}),
+    "influenciado_por":      ({"autor", "obra", "escuela", "corriente", "concepto"},
+                              {"autor", "obra", "escuela", "corriente", "concepto"}),
+    "critica_a":             ({"autor", "obra", "escuela", "corriente"},
+                              {"autor", "obra", "escuela", "corriente", "concepto"}),
+    "desarrolla_concepto":   ({"autor", "obra", "escuela", "corriente"}, {"concepto"}),
+    "redefine_a":            ({"autor", "obra", "concepto"}, {"concepto"}),
+    "precursor_de":          ({"autor", "obra", "escuela", "corriente", "concepto"},
+                              {"autor", "obra", "escuela", "corriente", "concepto"}),
+    "pertenece_a":           ({"autor", "concepto", "escuela"}, {"escuela", "corriente"}),
+    "estudia_a":             ({"autor", "obra"}, {"poblacion", "cultura"}),
+    "contemporaneo_de":      ({"autor"}, {"autor"}),
+    "parte_del_debate":      ({"autor", "obra", "concepto", "poblacion", "escuela", "corriente"},
+                              {"debate"}),
+    "es_mentor_de":          ({"autor"}, {"autor"}),
+    "colabora_con":          ({"autor"}, {"autor"}),
+}
+
+
+def _validar_tipo_relacion(tipo: str) -> tuple[bool, str | None]:
+    """Verifica que el tipo de relación sea canónico (Nivel A)."""
+    if tipo not in TIPOS_VALIDOS_RELACION:
+        return False, f"Tipo '{tipo}' no es canónico. Válidos: {sorted(TIPOS_VALIDOS_RELACION)}"
+    return True, None
+
+
+def _validar_no_reflexividad(origen_id: int, destino_id: int) -> tuple[bool, str | None]:
+    """Verifica que un nodo no se conecte a sí mismo."""
+    if origen_id == destino_id:
+        return False, "Un nodo no puede conectarse a sí mismo (no reflexividad)"
+    return True, None
+
+
+def _validar_firewall_poblacion(conn: sqlite3.Connection, origen_id: int, destino_id: int,
+                                 tipo: str) -> tuple[bool, str | None]:
+    """
+    Firewall epistemológico (Manifiesto §5.3):
+    - poblacion SOLO puede ser destino de 'estudia_a'
+    - poblacion SOLO puede ser origen de 'parte_del_debate'
+    """
+    tipos_nodo = dict(conn.execute("SELECT id, tipo FROM nodos").fetchall())
+    tipo_origen = tipos_nodo.get(origen_id)
+    tipo_destino = tipos_nodo.get(destino_id)
+
+    if tipo_origen is None or tipo_destino is None:
+        return True, None
+
+    if tipo_origen == "poblacion" and tipo != "parte_del_debate":
+        return False, (f"Firewall: 'poblacion' como origen solo permite 'parte_del_debate', "
+                       f"no '{tipo}'")
+
+    if tipo_destino == "poblacion" and tipo != "estudia_a":
+        return False, (f"Firewall: 'poblacion' como destino solo permite 'estudia_a', "
+                       f"no '{tipo}'")
+
+    return True, None
+
+
+def _validar_compatibilidad_nodos(conn: sqlite3.Connection, origen_id: int, destino_id: int,
+                                   tipo: str) -> tuple[bool, str | None]:
+    """Verifica que los tipos de nodo sean compatibles con el tipo de relación."""
+    if tipo not in COMPATIBILIDAD_RELACIONES:
+        return True, None
+
+    tipos_nodo = dict(conn.execute("SELECT id, tipo FROM nodos").fetchall())
+    tipo_origen = tipos_nodo.get(origen_id)
+    tipo_destino = tipos_nodo.get(destino_id)
+
+    if tipo_origen is None or tipo_destino is None:
+        return True, None
+
+    origenes_ok, destinos_ok = COMPATIBILIDAD_RELACIONES[tipo]
+    errores = []
+    if tipo_origen not in origenes_ok:
+        errores.append(f"Origen tipo '{tipo_origen}' no compatible con '{tipo}' (esperaba: {sorted(origenes_ok)})")
+    if tipo_destino not in destinos_ok:
+        errores.append(f"Destino tipo '{tipo_destino}' no compatible con '{tipo}' (esperaba: {sorted(destinos_ok)})")
+
+    if errores:
+        return False, "; ".join(errores)
+    return True, None
+
+
+def _validar_evidencia(fuente: str | None, cita_textual: str | None) -> tuple[bool, str | None]:
+    """Verifica que la relación tenga evidencia documental (Manifiesto §6.2)."""
+    if not fuente and not cita_textual:
+        return False, "Relación sin evidencia: se requiere al menos 'fuente' o 'cita_textual'"
+    return True, None
+
+
+def validar_relacion(conn: sqlite3.Connection, origen_id: int, destino_id: int,
+                     tipo: str, fuente: str | None = None,
+                     cita_textual: str | None = None) -> tuple[bool, str | None]:
+    """
+    Punto de entrada único para validación ontológica de relaciones.
+
+    Ejecuta todas las validaciones definidas en el Manifiesto v1.1:
+    1. Tipo de relación canónico
+    2. No reflexividad
+    3. Firewall epistemológico (poblacion)
+    4. Compatibilidad origen/destino
+    5. Evidencia documental
+
+    Retorna:
+        (True, None) si la relación es válida
+        (False, "error(s)") si no pasa alguna validación
+    """
+    validadores = [
+        ("tipo_relacion", lambda: _validar_tipo_relacion(tipo)),
+        ("reflexividad", lambda: _validar_no_reflexividad(origen_id, destino_id)),
+        ("firewall", lambda: _validar_firewall_poblacion(conn, origen_id, destino_id, tipo)),
+        ("compatibilidad", lambda: _validar_compatibilidad_nodos(conn, origen_id, destino_id, tipo)),
+        ("evidencia", lambda: _validar_evidencia(fuente, cita_textual)),
+    ]
+
+    errores = []
+    for nombre, validator in validadores:
+        ok, error = validator()
+        if not ok:
+            errores.append(f"[{nombre}] {error}")
+
+    if errores:
+        return False, " | ".join(errores)
+    return True, None
