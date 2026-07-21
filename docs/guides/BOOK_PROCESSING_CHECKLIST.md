@@ -204,7 +204,7 @@ Este checklist garantiza que un libro quedó completamente procesado.
 
 ### Documentación
 
-- [ ] Se registraron las métricas de calidad (ver QUALITY_METRICS.md)
+- [ ] Se registraron las métricas de calidad (ver [QUALITY_METRICS.md](../operations/QUALITY_METRICS.md))
 - [ ] Se anotaron problemas encontrados (si los hubo)
 - [ ] Se creó backup final
 

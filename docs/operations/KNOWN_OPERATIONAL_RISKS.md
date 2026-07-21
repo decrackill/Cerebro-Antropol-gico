@@ -23,7 +23,7 @@ No se proponen cambios de código. Solo procedimientos.
 | **Probabilidad** | Media |
 | **Impacto** | Alto |
 | **Cómo detectarlo** | No hay backup reciente en `data/` |
-| **Cómo mitigarlo** | Seguir EXTRACTION_PROTOCOL.md (FASE B siempre) |
+| **Cómo mitigarlo** | Seguir [EXTRACTION_PROTOCOL.md](../guides/EXTRACTION_PROTOCOL.md) (FASE B siempre) |
 | **Cómo recuperarse** | Si no hay backup, no se puede recuperar |
 
 ### R1.2: Eliminar nodos importantes por error

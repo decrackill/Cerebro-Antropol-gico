@@ -7,7 +7,7 @@
 
 ## Referencia
 
-Este plan reutiliza el [EXTRACTION_ROADMAP.md](EXTRACTION_ROADMAP.md) como base.
+Este plan reutiliza el [EXTRACTION_ROADMAP.md](../reports/EXTRACTION_ROADMAP.md) como base.
 Las hipótesis, umbrales de aceptación y criterios de decisión están definidos allí.
 
 ---
@@ -43,7 +43,7 @@ Las hipótesis, umbrales de aceptación y criterios de decisión están definido
 1. Crear backup de DB
 2. Extraer libro completo
 3. Revisar candidatos manualmente
-4. Registrar métricas (ver QUALITY_METRICS.md)
+4. Registrar métricas (ver [QUALITY_METRICS.md](QUALITY_METRICS.md))
 5. No insertar en DB hasta completar revisión
 
 ### Muestreo para Revisión Manual
