@@ -1,5 +1,5 @@
 """
-Exporta data/grafo.db a src/datos.json para que el frontend lo consuma
+Exporta data/grafo.db a public/datos.json para que el frontend lo consuma
 sin necesidad de un backend corriendo.
 
 Uso:
@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 DB_PATH = Path(__file__).parent.parent / "data" / "grafo.db"
-OUT_PATH = Path(__file__).parent.parent / "src" / "datos.json"
+OUT_PATH = Path(__file__).parent.parent / "public" / "datos.json"
 
 
 def main():
