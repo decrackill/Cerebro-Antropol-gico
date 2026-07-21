@@ -4,7 +4,7 @@ import fcose from 'cytoscape-fcose'
 cytoscape.use(fcose)
 
 let cy = null
-let datosOriginales = { nodos: [], relaciones: [] }
+let nodoActual = null
 
 const COLOR_POR_TIPO = {
   autor: '#D85A30',
@@ -18,8 +18,6 @@ const COLOR_POR_TIPO = {
 }
 
 export function inicializarVisualizacion(nodos, relaciones) {
-  datosOriginales = { nodos, relaciones }
-
   const elementos = [
     ...nodos.map((n) => ({
       data: { id: n.id, label: n.nombre, tipo: n.tipo, resumen: n.descripcion || n.resumen, metadata: n.metadatos || n.metadata },
@@ -49,8 +47,14 @@ export function inicializarVisualizacion(nodos, relaciones) {
           'font-size': 11,
           'text-valign': 'bottom',
           'text-margin-y': 6,
-          width: (ele) => 24 + ele.degree() * 6,
-          height: (ele) => 24 + ele.degree() * 6,
+          width: (ele) => {
+            const d = ele.degree()
+            return d > 10 ? 30 + d * 3 : 20 + d * 4
+          },
+          height: (ele) => {
+            const d = ele.degree()
+            return d > 10 ? 30 + d * 3 : 20 + d * 4
+          },
         },
       },
       {
@@ -85,10 +89,6 @@ export function inicializarVisualizacion(nodos, relaciones) {
         selector: '.oculto-filtro',
         style: { display: 'none' },
       },
-      {
-        selector: '.atenuado',
-        style: { opacity: 0.15 },
-      },
     ],
     layout: {
       name: 'fcose',
@@ -107,10 +107,28 @@ export function inicializarVisualizacion(nodos, relaciones) {
     },
   })
 
-  cy.on('tap', 'node', (evt) => mostrarPanel(evt.target.data()))
+  cy.on('tap', 'node', (evt) => {
+    activarVecindario(evt.target)
+    mostrarPanel(evt.target.data())
+  })
+
+  cy.on('tap', (evt) => {
+    if (evt.target === cy) {
+      desactivarVecindario()
+      ocultarPanel()
+    }
+  })
+
+  cy.on('mouseover', 'node', (evt) => mostrarTooltip(evt.originalEvent, evt.target.data()))
+  cy.on('mouseout', 'node', () => ocultarTooltip())
   cy.on('mouseover', 'edge', (evt) => evt.target.addClass('resaltada'))
   cy.on('mouseout', 'edge', (evt) => evt.target.removeClass('resaltada'))
-  document.getElementById('cerrar-panel').addEventListener('click', ocultarPanel)
+  cy.on('mousemove', (evt) => moverTooltip(evt.originalEvent))
+
+  document.getElementById('cerrar-panel').addEventListener('click', () => {
+    desactivarVecindario()
+    ocultarPanel()
+  })
 
   cy.on('zoom', () => {
     const zoomActual = cy.zoom()
@@ -121,17 +139,31 @@ export function inicializarVisualizacion(nodos, relaciones) {
   })
 }
 
+function activarVecindario(nodo) {
+  nodoActual = nodo
+  const vecinos = nodo.neighborhood().nodes()
+  const aristasConectadas = nodo.connectedEdges()
+
+  cy.nodes().removeClass('seleccionado vecino fuera-vecindario')
+  cy.edges().removeClass('arista-conectada arista-fuera')
+
+  nodo.addClass('seleccionado')
+  vecinos.addClass('vecino')
+  cy.nodes().not(nodo).not(vecinos).addClass('fuera-vecindario')
+
+  aristasConectadas.addClass('arista-conectada')
+  cy.edges().not(aristasConectadas).addClass('arista-fuera')
+}
+
+function desactivarVecindario() {
+  nodoActual = null
+  cy.nodes().removeClass('seleccionado vecino fuera-vecindario')
+  cy.edges().removeClass('arista-conectada arista-fuera')
+}
+
 function mostrarPanel(nodo) {
   const nodoElem = cy.getElementById(nodo.id)
   const grado = nodoElem.degree()
-
-  cy.nodes().removeClass('seleccionado vecino atenuado-seleccion')
-  cy.edges().removeClass('arista-conectada')
-
-  nodoElem.addClass('seleccionado')
-  nodoElem.neighborhood().nodes().addClass('vecino')
-  cy.nodes().not(nodoElem).not(nodoElem.neighborhood().nodes()).addClass('atenuado-seleccion')
-  nodoElem.connectedEdges().addClass('arista-conectada')
 
   document.getElementById('panel-titulo').textContent = nodo.label
   document.getElementById('panel-tipo').textContent = `${nodo.tipo} · Grado: ${grado}`
@@ -170,14 +202,11 @@ function saltarANodo(id) {
     zoom: 1.2,
     duration: 400,
   })
-  cy.nodes().unselect()
-  nodo.select()
+  activarVecindario(nodo)
   mostrarPanel(nodo.data())
 }
 
 function ocultarPanel() {
-  cy.nodes().removeClass('seleccionado vecino atenuado-seleccion')
-  cy.edges().removeClass('arista-conectada')
   document.getElementById('panel').classList.add('oculto')
   ocultarCita()
 }
@@ -197,6 +226,28 @@ function mostrarCita(tipo, destino, cita) {
 function ocultarCita() {
   const div = document.getElementById('panel-cita')
   if (div) div.classList.add('oculto')
+}
+
+function mostrarTooltip(event, nodo) {
+  const tooltip = document.getElementById('tooltip')
+  document.getElementById('tooltip-tipo').textContent = nodo.tipo
+  document.getElementById('tooltip-nombre').textContent = nodo.label
+  document.getElementById('tooltip-desc').textContent = nodo.resumen || ''
+  tooltip.classList.remove('oculto')
+  tooltip.style.left = (event.clientX + 15) + 'px'
+  tooltip.style.top = (event.clientY + 15) + 'px'
+}
+
+function ocultarTooltip() {
+  document.getElementById('tooltip').classList.add('oculto')
+}
+
+function moverTooltip(event) {
+  const tooltip = document.getElementById('tooltip')
+  if (!tooltip.classList.contains('oculto')) {
+    tooltip.style.left = (event.clientX + 15) + 'px'
+    tooltip.style.top = (event.clientY + 15) + 'px'
+  }
 }
 
 export function filtrarPorTipo(tipo) {

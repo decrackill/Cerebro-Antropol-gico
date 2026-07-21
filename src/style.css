@@ -215,18 +215,21 @@ main {
 }
 
 .seleccionado {
-  border-width: 3px !important;
+  border-width: 4px !important;
   border-color: #e94560 !important;
   z-index: 10;
+  width: 40 !important;
+  height: 40 !important;
 }
 
 .vecino {
   border-width: 2px !important;
   border-color: #fff !important;
+  opacity: 1 !important;
 }
 
-.atenuado-seleccion {
-  opacity: 0.15 !important;
+.fuera-vecindario {
+  opacity: 0.03 !important;
 }
 
 .arista-conectada {
@@ -234,8 +237,12 @@ main {
   target-arrow-color: #e94560 !important;
   text-opacity: 1 !important;
   color: #e94560 !important;
-  width: 2.5 !important;
+  width: 2.5px !important;
   z-index: 5;
+}
+
+.arista-fuera {
+  opacity: 0.03 !important;
 }
 
 .relacion-link {
@@ -263,4 +270,41 @@ main {
 
 #panel-cita.oculto {
   display: none;
+}
+
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: #16213e;
+  border: 1px solid #0f3460;
+  border-radius: 6px;
+  padding: 8px 12px;
+  max-width: 280px;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+#tooltip.oculto {
+  display: none;
+}
+
+#tooltip-tipo {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #e94560;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+#tooltip-nombre {
+  font-weight: 600;
+  color: #ecf0f1;
+  margin-bottom: 4px;
+}
+
+#tooltip-desc {
+  color: #bdc3c7;
+  font-size: 0.75rem;
 }
