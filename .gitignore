@@ -1,11 +1,9 @@
 node_modules/
-dist/
 .env
 *.pyc
 __pycache__/
 .mimocode/
 .pytest_cache/
-data/grafo.db
 data/grafo.db.bak
 data/grafo_backup_*.db
 runtime/
