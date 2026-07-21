@@ -122,8 +122,19 @@ export function inicializarVisualizacion(nodos, relaciones) {
 }
 
 function mostrarPanel(nodo) {
+  const nodoElem = cy.getElementById(nodo.id)
+  const grado = nodoElem.degree()
+
+  cy.nodes().removeClass('seleccionado vecino atenuado-seleccion')
+  cy.edges().removeClass('arista-conectada')
+
+  nodoElem.addClass('seleccionado')
+  nodoElem.neighborhood().nodes().addClass('vecino')
+  cy.nodes().not(nodoElem).not(nodoElem.neighborhood().nodes()).addClass('atenuado-seleccion')
+  nodoElem.connectedEdges().addClass('arista-conectada')
+
   document.getElementById('panel-titulo').textContent = nodo.label
-  document.getElementById('panel-tipo').textContent = nodo.tipo
+  document.getElementById('panel-tipo').textContent = `${nodo.tipo} · Grado: ${grado}`
   document.getElementById('panel-desc').textContent = nodo.resumen || ''
 
   const ul = document.getElementById('panel-relaciones')
@@ -165,6 +176,8 @@ function saltarANodo(id) {
 }
 
 function ocultarPanel() {
+  cy.nodes().removeClass('seleccionado vecino atenuado-seleccion')
+  cy.edges().removeClass('arista-conectada')
   document.getElementById('panel').classList.add('oculto')
   ocultarCita()
 }
@@ -204,8 +217,15 @@ export function buscarNodo(texto) {
     cy.nodes().removeClass('oculto-filtro')
     return
   }
+  let primerResultado = null
   cy.nodes().forEach((n) => {
     const coincide = n.data('label').toLowerCase().includes(q)
     n.toggleClass('oculto-filtro', !coincide)
+    if (coincide && !primerResultado) {
+      primerResultado = n
+    }
   })
+  if (primerResultado) {
+    cy.animate({ center: { eles: primerResultado }, zoom: 1.2, duration: 400 })
+  }
 }
