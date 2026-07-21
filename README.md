@@ -95,19 +95,21 @@ Cerebro-antropologico/
 │   └── cli/                     # Menú principal
 ├── scripts/                     # Utilidades standalone
 ├── src/                         # Frontend (JS/CSS)
-├── tests/                       # Tests automatizados
-├── data/                        # Base de datos SQLite
-├── libros/                      # PDFs fuente
-├── runtime/                     # Datos de ejecución
-├── MANIFIESTO_ONTOLOGICO.md     # Fuente de verdad ontológica
-├── ARCHITECTURE.md              # Arquitectura técnica
+├── tests/                       # Tests automatizados (107 tests)
+├── data/                        # Base de datos SQLite [ignorado]
+├── libros/                      # PDFs fuente [ignorado]
+├── runtime/                     # Datos de ejecución [ignorado]
+├── docs/                        # Documentación
+│   ├── ontology/                # Manifiesto Ontológico v1.1
+│   ├── architecture/            # Arquitectura técnica y ROADMAP
+│   └── reports/                 # Reportes y guías
 └── README.md                    # Este archivo
 ```
 
 ## Ejecución de Tests
 
 ```bash
-# Ejecutar todos los tests (89 tests)
+# Ejecutar todos los tests (107 tests)
 pytest
 
 # Ejecutar tests del firewall ontológico
@@ -146,6 +148,7 @@ Copiar `pipeline/.env.example` a `pipeline/.env` y configurar:
 | [MANIFIESTO_ONTOLOGICO.md](docs/ontology/MANIFIESTO_ONTOLOGICO.md) | Ontología formal, reglas, firewall |
 | [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) | Arquitectura técnica, sistema de validación |
 | [ROADMAP.md](docs/architecture/ROADMAP.md) | Estado del proyecto, trabajo pendiente |
+| [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) | Índice completo de documentación |
 
 ## Licencia
 

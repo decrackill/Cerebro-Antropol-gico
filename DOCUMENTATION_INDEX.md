@@ -5,111 +5,48 @@
 
 ---
 
-## Estructura del Proyecto
+## Qué leer primero
 
-```
-Cerebro-antropologico/
-│
-├── README.md                          # Guía de inicio
-├── CONTRIBUTING.md                    # Guía de contribución
-├── package.json                       # Dependencias JavaScript
-├── requirements.txt                   # Dependencias Python
-│
-├── docs/                              # Toda la documentación
-│   ├── ontology/                      # Documentación ontológica
-│   ├── architecture/                  # Arquitectura técnica
-│   ├── reports/                       # Reportes por área
-│   ├── audits/                        # Auditorías realizadas
-│   ├── certification/                 # Certificaciones
-│   ├── historical/                    # Documentación histórica
-│   └── generated/                     # Reportes generados automáticamente
-│
-├── pipeline/                          # Código Python
-├── scripts/                           # Scripts de utilidad
-├── tests/                             # Tests automatizados
-├── src/                               # Frontend (JS/CSS)
-├── data/                              # Base de datos SQLite
-└── runtime/                           # Datos de ejecución
-```
+1. **README.md** — Visión general del proyecto
+2. **docs/ontology/MANIFIESTO_ONTOLOGICO.md** — Ontología formal v1.1
+3. **docs/architecture/ARCHITECTURE.md** — Arquitectura técnica
+4. **CONTRIBUTING.md** — Convenciones de código
 
 ---
 
-## Documentación Oficial
+## Documentación Normativa
 
-Estos documentos definen el proyecto y deben consultarse regularmente.
-
-| Documento | Propósito | Ubicación |
-|-----------|-----------|-----------|
-| README.md | Guía de inicio para nuevos desarrolladores | Raíz |
-| CONTRIBUTING.md | Convenciones de código y ontología | Raíz |
-| MANIFIESTO_ONTOLOGICO.md | **Autoridad máxima** — Ontología formal v1.1 | docs/ontology/ |
-| MANIFIESTO_CHANGELOG.md | Registro de evolución de la ontología | docs/ontology/ |
-| ARCHITECTURE.md | Arquitectura técnica del sistema | docs/architecture/ |
-| ROADMAP.md | Estado del proyecto y trabajo pendiente | docs/architecture/ |
+| Documento | Propósito |
+|-----------|-----------|
+| [MANIFIESTO_ONTOLOGICO.md](docs/ontology/MANIFIESTO_ONTOLOGICO.md) | **Autoridad máxima** — Ontología formal |
+| [MANIFIESTO_CHANGELOG.md](docs/ontology/MANIFIESTO_CHANGELOG.md) | Registro de evolución de la ontología |
 
 ---
 
 ## Documentación Técnica
 
-### Ontología
-
 | Documento | Propósito |
 |-----------|-----------|
-| MANIFIESTO_ONTOLOGICO.md | Definición formal de la ontología (8 nodos, 12 relaciones) |
-| MANIFIESTO_CHANGELOG.md | Historial de cambios en la ontología |
-
-### Arquitectura
-
-| Documento | Propósito |
-|-----------|-----------|
-| ARCHITECTURE.md | Estructura del proyecto, pipeline, sistema de validación |
-| ROADMAP.md | Fases completadas y pendientes |
+| [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) | Estructura del proyecto, pipeline, validación |
+| [ROADMAP.md](docs/architecture/ROADMAP.md) | Fases completadas y pendientes |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Convenciones de código y ontología |
 
 ---
 
-## Reportes
-
-### Migración
+## Guías
 
 | Documento | Propósito |
 |-----------|-----------|
-| MIGRATION_GUIDE.md | Guía técnica para ejecutar la migración |
-| MIGRATION_REPORT.md | Reporte de la migración ejecutada |
-| PRE_MIGRATION_CHECKLIST.md | Checklist previo a la migración |
-
-### Exportación
-
-| Documento | Propósito |
-|-----------|-----------|
-| EXPORT_VALIDATION.md | Validación del proceso de exportación |
-| EXPORT_REPORT.md | Reporte de la exportación ejecutada |
-
-### Frontend
-
-| Documento | Propósito |
-|-----------|-----------|
-| FRONTEND_VALIDATION.md | Validación funcional del frontend |
+| [MIGRATION_GUIDE.md](docs/reports/migration/MIGRATION_GUIDE.md) | Cómo ejecutar la migración ontológica |
 
 ---
 
-## Auditorías
+## Reportes Activos
 
 | Documento | Propósito |
 |-----------|-----------|
-| COMPATIBILITY_REPORT.md | Auditoría de compatibilidad entre repositorios |
-| PREPRODUCTION_REVIEW.md | Certificación preproducción del migrador |
-| POST_MIGRATION_VALIDATION.md | Validación post-migración en entorno espejo |
-| VALIDACION_MIGRACION.md | Análisis semántico de cada tipo de migración |
-| INTEGRATION_PLAN.md | Plan de integración al repositorio principal |
-
----
-
-## Certificaciones
-
-| Documento | Propósito |
-|-----------|-----------|
-| READY_FOR_PRODUCTION.md | Estado del repositorio antes de la migración |
-| PROJECT_CERTIFICATION.md | Certificación final del proyecto completo |
+| [EXPORT_VALIDATION.md](docs/reports/export/EXPORT_VALIDATION.md) | Validación del proceso de exportación |
+| [FRONTEND_VALIDATION.md](docs/reports/frontend/FRONTEND_VALIDATION.md) | Validación funcional del frontend |
 
 ---
 
@@ -117,42 +54,25 @@ Estos documentos definen el proyecto y deben consultarse regularmente.
 
 Estos documentos se conservan por trazabilidad pero no son activos.
 
-| Documento | Propósito | Fecha |
-|-----------|-----------|-------|
-| cierre_migracion_ontologica.md | Cierre de la migración ontológica anterior | 2026-07-20 |
-| estado_actual.md | Estado de la DB en momento de auditoría | 2026-07-20 |
-| post_migration_report.md | Reporte post-migración anterior | 2026-07-20 |
-| verificacion_migracion.md | Verificación de migración anterior | 2026-07-20 |
-| relaciones_pendientes.md | Tipos no canónicos pendientes de decisión | 2026-07-20 |
-
----
-
-## Reportes Generados
-
-Estos documentos se generaron automáticamente durante la ejecución.
-
-| Documento | Generado por |
-|-----------|--------------|
-| reporte_migracion_apply_*.md | migrate_v1_1.py --apply |
-| reporte_migracion_dryrun_*.md | migrate_v1_1.py --dry-run |
-
----
-
-## Orden Recomendado de Lectura
-
-Para nuevos desarrolladores:
-
-1. **README.md** — Visión general del proyecto
-2. **docs/ontology/MANIFIESTO_ONTOLOGICO.md** — Ontología formal
-3. **docs/architecture/ARCHITECTURE.md** — Arquitectura técnica
-4. **CONTRIBUTING.md** — Convenciones de código
-5. **docs/architecture/ROADMAP.md** — Estado del proyecto
-
-Para entender la migración:
-
-1. **docs/ontology/MANIFIESTO_ONTOLOGICO.md** — Ontología v1.1
-2. **docs/reports/migration/MIGRATION_GUIDE.md** — Cómo se migró
-3. **docs/audits/VALIDACION_MIGRACION.md** — Por qué se migró así
+| Documento | Propósito |
+|-----------|-----------|
+| [COMPATIBILITY_REPORT.md](docs/reports/historical/COMPATIBILITY_REPORT.md) | Auditoría de compatibilidad entre repositorios |
+| [INTEGRATION_PLAN.md](docs/reports/historical/INTEGRATION_PLAN.md) | Plan de integración al repositorio principal |
+| [POST_MIGRATION_VALIDATION.md](docs/reports/historical/POST_MIGRATION_VALIDATION.md) | Validación post-migración en entorno espejo |
+| [PREPRODUCTION_REVIEW.md](docs/reports/historical/PREPRODUCTION_REVIEW.md) | Certificación preproducción del migrador |
+| [VALIDACION_MIGRACION.md](docs/reports/historical/VALIDACION_MIGRACION.md) | Análisis semántico de cada tipo de migración |
+| [PROJECT_CERTIFICATION.md](docs/reports/historical/PROJECT_CERTIFICATION.md) | Certificación final del proyecto |
+| [READY_FOR_PRODUCTION.md](docs/reports/historical/READY_FOR_PRODUCTION.md) | Estado del repositorio pre-migración |
+| [REPOSITORY_ORGANIZATION_REPORT.md](docs/reports/historical/REPOSITORY_ORGANIZATION_REPORT.md) | Reporte de organización previo |
+| [PRE_MIGRATION_CHECKLIST.md](docs/reports/historical/PRE_MIGRATION_CHECKLIST.md) | Checklist previo a la migración |
+| [MIGRATION_REPORT.md](docs/reports/historical/MIGRATION_REPORT.md) | Reporte de la migración ejecutada |
+| [EXPORT_REPORT.md](docs/reports/historical/EXPORT_REPORT.md) | Reporte de la exportación ejecutada |
+| [reporte_migracion_*.md](docs/reports/historical/) | Reportes generados automáticamente |
+| [cierre_migracion_ontologica.md](docs/reports/historical/) | Cierre de migración anterior |
+| [estado_actual.md](docs/reports/historical/) | Estado de la DB en momento de auditoría |
+| [post_migration_report.md](docs/reports/historical/) | Reporte post-migración anterior |
+| [verificacion_migracion.md](docs/reports/historical/) | Verificación de migración anterior |
+| [relaciones_pendientes.md](docs/reports/historical/) | Tipos no canónicos pendientes |
 
 ---
 
