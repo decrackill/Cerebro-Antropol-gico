@@ -38,6 +38,19 @@
 | Documento | Propósito |
 |-----------|-----------|
 | [MIGRATION_GUIDE.md](docs/reports/migration/MIGRATION_GUIDE.md) | Cómo ejecutar la migración ontológica |
+| [EXTRACTION_PROTOCOL.md](docs/guides/EXTRACTION_PROTOCOL.md) | Procedimiento completo de extracción |
+| [BOOK_PROCESSING_CHECKLIST.md](docs/guides/BOOK_PROCESSING_CHECKLIST.md) | Checklist de verificación por libro |
+| [DATA_INTEGRITY_PROTOCOL.md](docs/guides/DATA_INTEGRITY_PROTOCOL.md) | Protección de la base de datos |
+
+---
+
+## Operaciones
+
+| Documento | Propósito |
+|-----------|-----------|
+| [QUALITY_METRICS.md](docs/operations/QUALITY_METRICS.md) | Definición de métricas de calidad |
+| [KNOWN_OPERATIONAL_RISKS.md](docs/operations/KNOWN_OPERATIONAL_RISKS.md) | Riesgos y procedimientos de recuperación |
+| [EXTRACTION_EXPERIMENT_PLAN.md](docs/operations/EXTRACTION_EXPERIMENT_PLAN.md) | Validación de hipótesis H1-H6 |
 
 ---
 
@@ -47,6 +60,8 @@
 |-----------|-----------|
 | [EXPORT_VALIDATION.md](docs/reports/export/EXPORT_VALIDATION.md) | Validación del proceso de exportación |
 | [FRONTEND_VALIDATION.md](docs/reports/frontend/FRONTEND_VALIDATION.md) | Validación funcional del frontend |
+| [EXTRACTION_SYSTEM_AUDIT.md](docs/reports/EXTRACTION_SYSTEM_AUDIT.md) | Auditoría del sistema de extracción |
+| [EXTRACTION_ROADMAP.md](docs/reports/EXTRACTION_ROADMAP.md) | Roadmap de evolución v1.2/v1.3/v2.0 |
 
 ---
 
@@ -67,12 +82,8 @@ Estos documentos se conservan por trazabilidad pero no son activos.
 | [PRE_MIGRATION_CHECKLIST.md](docs/reports/historical/PRE_MIGRATION_CHECKLIST.md) | Checklist previo a la migración |
 | [MIGRATION_REPORT.md](docs/reports/historical/MIGRATION_REPORT.md) | Reporte de la migración ejecutada |
 | [EXPORT_REPORT.md](docs/reports/historical/EXPORT_REPORT.md) | Reporte de la exportación ejecutada |
-| [reporte_migracion_*.md](docs/reports/historical/) | Reportes generados automáticamente |
-| [cierre_migracion_ontologica.md](docs/reports/historical/) | Cierre de migración anterior |
-| [estado_actual.md](docs/reports/historical/) | Estado de la DB en momento de auditoría |
-| [post_migration_report.md](docs/reports/historical/) | Reporte post-migración anterior |
-| [verificacion_migracion.md](docs/reports/historical/) | Verificación de migración anterior |
-| [relaciones_pendientes.md](docs/reports/historical/) | Tipos no canónicos pendientes |
+| [PROJECT_MAINTAINABILITY_REVIEW.md](docs/reports/historical/PROJECT_MAINTAINABILITY_REVIEW.md) | Revisión de mantenibilidad |
+| [REPOSITORY_SIMPLIFICATION_PLAN.md](docs/reports/historical/REPOSITORY_SIMPLIFICATION_PLAN.md) | Plan de simplificación del repositorio |
 
 ---
 
