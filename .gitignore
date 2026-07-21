@@ -10,5 +10,4 @@ data/grafo.db.bak
 data/grafo_backup_*.db
 runtime/
 libros/*.pdf
-public/datos.json
 *.log
