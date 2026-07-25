@@ -5,7 +5,21 @@ cytoscape.use(fcose)
 
 let cy = null
 let nodoActual = null
+let focusedNode = null
+let focusAnim = null
+let focusedOriginalSize = null
 
+
+// V3 — Grosor de Aristas por Nivel Ontológico
+const NIVEL_A = new Set([
+  'autor_de', 'influenciado_por', 'critica_a', 'desarrolla_concepto',
+  'redefine_a', 'precursor_de', 'pertenece_a', 'estudia_a',
+  'contemporaneo_de', 'parte_del_debate', 'es_mentor_de', 'colabora_con'
+])
+
+const NIVEL_B = new Set([
+  'contradice', 'relacionado_con', 'depende_de'
+])
 const COLOR_POR_TIPO = {
   autor: '#D85A30',
   obra: '#1D9E75',
@@ -47,14 +61,9 @@ export function inicializarVisualizacion(nodos, relaciones) {
           'font-size': 11,
           'text-valign': 'bottom',
           'text-margin-y': 6,
-          width: (ele) => {
-            const d = ele.degree()
-            return d > 10 ? 30 + d * 3 : 20 + d * 4
-          },
-          height: (ele) => {
-            const d = ele.degree()
-            return d > 10 ? 30 + d * 3 : 20 + d * 4
-          },
+          width: (ele) => 14 + Math.min(ele.degree() * 2.5, 36),
+          height: (ele) => 14 + Math.min(ele.degree() * 2.5, 36),
+          'border-width': (ele) => { const c = Number(ele.data('centralidad')) || 0; return 1 + c * 8; },
         },
       },
       {
@@ -73,6 +82,26 @@ export function inicializarVisualizacion(nodos, relaciones) {
         },
       },
       {
+        selector: 'edge[tipoedge = "Nivel_A"]',
+        style: { width: 2.0 },
+      },
+      {
+        selector: 'edge[tipoedge = "Nivel_B"]',
+        style: { width: 1.0 },
+      },
+      {
+        selector: 'edge[evidencia = "cita"]',
+        style: { 'line-color': '#e94560', 'target-arrow-color': '#e94560', opacity: 0.9 },
+      },
+      {
+        selector: 'edge[evidencia = "fuente"]',
+        style: { 'line-color': '#f28a9b', 'target-arrow-color': '#f28a9b', opacity: 0.7 },
+      },
+      {
+        selector: 'edge[evidencia = "ninguna"]',
+        style: { 'line-color': '#777777', 'target-arrow-color': '#777777', opacity: 0.4 },
+      },
+      {
         selector: 'edge:active, edge.resaltada',
         style: { 'text-opacity': 1, 'line-color': '#aaa' },
       },
@@ -89,22 +118,54 @@ export function inicializarVisualizacion(nodos, relaciones) {
         selector: '.oculto-filtro',
         style: { display: 'none' },
       },
+      {
+        selector: 'node.seleccionado',
+        style: {
+          'border-width': 6,
+          'border-color': '#e94560',
+          'border-opacity': 1,
+          'z-index': 12,
+        },
+      },
+      {
+        selector: 'node.focused',
+        style: {
+          'border-width': 5,
+          'border-color': '#00e5ff',
+          'border-opacity': 1,
+          opacity: 1,
+          'z-index': 11,
+        },
+      },
+      {
+        selector: 'node.hovered',
+        style: { 'border-width': 3, 'border-opacity': 0.8, 'z-index': 10 },
+      },
     ],
     layout: {
       name: 'fcose',
       randomize: true,
       animate: true,
-      animationDuration: 800,
-      nodeRepulsion: 25000,
-      idealEdgeLength: 180,
-      edgeElasticity: 0.05,
-      gravity: 0.15,
-      numIter: 4000,
+      animationDuration: 500,
+      quality: nodos.length > 3000 ? 'draft' : nodos.length > 1000 ? 'default' : 'proof',
+      nodeRepulsion: 18000,
+      idealEdgeLength: 160,
+      edgeElasticity: 0.15,
+      gravity: 0.35,
+      gravityRange: 2.5,
+      numIter: nodos.length > 3000 ? 1000 : nodos.length > 1000 ? 1500 : 2000,
       tile: true,
       packComponents: true,
-      componentSpacing: 200,
+      componentSpacing: 150,
       nodeDimensionsIncludeLabels: true,
+      padding: 30,
     },
+  })
+
+  // V7 — Representación de Centralidad
+  const bc = cy.elements().betweennessCentrality()
+  cy.nodes().forEach(nodo => {
+    nodo.data('centralidad', bc.betweennessNormalized(nodo))
   })
 
   cy.on('tap', 'node', (evt) => {
@@ -119,8 +180,14 @@ export function inicializarVisualizacion(nodos, relaciones) {
     }
   })
 
-  cy.on('mouseover', 'node', (evt) => mostrarTooltip(evt.originalEvent, evt.target.data()))
-  cy.on('mouseout', 'node', () => ocultarTooltip())
+  cy.on('mouseover', 'node', (evt) => {
+    evt.target.addClass('hovered')
+    mostrarTooltip(evt.originalEvent, evt.target.data())
+  })
+  cy.on('mouseout', 'node', (evt) => {
+    evt.target.removeClass('hovered')
+    ocultarTooltip()
+  })
   cy.on('mouseover', 'edge', (evt) => evt.target.addClass('resaltada'))
   cy.on('mouseout', 'edge', (evt) => evt.target.removeClass('resaltada'))
   cy.on('mousemove', (evt) => moverTooltip(evt.originalEvent))
@@ -136,6 +203,49 @@ export function inicializarVisualizacion(nodos, relaciones) {
       .selector('node')
       .style('label', zoomActual > 0.6 ? 'data(label)' : '')
       .update()
+  })
+
+  // V8 — Inercia al Arrastrar
+  let grabPos = null
+  let grabTime = null
+  let inertiaAnim = null
+
+  cy.on('grab', 'node', (e) => {
+    if (inertiaAnim) {
+      inertiaAnim.stop()
+      inertiaAnim = null
+    }
+    grabPos = e.target.position()
+    grabTime = Date.now()
+  })
+
+  cy.on('drag', 'node', (e) => {
+    grabPos = e.target.position()
+    grabTime = Date.now()
+  })
+
+  cy.on('free', 'node', (e) => {
+    if (!grabPos || !grabTime) return
+    const now = Date.now()
+    const dt = now - grabTime
+    if (dt > 100 || dt === 0) return
+    const pos = e.target.position()
+    const vx = (pos.x - grabPos.x) / dt * 16
+    const vy = (pos.y - grabPos.y) / dt * 16
+    const speed = Math.sqrt(vx * vx + vy * vy)
+    const maxDist = 100
+    const dist = Math.min(speed * 0.3, maxDist)
+    const angle = Math.atan2(vy, vx)
+    const destino = {
+      x: pos.x + Math.cos(angle) * dist,
+      y: pos.y + Math.sin(angle) * dist
+    }
+    e.target.animate({
+      position: destino,
+      duration: 250,
+      easing: 'ease-out'
+    })
+    setTimeout(() => { inertiaAnim = null }, 260)
   })
 }
 
@@ -195,15 +305,54 @@ function mostrarPanel(nodo) {
   document.getElementById('panel').classList.remove('oculto')
 }
 
+function focusNode(nodo) {
+  if (focusAnim) {
+    focusAnim.stop()
+    if (focusedNode && focusedOriginalSize) {
+      focusedNode.style({ width: focusedOriginalSize.w, height: focusedOriginalSize.h })
+    }
+    focusAnim = null
+  }
+  if (focusedNode) {
+    focusedNode.removeClass('focused')
+  }
+  focusedNode = nodo
+  focusedOriginalSize = { w: nodo.width(), h: nodo.height() }
+  nodo.addClass('focused')
+  const w = focusedOriginalSize.w
+  const h = focusedOriginalSize.h
+  focusAnim = nodo.animate({
+    style: { width: w * 1.15, height: h * 1.15 },
+    duration: 400,
+    easing: 'ease-in-out',
+  })
+  setTimeout(() => {
+    if (!focusAnim) return
+    focusAnim = nodo.animate({
+      style: { width: w, height: h },
+      duration: 400,
+      easing: 'ease-in-out',
+      complete: () => {
+        nodo.removeClass('focused')
+        focusAnim = null
+        focusedNode = null
+        focusedOriginalSize = null
+      }
+    })
+  }, 400)
+}
+
 function saltarANodo(id) {
   const nodo = cy.getElementById(id)
   cy.animate({
     center: { eles: nodo },
     zoom: 1.2,
-    duration: 400,
+    duration: 500,
+    easing: 'ease-in-out-cubic',
   })
   activarVecindario(nodo)
   mostrarPanel(nodo.data())
+  focusNode(nodo)
 }
 
 function ocultarPanel() {
@@ -230,9 +379,32 @@ function ocultarCita() {
 
 function mostrarTooltip(event, nodo) {
   const tooltip = document.getElementById('tooltip')
+  const nodoElem = cy.getElementById(nodo.id)
+  const degree = nodoElem.degree()
+  const centralidad = Number(nodoElem.data('centralidad')) || 0
+  const edges = nodoElem.connectedEdges()
+  let nivelA = 0, nivelB = 0
+  edges.forEach(e => {
+    if (e.data('tipoedge') === 'Nivel_A') nivelA++
+    else if (e.data('tipoedge') === 'Nivel_B') nivelB++
+  })
+  let evCita = 0, evFuente = 0, evNinguna = 0
+  edges.forEach(e => {
+    const ev = e.data('evidencia')
+    if (ev === 'cita') evCita++
+    else if (ev === 'fuente') evFuente++
+    else evNinguna++
+  })
+  const evLabel = evCita > 0 ? evCita + ' con cita' : evFuente > 0 ? evFuente + ' con fuente' : 'Sin evidencia'
+
   document.getElementById('tooltip-tipo').textContent = nodo.tipo
   document.getElementById('tooltip-nombre').textContent = nodo.label
   document.getElementById('tooltip-desc').textContent = nodo.resumen || ''
+  document.getElementById('tooltip-metricas').innerHTML =
+    'Grado: ' + degree + ' | Centralidad: ' + centralidad.toFixed(2) +
+    '<br>Relaciones: ' + nivelA + ' A / ' + nivelB + ' B' +
+    '<br>Evidencia: ' + evLabel
+
   tooltip.classList.remove('oculto')
   tooltip.style.left = (event.clientX + 15) + 'px'
   tooltip.style.top = (event.clientY + 15) + 'px'
@@ -250,15 +422,45 @@ function moverTooltip(event) {
   }
 }
 
+let transitionId = 0
+
 export function filtrarPorTipo(tipo) {
   if (!cy) return
+  const currentTransition = ++transitionId
+  cy.nodes().stop(true)
+
   if (tipo === 'todos') {
-    cy.nodes().removeClass('oculto-filtro')
+    const ocultos = cy.nodes().filter('.oculto-filtro')
+    if (ocultos.length === 0) return
+    ocultos.removeClass('oculto-filtro')
+    ocultos.forEach((n) => {
+      n.animate({ style: { opacity: 1 }, duration: 200 })
+    })
     return
   }
-  cy.nodes().forEach((n) => {
-    n.toggleClass('oculto-filtro', n.data('tipo') !== tipo)
+
+  const aOcultar = cy.nodes().filter((n) => !n.hasClass('oculto-filtro') && n.data('tipo') !== tipo)
+  const aMostrar = cy.nodes().filter((n) => n.hasClass('oculto-filtro') && n.data('tipo') === tipo)
+
+  if (aOcultar.length === 0 && aMostrar.length === 0) return
+
+  aOcultar.forEach((n) => {
+    n.animate({ style: { opacity: 0 }, duration: 200, complete: () => {
+      if (transitionId !== currentTransition) return
+      n.addClass('oculto-filtro')
+    }})
   })
+
+  if (aMostrar.length > 0) {
+    const waitMs = aOcultar.length > 0 ? 200 : 0
+    setTimeout(() => {
+      if (transitionId !== currentTransition) return
+      aMostrar.forEach((n) => {
+        n.removeClass('oculto-filtro')
+        n.animate({ style: { opacity: 1 }, duration: 200 })
+      })
+    }, waitMs)
+  }
 }
 
 export function buscarNodo(texto) {
