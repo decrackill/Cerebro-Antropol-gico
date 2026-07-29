@@ -92,8 +92,6 @@ export function inicializarVisualizacion(nodos, relaciones) {
     })),
   ]
 
-  initTheme()
-
   cy = cytoscape({
     container: document.getElementById('grafo'),
     elements: elementos,
@@ -247,18 +245,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
     padding: 30,
   }).run()
 
-  // Apply initial theme colors to cy elements
-  const temaInicial = localStorage.getItem(TEMA_KEY) || 'oscuro'
-  if (temaInicial === 'claro') {
-    cy.nodes().style('color', '#222')
-    cy.edges().style('color', '#555')
-    cy.style()
-      .selector('edge:active, edge.resaltada')
-      .style('line-color', '#333')
-      .style('target-arrow-color', '#333')
-      .style('color', '#222')
-      .update()
-  }
+  initTheme()
 
   // V7 — Representación de Centralidad
   const bc = cy.elements().betweennessCentrality()
@@ -582,27 +569,32 @@ function moverTooltip(event) {
 
 // Theme toggle
 const TEMA_KEY = 'cerebro-tema'
+function aplicarTema(esClaro) {
+  document.body.classList.toggle('tema-claro', esClaro)
+  document.getElementById('tema-toggle').textContent = esClaro ? '☀️' : '🌙'
+  if (!cy) return
+  cy.nodes().style('color', esClaro ? '#1a1a2e' : '#fff')
+  cy.nodes().style('text-background-color', esClaro ? '#f0f2f5' : '#1a1a2e')
+  cy.nodes().style('text-background-opacity', 0.85)
+  cy.edges().style('color', esClaro ? '#444' : '#bbb')
+  cy.style()
+    .selector('edge:active, edge.resaltada')
+    .style('line-color', esClaro ? '#333' : '#fff')
+    .style('target-arrow-color', esClaro ? '#333' : '#fff')
+    .style('color', esClaro ? '#1a1a2e' : '#fff')
+    .update()
+}
+
 function initTheme() {
   const tema = localStorage.getItem(TEMA_KEY) || 'oscuro'
-  document.body.classList.toggle('tema-claro', tema === 'claro')
-  document.getElementById('tema-toggle').textContent = tema === 'claro' ? '☀️' : '🌙'
+  aplicarTema(tema === 'claro')
 }
 
 document.getElementById('tema-toggle')?.addEventListener('click', () => {
-  const esClaro = document.body.classList.toggle('tema-claro')
+  const esClaro = !document.body.classList.contains('tema-claro')
   const tema = esClaro ? 'claro' : 'oscuro'
-  document.getElementById('tema-toggle').textContent = esClaro ? '☀️' : '🌙'
   localStorage.setItem(TEMA_KEY, tema)
-  if (cy) {
-    cy.nodes().style('color', esClaro ? '#222' : '#fff')
-    cy.edges().style('color', esClaro ? '#555' : '#999')
-    cy.style()
-      .selector('edge:active, edge.resaltada')
-      .style('line-color', esClaro ? '#333' : '#fff')
-      .style('target-arrow-color', esClaro ? '#333' : '#fff')
-      .style('color', esClaro ? '#222' : '#fff')
-      .update()
-  }
+  aplicarTema(esClaro)
 })
 
 let transitionId = 0
