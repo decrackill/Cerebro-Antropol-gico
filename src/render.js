@@ -248,7 +248,8 @@ export function inicializarVisualizacion(nodos, relaciones) {
 
   // Stagger reveal after layout
   cy.one('layoutstop', () => {
-    cy.nodes().forEach((node, i) => {
+    const nodes = cy.nodes()
+    nodes.forEach((node, i) => {
       node.animate({
         style: { opacity: 1 },
         duration: 250,
@@ -256,6 +257,13 @@ export function inicializarVisualizacion(nodos, relaciones) {
         easing: 'ease-out',
       })
     })
+    setTimeout(() => {
+      cy.edges().animate({
+        style: { opacity: 1 },
+        duration: 400,
+        easing: 'ease-out',
+      })
+    }, nodes.length * 6 + 100)
   })
 
   // V8 — Inercia al Arrastrar
