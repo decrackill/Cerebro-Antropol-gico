@@ -1,5 +1,5 @@
 import { cargarGrafo } from './grafo.js'
-import { inicializarVisualizacion, filtrarPorTipo, buscarNodo, setTotalCounts } from './render.js'
+import { inicializarVisualizacion, filtrarPorTipo, buscarNodo, setTotalCounts, mostrarAutocomplete, ocultarAutocomplete } from './render.js'
 
 async function init() {
   try {
@@ -22,9 +22,15 @@ async function init() {
     })
   })
 
-  document.getElementById('buscar').addEventListener('input', (e) => {
+  const searchInput = document.getElementById('buscar')
+  searchInput.addEventListener('input', (e) => {
     buscarNodo(e.target.value)
+    mostrarAutocomplete(e.target.value)
   })
+  searchInput.addEventListener('focus', (e) => {
+    if (e.target.value.trim()) mostrarAutocomplete(e.target.value)
+  })
+  searchInput.addEventListener('blur', () => ocultarAutocomplete())
 }
 
 init()

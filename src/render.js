@@ -658,3 +658,64 @@ export function buscarNodo(texto) {
   }
   actualizarStats()
 }
+
+let autocompleteHideTimer = null
+
+export function mostrarAutocomplete(texto) {
+  const container = document.getElementById('autocomplete')
+  clearTimeout(autocompleteHideTimer)
+
+  if (!cy || !texto.trim()) {
+    container.classList.remove('visible')
+    container.innerHTML = ''
+    return
+  }
+
+  const q = texto.trim().toLowerCase()
+  const matches = cy.nodes().filter(n => n.data('label').toLowerCase().includes(q))
+
+  if (matches.length === 0) {
+    container.classList.remove('visible')
+    container.innerHTML = ''
+    return
+  }
+
+  const maxMostrar = 20
+  container.innerHTML = ''
+  matches.slice(0, maxMostrar).forEach(n => {
+    const item = document.createElement('div')
+    item.className = 'autocomplete-item'
+    const color = COLOR_POR_TIPO[n.data('tipo')] || '#888'
+    item.innerHTML = `
+      <span class="punto" style="background:${color}"></span>
+      <span>${n.data('label')}</span>
+      <span class="tipo-tag">${n.data('tipo')}</span>
+    `
+    item.addEventListener('click', () => {
+      saltarANodo(n.id())
+      container.classList.remove('visible')
+      container.innerHTML = ''
+      document.getElementById('buscar').value = ''
+    })
+    container.appendChild(item)
+  })
+
+  if (matches.length > maxMostrar) {
+    const mas = document.createElement('div')
+    mas.className = 'autocomplete-item'
+    mas.style.cursor = 'default'
+    mas.style.color = 'var(--text-secondary)'
+    mas.textContent = `... y ${matches.length - maxMostrar} más`
+    container.appendChild(mas)
+  }
+
+  container.classList.add('visible')
+}
+
+export function ocultarAutocomplete() {
+  const container = document.getElementById('autocomplete')
+  autocompleteHideTimer = setTimeout(() => {
+    container.classList.remove('visible')
+    container.innerHTML = ''
+  }, 200)
+}

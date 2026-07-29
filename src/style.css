@@ -113,6 +113,61 @@ header h1::after {
   background: var(--bg-tertiary);
 }
 
+#buscar-wrapper {
+  position: relative;
+  margin-left: auto;
+}
+
+#autocomplete {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 200;
+  display: none;
+}
+
+#autocomplete.visible {
+  display: block;
+}
+
+.autocomplete-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  transition: background 0.15s;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.autocomplete-item:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-item:hover {
+  background: var(--bg-tertiary);
+}
+
+.autocomplete-item .punto {
+  flex-shrink: 0;
+}
+
+.autocomplete-item .tipo-tag {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
 #buscar {
   padding: 0.35rem 0.7rem;
   border: 1px solid var(--border-color);
