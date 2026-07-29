@@ -168,7 +168,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
       },
       {
         selector: 'edge:active, edge.resaltada',
-        style: { 'text-opacity': 1, 'line-color': '#fff', 'target-arrow-color': '#fff', 'z-index': 10 },
+        style: { 'text-opacity': 1, 'line-color': '#fff', 'target-arrow-color': '#fff', color: '#fff', 'z-index': 10 },
       },
       {
         selector: 'node[[degree = 0]]',
@@ -186,25 +186,36 @@ export function inicializarVisualizacion(nodos, relaciones) {
       {
         selector: 'node.seleccionado',
         style: {
-          'border-width': 6,
-          'border-color': '#e94560',
-          'border-opacity': 1,
+          'border-width': 4,
+          'border-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#e94560',
+          'border-opacity': 0.9,
+          'shadow-blur': 24,
+          'shadow-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#e94560',
+          'shadow-opacity': 0.7,
           'z-index': 12,
         },
       },
       {
         selector: 'node.focused',
         style: {
-          'border-width': 5,
+          'border-width': 3,
           'border-color': '#00e5ff',
-          'border-opacity': 1,
-          opacity: 1,
+          'shadow-blur': 18,
+          'shadow-color': '#00e5ff',
+          'shadow-opacity': 0.5,
           'z-index': 11,
         },
       },
       {
         selector: 'node.hovered',
-        style: { 'border-width': 3, 'border-opacity': 0.8, 'z-index': 10 },
+        style: {
+          'border-width': 2,
+          'border-opacity': 0.6,
+          'shadow-blur': 14,
+          'shadow-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#888',
+          'shadow-opacity': 0.4,
+          'z-index': 10,
+        },
       },
     ],
   })
@@ -233,7 +244,12 @@ export function inicializarVisualizacion(nodos, relaciones) {
   if (temaInicial === 'claro') {
     cy.nodes().style('color', '#222')
     cy.edges().style('color', '#555')
-    cy.style().update()
+    cy.style()
+      .selector('edge:active, edge.resaltada')
+      .style('line-color', '#333')
+      .style('target-arrow-color', '#333')
+      .style('color', '#222')
+      .update()
   }
 
   // V7 — Representación de Centralidad
@@ -571,7 +587,12 @@ document.getElementById('tema-toggle')?.addEventListener('click', () => {
   if (cy) {
     cy.nodes().style('color', esClaro ? '#222' : '#fff')
     cy.edges().style('color', esClaro ? '#555' : '#999')
-    cy.style().update()
+    cy.style()
+      .selector('edge:active, edge.resaltada')
+      .style('line-color', esClaro ? '#333' : '#fff')
+      .style('target-arrow-color', esClaro ? '#333' : '#fff')
+      .style('color', esClaro ? '#222' : '#fff')
+      .update()
   }
 })
 
