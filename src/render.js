@@ -184,7 +184,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
 
   cy.elements().style('opacity', 0)
 
-  cy.layout({
+  const layout = cy.layout({
     name: 'fcose',
     randomize: true,
     animate: true,
@@ -201,7 +201,29 @@ export function inicializarVisualizacion(nodos, relaciones) {
     componentSpacing: 150,
     nodeDimensionsIncludeLabels: true,
     padding: 30,
-  }).run()
+  })
+
+  // Stagger reveal after layout
+  cy.one('layoutstop', () => {
+    const nodes = cy.nodes()
+    nodes.forEach((node, i) => {
+      node.animate({
+        style: { opacity: 1 },
+        duration: 250,
+        delay: i * 6,
+        easing: 'ease-out',
+      })
+    })
+    setTimeout(() => {
+      cy.edges().animate({
+        style: { opacity: 1 },
+        duration: 400,
+        easing: 'ease-out',
+      })
+    }, nodes.length * 6 + 100)
+  })
+
+  layout.run()
 
   // V7 — Representación de Centralidad
   const bc = cy.elements().betweennessCentrality()
@@ -244,26 +266,6 @@ export function inicializarVisualizacion(nodos, relaciones) {
       .selector('node')
       .style('label', zoomActual > 0.6 ? 'data(label)' : '')
       .update()
-  })
-
-  // Stagger reveal after layout
-  cy.one('layoutstop', () => {
-    const nodes = cy.nodes()
-    nodes.forEach((node, i) => {
-      node.animate({
-        style: { opacity: 1 },
-        duration: 250,
-        delay: i * 6,
-        easing: 'ease-out',
-      })
-    })
-    setTimeout(() => {
-      cy.edges().animate({
-        style: { opacity: 1 },
-        duration: 400,
-        easing: 'ease-out',
-      })
-    }, nodes.length * 6 + 100)
   })
 
   // V8 — Inercia al Arrastrar
