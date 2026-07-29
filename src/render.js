@@ -184,7 +184,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
 
   cy.elements().style('opacity', 0)
 
-  const layout = cy.layout({
+  cy.layout({
     name: 'fcose',
     randomize: true,
     animate: true,
@@ -201,10 +201,10 @@ export function inicializarVisualizacion(nodos, relaciones) {
     componentSpacing: 150,
     nodeDimensionsIncludeLabels: true,
     padding: 30,
-  })
+  }).run()
 
-  // Stagger reveal after layout
-  cy.one('layoutstop', () => {
+  // Stagger reveal after layout animation
+  setTimeout(() => {
     const nodes = cy.nodes()
     nodes.forEach((node, i) => {
       node.animate({
@@ -221,9 +221,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
         easing: 'ease-out',
       })
     }, nodes.length * 6 + 100)
-  })
-
-  layout.run()
+  }, 600)
 
   // V7 — Representación de Centralidad
   const bc = cy.elements().betweennessCentrality()
