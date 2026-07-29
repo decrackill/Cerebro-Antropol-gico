@@ -44,7 +44,6 @@ export function inicializarVisualizacion(nodos, relaciones) {
         label: r.tipo,
         nota: r.nota || r.fuente,
         cita: r.cita_textual || '',
-        libro: r.libro || '',
       },
     })),
   ]
@@ -287,20 +286,22 @@ function mostrarPanel(nodo) {
     const otroId = edge.data('source') === nodo.id ? edge.data('target') : edge.data('source')
     const otro = cy.getElementById(otroId).data('label')
     const cita = edge.data('cita')
-    const fuente = edge.data('nota')
-    const libro = edge.data('libro')
 
     const li = document.createElement('li')
     li.classList.add('relacion-link')
     li.textContent = `${edge.data('label')} → ${otro}`
+    if (cita) {
+      li.title = cita
+    }
     li.addEventListener('click', () => {
       saltarANodo(otroId)
-      mostrarDetalleRelacion(edge.data('label'), otro, cita, fuente, libro)
+      if (cita) {
+        mostrarCita(edge.data('label'), otro, cita)
+      }
     })
     ul.appendChild(li)
   })
 
-  ocultarCita()
   document.getElementById('panel').classList.remove('oculto')
 }
 
@@ -359,29 +360,15 @@ function ocultarPanel() {
   ocultarCita()
 }
 
-function mostrarDetalleRelacion(tipo, destino, cita, fuente, libro) {
+function mostrarCita(tipo, destino, cita) {
   const div = document.getElementById('panel-cita')
-  div.innerHTML = ''
-  if (libro) {
-    const p = document.createElement('p')
-    p.style.cssText = 'font-size:0.8rem;color:#e94560;margin-bottom:4px;font-weight:500'
-    p.textContent = libro
-    div.appendChild(p)
-  }
-  if (fuente && fuente !== libro) {
-    const p = document.createElement('p')
-    p.style.cssText = 'font-size:0.7rem;color:#999;margin-bottom:4px'
-    p.textContent = fuente
-    div.appendChild(p)
-  }
-  if (cita) {
-    const strong = document.createElement('strong')
-    strong.textContent = 'Cita: '
-    const em = document.createElement('em')
-    em.textContent = `"${cita}"`
-    div.appendChild(strong)
-    div.appendChild(em)
-  }
+  div.textContent = ''
+  const strong = document.createElement('strong')
+  strong.textContent = 'Cita textual: '
+  const em = document.createElement('em')
+  em.textContent = `"${cita}"`
+  div.appendChild(strong)
+  div.appendChild(em)
   div.classList.remove('oculto')
 }
 
