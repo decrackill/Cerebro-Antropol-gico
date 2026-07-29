@@ -8,8 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "db": "python3 scripts/init_db.py",
-    "deploy": "wrangler deploy",
-    "pages:dev": "wrangler pages dev dist --local"
+    "deploy": "wrangler deploy"
   },
   "dependencies": {
     "cytoscape": "^3.30.0",
