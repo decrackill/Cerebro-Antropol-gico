@@ -92,6 +92,8 @@ export function inicializarVisualizacion(nodos, relaciones) {
     })),
   ]
 
+  initTheme()
+
   cy = cytoscape({
     container: document.getElementById('grafo'),
     elements: elementos,
@@ -226,6 +228,14 @@ export function inicializarVisualizacion(nodos, relaciones) {
     padding: 30,
   }).run()
 
+  // Apply initial theme colors to cy elements
+  const temaInicial = localStorage.getItem(TEMA_KEY) || 'oscuro'
+  if (temaInicial === 'claro') {
+    cy.nodes().style('color', '#222')
+    cy.edges().style('color', '#555')
+    cy.style().update()
+  }
+
   // V7 — Representación de Centralidad
   const bc = cy.elements().betweennessCentrality()
   cy.nodes().forEach(nodo => {
@@ -235,6 +245,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
   cy.on('tap', 'node', (evt) => {
     activarVecindario(evt.target)
     mostrarPanel(evt.target.data())
+    bounceNode(evt.target)
   })
 
   cy.on('tap', (evt) => {
@@ -428,6 +439,25 @@ function focusNode(nodo) {
   }, 400)
 }
 
+function bounceNode(nodo) {
+  const w = nodo.width()
+  const h = nodo.height()
+  nodo.addClass('focused')
+  nodo.animate({
+    style: { width: w * 1.25, height: h * 1.25 },
+    duration: 150,
+    easing: 'ease-out',
+    complete: () => {
+      nodo.animate({
+        style: { width: w, height: h },
+        duration: 150,
+        easing: 'ease-in',
+        complete: () => nodo.removeClass('focused'),
+      })
+    },
+  })
+}
+
 function saltarANodo(id) {
   const nodo = cy.getElementById(id)
   cy.animate({
@@ -438,7 +468,7 @@ function saltarANodo(id) {
   })
   activarVecindario(nodo)
   mostrarPanel(nodo.data())
-  focusNode(nodo)
+  bounceNode(nodo)
 }
 
 function ocultarPanel() {
@@ -481,6 +511,7 @@ function ocultarCita() {
 
 function mostrarTooltip(event, nodo) {
   const tooltip = document.getElementById('tooltip')
+  tooltip.style.borderColor = COLOR_POR_TIPO[nodo.tipo] || '#0f3460'
   const nodoElem = cy.getElementById(nodo.id)
   const degree = nodoElem.degree()
   const centralidad = Number(nodoElem.data('centralidad')) || 0
@@ -523,6 +554,26 @@ function moverTooltip(event) {
     tooltip.style.top = (event.clientY + 15) + 'px'
   }
 }
+
+// Theme toggle
+const TEMA_KEY = 'cerebro-tema'
+function initTheme() {
+  const tema = localStorage.getItem(TEMA_KEY) || 'oscuro'
+  document.body.classList.toggle('tema-claro', tema === 'claro')
+  document.getElementById('tema-toggle').textContent = tema === 'claro' ? '☀️' : '🌙'
+}
+
+document.getElementById('tema-toggle')?.addEventListener('click', () => {
+  const esClaro = document.body.classList.toggle('tema-claro')
+  const tema = esClaro ? 'claro' : 'oscuro'
+  document.getElementById('tema-toggle').textContent = esClaro ? '☀️' : '🌙'
+  localStorage.setItem(TEMA_KEY, tema)
+  if (cy) {
+    cy.nodes().style('color', esClaro ? '#222' : '#fff')
+    cy.edges().style('color', esClaro ? '#555' : '#999')
+    cy.style().update()
+  }
+})
 
 let transitionId = 0
 let totalNodeCount = 0
