@@ -225,11 +225,11 @@ export function inicializarVisualizacion(nodos, relaciones) {
       },
       {
         selector: 'node.fuera-vecindario',
-        style: { opacity: 0.06 },
+        style: { opacity: 0.12 },
       },
       {
         selector: 'edge.arista-fuera',
-        style: { opacity: 0.06 },
+        style: { opacity: 0.08 },
       },
       {
         selector: 'node.vecino',
@@ -237,7 +237,7 @@ export function inicializarVisualizacion(nodos, relaciones) {
       },
       {
         selector: 'edge.arista-conectada',
-        style: { 'text-opacity': 1, 'line-color': '#fff', 'target-arrow-color': '#fff', color: '#fff', width: 2.5, 'z-index': 5 },
+        style: { 'text-opacity': 1, width: 2.5, 'z-index': 5 },
       },
     ],
   })
@@ -594,7 +594,7 @@ function aplicarTema(esClaro) {
   cy.nodes().style('text-background-opacity', 0.85)
   cy.edges().style('color', esClaro ? '#444' : '#bbb')
   cy.style()
-    .selector('edge:active, edge.resaltada, edge.arista-conectada')
+    .selector('edge:active, edge.resaltada')
     .style('line-color', esClaro ? '#333' : '#fff')
     .style('target-arrow-color', esClaro ? '#333' : '#fff')
     .style('color', esClaro ? '#1a1a2e' : '#fff')

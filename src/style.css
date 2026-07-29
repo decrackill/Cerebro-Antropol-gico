@@ -416,23 +416,18 @@ main {
   z-index: 10;
 }
 
-.vecino {
-  opacity: 1 !important;
-}
-
 .fuera-vecindario {
-  opacity: 0.06 !important;
+  opacity: 0.12 !important;
 }
 
 .arista-conectada {
   text-opacity: 1 !important;
-  color: var(--accent) !important;
   width: 2.5px !important;
   z-index: 5;
 }
 
 .arista-fuera {
-  opacity: 0.06 !important;
+  opacity: 0.08 !important;
 }
 
 .relacion-link {
