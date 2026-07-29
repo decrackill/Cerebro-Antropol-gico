@@ -262,6 +262,8 @@ export function inicializarVisualizacion(nodos, relaciones) {
   }).run()
 
   initTheme()
+  initParticles()
+  initQuoteCollage(relaciones)
 
   // V7 — Representación de Centralidad
   const bc = cy.elements().betweennessCentrality()
@@ -390,12 +392,15 @@ function activarVecindario(nodo) {
 
   aristasConectadas.addClass('arista-conectada')
   cy.edges().not(aristasConectadas).addClass('arista-fuera')
+
+  ocultarCitasFondo()
 }
 
 function desactivarVecindario() {
   nodoActual = null
   cy.nodes().removeClass('seleccionado vecino fuera-vecindario')
   cy.edges().removeClass('arista-conectada arista-fuera')
+  mostrarCitasFondo()
 }
 
 function mostrarPanel(nodo) {
@@ -612,6 +617,104 @@ document.getElementById('tema-toggle')?.addEventListener('click', () => {
   localStorage.setItem(TEMA_KEY, tema)
   aplicarTema(esClaro)
 })
+
+// Particle background
+let particlesCanvas = null
+let particlesCtx = null
+let particles = []
+let particlesAnimId = null
+let particlesRunning = false
+
+function initParticles() {
+  const canvas = document.getElementById('particles')
+  if (!canvas) return
+  particlesCanvas = canvas
+  particlesCtx = canvas.getContext('2d')
+
+  function resize() {
+    const rect = canvas.parentElement.getBoundingClientRect()
+    canvas.width = rect.width
+    canvas.height = rect.height
+  }
+
+  resize()
+  window.addEventListener('resize', resize)
+
+  const count = Math.min(80, Math.floor((canvas.width * canvas.height) / 8000))
+  particles = []
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.2,
+      vy: (Math.random() - 0.5) * 0.2,
+      r: 0.5 + Math.random() * 2,
+      o: 0.2 + Math.random() * 0.6,
+    })
+  }
+  particlesRunning = true
+  loopParticles()
+}
+
+function loopParticles() {
+  if (!particlesRunning) return
+  const ctx = particlesCtx
+  const canvas = particlesCanvas
+  if (!ctx || !canvas) return
+  ctx.clearRect(0, 0, canvas.width, canvas.height)
+  const esClaro = document.body.classList.contains('tema-claro')
+  for (const p of particles) {
+    p.x += p.vx
+    p.y += p.vy
+    if (p.x < 0) p.x += canvas.width
+    if (p.x > canvas.width) p.x -= canvas.width
+    if (p.y < 0) p.y += canvas.height
+    if (p.y > canvas.height) p.y -= canvas.height
+    ctx.beginPath()
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2)
+    ctx.fillStyle = esClaro ? `rgba(40,40,80,${p.o * 0.5})` : `rgba(200,210,255,${p.o * 0.6})`
+    ctx.fill()
+  }
+  particlesAnimId = requestAnimationFrame(loopParticles)
+}
+
+// Quote collage
+let citasFondoActivas = false
+
+function initQuoteCollage(relaciones) {
+  const container = document.getElementById('quote-collage')
+  if (!container) return
+
+  const citas = [...new Set(relaciones.map(r => r.cita_textual).filter(Boolean))]
+  if (citas.length === 0) return
+
+  const seleccionadas = citas.sort(() => Math.random() - 0.5).slice(0, 12)
+  const mainRect = container.parentElement.getBoundingClientRect()
+
+  for (const cita of seleccionadas) {
+    const span = document.createElement('span')
+    span.className = 'quote-flotante'
+    span.textContent = `"${cita.length > 100 ? cita.slice(0, 100) + '...' : cita}"`
+    span.style.left = (5 + Math.random() * 70) + '%'
+    span.style.top = (5 + Math.random() * 75) + '%'
+    span.style.transform = `rotate(${(-15 + Math.random() * 30).toFixed(1)}deg)`
+    span.style.maxWidth = (120 + Math.random() * 140) + 'px'
+    span.dataset.index = citas.indexOf(cita)
+    container.appendChild(span)
+  }
+
+  citasFondoActivas = true
+}
+
+function ocultarCitasFondo() {
+  const container = document.getElementById('quote-collage')
+  if (container) container.classList.add('oculto')
+}
+
+function mostrarCitasFondo() {
+  const container = document.getElementById('quote-collage')
+  if (container) container.classList.remove('oculto')
+}
 
 let transitionId = 0
 let totalNodeCount = 0
