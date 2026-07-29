@@ -184,6 +184,10 @@ export function inicializarVisualizacion(nodos, relaciones) {
         style: { display: 'none' },
       },
       {
+        selector: '.leyenda-oculto',
+        style: { opacity: 0.12 },
+      },
+      {
         selector: 'node.seleccionado',
         style: {
           'border-width': 4,
@@ -204,6 +208,18 @@ export function inicializarVisualizacion(nodos, relaciones) {
           'shadow-color': '#00e5ff',
           'shadow-opacity': 0.5,
           'z-index': 11,
+        },
+      },
+      {
+        selector: '.tipo-destacado',
+        style: {
+          'shadow-blur': 20,
+          'shadow-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#888',
+          'shadow-opacity': 0.6,
+          'border-width': 3,
+          'border-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#888',
+          'border-opacity': 0.7,
+          'z-index': 9,
         },
       },
       {
@@ -305,6 +321,14 @@ export function inicializarVisualizacion(nodos, relaciones) {
     el.addEventListener('click', () => {
       const tipo = el.dataset.tipo
       document.querySelector(`#filtros button[data-tipo="${tipo}"]`)?.click()
+    })
+    el.addEventListener('mouseenter', () => {
+      const tipo = el.dataset.tipo
+      cy.nodes(`[tipo != "${tipo}"]`).addClass('leyenda-oculto')
+      cy.nodes(`[tipo = "${tipo}"]`).addClass('tipo-destacado')
+    })
+    el.addEventListener('mouseleave', () => {
+      cy.nodes().removeClass('leyenda-oculto tipo-destacado')
     })
   })
 
