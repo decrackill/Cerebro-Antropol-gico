@@ -525,6 +525,25 @@ function moverTooltip(event) {
 }
 
 let transitionId = 0
+let totalNodeCount = 0
+let totalEdgeCount = 0
+
+export function setTotalCounts(nodos, edges) {
+  totalNodeCount = nodos
+  totalEdgeCount = edges
+}
+
+function actualizarStats() {
+  if (!cy) return
+  const visibles = cy.nodes(':visible').length
+  const stats = document.getElementById('stats')
+  const base = `${totalNodeCount} nodos · ${totalEdgeCount} conexiones`
+  if (visibles < totalNodeCount) {
+    stats.textContent = `${visibles} / ${base}`
+  } else {
+    stats.textContent = base
+  }
+}
 
 export function filtrarPorTipo(tipo) {
   if (!cy) return
@@ -538,6 +557,7 @@ export function filtrarPorTipo(tipo) {
     ocultos.forEach((n) => {
       n.animate({ style: { opacity: 1 }, duration: 200 })
     })
+    actualizarStats()
     return
   }
 
@@ -563,6 +583,7 @@ export function filtrarPorTipo(tipo) {
       })
     }, waitMs)
   }
+  actualizarStats()
 }
 
 export function buscarNodo(texto) {
@@ -570,6 +591,7 @@ export function buscarNodo(texto) {
   const q = texto.trim().toLowerCase()
   if (!q) {
     cy.nodes().removeClass('oculto-filtro')
+    actualizarStats()
     return
   }
   let primerResultado = null
@@ -583,4 +605,5 @@ export function buscarNodo(texto) {
   if (primerResultado) {
     cy.animate({ center: { eles: primerResultado }, zoom: 1.2, duration: 400 })
   }
+  actualizarStats()
 }

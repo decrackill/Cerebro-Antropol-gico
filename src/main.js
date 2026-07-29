@@ -1,10 +1,11 @@
 import { cargarGrafo } from './grafo.js'
-import { inicializarVisualizacion, filtrarPorTipo, buscarNodo } from './render.js'
+import { inicializarVisualizacion, filtrarPorTipo, buscarNodo, setTotalCounts } from './render.js'
 
 async function init() {
   try {
     const { nodos, relaciones } = await cargarGrafo()
     inicializarVisualizacion(nodos, relaciones)
+    setTotalCounts(nodos.length, relaciones.length)
 
     document.getElementById('stats').textContent = `${nodos.length} nodos · ${relaciones.length} conexiones`
     document.getElementById('loading').classList.add('oculto')
