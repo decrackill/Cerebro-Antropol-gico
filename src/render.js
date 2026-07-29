@@ -57,6 +57,24 @@ const SHAPE_POR_TIPO = {
   corriente: 'star',
 }
 
+const COLOR_POR_RELACION = {
+  autor_de: '#e74c3c',
+  influenciado_por: '#3498db',
+  critica_a: '#e67e22',
+  desarrolla_concepto: '#2ecc71',
+  redefine_a: '#9b59b6',
+  precursor_de: '#1abc9c',
+  pertenece_a: '#f1c40f',
+  estudia_a: '#2980b9',
+  contemporaneo_de: '#d35400',
+  parte_del_debate: '#8e44ad',
+  es_mentor_de: '#16a085',
+  colabora_con: '#27ae60',
+  contradice: '#c0392b',
+  relacionado_con: '#7f8c8d',
+  depende_de: '#95a5a6',
+}
+
 export function inicializarVisualizacion(nodos, relaciones) {
   const elementos = [
     ...nodos.map((n) => ({
@@ -108,15 +126,22 @@ export function inicializarVisualizacion(nodos, relaciones) {
         selector: 'edge',
         style: {
           width: 1.5,
-          'line-color': '#555',
-          'target-arrow-color': '#555',
+          'line-color': (ele) => COLOR_POR_RELACION[ele.data('label')] || '#555',
+          'target-arrow-color': (ele) => COLOR_POR_RELACION[ele.data('label')] || '#555',
           'target-arrow-shape': 'triangle',
           'curve-style': 'bezier',
+          'edge-distances': 'node-position',
           label: 'data(label)',
           'font-size': 9,
           color: '#999',
           'text-rotation': 'autorotate',
           'text-opacity': 0,
+          'line-style': (ele) => {
+            const ev = ele.data('evidencia')
+            if (ev === 'cita') return 'solid'
+            if (ev === 'fuente') return 'dashed'
+            return 'dotted'
+          },
         },
       },
       {
@@ -129,19 +154,19 @@ export function inicializarVisualizacion(nodos, relaciones) {
       },
       {
         selector: 'edge[evidencia = "cita"]',
-        style: { 'line-color': '#e94560', 'target-arrow-color': '#e94560', opacity: 0.9 },
+        style: { opacity: 0.9 },
       },
       {
         selector: 'edge[evidencia = "fuente"]',
-        style: { 'line-color': '#f28a9b', 'target-arrow-color': '#f28a9b', opacity: 0.7 },
+        style: { opacity: 0.7 },
       },
       {
         selector: 'edge[evidencia = "ninguna"]',
-        style: { 'line-color': '#777777', 'target-arrow-color': '#777777', opacity: 0.4 },
+        style: { opacity: 0.4 },
       },
       {
         selector: 'edge:active, edge.resaltada',
-        style: { 'text-opacity': 1, 'line-color': '#aaa' },
+        style: { 'text-opacity': 1, 'line-color': '#fff', 'target-arrow-color': '#fff', 'z-index': 10 },
       },
       {
         selector: 'node[[degree = 0]]',

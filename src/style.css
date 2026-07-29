@@ -239,10 +239,8 @@ main {
 }
 
 .arista-conectada {
-  line-color: #e94560 !important;
-  target-arrow-color: #e94560 !important;
   text-opacity: 1 !important;
-  color: #e94560 !important;
+  color: #fff !important;
   width: 2.5px !important;
   z-index: 5;
 }
