@@ -190,24 +190,13 @@ export function inicializarVisualizacion(nodos, relaciones) {
       {
         selector: 'node.seleccionado',
         style: {
-          'border-width': 4,
-          'border-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#e94560',
-          'border-opacity': 0.9,
-          'shadow-blur': 24,
-          'shadow-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#e94560',
-          'shadow-opacity': 0.7,
-          'z-index': 12,
-        },
-      },
-      {
-        selector: 'node.focused',
-        style: {
-          'border-width': 3,
+          'border-width': 5,
           'border-color': '#00e5ff',
-          'shadow-blur': 18,
+          'border-opacity': 1,
+          'shadow-blur': 30,
           'shadow-color': '#00e5ff',
-          'shadow-opacity': 0.5,
-          'z-index': 11,
+          'shadow-opacity': 0.8,
+          'z-index': 12,
         },
       },
       {
@@ -453,12 +442,8 @@ function focusNode(nodo) {
     }
     focusAnim = null
   }
-  if (focusedNode) {
-    focusedNode.removeClass('focused')
-  }
   focusedNode = nodo
   focusedOriginalSize = { w: nodo.width(), h: nodo.height() }
-  nodo.addClass('focused')
   const w = focusedOriginalSize.w
   const h = focusedOriginalSize.h
   focusAnim = nodo.animate({
@@ -473,7 +458,6 @@ function focusNode(nodo) {
       duration: 400,
       easing: 'ease-in-out',
       complete: () => {
-        nodo.removeClass('focused')
         focusAnim = null
         focusedNode = null
         focusedOriginalSize = null
@@ -485,17 +469,15 @@ function focusNode(nodo) {
 function bounceNode(nodo) {
   const w = nodo.width()
   const h = nodo.height()
-  nodo.addClass('focused')
   nodo.animate({
     style: { width: w * 1.25, height: h * 1.25 },
-    duration: 150,
+    duration: 120,
     easing: 'ease-out',
     complete: () => {
       nodo.animate({
         style: { width: w, height: h },
-        duration: 150,
+        duration: 120,
         easing: 'ease-in',
-        complete: () => nodo.removeClass('focused'),
       })
     },
   })
