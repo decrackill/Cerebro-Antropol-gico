@@ -261,6 +261,23 @@ export function inicializarVisualizacion(nodos, relaciones) {
     ocultarPanel()
   })
 
+  document.getElementById('zoom-in').addEventListener('click', () => {
+    cy.zoom({ level: cy.zoom() * 1.4 })
+  })
+  document.getElementById('zoom-out').addEventListener('click', () => {
+    cy.zoom({ level: cy.zoom() / 1.4 })
+  })
+  document.getElementById('zoom-fit').addEventListener('click', () => {
+    cy.fit(50)
+  })
+
+  document.querySelectorAll('#leyenda [data-tipo]').forEach(el => {
+    el.addEventListener('click', () => {
+      const tipo = el.dataset.tipo
+      document.querySelector(`#filtros button[data-tipo="${tipo}"]`)?.click()
+    })
+  })
+
   cy.on('zoom', () => {
     const zoomActual = cy.zoom()
     cy.style()
@@ -338,8 +355,12 @@ function desactivarVecindario() {
 function mostrarPanel(nodo) {
   const nodoElem = cy.getElementById(nodo.id)
   const grado = nodoElem.degree()
+  const color = COLOR_POR_TIPO[nodo.tipo] || '#888'
 
-  document.getElementById('panel-titulo').textContent = nodo.label
+  const badge = document.getElementById('panel-badge')
+  badge.style.background = color
+  document.getElementById('panel-titulo').textContent = ''
+  document.getElementById('panel-titulo').append(badge, nodo.label)
   document.getElementById('panel-tipo').textContent = `${nodo.tipo} · Grado: ${grado}`
   document.getElementById('panel-desc').textContent = nodo.resumen || ''
 
@@ -364,7 +385,10 @@ function mostrarPanel(nodo) {
   })
 
   ocultarCita()
-  document.getElementById('panel').classList.remove('oculto')
+  const panel = document.getElementById('panel')
+  panel.classList.remove('oculto')
+  panel.offsetHeight
+  panel.classList.add('panel-visible')
 }
 
 function focusNode(nodo) {
@@ -418,7 +442,9 @@ function saltarANodo(id) {
 }
 
 function ocultarPanel() {
-  document.getElementById('panel').classList.add('oculto')
+  const panel = document.getElementById('panel')
+  panel.classList.remove('panel-visible')
+  panel.classList.add('oculto')
   ocultarCita()
 }
 

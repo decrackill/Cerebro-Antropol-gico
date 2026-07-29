@@ -115,6 +115,35 @@ main {
   to { transform: rotate(360deg); }
 }
 
+#zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 10;
+}
+
+#zoom-controls button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #0f3460;
+  border-radius: 4px;
+  background: rgba(22, 33, 62, 0.9);
+  color: #ecf0f1;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+#zoom-controls button:hover {
+  background: #0f3460;
+}
+
 #leyenda {
   position: absolute;
   bottom: 20px;
@@ -128,6 +157,15 @@ main {
   flex-direction: column;
   gap: 4px;
   z-index: 10;
+}
+
+#leyenda [data-tipo] {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#leyenda [data-tipo]:hover {
+  color: #fff;
 }
 
 .punto {
@@ -152,10 +190,31 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transform: translateX(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+
+#panel.panel-visible {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 #panel.oculto {
   display: none;
+}
+
+#panel-badge {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 #cerrar-panel {
@@ -406,6 +465,17 @@ main {
     padding: 6px 8px;
     font-size: 10px;
     gap: 2px;
+  }
+
+  #zoom-controls {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  #zoom-controls button {
+    width: 28px;
+    height: 28px;
+    font-size: 0.9rem;
   }
 
   .punto {
