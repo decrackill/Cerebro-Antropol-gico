@@ -247,7 +247,7 @@ def herramienta_limpiar_auto():
 # RECUPERACIÓN DE RELACIONES
 # ═══════════════════════════════════════════════════════════════════════════
 
-from ..core.config import RECUPERACION_ESTADO_PATH
+from ..core.config import RECUPERACION_ESTADO_PATH, CACHE_DIR
 from ..core.db import construir_mapa_resolucion, relacion_ya_existe
 
 
@@ -262,8 +262,8 @@ def herramienta_recuperar_relaciones():
     otro después de la extracción original. Checkpoint propio
     (recuperacion_estado.json) para no reprocesar lo ya resuelto.
     """
-    archivos = sorted(BASE_DIR.glob("candidatos_procesados_*.json"))
-    pendiente = BASE_DIR / "candidatos_pendientes.json"
+    archivos = sorted(CACHE_DIR.glob("candidatos_procesados_*.json"))
+    pendiente = CACHE_DIR / "candidatos_pendientes.json"
     if pendiente.exists():
         archivos.append(pendiente)
     if not archivos:

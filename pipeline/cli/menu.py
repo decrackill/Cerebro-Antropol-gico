@@ -17,38 +17,51 @@ from ..review.limpieza import (
     herramienta_recuperar_relaciones,
 )
 from ..review.auditoria import herramienta_auditoria
-from ..core.config import BASE_DIR
+from ..core.config import BASE_DIR, LIBROS_DIR, PROJECT_ROOT
+
+
+def _pdf_stem_a_ruta(stem):
+    """Busca un PDF por su stem (sin extensión) en libros/."""
+    pdf = LIBROS_DIR / f"{stem}.pdf"
+    if not pdf.exists():
+        print(f"  ✗ No existe {pdf}")
+        return None
+    return pdf
 
 
 def _extraer():
     """Lanza extractor.py sobre un PDF."""
-    script = BASE_DIR / "extract" / "extractor.py"
-    pdf_path = input("  Ruta del PDF: ").strip()
-    if not pdf_path:
+    stem = input("  Nombre del PDF (sin extensión, ej: boas-f-1911-...): ").strip()
+    if not stem:
         print("  Cancelado.")
         return
-    subprocess.run([sys.executable, str(script), pdf_path])
+    pdf = _pdf_stem_a_ruta(stem)
+    if not pdf:
+        return
+    subprocess.run([sys.executable, "-m", "pipeline.extract.extractor", str(pdf)])
 
 
 def _modo_manual_menu():
     """Lanza modo_manual.py (generar prompt / pegar respuesta)."""
-    script = BASE_DIR / "extract" / "modo_manual.py"
-    pdf_path = input("  Ruta del PDF: ").strip()
-    if not pdf_path:
+    stem = input("  Nombre del PDF (sin extensión): ").strip()
+    if not stem:
         print("  Cancelado.")
+        return
+    pdf = _pdf_stem_a_ruta(stem)
+    if not pdf:
         return
     resp = input("  Acción (generar/pegar): ").strip().lower()
     if resp in ("generar", "g"):
-        subprocess.run([sys.executable, str(script), pdf_path, "generar"])
+        subprocess.run([sys.executable, "-m", "pipeline.extract.modo_manual", str(pdf), "generar"])
     elif resp in ("pegar", "p"):
-        subprocess.run([sys.executable, str(script), pdf_path, "pegar"])
+        subprocess.run([sys.executable, "-m", "pipeline.extract.modo_manual", str(pdf), "pegar"])
     else:
         print("  Opción no válida.")
 
 
 def _verificar():
     """Lanza verificar_extraccion.py."""
-    script = BASE_DIR / "verificar_extraccion.py"
+    script = BASE_DIR.parent / "scripts" / "verificar_extraccion.py"
     stem = input("  Nombre stem del PDF (sin extensión): ").strip()
     if not stem:
         print("  Cancelado.")

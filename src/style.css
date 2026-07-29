@@ -67,6 +67,12 @@ header h1 {
   border-color: #e94560;
 }
 
+#stats {
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+}
+
 main {
   position: relative;
   height: calc(100vh - 52px);

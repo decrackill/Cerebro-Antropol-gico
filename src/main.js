@@ -6,6 +6,7 @@ async function init() {
     const { nodos, relaciones } = await cargarGrafo()
     inicializarVisualizacion(nodos, relaciones)
 
+    document.getElementById('stats').textContent = `${nodos.length} nodos · ${relaciones.length} conexiones`
     document.getElementById('loading').classList.add('oculto')
   } catch (e) {
     document.getElementById('loading').textContent = `Error al cargar: ${e.message}`
