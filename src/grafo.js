@@ -1,7 +1,12 @@
-// Carga el grafo desde el JSON exportado de SQLite (ver scripts/export_json.py)
-
 export async function cargarGrafo() {
-  const respuesta = await fetch('/datos.json')
+  const respuesta = await fetch('/api/datos')
+  if (!respuesta.ok) {
+    throw new Error(`Error HTTP ${respuesta.status}`)
+  }
   const datos = await respuesta.json()
-  return datos // { nodos: [...], relaciones: [...] }
+  if (!datos.ok) {
+    throw new Error(datos.error || 'Error del servidor')
+  }
+  const { nodos, relaciones } = datos
+  return { nodos, relaciones }
 }

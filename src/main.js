@@ -2,10 +2,15 @@ import { cargarGrafo } from './grafo.js'
 import { inicializarVisualizacion, filtrarPorTipo, buscarNodo } from './render.js'
 
 async function init() {
-  const { nodos, relaciones } = await cargarGrafo()
-  inicializarVisualizacion(nodos, relaciones)
+  try {
+    const { nodos, relaciones } = await cargarGrafo()
+    inicializarVisualizacion(nodos, relaciones)
 
-  document.getElementById('loading').classList.add('oculto')
+    document.getElementById('loading').classList.add('oculto')
+  } catch (e) {
+    document.getElementById('loading').textContent = `Error al cargar: ${e.message}`
+    return
+  }
 
   document.querySelectorAll('#filtros button').forEach(btn => {
     btn.addEventListener('click', () => {

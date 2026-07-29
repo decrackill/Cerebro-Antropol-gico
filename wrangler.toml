@@ -1,0 +1,8 @@
+name = "cerebro-antropologico"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-07-29"
+
+[[d1_databases]]
+binding = "GRAFO_DB"
+database_name = "cerebro-antropologico-db"
+database_id = "b83b620c-c027-4dde-8306-dd684cd23fd5"
