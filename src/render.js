@@ -36,14 +36,14 @@ const NIVEL_B = new Set([
   'contradice', 'relacionado_con', 'depende_de'
 ])
 const COLOR_POR_TIPO = {
-  autor: '#D85A30',
-  obra: '#1D9E75',
-  concepto: '#7F77DD',
-  escuela: '#BA7517',
-  cultura: '#639922',
-  debate: '#D4537E',
-  poblacion: '#3A9BDC',
-  corriente: '#C9A227',
+  autor: '#C44569',
+  obra: '#3DC1D3',
+  concepto: '#A29BFE',
+  escuela: '#E8B830',
+  cultura: '#6AB04C',
+  debate: '#EB4D4B',
+  poblacion: '#45AAF2',
+  corriente: '#F97F51',
 }
 
 const SHAPE_POR_TIPO = {
