@@ -46,6 +46,17 @@ const COLOR_POR_TIPO = {
   corriente: '#C9A227',
 }
 
+const SHAPE_POR_TIPO = {
+  autor: 'round-triangle',
+  obra: 'round-rectangle',
+  concepto: 'diamond',
+  escuela: 'hexagon',
+  cultura: 'pentagon',
+  debate: 'round-diamond',
+  poblacion: 'barrel',
+  corriente: 'star',
+}
+
 export function inicializarVisualizacion(nodos, relaciones) {
   const elementos = [
     ...nodos.map((n) => ({
@@ -71,14 +82,26 @@ export function inicializarVisualizacion(nodos, relaciones) {
         selector: 'node',
         style: {
           'background-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#888',
+          shape: (ele) => SHAPE_POR_TIPO[ele.data('tipo')] || 'ellipse',
           label: 'data(label)',
-          color: '#eee',
+          color: '#fff',
           'font-size': 11,
+          'font-weight': 600,
           'text-valign': 'bottom',
           'text-margin-y': 6,
+          'text-background-color': '#1a1a2e',
+          'text-background-opacity': 0.7,
+          'text-background-padding': 3,
+          'text-background-shape': 'round-rectangle',
           width: (ele) => 14 + Math.min(ele.degree() * 2.5, 36),
           height: (ele) => 14 + Math.min(ele.degree() * 2.5, 36),
           'border-width': (ele) => { const c = Number(ele.data('centralidad')) || 0; return 1 + c * 8; },
+          'border-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#888',
+          'shadow-blur': 12,
+          'shadow-color': (ele) => COLOR_POR_TIPO[ele.data('tipo')] || '#888',
+          'shadow-offset-x': 0,
+          'shadow-offset-y': 0,
+          'shadow-opacity': 0.5,
         },
       },
       {
@@ -157,25 +180,28 @@ export function inicializarVisualizacion(nodos, relaciones) {
         style: { 'border-width': 3, 'border-opacity': 0.8, 'z-index': 10 },
       },
     ],
-    layout: {
-      name: 'fcose',
-      randomize: true,
-      animate: true,
-      animationDuration: 500,
-      quality: nodos.length > 3000 ? 'draft' : nodos.length > 1000 ? 'default' : 'proof',
-      nodeRepulsion: 18000,
-      idealEdgeLength: 160,
-      edgeElasticity: 0.15,
-      gravity: 0.35,
-      gravityRange: 2.5,
-      numIter: nodos.length > 3000 ? 1000 : nodos.length > 1000 ? 1500 : 2000,
-      tile: true,
-      packComponents: true,
-      componentSpacing: 150,
-      nodeDimensionsIncludeLabels: true,
-      padding: 30,
-    },
   })
+
+  cy.elements().style('opacity', 0)
+
+  cy.layout({
+    name: 'fcose',
+    randomize: true,
+    animate: true,
+    animationDuration: 500,
+    quality: nodos.length > 3000 ? 'draft' : nodos.length > 1000 ? 'default' : 'proof',
+    nodeRepulsion: 18000,
+    idealEdgeLength: 160,
+    edgeElasticity: 0.15,
+    gravity: 0.35,
+    gravityRange: 2.5,
+    numIter: nodos.length > 3000 ? 1000 : nodos.length > 1000 ? 1500 : 2000,
+    tile: true,
+    packComponents: true,
+    componentSpacing: 150,
+    nodeDimensionsIncludeLabels: true,
+    padding: 30,
+  }).run()
 
   // V7 — Representación de Centralidad
   const bc = cy.elements().betweennessCentrality()
@@ -218,6 +244,18 @@ export function inicializarVisualizacion(nodos, relaciones) {
       .selector('node')
       .style('label', zoomActual > 0.6 ? 'data(label)' : '')
       .update()
+  })
+
+  // Stagger reveal after layout
+  cy.one('layoutstop', () => {
+    cy.nodes().forEach((node, i) => {
+      node.animate({
+        style: { opacity: 1 },
+        duration: 250,
+        delay: i * 6,
+        easing: 'ease-out',
+      })
+    })
   })
 
   // V8 — Inercia al Arrastrar
