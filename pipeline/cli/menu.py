@@ -235,22 +235,74 @@ for _seccion, items in SECCIONES:
 
 
 def mostrar_flujo():
-    """Muestra el orden paso a paso recomendado con indicaciones contextuales."""
-    print(f"""
-{BOLD}╔{'═' * 57}╗{RESET}
-{BOLD}║{RESET}  FLUJO RECOMENDADO DE USO{' ' * 30}{BOLD}║{RESET}
-{BOLD}╠{'═' * 57}╣{RESET}
-{BOLD}║{RESET}  {CYAN}1.{RESET} Colocar PDFs en {DIM}libros/{RESET}{' ' * 34}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}2.{RESET} {GREEN}e1{RESET} Extraer entidades{' ' * 34}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}3.{RESET} {GREEN}1{RESET}  Revisar candidatos{' ' * 35}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}4.{RESET} {GREEN}2{RESET}  Conectar automático{' ' * 31}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}5.{RESET} {GREEN}3{RESET}  Recuperar relaciones{' ' * 30}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}6.{RESET} {GREEN}4{RESET}  Auditoría{' ' * 42}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}7.{RESET} {GREEN}5-9{RESET} Limpiar y deduplicar{' ' * 30}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}8.{RESET} {GREEN}11{RESET} Exportar (DB → datos.json){' ' * 24}{BOLD}║{RESET}
-{BOLD}║{RESET}  {CYAN}9.{RESET} {GREEN}npm run dev{RESET} Visualizar en navegador{' ' * 18}{BOLD}║{RESET}
-{BOLD}╚{'═' * 57}╝{RESET}
-""")
+    """Muestra el flujo recomendado con progreso real según estado de la DB.
+
+    Lee de la DB para determinar qué pasos están completados
+    y cuáles faltan, mostrando indicadores contextuales.
+    """
+    try:
+        from ..core.db import conectar_db
+        conn = conectar_db()
+        total_nodos = conn.execute("SELECT COUNT(*) FROM nodos").fetchone()[0]
+        total_rels = conn.execute("SELECT COUNT(*) FROM relaciones").fetchone()[0]
+        aislados = total_nodos - len(set(
+            r[0] for r in conn.execute(
+                "SELECT origen_id FROM relaciones UNION SELECT destino_id FROM relaciones"
+            ).fetchall()
+        ))
+        pendientes_revision = conn.execute(
+            "SELECT COUNT(*) FROM nodos WHERE revision_estado != 'ok' OR revision_estado IS NULL"
+        ).fetchone()[0]
+        candidatos = len(list(BASE_DIR.glob("candidatos_*.json")))
+        conn.close()
+    except Exception:
+        total_nodos = total_rels = aislados = pendientes_revision = candidatos = 0
+
+    def paso(num, label, opcion, hecho, sugerencia=""):
+        icono = f"{GREEN}✓{RESET}" if hecho else f"{RED}○{RESET}"
+        estado = f" {DIM}{sugerencia}{RESET}" if not hecho and sugerencia else ""
+        print(f"  {icono}  {CYAN}{num}.{RESET} {label}  {DIM}({opcion}){RESET}{estado}")
+
+    print(f"\n  {BOLD}FLUJO RECOMENDADO — Estado actual{RESET}\n")
+
+    paso(1, "PDFs en libros/", "colocar PDFs",
+         bool(list(BASE_DIR.parent.glob("libros/*.pdf"))),
+         "Agrega PDFs a libros/")
+
+    paso(2, "Extraer entidades", "e1 → e3",
+         total_nodos > 0,
+         "Usa e1 para extraer")
+
+    paso(3, "Revisar candidatos", "1",
+         candidatos == 0,
+         f"{candidatos} pendientes")
+
+    paso(4, "Conectar automático", "2",
+         total_rels > 0,
+         "Usa opción 2")
+
+    paso(5, "Recuperar relaciones", "3",
+         False,  # siempre sugerido ejecutar
+         "Usa opción 3")
+
+    paso(6, "Auditar grafo", "4",
+         total_rels > 0,
+         "Usa opción 4")
+
+    paso(7, "Limpiar y deduplicar", "5-9",
+         aislados < total_nodos * 0.1,
+         f"{aislados} aislados")
+
+    paso(8, "Revisión ontológica", "16",
+         pendientes_revision == 0,
+         f"{pendientes_revision} sin revisar")
+
+    paso(9, "Exportar a datos.json", "11",
+         (BASE_DIR.parent / "public" / "datos.json").exists(),
+         "Usa opción 11")
+
+    print(f"\n  {BOLD}Resumen:{RESET} {total_nodos} nodos · {total_rels} relaciones · {aislados} aislados · {pendientes_revision} pendientes")
+    print(f"  {DIM}✓{RESET} = completado  ·  {RED}○{RESET} = pendiente\n")
 
 
 def mostrar_ayuda(clave):
