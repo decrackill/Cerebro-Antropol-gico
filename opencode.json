@@ -1,0 +1,223 @@
+{
+  "$schema": "https://opencode.ai",
+  "default_agent": "build",
+  "instructions": [
+    "AGENTS.md",
+    "contexto-mimo.md",
+    "instructions/INSTRUCTIONS.md"
+  ],
+  "plugin": [
+    "opencode-agent-skills",
+    "./plugins"
+  ],
+  "agent": {
+    "build": {
+      "description": "Primary coding agent for development work",
+      "mode": "primary",
+      "permission": {
+        "write": "allow",
+        "edit": "allow",
+        "bash": "allow",
+        "read": "allow"
+      }
+    },
+    "planner": {
+      "description": "Planning specialist for complex features and refactoring",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/planner.txt}",
+      "permission": { "read": "allow", "bash": "allow" }
+    },
+    "architect": {
+      "description": "Software architecture specialist for system design and technical decisions",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/architect.txt}",
+      "permission": { "read": "allow", "bash": "allow" }
+    },
+    "code-reviewer": {
+      "description": "Code review specialist for quality, security, and maintainability",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/code-reviewer.txt}",
+      "permission": { "read": "allow", "bash": "allow" }
+    },
+    "security-reviewer": {
+      "description": "Security vulnerability detection and remediation specialist",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/security-reviewer.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    },
+    "tdd-guide": {
+      "description": "Test-Driven Development specialist",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/tdd-guide.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    },
+    "build-error-resolver": {
+      "description": "Build and error resolution specialist",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/build-error-resolver.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    },
+    "e2e-runner": {
+      "description": "End-to-end testing specialist using Playwright",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/e2e-runner.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    },
+    "database-reviewer": {
+      "description": "Database specialist for query optimization, schema design, and performance",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/database-reviewer.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    },
+    "refactor-cleaner": {
+      "description": "Dead code cleanup and consolidation specialist",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/refactor-cleaner.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    },
+    "doc-updater": {
+      "description": "Documentation and codemap specialist",
+      "mode": "subagent",
+      "prompt": "{file:prompts/agents/doc-updater.txt}",
+      "permission": { "read": "allow", "write": "allow", "edit": "allow", "bash": "allow" }
+    }
+  },
+  "command": {
+    "common-ground": {
+      "description": "Surface and validate hidden assumptions about the project",
+      "template": "Execute the Common Ground workflow.\n\nArguments: $ARGUMENTS\n\nSee .opencode/commands/common-ground.md for full instructions.",
+      "subtask": true
+    },
+    "discovery-create": {
+      "description": "Create discovery document for an epic",
+      "template": "{file:commands/discovery/create.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "discovery-synthesize": {
+      "description": "Synthesize research findings",
+      "template": "{file:commands/discovery/synthesize.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "discovery-approve": {
+      "description": "Approve synthesis and create tickets",
+      "template": "{file:commands/discovery/approve.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "epic-plan": {
+      "description": "Generate epic planning document",
+      "template": "{file:commands/planning/epic-plan.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "impl-plan": {
+      "description": "Create implementation plan from overview",
+      "template": "{file:commands/planning/impl-plan.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "execute-ticket": {
+      "description": "Execute a ticket following its plan",
+      "template": "{file:commands/execution/execute-ticket.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "complete-ticket": {
+      "description": "Finalize ticket, transition, update docs",
+      "template": "{file:commands/execution/complete-ticket.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "complete-epic": {
+      "description": "Epic completion report and closeout",
+      "template": "{file:commands/retrospectives/complete-epic.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "complete-sprint": {
+      "description": "Sprint retrospective analysis",
+      "template": "{file:commands/retrospectives/complete-sprint.md}\n\n$ARGUMENTS",
+      "subtask": true
+    },
+    "plan": {
+      "description": "Create a detailed implementation plan",
+      "template": "{file:commands/plan.md}\n\n$ARGUMENTS",
+      "agent": "planner",
+      "subtask": true
+    },
+    "tdd": {
+      "description": "Enforce TDD workflow",
+      "template": "{file:commands/tdd.md}\n\n$ARGUMENTS",
+      "agent": "tdd-guide",
+      "subtask": true
+    },
+    "code-review": {
+      "description": "Review code for quality and security",
+      "template": "{file:commands/code-review.md}\n\n$ARGUMENTS",
+      "agent": "code-reviewer",
+      "subtask": true
+    },
+    "security": {
+      "description": "Run comprehensive security review",
+      "template": "{file:commands/security.md}\n\n$ARGUMENTS",
+      "agent": "security-reviewer",
+      "subtask": true
+    },
+    "build-fix": {
+      "description": "Fix build and type errors",
+      "template": "{file:commands/build-fix.md}\n\n$ARGUMENTS",
+      "agent": "build-error-resolver",
+      "subtask": true
+    },
+    "e2e": {
+      "description": "Generate and run E2E tests",
+      "template": "{file:commands/e2e.md}\n\n$ARGUMENTS",
+      "agent": "e2e-runner",
+      "subtask": true
+    },
+    "refactor-clean": {
+      "description": "Remove dead code and consolidate duplicates",
+      "template": "{file:commands/refactor-clean.md}\n\n$ARGUMENTS",
+      "agent": "refactor-cleaner",
+      "subtask": true
+    },
+    "orchestrate": {
+      "description": "Orchestrate multiple agents for complex tasks",
+      "template": "{file:commands/orchestrate.md}\n\n$ARGUMENTS",
+      "agent": "planner",
+      "subtask": true
+    },
+    "learn": {
+      "description": "Extract patterns and learnings from session",
+      "template": "{file:commands/learn.md}\n\n$ARGUMENTS"
+    },
+    "checkpoint": {
+      "description": "Save verification state and progress",
+      "template": "{file:commands/checkpoint.md}\n\n$ARGUMENTS"
+    },
+    "verify": {
+      "description": "Run verification loop",
+      "template": "{file:commands/verify.md}\n\n$ARGUMENTS"
+    },
+    "eval": {
+      "description": "Run evaluation against criteria",
+      "template": "{file:commands/eval.md}\n\n$ARGUMENTS"
+    },
+    "update-docs": {
+      "description": "Update documentation",
+      "template": "{file:commands/update-docs.md}\n\n$ARGUMENTS",
+      "agent": "doc-updater",
+      "subtask": true
+    }
+  },
+  "permission": {
+    "skill": { "*": "allow" },
+    "mcp_*": "ask",
+    "edit": [
+      { "pattern": "prompts/**", "action": "allow" },
+      { "pattern": "commands/**", "action": "allow" },
+      { "pattern": "instructions/**", "action": "allow" },
+      { "pattern": "AGENTS.md", "action": "allow" }
+    ],
+    "write": [
+      { "pattern": "prompts/**", "action": "allow" },
+      { "pattern": "commands/**", "action": "allow" },
+      { "pattern": "instructions/**", "action": "allow" },
+      { "pattern": "AGENTS.md", "action": "allow" }
+    ]
+  }
+}

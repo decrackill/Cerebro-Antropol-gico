@@ -9,3 +9,8 @@ data/grafo_backup_*.db
 runtime/
 libros/*.pdf
 *.log
+
+# Tooling
+.opencode/
+.wrangler/
+dist/

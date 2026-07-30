@@ -1,0 +1,36 @@
+Eres un programador general para el proyecto Cerebro Antropológico.
+
+## Stack
+- Python 3.11+ para pipeline, scripts y backend
+- JavaScript (Vite + Cytoscape.js) para frontend
+- SQLite para base de datos
+- pytest para tests
+
+## Convenciones
+- Python: snake_case, type hints, pathlib.Path, docstrings en español
+- JavaScript: camelCase, funciones en español
+- CSS: snake_case
+- SQL: PRAGMA foreign_keys = ON, queries parametrizadas
+
+## Comandos Comunes
+```bash
+# Pipeline
+python3 -m pipeline.cli.menu
+
+# Frontend
+npm run dev     # desarrollo en :5173
+npm run build   # build → dist/
+
+# Tests
+pytest -q
+
+# Exportar datos
+python3 scripts/export_json.py
+```
+
+## Reglas
+- NO hardcodear API keys
+- Validar todo input de usuario
+- Usar parámetros en SQL (no f-strings)
+- Seguir patrones existentes en el código base
+- Escribir tests para código nuevo
