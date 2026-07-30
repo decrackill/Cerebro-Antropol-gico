@@ -88,22 +88,27 @@ Ver [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) para detalles de implem
 
 ```
 Cerebro-antropologico/
-├── pipeline/                    # Código Python
-│   ├── core/                    # Config, DB, utils, validar_relacion()
-│   ├── extract/                 # Extracción PDF→LLM
-│   ├── review/                  # Revisión y limpieza
-│   └── cli/                     # Menú principal
+├── pipeline/                    # Código Python (core/extract/review/cli)
+├── frontend/                    # Aplicación web (Vite + Cytoscape.js)
+│   ├── index.html
+│   ├── src/                     # JS y CSS
+│   └── public/                  # datos.json (export de la DB)
 ├── scripts/                     # Utilidades standalone
-├── src/                         # Frontend (JS/CSS)
-├── tests/                       # Tests automatizados (107 tests)
-├── data/                        # Base de datos SQLite [ignorado]
-├── libros/                      # PDFs fuente [ignorado]
-├── runtime/                     # Datos de ejecución [ignorado]
+├── archive/                     # Scripts one-off y docs históricas
 ├── docs/                        # Documentación
 │   ├── ontology/                # Manifiesto Ontológico v1.1
 │   ├── architecture/            # Arquitectura técnica y ROADMAP
-│   └── reports/                 # Reportes y guías
-└── README.md                    # Este archivo
+│   ├── guides/                  # GUIA_DE_USO, HELP, protocolos
+│   ├── validation/              # Reportes de validación (Fase 8)
+│   ├── context/                 # AGENTS, contexto-mimo, reglas
+│   └── reports/                 # Reportes de migración y export
+├── tests/                       # Tests automatizados (118 tests)
+├── functions/                   # Cloudflare Functions
+├── .github/                     # CI/CD pipelines
+├── README.md
+├── package.json                 # npm dev/build/preview
+├── vite.config.js               # root: 'frontend'
+└── wrangler.toml                # Cloudflare Pages
 ```
 
 ## Ejecución de Tests
@@ -148,7 +153,7 @@ Copiar `pipeline/.env.example` a `pipeline/.env` y configurar:
 | [MANIFIESTO_ONTOLOGICO.md](docs/ontology/MANIFIESTO_ONTOLOGICO.md) | Ontología formal, reglas, firewall |
 | [ARCHITECTURE.md](docs/architecture/ARCHITECTURE.md) | Arquitectura técnica, sistema de validación |
 | [ROADMAP.md](docs/architecture/ROADMAP.md) | Estado del proyecto, trabajo pendiente |
-| [DOCUMENTATION_INDEX.md](DOCUMENTATION_INDEX.md) | Índice completo de documentación |
+| [DOCUMENTATION_INDEX.md](docs/context/DOCUMENTATION_INDEX.md) | Índice completo de documentación |
 
 ## Licencia
 

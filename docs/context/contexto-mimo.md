@@ -31,16 +31,20 @@ Cerebro-antropologico/
 │   └── cli/
 │       └── menu.py                  # Menú principal (punto de entrada)
 ├── scripts/                         # Utilidades standalone
-│   ├── export_json.py               # SQLite → public/datos.json
+│   ├── export_json.py               # SQLite → frontend/public/datos.json
 │   ├── init_db.py                   # Crear esquema DB desde cero
 │   ├── check_models.py              # Verificar tipos (bug: busca .env en scripts/)
 │   └── verificar_extraccion.py      # Ver cobertura de extracción por PDF
-├── src/                             # Frontend (Vite + Cytoscape.js)
+├── frontend/                        # Aplicación web (Vite + Cytoscape.js)
 │   ├── index.html                   # HTML principal (con #stats header)
-│   ├── main.js                      # init(), carga stats
-│   ├── render.js                    # Visualización Cytoscape, panel lateral, mapeo de libros
-│   ├── grafo.js                     # Carga de datos (fetch datos.json)
-│   └── style.css                    # Estilos
+│   ├── src/                         # JS/CSS del frontend
+│   │   ├── main.js                  # init(), carga stats
+│   │   ├── render.js                # Visualización Cytoscape, panel lateral, mapeo de libros
+│   │   ├── grafo.js                 # Carga de datos (fetch datos.json)
+│   │   └── style.css                # Estilos
+│   └── public/
+│       └── datos.json               # Datos curados para producción (394 nodos, 371 rel)
+├── archive/                         # Scripts one-off y docs históricas
 ├── libros/                          # PDFs fuente (gitignored)
 ├── data/
 │   └── grafo.db                     # SQLite principal (gitignored)
@@ -48,15 +52,14 @@ Cerebro-antropologico/
 │   ├── cache/                       # candidatos_pendientes.json, procesados_*.json
 │   ├── logs/                        # extraccion_log_*.json
 │   └── state/                       # checkpoint_*.json, revision_estado.json, limpieza_estado.json
-├── public/
-│   └── datos.json                   # Datos curados para producción (394 nodos, 371 rel)
 ├── tests/                           # pytest (107 tests)
-├── vite.config.js                   # Proxy /api → https://cerebro-antropologico.pages.dev
+├── vite.config.js                   # root: 'frontend', proxy /api
 ├── package.json                     # npm deps (vite, cytoscape, etc.)
 ├── requirements.txt                 # Python deps
-├── wrangler.toml                    # Cloudflare Pages (no usado localmente)
+├── wrangler.toml                    # Cloudflare Pages, build: frontend/dist
 ├── README.md                        # Documentación principal
-├── GUIA_DE_USO.md                   # Guía de usuario
+├── docs/
+│   ├── context/GUIA_DE_USO.md       # Guía de usuario
 ├── DOCUMENTATION_INDEX.md           # Índice de docs
 ├── CONTRIBUTING.md                  # Guía de contribución
 └── contexto-mimo.md                 # Este archivo
@@ -242,14 +245,14 @@ npm run preview    # preview del build
 
 - **Vite** sirve `index.html`, proxy `/api/*` → `https://cerebro-antropologico.pages.dev`
 - **No usa Wrangler local** — no hay Cloudflare Workers en desarrollo
-- **Cytoscape.js** renderiza el grafo desde `public/datos.json`
+- **Cytoscape.js** renderiza el grafo desde `frontend/public/datos.json`
 - Header muestra `#stats`: "X nodos · Y conexiones"
 - Filtros por tipo de nodo (botones en `#filtros`)
 - Buscador (`#buscar`) para resaltar nodos por nombre
 - Panel lateral: lista de relaciones `tipo → nombre`; al hacer clic despliega detalle (libro, fuente, cita textual)
 - Mapeo de PDFs a títulos de libros en `render.js` (frontend-only, no modifica DB)
 
-### `public/datos.json`
+### `frontend/public/datos.json`
 - Export manual con `scripts/export_json.py`
 - Actual: **394 nodos, 371 relaciones** (curados)
 - DB local tiene ~1433 nodos (pre-limpieza) pero **no se sirven a producción**
@@ -285,7 +288,7 @@ Las opciones e1/e2/e3 piden solo el **stem** del PDF (sin ruta ni extensión), l
 | `8` | Limpieza asistida | Revisión de nodos aislados |
 | `9` | Limpiar ruido | Eliminación agresiva de ruido biomédico |
 | `10` | Auditoría (repetir) | Re-ejecuta diagnóstico |
-| `11` | Exportar | DB → `public/datos.json` |
+| `11` | Exportar | DB → `frontend/public/datos.json` |
 | `12` | Reforzar esquema | Crea índices (run-once, seguro re-ejecutar) |
 | `13` | Limpiar archivos | Elimina `candidatos_procesados_*.json` y logs |
 | `14` | Mantenimiento | Cadena completa: limpieza → recuperación → export → auditoría |

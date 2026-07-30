@@ -49,7 +49,7 @@
 ### Mantenimiento
 | Opción | Descripción |
 |--------|-------------|
-| `11` | Exportar DB → `public/datos.json` |
+| `11` | Exportar DB → `frontend/public/datos.json` |
 | `12` | Crear/verificar índices de la DB |
 | `13` | Limpiar archivos temporales y logs |
 | `14` | Mantenimiento automático completo |
@@ -104,5 +104,5 @@ pipeline/        → Backend Python (extracción, DB, revisión)
 src/             → Frontend Vite + Cytoscape.js
 libros/          → PDFs fuente (gitignored)
 data/grafo.db    → SQLite (gitignored)
-public/datos.json → Datos curados para producción
+frontend/public/datos.json → Datos curados para producción
 ```

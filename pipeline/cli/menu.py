@@ -220,7 +220,7 @@ SECCIONES = [
         ("10", "Auditoría (repetir)", herramienta_auditoria, "Re-ejecutar diagnóstico"),
     ]),
     ("MANTENIMIENTO", [
-        ("11", "Exportar", _herramienta_exportar, "DB → public/datos.json"),
+        ("11", "Exportar", _herramienta_exportar, "DB → frontend/public/datos.json"),
         ("12", "Reforzar esquema", _herramienta_reforzar_esquema, "Crear índices (run-once, seguro)"),
         ("13", "Limpiar archivos", _herramienta_limpiar_archivos, "Eliminar temporales y logs"),
         ("14", "Mantenimiento", _herramienta_mantenimiento, "Cadena automática completa"),

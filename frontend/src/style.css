@@ -366,6 +366,7 @@ main {
   transform: translateX(20px);
   opacity: 0;
   visibility: hidden;
+  z-index: 30;
   transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, background 0.3s, border-color 0.3s, box-shadow 0.3s;
   pointer-events: none;
 }
@@ -480,7 +481,7 @@ main {
 }
 
 #panel-cita {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-tertiary);
   border-left: 3px solid var(--accent);
   padding: 8px 10px;
   margin: 8px 0;

@@ -35,7 +35,7 @@
 ## Mantenimiento
 
 - `python3 -m pipeline.cli.menu` → opción 14 = mantenimiento completo
-- Export: opción 11 del menú (genera `public/datos.json`)
+- Export: opción 11 del menú (genera `frontend/public/datos.json`)
 - Auditoría: opción 4 (diagnóstico completo del grafo)
 - Limpieza: opciones 5-9 (fusión, ruido biomédico, aislados)
 
@@ -57,13 +57,15 @@ pytest tests/ -k test_db  # Filtro por nombre
 ## Estructura de Carpetas Clave
 
 ```
-pipeline/        → Backend Python
-src/             → Frontend Vite
-libros/          → PDFs fuente (gitignored)
-data/grafo.db    → SQLite (gitignored)
-runtime/         → Caché, logs, checkpoints (gitignored)
-public/datos.json → Datos curados para producción
-scripts/         → Utilidades standalone
-tests/           → Pytest
-docs/            → Documentación ontológica
+pipeline/                  → Backend Python
+frontend/                  → Aplicación web (Vite)
+  src/                     → JS y CSS
+  public/datos.json        → Datos curados para producción
+libros/                    → PDFs fuente (gitignored)
+data/grafo.db              → SQLite (gitignored)
+runtime/                   → Caché, logs, checkpoints (gitignored)
+scripts/                   → Utilidades standalone
+archive/                   → Scripts one-off y docs históricas
+tests/                     → Pytest
+docs/                      → Documentación ontológica y guías
 ```

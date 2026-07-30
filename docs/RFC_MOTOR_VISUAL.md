@@ -31,7 +31,7 @@ Un efecto visual cuya única finalidad sea que el grafo "se vea bonito" no cumpl
 |-----------|------------|
 | KISS | Soluciones simples. Si una propuesta requiere más de 50 líneas nuevas, reevaluar. |
 | YAGNI | No implementar nada que no resuelva un problema actual del frontend. |
-| Bajo acoplamiento | La lógica visual se mantiene en `src/render.js` y `src/style.css`. No contamina pipeline, backend ni ontología. |
+| Bajo acoplamiento | La lógica visual se mantiene en `frontend/src/render.js` y `frontend/src/style.css`. No contamina pipeline, backend ni ontología. |
 | APIs oficiales | Solo se usan APIs documentadas de Cytoscape.js y extensiones oficiales. Nunca se reimplementan algoritmos que Cytoscape ya resuelve. |
 | Compatibilidad fcose | No se duplica el motor de layout. No se ejecutan dos motores de fuerzas en paralelo. |
 | Alto rendimiento | El grafo debe mantener 60fps con 500+ nodos visibles. |
@@ -65,9 +65,9 @@ Un efecto visual cuya única finalidad sea que el grafo "se vea bonito" no cumpl
 
 | Archivo | Líneas | Función |
 |---------|--------|---------|
-| `src/render.js` | 282 | Inicialización Cytoscape, layout fcose, eventos, filtrado, panel |
-| `src/style.css` | 417 | Estilos de nodos, aristas, paneles, tooltip, responsive |
-| `src/main.js` | 23 | Punto de entrada, carga datos, inicializa UI |
+| `frontend/src/render.js` | 282 | Inicialización Cytoscape, layout fcose, eventos, filtrado, panel |
+| `frontend/src/style.css` | 417 | Estilos de nodos, aristas, paneles, tooltip, responsive |
+| `frontend/src/main.js` | 23 | Punto de entrada, carga datos, inicializa UI |
 | `src/grafo.js` | 7 | Carga JSON desde servidor |
 | `index.html` | 58 | Estructura HTML |
 
@@ -590,13 +590,13 @@ Opacidad de nodos fuera del vecindario: transición de 1.0 → 0.08 en 250ms (ya
 
 **Propuesta:**
 
-En `src/render.js`, agregar eventos:
+En `frontend/src/render.js`, agregar eventos:
 ```javascript
 cy.on('mouseover', 'node', (e) => e.target.addClass('hovered'))
 cy.on('mouseout', 'node', (e) => e.target.removeClass('hovered'))
 ```
 
-En `src/style.css`:
+En `frontend/src/style.css`:
 ```css
 .hovered {
   border-width: 3px !important;
@@ -795,9 +795,9 @@ Comportamiento:
 
 | Componente | Afectado | Cambios |
 |------------|----------|---------|
-| `src/render.js` | Sí | Estilos, eventos, layout, centralidad |
-| `src/style.css` | Sí | Selectores hover, transiciones, curvatura |
-| `src/main.js` | No | Sin cambios |
+| `frontend/src/render.js` | Sí | Estilos, eventos, layout, centralidad |
+| `frontend/src/style.css` | Sí | Selectores hover, transiciones, curvatura |
+| `frontend/src/main.js` | No | Sin cambios |
 | `src/grafo.js` | No | Sin cambios |
 | `index.html` | No | Sin cambios |
 
@@ -876,7 +876,7 @@ Cada fase se valida independientemente antes de pasar a la siguiente.
 - [ ] El grafo carga en <2 segundos con el dataset actual
 - [ ] Se mantiene 60fps durante interacción normal (DevTools Performance)
 - [ ] No hay regresiones en tests existentes (`pytest`)
-- [ ] Las propuestas se implementan solo en `src/render.js` y `src/style.css`
+- [ ] Las propuestas se implementan solo en `frontend/src/render.js` y `frontend/src/style.css`
 - [ ] No se modifican pipeline, backend, ontología ni tests de firewall
 - [ ] No se reimplementan algoritmos que Cytoscape resuelve nativamente
 
@@ -961,9 +961,9 @@ Cada fase se valida independientemente antes de pasar a la siguiente.
 
 | Archivo | Líneas antes | Líneas después | Cambio |
 |---------|--------------|----------------|--------|
-| src/render.js | 282 | ~420 | +138 líneas |
+| frontend/src/render.js | 282 | ~420 | +138 líneas |
 | index.html | 58 | 59 | +1 línea |
-| src/style.css | 417 | 417 | Sin cambios |
+| frontend/src/style.css | 417 | 417 | Sin cambios |
 
 ### APIs Nativas Utilizadas
 
