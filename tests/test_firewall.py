@@ -34,7 +34,8 @@ def db_validacion():
             tipo TEXT NOT NULL,
             nombre TEXT NOT NULL UNIQUE,
             descripcion TEXT,
-            metadatos TEXT DEFAULT '{}'
+            metadatos TEXT DEFAULT '{}',
+            revision_estado TEXT DEFAULT 'pendiente'
         );
         CREATE TABLE relaciones (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -62,6 +63,7 @@ def db_validacion():
     ]
     for tipo, nombre in nodos_data:
         conn.execute("INSERT INTO nodos (tipo, nombre) VALUES (?, ?)", (tipo, nombre))
+    conn.execute("UPDATE nodos SET revision_estado = 'ok'")
     conn.commit()
 
     yield conn
@@ -375,3 +377,48 @@ class TestLas12Relaciones:
         ok, err = validar_relacion(db_validacion, nodos[origen_tipo], nodos[destino_tipo],
                                    tipo, "fuente", "cita")
         assert ok, f"{tipo} debería ser válida: {err}"
+
+
+# ── 7. Revisión ontológica de nodos ─────────────────────────────────────
+
+class TestRevisionEstado:
+    """Salvaguarda: solo nodos con revision_estado='ok' pueden tener relaciones."""
+
+    def test_nodo_pendiente_bloquea_relacion(self, db_validacion, nodos):
+        """Un nodo con revision_estado='pendiente' debe bloquear la relación."""
+        # Crear un nodo pendiente
+        cur = db_validacion.execute(
+            "INSERT INTO nodos (tipo, nombre, revision_estado) VALUES (?, ?, 'pendiente')",
+            ("autor", "Autor Sin Revisar")
+        )
+        id_pendiente = cur.lastrowid
+        ok, err = validar_relacion(db_validacion, id_pendiente, nodos["obra"],
+                                   "autor_de", "fuente", "cita")
+        assert not ok
+        assert "sin revisión" in err.lower()
+
+    def test_nodo_ok_permite_relacion(self, db_validacion, nodos):
+        """Un nodo con revision_estado='ok' debe permitir la relación."""
+        ok, _ = validar_relacion(db_validacion, nodos["autor"], nodos["obra"],
+                                 "autor_de", "fuente", "cita")
+        assert ok
+
+    def test_ambos_pendientes_bloquea(self, db_validacion):
+        """Dos nodos pendientes deben bloquear la relación."""
+        cur1 = db_validacion.execute(
+            "INSERT INTO nodos (tipo, nombre, revision_estado) VALUES (?, ?, 'pendiente')",
+            ("autor", "Autor A Sin Revisar")
+        )
+        cur2 = db_validacion.execute(
+            "INSERT INTO nodos (tipo, nombre, revision_estado) VALUES (?, ?, 'pendiente')",
+            ("obra", "Obra A Sin Revisar")
+        )
+        ok, _ = validar_relacion(db_validacion, cur1.lastrowid, cur2.lastrowid,
+                                 "autor_de", "fuente", "cita")
+        assert not ok
+
+    def test_nodo_inexistente_bloquea(self, db_validacion, nodos):
+        """Un ID que no existe debe bloquear."""
+        ok, _ = validar_relacion(db_validacion, 99999, nodos["obra"],
+                                 "autor_de", "fuente", "cita")
+        assert not ok

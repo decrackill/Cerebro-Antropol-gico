@@ -78,6 +78,46 @@ def fusionar_nodos(conn: sqlite3.Connection, id_mantener: int, id_borrar: int) -
     conn.commit()
 
 
+def migrar_revision_estado(conn: sqlite3.Connection) -> None:
+    """Agrega columna revision_estado y marca nodos existentes como 'ok'.
+    
+    En migración inicial marca todos los nodos existentes como 'ok'.
+    En re-ejecución es idempotente: los que ya son 'ok' quedan igual.
+    """
+    try:
+        conn.execute("ALTER TABLE nodos ADD COLUMN revision_estado TEXT DEFAULT 'pendiente'")
+    except sqlite3.OperationalError:
+        pass
+    conn.execute("UPDATE nodos SET revision_estado = 'ok' WHERE revision_estado != 'ok'")
+    conn.commit()
+
+
+def marcar_nodos_revisados(conn: sqlite3.Connection, ids: list[int] | None = None,
+                           tipo: str | None = None) -> int:
+    """Marca nodos como 'ok' (revisados ontológicamente).
+    
+    Args:
+        ids: Lista específica de IDs a marcar, o None para todos.
+        tipo: Tipo de nodo a marcar (ej. 'concepto'), o None para todos.
+    Returns:
+        Cantidad de nodos actualizados.
+    """
+    if ids:
+        placeholders = ','.join('?' for _ in ids)
+        cur = conn.execute(
+            f"UPDATE nodos SET revision_estado = 'ok' WHERE id IN ({placeholders})",
+            ids
+        )
+    elif tipo:
+        cur = conn.execute(
+            "UPDATE nodos SET revision_estado = 'ok' WHERE tipo = ?", (tipo,)
+        )
+    else:
+        cur = conn.execute("UPDATE nodos SET revision_estado = 'ok'")
+    conn.commit()
+    return cur.rowcount
+
+
 def relacion_ya_existe(conn: sqlite3.Connection, origen: int, destino: int, tipo: str) -> bool:
     """True si ya existe una relación exacta con ese origen/destino/tipo."""
     return conn.execute(
@@ -233,6 +273,28 @@ def _validar_evidencia(fuente: str | None, cita_textual: str | None) -> tuple[bo
     return True, None
 
 
+def _validar_revision_estado(conn: sqlite3.Connection, origen_id: int,
+                              destino_id: int) -> tuple[bool, str | None]:
+    """
+    Verifica que ambos nodos hayan pasado revisión ontológica
+    antes de permitir crear una relación. (Salvaguarda post-limpieza)
+    """
+    filas = dict(conn.execute(
+        "SELECT id, revision_estado FROM nodos WHERE id IN (?, ?)",
+        (origen_id, destino_id)
+    ).fetchall())
+    no_revisados = []
+    for nid in (origen_id, destino_id):
+        estado = filas.get(nid)
+        if estado is None:
+            no_revisados.append(f"id={nid} (no existe)")
+        elif estado != "ok":
+            no_revisados.append(f"id={nid} (revision_estado='{estado}')")
+    if no_revisados:
+        return False, f"Nodo(s) sin revisión ontológica: {', '.join(no_revisados)}"
+    return True, None
+
+
 def validar_relacion(conn: sqlite3.Connection, origen_id: int, destino_id: int,
                      tipo: str, fuente: str | None = None,
                      cita_textual: str | None = None) -> tuple[bool, str | None]:
@@ -245,6 +307,7 @@ def validar_relacion(conn: sqlite3.Connection, origen_id: int, destino_id: int,
     3. Firewall epistemológico (poblacion)
     4. Compatibilidad origen/destino
     5. Evidencia documental
+    6. Revisión ontológica de nodos
 
     Retorna:
         (True, None) si la relación es válida
@@ -256,6 +319,7 @@ def validar_relacion(conn: sqlite3.Connection, origen_id: int, destino_id: int,
         ("firewall", lambda: _validar_firewall_poblacion(conn, origen_id, destino_id, tipo)),
         ("compatibilidad", lambda: _validar_compatibilidad_nodos(conn, origen_id, destino_id, tipo)),
         ("evidencia", lambda: _validar_evidencia(fuente, cita_textual)),
+        ("revision_estado", lambda: _validar_revision_estado(conn, origen_id, destino_id)),
     ]
 
     errores = []

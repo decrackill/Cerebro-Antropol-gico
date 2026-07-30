@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cerebro Antropológico</title>
-  <script type="module" crossorigin src="/assets/index-B1aeiSz4.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-gqqOaojk.css">
+  <script type="module" crossorigin src="/assets/index-lYBnoEPy.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DstIGM9E.css">
 </head>
 <body>
   <header>
@@ -21,33 +21,45 @@
       <button data-tipo="poblacion">Poblaciones</button>
       <button data-tipo="corriente">Corrientes</button>
     </div>
-    <input type="text" id="buscar" placeholder="Buscar nodo..." />
+    <div id="buscar-wrapper">
+      <input type="text" id="buscar" placeholder="Buscar nodo..." autocomplete="off" />
+      <div id="autocomplete"></div>
+    </div>
+    <button id="tema-toggle" title="Cambiar tema">🌙</button>
+    <div id="stats"></div>
   </header>
   <main>
+    <canvas id="particles"></canvas>
+    <div id="quote-collage"></div>
     <div id="grafo"></div>
     <div id="loading">
-      <div class="spinner"></div>
+      <div id="loading-bar-track"><div id="loading-bar-fill"></div></div>
       <span>Cargando grafo...</span>
     </div>
     <div id="leyenda">
-      <div><span class="punto" style="background:#D85A30"></span>Autor</div>
-      <div><span class="punto" style="background:#1D9E75"></span>Obra</div>
-      <div><span class="punto" style="background:#7F77DD"></span>Concepto</div>
-      <div><span class="punto" style="background:#BA7517"></span>Escuela</div>
-      <div><span class="punto" style="background:#639922"></span>Cultura</div>
-      <div><span class="punto" style="background:#D4537E"></span>Debate</div>
-      <div><span class="punto" style="background:#3A9BDC"></span>Población</div>
-      <div><span class="punto" style="background:#C9A227"></span>Corriente</div>
+      <div data-tipo="autor"><span class="punto" style="background:#C44569"></span>Autor</div>
+      <div data-tipo="obra"><span class="punto" style="background:#3DC1D3"></span>Obra</div>
+      <div data-tipo="concepto"><span class="punto" style="background:#A29BFE"></span>Concepto</div>
+      <div data-tipo="escuela"><span class="punto" style="background:#E8B830"></span>Escuela</div>
+      <div data-tipo="cultura"><span class="punto" style="background:#6AB04C"></span>Cultura</div>
+      <div data-tipo="debate"><span class="punto" style="background:#EB4D4B"></span>Debate</div>
+      <div data-tipo="poblacion"><span class="punto" style="background:#45AAF2"></span>Población</div>
+      <div data-tipo="corriente"><span class="punto" style="background:#F97F51"></span>Corriente</div>
     </div>
     <aside id="panel" class="oculto">
       <button id="cerrar-panel">&times;</button>
-      <h2 id="panel-titulo"></h2>
+      <h2 id="panel-titulo"><span id="panel-badge"></span></h2>
       <p id="panel-tipo"></p>
       <p id="panel-desc"></p>
       <h3>Relaciones</h3>
       <div id="panel-cita" class="oculto"></div>
       <ul id="panel-relaciones"></ul>
     </aside>
+    <div id="zoom-controls">
+      <button id="zoom-in" title="Acercar">+</button>
+      <button id="zoom-out" title="Alejar">−</button>
+      <button id="zoom-fit" title="Ajustar vista">⊡</button>
+    </div>
     <div id="tooltip" class="oculto">
       <div id="tooltip-tipo"></div>
       <div id="tooltip-nombre"></div>

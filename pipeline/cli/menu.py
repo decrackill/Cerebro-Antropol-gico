@@ -104,6 +104,36 @@ def _herramienta_limpiar_archivos():
         print("  Cancelado")
 
 
+def _herramienta_marcar_revisados():
+    """Marca nodos como ontológicamente revisados (revision_estado='ok')."""
+    from ..core.db import conectar_db, migrar_revision_estado, marcar_nodos_revisados
+    conn = conectar_db()
+    migrar_revision_estado(conn)
+    print("\n  ¿Qué nodos marcar como revisados?")
+    print("    t) Por tipo (ej. 'concepto', 'poblacion')")
+    print("    a) Todos los nodos (1401 existentes)")
+    print("    n) Solo nodos pendientes (revision_estado != 'ok')")
+    resp = input("  Opción (t/a/n): ").strip().lower()
+    if resp == 't':
+        tipo = input("  Tipo de nodo (autor/obra/concepto/escuela/corriente/cultura/poblacion/debate): ").strip()
+        cnt = marcar_nodos_revisados(conn, tipo=tipo)
+        print(f"  ✓ {cnt} nodos de tipo '{tipo}' marcados como revisados")
+    elif resp == 'a':
+        cnt = marcar_nodos_revisados(conn)
+        print(f"  ✓ {cnt} nodos marcados como revisados")
+    elif resp == 'n':
+        pendientes = conn.execute("SELECT id FROM nodos WHERE revision_estado != 'ok' OR revision_estado IS NULL").fetchall()
+        if pendientes:
+            ids = [r[0] for r in pendientes]
+            cnt = marcar_nodos_revisados(conn, ids=ids)
+            print(f"  ✓ {cnt} nodos pendientes marcados como revisados")
+        else:
+            print("  No hay nodos pendientes.")
+    else:
+        print("  Cancelado.")
+    conn.close()
+
+
 def _herramienta_mantenimiento():
     """Mantenimiento completo: limpieza + recuperación + export + auditoría."""
     print("═" * 60)
@@ -143,6 +173,7 @@ OPCIONES = {
     "13": ("Limpiar archivos", _herramienta_limpiar_archivos, "Eliminar temporales"),
     "14": ("Mantenimiento", _herramienta_mantenimiento, "Cadena automática completa"),
     "15": ("Revisión total", herramienta_revision_total_menu, "Revisar TODOS los nodos"),
+    "16": ("Marcar revisados", _herramienta_marcar_revisados, "Marcar nodos como ontológicamente revisados"),
 }
 
 

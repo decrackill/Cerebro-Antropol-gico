@@ -11,7 +11,7 @@ def test_extrac_dict():
 
 def test_opciones_dict():
     from pipeline.cli.menu import OPCIONES
-    assert len(OPCIONES) == 16
+    assert len(OPCIONES) == 17
     assert "0" in OPCIONES
     assert "1" in OPCIONES
     assert "15" in OPCIONES
