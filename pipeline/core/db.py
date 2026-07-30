@@ -9,7 +9,11 @@ from .config import DB_PATH, TIPOS_VALIDOS_RELACION, TIPOS_VALIDOS_NODO
 
 
 def conectar_db() -> sqlite3.Connection:
-    """Abre una conexión a la DB con foreign keys habilitados."""
+    """Abre una conexión a la DB con foreign keys habilitados.
+    
+    Returns:
+        sqlite3.Connection: Conexión con PRAGMA foreign_keys = ON.
+    """
     conn = sqlite3.connect(DB_PATH)
     conn.execute("PRAGMA foreign_keys = ON")
     return conn

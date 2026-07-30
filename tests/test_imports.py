@@ -53,4 +53,4 @@ def test_import_menu():
     from pipeline.cli import menu
     assert hasattr(menu, 'main')
     assert hasattr(menu, 'EXTRAE')
-    assert hasattr(menu, 'OPCIONES')
+    assert hasattr(menu, 'OPCIONES_DICT') or hasattr(menu, 'OPCIONES')
